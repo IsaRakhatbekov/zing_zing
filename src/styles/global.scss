@@ -1,12 +1,33 @@
 @use './reset.scss' as *;
 
 :root {
-	--font-family: 'Roboto', sans-serif;
-	--second-family: 'Inter', sans-serif;
-
 	--pink: #ff2684;
 	--purple: #8037de;
 	--yellow: #f9dc4d;
 	--white: #fff;
 	--black: #3c3c3c;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 15px;
+	max-width: 1315px;
+}
+
+html,
+body {
+	font-family: var(--font-family);
+	font-size: 22px;
+	line-height: 1.3em;
+	color: var(--white);
+	scroll-behavior: smooth;
+
+	height: 100%;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+footer {
+	margin-top: auto;
 }

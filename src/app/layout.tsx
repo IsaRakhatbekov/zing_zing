@@ -1,18 +1,22 @@
 import Footer from '@/components/Footer/Footer'
 import Header from '@/components/Header/Header'
 import '@/styles/global.scss'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Inter, Montserrat, Roboto } from 'next/font/google'
 
-const geistSans = Geist({
-	variable: '--font-geist-sans',
+const roboto = Roboto({
+	variable: '--font-family',
 	subsets: ['latin'],
 })
 
-const geistMono = Geist_Mono({
-	variable: '--font-geist-mono',
+const inter = Inter({
+	variable: '--second-family',
 	subsets: ['latin'],
 })
 
+const montserrat = Montserrat({
+	variable: '--third-family',
+	subsets: ['latin'],
+})
 export const metadata = {
 	title: 'ZingZing',
 	description: 'ZingZing — отзывы, видео и анимации',
@@ -34,7 +38,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${geistSans.variable} ${geistMono.variable}`}>
+			<body
+				className={`${inter.variable} ${roboto.variable} ${montserrat.variable}`}
+			>
 				<Header />
 				<main>{children}</main>
 				<Footer />
