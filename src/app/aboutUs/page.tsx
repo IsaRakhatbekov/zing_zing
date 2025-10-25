@@ -16,6 +16,7 @@ import Button from '@/components/ui/Button'
 import Image from 'next/image'
 
 const page = () => {
+	// About Us page
 	return (
 		<>
 			<section className={styles.secondHero}>
