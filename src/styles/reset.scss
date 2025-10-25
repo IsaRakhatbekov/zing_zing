@@ -12,8 +12,11 @@ ol {
 a,
 button {
 	border: none;
-	background-color: transparent;
 	text-decoration: none;
+	background-color: transparent;
+	&:focus {
+		outline: none;
+	}
 }
 
 h1,
@@ -25,4 +28,14 @@ h6,
 p,
 a {
 	line-height: 1.3em;
+}
+
+input,
+label,
+textarea {
+	border: none;
+	background-color: transparent;
+	&:focus {
+		outline: none;
+	}
 }

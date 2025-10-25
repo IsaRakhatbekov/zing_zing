@@ -7,6 +7,7 @@
 	font-size: clamp(12px, calc(12px + 10px * (100vw / 1315px)), 22px);
 
 	&.pink {
+		color: var(--white);
 		background: url('../../assets/images/pink-bg.png') no-repeat center/contain;
 	}
 
