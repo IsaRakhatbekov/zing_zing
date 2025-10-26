@@ -16,6 +16,11 @@
 		background: url('../../assets/images/yellow-bg-small.png') no-repeat
 			center/contain;
 	}
+	&.yellowWithPurple {
+		color: var(--purple);
+		background: url('../../assets/images/yellow-bg-small.png') no-repeat
+			center/contain;
+	}
 
 	&.purple {
 		color: var(--white);
