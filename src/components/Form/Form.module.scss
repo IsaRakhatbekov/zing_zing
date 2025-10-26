@@ -8,6 +8,33 @@
 	background: #262626;
 	color: var(--white);
 
+	// варианты фона
+	&.default {
+		background: #262626;
+	}
+
+	&.pink {
+		background: var(--pink);
+
+		// перекрашиваем текст и плейсхолдеры
+		.inp {
+			color: var(--white);
+			border-color: rgba(255, 255, 255, 0.6);
+
+			&::placeholder {
+				color: var(--white);
+				opacity: 0.7;
+			}
+		}
+
+		.lbl {
+			color: var(--white);
+		}
+
+		.text {
+			color: var(--white);
+		}
+	}
 	.textWrapper {
 		max-width: 345px;
 	}

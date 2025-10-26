@@ -1,15 +1,23 @@
+// Form.tsx
 import styles from './Form.module.scss'
-const Form = () => {
+
+interface FormProps {
+	variant?: 'default' | 'pink' 
+	title?: string
+	text?: string
+}
+
+const Form = ({
+	variant = 'default',
+	title = 'Let’s Grow Together!',
+	text = 'Whether you’re a distributor, retailer, or creative partner — we’d love to hear from you!Join the ZingZing family and bring bold flavor, playful energy, and reliable quality to your region.',
+}: FormProps) => {
 	return (
 		<div className={`${styles.container} container`}>
-			<form className={styles.form}>
+			<form className={`${styles.form} ${styles[variant]}`}>
 				<div className={styles.textWrapper}>
-					<h2 className={styles.title}>Let’s Grow Together!</h2>
-					<p className={styles.text}>
-						Whether you’re a distributor, retailer, or creative partner — we’d
-						love to hear from you!Join the ZingZing family and bring bold
-						flavor, playful energy, and reliable quality to your region.
-					</p>
+					<h2 className={styles.title}>{title}</h2>
+					<p className={styles.text}>{text}</p>
 				</div>
 				<div className={styles.rightSide}>
 					<div className={styles.inputsWrapper}>
