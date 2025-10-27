@@ -1,0 +1,91 @@
+.products {
+	padding: 100px 0;
+	background: #ccc;
+	text-align: center;
+
+	.wrapper {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 40px;
+	}
+
+	.card {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		text-align: center;
+	}
+
+	.imgWrapper {
+		width: 300px;
+		height: 400px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 25px;
+
+		img {
+			width: 100%;
+			height: auto;
+			object-fit: contain;
+		}
+	}
+
+	.text {
+		max-width: 300px;
+		margin-bottom: 20px;
+		line-height: 1.4;
+		font-size: 16px;
+	}
+
+	// --- BUTTONS ---
+	.btn {
+		border: none;
+		border-radius: 30px;
+		padding: 10px 35px;
+		font-weight: 600;
+		font-size: 15px;
+		color: #fff;
+		cursor: pointer;
+		transition: all 0.2s ease;
+	}
+
+	// color variants
+	.pink {
+		color: #d62b8a;
+		&.btn {
+			background: #d62b8a;
+		}
+	}
+
+	.purple {
+		color: #6c43f3;
+		&.btn {
+			background: #6c43f3;
+		}
+	}
+
+	.orange {
+		color: #d6802b;
+		&.btn {
+			background: #d6802b;
+		}
+	}
+
+	// hover states
+	.btn:hover {
+		transform: translateY(-3px);
+		opacity: 0.9;
+	}
+
+	@media (max-width: 900px) {
+		.wrapper {
+			flex-direction: column;
+			align-items: center;
+			gap: 60px;
+		}
+	}
+}

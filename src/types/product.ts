@@ -1,8 +1,23 @@
+export interface Hero {
+	leftImage: string
+	rightImage: string
+	title: string
+}
+
 export interface Product {
-	id: number
-	title: string // "ZingZing Classic"
-	flavor: string // "Classic"
-	image: string // "/images/classic.png"
-	bgColor: string // "#F9DC4D"
-	textColor: string // "#FF2684"
+	id: string
+	title: string
+	flavor: string
+	image: string
+	description?: string
+	bgColor?: string
+	textColor?: string
+	buttonColor?: 'pink' | 'purple' | 'orange'
+}
+
+/** ДАННЫЕ СТРАНИЦЫ /products */
+export interface ProductsPageData {
+	hero: Hero
+	products: Product[]
+	productsDetailed: Product[]
 }

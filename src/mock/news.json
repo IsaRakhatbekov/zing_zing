@@ -1,0 +1,32 @@
+{
+	"hero": {
+		"title": "STAY",
+		"subtitle": "Spicy. Updated.",
+		"text": "At ZingZing, every month brings something new — new flavors, new faces, and new adventures. Here you’ll find the latest updates, event highlights, and stories from our journey across Central Asia and beyond.",
+		"leftImage": "/mock/news/news-hero-packet.png",
+		"rightImage": "/mock/news/news-hero-model.png"
+	},
+	"sections": [
+		{
+			"id": "1",
+			"title": "Brand News",
+			"text": "Discover what’s cooking behind the scenes! From product launches to packaging updates, our team constantly works to make every ZingZing snack fresher, bolder, and better than before.",
+			"buttonText": "Read More News",
+			"image": "/mock/news/news-paper.png"
+		},
+		{
+			"id": "2",
+			"title": "Events & Exhibitions",
+			"text": "ZingZing loves to meet people! We take part in food fairs, expos, and local festivals — sharing our story, our spice, and our smiles with everyone we meet.",
+			"buttonText": "Upcoming Events",
+			"image": "/mock/news/news-Events-model.png"
+		},
+		{
+			"id": "3",
+			"title": "Giveaways",
+			"text": "We love giving back to our fans! Follow ZingZing on social media for monthly giveaways, surprise snack boxes, and limited-edition merchandise.",
+			"buttonText": "Visit Our Instagram",
+			"image": "/mock/news/news-tshirts.png"
+		}
+	]
+}
