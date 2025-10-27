@@ -1,17 +1,99 @@
+'use client'
+
 import growTogetherImg from '@/assets/images/growTogether-img.png'
 import heroImg from '@/assets/images/hero-main.png'
 import whoWeAreImg from '@/assets/images/whoWeAre.png'
 import HomeCards from '@/components/HomeCards/HomeCards'
 import Reviews from '@/components/Reviews/Reviews'
 import Button from '@/components/ui/Button'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Image from 'next/image'
+import { useEffect, useRef } from 'react'
+gsap.registerPlugin(ScrollTrigger)
+
 import styles from './page.module.scss'
 
 // SERVER COMPONENT
-export default async function Home() {
+export default function Home() {
+	const heroRef = useRef<HTMLElement | null>(null)
+	const whoWeAreRef = useRef<HTMLElement | null>(null)
+	const growTogetherRef = useRef<HTMLElement | null>(null)
+	useEffect(() => {
+		const ctx = gsap.context(() => {
+			// === HERO ===
+			const q = gsap.utils.selector(heroRef)
+			const title = q(`.${styles.title}`)[0]
+			const text = q(`.${styles.text}`)[0]
+			const pinkText = q(`.${styles.pinkText}`)[0]
+			const imgWrap = q(`.${styles.imgWrapper}`)[0]
+
+			gsap.set([title, text, pinkText], { x: -60, opacity: 0 })
+			gsap.set(imgWrap, { y: 80, opacity: 0 })
+
+			gsap
+				.timeline({ defaults: { ease: 'power3.out' } })
+				.to(title, { x: 0, opacity: 1, duration: 0.8 })
+				.to(text, { x: 0, opacity: 1, duration: 0.7 }, '-=0.3')
+				.to(pinkText, { x: 0, opacity: 1, duration: 0.7 }, '-=0.25')
+				.to(imgWrap, { y: 0, opacity: 1, duration: 0.9 }, '-=0.2')
+
+			// === WHO WE ARE ===
+			const q2 = gsap.utils.selector(whoWeAreRef)
+			const img = q2(`.${styles.imgWrapper}`)[0]
+			const title2 = q2(`.${styles.title}`)[0]
+			const text2 = q2(`.${styles.text}`)[0]
+			const btn2 = q2(`button`)[0]
+
+			gsap.set(img, { x: -100, opacity: 0 })
+			gsap.set([title2, text2, btn2], { x: 100, opacity: 0 })
+
+			gsap
+				.timeline({
+					scrollTrigger: {
+						trigger: whoWeAreRef.current,
+						start: 'top 70%',
+						toggleActions: 'play none none none',
+					},
+					defaults: { ease: 'power3.out' },
+				})
+				.to(img, { x: 0, opacity: 1, duration: 1 })
+				.to(title2, { x: 0, opacity: 1, duration: 0.8 }, '-=0.4')
+				.to(text2, { x: 0, opacity: 1, duration: 0.7 }, '-=0.3')
+				.to(btn2, { x: 0, opacity: 1, duration: 0.6 }, '-=0.25')
+
+			// === GROW TOGETHER ===
+			const q3 = gsap.utils.selector(growTogetherRef)
+			const img3 = q3(`.${styles.imgWrapper}`)[0]
+			const title3 = q3(`.${styles.title}`)[0]
+			const text3 = q3(`.${styles.text}`)[0]
+			const btn3 = q3(`button`)[0]
+
+			// стартовые позиции
+			gsap.set(img3, { x: 120, opacity: 0 })
+			gsap.set([title3, text3, btn3], { x: -100, opacity: 0 })
+
+			gsap
+				.timeline({
+					scrollTrigger: {
+						trigger: growTogetherRef.current,
+						start: 'top 70%',
+						toggleActions: 'play none none none',
+					},
+					defaults: { ease: 'power3.out' },
+				})
+				.to(img3, { x: 0, opacity: 1, duration: 1 })
+				.to(title3, { x: 0, opacity: 1, duration: 0.8 }, '-=0.5')
+				.to(text3, { x: 0, opacity: 1, duration: 0.7 }, '-=0.3')
+				.to(btn3, { x: 0, opacity: 1, duration: 0.6 }, '-=0.25')
+		})
+
+		return () => ctx.revert()
+	}, [])
+
 	return (
 		<>
-			<section className={styles.hero}>
+			<section className={styles.hero} ref={heroRef}>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
 						<div className={styles.content}>
@@ -24,6 +106,7 @@ export default async function Home() {
 								bite into a moment of happiness!
 							</p>
 						</div>
+
 						<div className={styles.rightSide}>
 							<p className={styles.pinkText}>
 								ZingZing isn’t just a snack — it’s a spark of happiness that
@@ -37,7 +120,7 @@ export default async function Home() {
 				</div>
 			</section>
 
-			<section className={styles.whoWeAre}>
+			<section className={styles.whoWeAre} ref={whoWeAreRef}>
 				<div className={`${styles.container} container`}>
 					<div className={`${styles.wrapper} pink-bg`}>
 						<div className={styles.imgWrapper}>
@@ -59,7 +142,7 @@ export default async function Home() {
 
 			<HomeCards />
 
-			<section className={styles.growTogether}>
+			<section className={styles.growTogether} ref={growTogetherRef}>
 				<div className={`${styles.container} container`}>
 					<div className={`${styles.wrapper} pink-bg-reverse`}>
 						<div className={styles.content}>
