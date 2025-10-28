@@ -1,3 +1,4 @@
+'use client'
 import sertifications from '@/assets/images/Our-Certifications.png'
 import qualityPacket from '@/assets/images/Quality-herio-packet.png'
 import qualityModel from '@/assets/images/Quality-model.png'
@@ -7,13 +8,127 @@ import purpleBox from '@/assets/images/purpleBox.png'
 import tree from '@/assets/images/tree.png'
 import Form from '@/components/Form/Form'
 import Button from '@/components/ui/Button'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Image from 'next/image'
+import { useEffect, useRef } from 'react'
 import styles from './page.module.scss'
+gsap.registerPlugin(ScrollTrigger)
 const page = () => {
 	// Quality page
+	const secondHeroRef = useRef<HTMLElement | null>(null)
+	const qualityRef = useRef<HTMLElement | null>(null)
+	const ensureQualityRef = useRef<HTMLElement | null>(null)
+	useEffect(() => {
+		const ctx = gsap.context(() => {
+			// === SECOND HERO ===
+			const q1 = gsap.utils.selector(secondHeroRef)
+			const leftImg = q1(`.${styles.leftImg}`)[0]
+			const rightImg = q1(`.${styles.rightImg}`)[0]
+
+			gsap.set(leftImg, { x: 100, opacity: 0 })
+			gsap.set(rightImg, { y: 100, opacity: 0 })
+
+			gsap
+				.timeline({
+					scrollTrigger: {
+						trigger: secondHeroRef.current,
+						start: 'top 60%',
+						toggleActions: 'play none none none',
+					},
+					defaults: { ease: 'power3.out' },
+				})
+				.to(leftImg, { x: 0, opacity: 1, duration: 1 })
+				.to(rightImg, { y: 0, opacity: 1, duration: 1 }, '-=0.7')
+
+			// === QUALITY ===
+			const q2 = gsap.utils.selector(qualityRef)
+			const hatImg = q2(`.${styles.imgWrapper}`)[0]
+
+			gsap.set(hatImg, { x: -120, opacity: 0 })
+
+			gsap
+				.timeline({
+					scrollTrigger: {
+						trigger: qualityRef.current,
+						start: 'top 60%',
+						toggleActions: 'play none none none',
+					},
+					defaults: { ease: 'power3.out' },
+				})
+				.to(hatImg, { x: 0, opacity: 1, duration: 1 })
+
+			// === ENSURE QUALITY ===
+			const q3 = gsap.utils.selector(ensureQualityRef)
+
+			const doctorImg = q3(`.${styles.imgWrapper}`)[0]
+			const pinkImg = q3(`.${styles.pinkWrapper} .${styles.pinkImgWrapper}`)[0]
+			const purpleImg = q3(`.${styles.purpleWrapper} .${styles.imgWrapper}`)[0]
+			const sertImg = q3(
+				`.${styles.ourCertifications} .${styles.imgWrapper}`
+			)[0]
+
+			// стартовые состояния
+			gsap.set(doctorImg, { x: 100, opacity: 0 })
+			gsap.set(pinkImg, { y: 100, opacity: 0 })
+			gsap.set(purpleImg, { x: -100, opacity: 0 })
+			gsap.set(sertImg, { x: 100, opacity: 0 })
+
+			// doctor (справа налево)
+			gsap
+				.timeline({
+					scrollTrigger: {
+						trigger: doctorImg,
+						start: 'top 60%',
+						toggleActions: 'play none none none',
+					},
+					defaults: { ease: 'power3.out' },
+				})
+				.to(doctorImg, { x: 0, opacity: 1, duration: 1 })
+
+			// pinkWrapper (снизу вверх)
+			gsap
+				.timeline({
+					scrollTrigger: {
+						trigger: pinkImg,
+						start: 'top 60%',
+						toggleActions: 'play none none none',
+					},
+					defaults: { ease: 'power3.out' },
+				})
+				.to(pinkImg, { y: 0, opacity: 1, duration: 1 })
+
+			// purpleWrapper (слева направо)
+			gsap
+				.timeline({
+					scrollTrigger: {
+						trigger: purpleImg,
+						start: 'top 60%',
+						toggleActions: 'play none none none',
+					},
+					defaults: { ease: 'power3.out' },
+				})
+				.to(purpleImg, { x: 0, opacity: 1, duration: 1 })
+
+			// ourCertifications (справа налево)
+			gsap
+				.timeline({
+					scrollTrigger: {
+						trigger: sertImg,
+						start: 'top 60%',
+						toggleActions: 'play none none none',
+					},
+					defaults: { ease: 'power3.out' },
+				})
+				.to(sertImg, { x: 0, opacity: 1, duration: 1 })
+		}, secondHeroRef)
+
+		return () => ctx.revert()
+	}, [])
+
 	return (
 		<>
-			<section className={styles.secondHero}>
+			<section className={styles.secondHero} ref={secondHeroRef}>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
 						<div className={styles.textWrapper}>
@@ -42,7 +157,7 @@ const page = () => {
 				</div>
 			</section>
 
-			<section className={styles.quality}>
+			<section className={styles.quality} ref={qualityRef}>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
 						<div className={styles.imgWrapper}>
@@ -162,7 +277,7 @@ const page = () => {
 				</div>
 			</section>
 
-			<section className={styles.ensureQuality}>
+			<section className={styles.ensureQuality} ref={ensureQualityRef}>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
 						<div className={styles.content}>

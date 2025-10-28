@@ -3,6 +3,7 @@ import styles from './page.module.scss'
 
 import Button from '@/components/ui/Button'
 import { fetchNews } from '@/shared/api/fetchNews'
+import NewsAnimations from './NewsAnimations'
 
 // === News Page ===
 export default async function Page() {
@@ -16,6 +17,7 @@ export default async function Page() {
 
 	return (
 		<>
+		<NewsAnimations />
 			{/* === HERO === */}
 			<section className={styles.secondHero}>
 				<div className={`${styles.container} container`}>
