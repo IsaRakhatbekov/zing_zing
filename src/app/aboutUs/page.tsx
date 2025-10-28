@@ -1,25 +1,164 @@
+'use client'
 import styles from './page.module.scss'
 
 import aboutGirl from '@/assets/images/about-girl.png'
 import aboutPacket from '@/assets/images/about-packet.png'
 import car from '@/assets/images/Truck.png'
 
+import Boxes from '@/assets/images/Boxes.png'
 import KazakhstanMap from '@/assets/images/KazakhstanMap.png'
 import KyrgyzstanMap from '@/assets/images/KyrgyzstanMap.png'
+import ModelWomanTshirt from '@/assets/images/ModelWomanTshirt.png'
 import RussianMap from '@/assets/images/RussianMap.png'
 import UzbekistanMap from '@/assets/images/UzbekistanMap.png'
-
-import Boxes from '@/assets/images/Boxes.png'
-import ModelWomanTshirt from '@/assets/images/ModelWomanTshirt.png'
 import Form from '@/components/Form/Form'
 import Button from '@/components/ui/Button'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Image from 'next/image'
+import { useEffect, useRef } from 'react'
+gsap.registerPlugin(ScrollTrigger)
 
 const page = () => {
-	// About Us page
+	const ourMissionRef = useRef<HTMLElement | null>(null)
+	const secondHeroRef = useRef<HTMLElement | null>(null)
+	const centralAsiaRef = useRef<HTMLElement | null>(null)
+	const ourCommunityRef = useRef<HTMLElement | null>(null)
+
+	useEffect(() => {
+		const ctx = gsap.context(() => {
+			// === SECOND HERO ===
+			const q1 = gsap.utils.selector(secondHeroRef)
+			const title = q1(`.${styles.title}`)[0]
+			const text = q1(`.${styles.text}`)[0]
+			const leftImg = q1(`.${styles.leftImg}`)[0]
+			const rightImg = q1(`.${styles.rightImg}`)[0]
+
+			// стартовые состояния
+			gsap.set([title, text], { x: -80, opacity: 0 }) // тексты слева -> направо
+			gsap.set(leftImg, { x: 120, opacity: 0 }) // левая картинка справа -> налево
+			gsap.set(rightImg, { y: 120, opacity: 0 }) // правая картинка снизу -> вверх
+
+			gsap
+				.timeline({
+					scrollTrigger: {
+						trigger: secondHeroRef.current,
+						start: 'top 70%',
+						toggleActions: 'play none none none', // один раз
+					},
+					defaults: { ease: 'power3.out' },
+				})
+				.to(title, { x: 0, opacity: 1, duration: 0.8 })
+				.to(text, { x: 0, opacity: 1, duration: 0.7 }, '-=0.4')
+				.to(leftImg, { x: 0, opacity: 1, duration: 0.8 }, '-=0.3')
+				.to(rightImg, { y: 0, opacity: 1, duration: 0.9 }, '-=0.4')
+
+			// === CENTRAL ASIA ===
+			const q2 = gsap.utils.selector(centralAsiaRef)
+			const items = q2(`.${styles.item}`)
+			const drops = q2(`.${styles.dropsItem}`)
+
+			gsap.set(items, { y: 80, opacity: 0 })
+			gsap.set(drops, { y: 80, opacity: 0 })
+
+			gsap
+				.timeline({
+					scrollTrigger: {
+						trigger: centralAsiaRef.current,
+						start: 'top 60%',
+						toggleActions: 'play none none none',
+					},
+					defaults: { ease: 'power1.out' },
+				})
+				.to(items, {
+					y: 0,
+					opacity: 1,
+					duration: 0.8,
+					stagger: 0.25,
+				})
+				.to(
+					drops,
+					{
+						y: 0,
+						opacity: 1,
+						duration: 0.8,
+						stagger: 0.25,
+					},
+					'-=0.2'
+				)
+
+			// === OUR COMMUNITY ===
+			const q3 = gsap.utils.selector(ourCommunityRef)
+
+			// pink-bg-reverse — картинка справа, едет снизу вверх
+			const pinkImg =
+				q3(`.${styles.pinkBgReverse} .${styles.imgWrapper}`)[0] ||
+				q3(`.${styles.wrapper}.pink-bg-reverse .${styles.imgWrapper}`)[0]
+
+			// purpleWrapper — картинка слева, едет слева направо
+			const purpleImg = q3(
+				`.${styles.purpleWrapper} .${styles.purpleImgWrapper}`
+			)[0]
+
+			// стартовые состояния
+			gsap.set(pinkImg, { y: 120, opacity: 0 })
+			gsap.set(purpleImg, { x: -300, opacity: 0 })
+
+			// pink-bg-reverse анимация (справа, снизу вверх)
+			gsap
+				.timeline({
+					scrollTrigger: {
+						trigger: pinkImg,
+						start: 'top 60%',
+						toggleActions: 'play none none none',
+					},
+					defaults: { ease: 'power1.out' },
+				})
+				.to(pinkImg, { y: 0, opacity: 1, duration: 1 })
+
+			// purpleWrapper анимация (слева направо)
+			gsap
+				.timeline({
+					scrollTrigger: {
+						trigger: purpleImg,
+						start: 'top 60%',
+						toggleActions: 'play none none none',
+					},
+					defaults: { ease: 'power1.out' },
+				})
+				.to(purpleImg, { x: 0, opacity: 1, duration: 1 })
+
+			// === OUR MISSION ===
+			const q4 = gsap.utils.selector(ourMissionRef)
+			const missionImg = q4(`.${styles.imgWrapper}`)[0]
+
+			// стартовое состояние — немного справа и сверху
+			gsap.set(missionImg, { x: 220, scale: 0.9, opacity: 0 })
+
+			gsap
+				.timeline({
+					scrollTrigger: {
+						trigger: ourMissionRef.current,
+						start: 'top 50%',
+						toggleActions: 'play none none none', // один раз
+					},
+					defaults: { ease: 'power3.out' },
+				})
+				.to(missionImg, {
+					x: 0, // двигается к центру (слева)
+					// y: 0, // опускается чуть вниз
+					scale: 1,
+					opacity: 1,
+					duration: 1.1,
+				})
+		})
+
+		return () => ctx.revert()
+	}, [])
+
 	return (
 		<>
-			<section className={styles.secondHero}>
+			<section className={styles.secondHero} ref={secondHeroRef}>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
 						<div className={styles.textWrapper}>
@@ -44,7 +183,7 @@ const page = () => {
 				</div>
 			</section>
 
-			<section className={styles.centralAsia}>
+			<section className={styles.centralAsia} ref={centralAsiaRef}>
 				<div className={`${styles.container} container`}>
 					<h2 className={styles.title}>
 						ZingZing Across <span>Central Asia</span>
@@ -194,7 +333,7 @@ const page = () => {
 				</div>
 			</section>
 
-			<section className={styles.ourCommunity}>
+			<section className={styles.ourCommunity} ref={ourCommunityRef}>
 				<div className={`${styles.container} container`}>
 					<div className={`${styles.wrapper} pink-bg-reverse`}>
 						<div className={styles.content}>
@@ -234,7 +373,7 @@ const page = () => {
 				</div>
 			</section>
 
-			<section className={styles.ourMission}>
+			<section className={styles.ourMission} ref={ourMissionRef}>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
 						<div className={styles.content}>
