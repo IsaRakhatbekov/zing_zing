@@ -1,91 +1,28 @@
-.products {
-	padding: 100px 0;
-	background: #ccc;
-	text-align: center;
+.HomeCards {
+	margin: 200px 0;
 
-	.wrapper {
-		display: flex;
-		align-items: flex-start;
-		justify-content: space-between;
-		gap: 40px;
-	}
+	.pinkBg {
+		position: relative;
+		width: 100%;
+		max-width: 1328px;
+		height: 500px;
+		margin: 0 auto;
+		background: #ff2684;
+		/* магия формы */
+		clip-path: polygon(0% 29%, 100% 5%, 100% 100%, 0% 70%);
+		clip: rect(175px, 175px, 175px, 175px);
 
-	.card {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: flex-start;
-		text-align: center;
-	}
+		border-radius: 240px; /* чтобы сделать скругления */
 
-	.imgWrapper {
-		width: 300px;
-		height: 400px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin-bottom: 25px;
-
-		img {
-			width: 100%;
-			height: auto;
-			object-fit: contain;
-		}
-	}
-
-	.text {
-		max-width: 300px;
-		margin-bottom: 20px;
-		line-height: 1.4;
-		font-size: 16px;
-	}
-
-	// --- BUTTONS ---
-	.btn {
-		border: none;
-		border-radius: 30px;
-		padding: 10px 35px;
-		font-weight: 600;
-		font-size: 15px;
-		color: #fff;
-		cursor: pointer;
-		transition: all 0.2s ease;
-	}
-
-	// color variants
-	.pink {
-		color: #d62b8a;
-		&.btn {
-			background: #d62b8a;
-		}
-	}
-
-	.purple {
-		color: #6c43f3;
-		&.btn {
-			background: #6c43f3;
-		}
-	}
-
-	.orange {
-		color: #d6802b;
-		&.btn {
-			background: #d6802b;
-		}
-	}
-
-	// hover states
-	.btn:hover {
-		transform: translateY(-3px);
-		opacity: 0.9;
-	}
-
-	@media (max-width: 900px) {
-		.wrapper {
-			flex-direction: column;
-			align-items: center;
-			gap: 60px;
+		&::after {
+			content: '';
+			position: absolute;
+			width: 500px;
+			height: 500px;
+			top: 0;
+			left: 0;
+			background-color: #fff;
+			border-radius: 100%;
 		}
 	}
 }

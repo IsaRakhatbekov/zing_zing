@@ -1,17 +1,22 @@
 'use client'
-import data from '@/mock/products.json'
-import { ProductsPageData } from '@/types/product'
 import Image from 'next/image'
+// import data from '@/mock/products.json'
+// import { ProductsPageData } from '@/types/product'
+// import Image from 'next/image'
+import cardImg from '@/assets/images/hero-main.png'
 import styles from './HomeCards.module.scss'
 
 export default function HomeCards() {
-	const { productsDetailed }: ProductsPageData = data
+	// const { productsDetailed }: ProductsPageData = data
 
 	return (
-		<section className={styles.products}>
+		<section className={styles.HomeCards}>
 			<div className={`${styles.container} container`}>
+				<div className={styles.wrapperTop}>
+					<div className={styles.pinkBg}></div>
+				</div>
 				<div className={styles.wrapper}>
-					{productsDetailed.map(item => (
+					{/* {productsDetailed.map(item => (
 						<div key={item.id} className={styles.card}>
 							<div className={styles.imgWrapper}>
 								<Image
@@ -30,7 +35,7 @@ export default function HomeCards() {
 								</a>
 							</div>
 						</div>
-					))}
+					))} */}
 				</div>
 			</div>
 		</section>

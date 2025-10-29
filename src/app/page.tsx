@@ -140,6 +140,50 @@ export default function Home() {
 				</div>
 			</section>
 
+			<section className={styles.Differentiators}>
+				<div className='container'>
+					<h2 className={styles.title}>Key Differentiators</h2>
+
+					<div className={styles.cards}>
+						<div className={styles.card}>
+							<div className={styles.iconWrapper}></div>
+							<h3 className={styles.subtitle}>Factory-Direct Quality</h3>
+							<p className={styles.text}>
+								Produced with care in our own certified facility for maximum
+								freshness and consistency.
+							</p>
+							<a href='#' className={styles.btn}>
+								Learn More
+							</a>
+						</div>
+
+						<div className={styles.card}>
+							<div className={styles.iconWrapper}></div>
+							<h3 className={styles.subtitle}>ISO & Halal Certified</h3>
+							<p className={styles.text}>
+								Every batch meets international quality and hygiene standards
+								because your trust matters.
+							</p>
+							<a href='#' className={styles.btn}>
+								Learn More
+							</a>
+						</div>
+
+						<div className={styles.card}>
+							<div className={styles.iconWrapper}></div>
+							<h3 className={styles.subtitle}>Unforgettable Taste</h3>
+							<p className={styles.text}>
+								A perfect mix of spice, crunch, and happiness — made for those
+								who live life with flavor.
+							</p>
+							<a href='#' className={styles.btn}>
+								Learn More
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			<HomeCards />
 
 			<section className={styles.growTogether} ref={growTogetherRef}>
