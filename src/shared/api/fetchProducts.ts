@@ -9,10 +9,23 @@ export async function fetchProducts(): Promise<ProductsPageData> {
 			return productsMock as ProductsPageData
 		}
 
-		const res = await fetch(`${API_URL}/products`, { cache: 'no-store' })
+		const res = await fetch(`${API_URL}/shop/products/`, { cache: 'no-store' })
 		if (!res.ok) throw new Error('Ошибка при получении данных')
 
-		return (await res.json()) as ProductsPageData
+		const products = await res.json()
+
+		// 🔄 Приводим формат данных к твоей старой структуре
+		const normalized = {
+			hero: {
+				leftImage: '/mock/products/products-hero-girl.png',
+				rightImage: '/mock/products/products-hero-packet.png',
+				title: 'Crafted with Spice Shared with Joy',
+			},
+			products,
+			productsDetailed: products, // можешь потом разделить
+		}
+
+		return normalized as ProductsPageData
 	} catch (err) {
 		console.warn('⚠️ Используются моки (сервер недоступен):', err)
 		return productsMock as ProductsPageData
