@@ -3,21 +3,24 @@ import styles from './page.module.scss'
 
 import growTogetherImg from '@/assets/images/growTogether-img.png'
 import Button from '@/components/ui/Button'
-import { fetchProducts } from '@/shared/api/fetchProducts'
-import { ProductsPageData } from '@/types/product'
+// import { fetchProducts } from '@/shared/api/fetchProducts'
+// import { ProductsPageData } from '@/types/product'
 
 // Products page
 export default async function Page() {
-	const data: ProductsPageData = await fetchProducts()
+	// const data: ProductsPageData = await fetchProducts()
 
 	return (
 		<>
 			{/* HERO */}
-			<section className={styles.secondHero}>
+			{/* <section className={styles.secondHero}>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
 						<div className={styles.textWrapper}>
-							<h2 className={styles.title}>{data.hero.title}</h2>
+							<h2 className={styles.title}>{data.hero.title}
+								<spam>{data.colord}</spam>
+								<spam>{data.colord}</spam>
+							</h2>
 						</div>
 						<div className={styles.imagesWrapper}>
 							<div className={`${styles.imgWrapper} ${styles.leftImg}`}>
@@ -39,10 +42,10 @@ export default async function Page() {
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> */}
 
 			{/* МАЛЕНЬКИЕ КАРТОЧКИ */}
-			<section className={styles.products}>
+			{/* <section className={styles.products}>
 				<div className='container'>
 					<ul className={styles.list}>
 						{data.products.map(p => (
@@ -66,10 +69,10 @@ export default async function Page() {
 						))}
 					</ul>
 				</div>
-			</section>
+			</section> */}
 
 			{/* БОЛЬШИЕ БЛОКИ */}
-			<section className={styles.productsDetailed}>
+			{/* <section className={styles.productsDetailed}>
 				<div className={`${styles.container} container`}>
 					<ul className={styles.list}>
 						{data.productsDetailed.map(p => (
@@ -101,10 +104,10 @@ export default async function Page() {
 						))}
 					</ul>
 				</div>
-			</section>
+			</section> */}
 
 			{/* Остальное как было */}
-			<section className={styles.growTogether}>
+			{/* <section className={styles.growTogether}>
 				<div className={`${styles.container} container`}>
 					<div className={`${styles.wrapper} pink-bg-reverse`}>
 						<div className={styles.content}>
@@ -124,7 +127,7 @@ export default async function Page() {
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> */}
 		</>
 	)
 }

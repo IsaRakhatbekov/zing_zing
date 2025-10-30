@@ -1,25 +1,12 @@
-import Image from 'next/image'
-import styles from './page.module.scss'
-
-import Button from '@/components/ui/Button'
-import { fetchNews } from '@/shared/api/fetchNews'
 import NewsAnimations from './NewsAnimations'
 
 // === News Page ===
 export default async function Page() {
-	const data = await fetchNews()
-	const { hero, sections } = data
-
-	// Привязываем секции по id
-	const brandNews = sections.find(s => s.id === '1')
-	const events = sections.find(s => s.id === '2')
-	const giveaways = sections.find(s => s.id === '3')
-
 	return (
 		<>
-		<NewsAnimations />
+			<NewsAnimations />
 			{/* === HERO === */}
-			<section className={styles.secondHero}>
+			{/* <section className={styles.secondHero}>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
 						<div className={styles.textWrapper}>
@@ -54,10 +41,10 @@ export default async function Page() {
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> */}
 
 			{/* === BRAND NEWS === */}
-			{brandNews && (
+			{/* {brandNews && (
 				<section className={styles.brandNews}>
 					<div className={`${styles.container} container`}>
 						<div className={styles.wrapper}>
@@ -81,10 +68,10 @@ export default async function Page() {
 						</div>
 					</div>
 				</section>
-			)}
+			)} */}
 
 			{/* === EVENTS === */}
-			{events && (
+			{/* {events && (
 				<section className={styles.events}>
 					<div className={`${styles.container} container`}>
 						<div className={styles.wrapper}>
@@ -104,10 +91,10 @@ export default async function Page() {
 						</div>
 					</div>
 				</section>
-			)}
+			)} */}
 
 			{/* === GIVEAWAYS === */}
-			{giveaways && (
+			{/* {giveaways && (
 				<section className={styles.giveaways}>
 					<div className={`${styles.container} container`}>
 						<div className={styles.wrapper}>
@@ -127,7 +114,7 @@ export default async function Page() {
 						</div>
 					</div>
 				</section>
-			)}
+			)} */}
 		</>
 	)
 }

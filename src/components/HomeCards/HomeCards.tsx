@@ -1,41 +1,62 @@
 'use client'
 import Image from 'next/image'
-// import data from '@/mock/products.json'
-// import { ProductsPageData } from '@/types/product'
-// import Image from 'next/image'
-import cardImg from '@/assets/images/hero-main.png'
+import Button from '../ui/Button'
 import styles from './HomeCards.module.scss'
+interface ThirdSectionProps {
+	cards: Array<{
+		image: string
+		text: string
+	}>
+}
 
-export default function HomeCards() {
-	// const { productsDetailed }: ProductsPageData = data
+interface HomeCardsProps {
+	thirdSection: ThirdSectionProps
+}
 
+export default function HomeCards({ thirdSection }: HomeCardsProps) {
+	// Получаем thirdSection из пропсов
 	return (
 		<section className={styles.HomeCards}>
 			<div className={`${styles.container} container`}>
 				<div className={styles.wrapperTop}>
-					<div className={styles.pinkBg}></div>
+					<div className={styles.imgWrapper}>
+						<Image
+							src={thirdSection.cards[0].image}
+							alt='#'
+							width={100}
+							height={100}
+						/>
+					</div>
+					<div className={styles.imgWrapper}>
+						<Image
+							src={thirdSection.cards[1].image}
+							alt='#'
+							width={100}
+							height={100}
+						/>
+					</div>
+					<div className={styles.imgWrapper}>
+						<Image
+							src={thirdSection.cards[2].image}
+							alt='#'
+							width={100}
+							height={100}
+						/>
+					</div>
 				</div>
-				<div className={styles.wrapper}>
-					{/* {productsDetailed.map(item => (
-						<div key={item.id} className={styles.card}>
-							<div className={styles.imgWrapper}>
-								<Image
-									src={item.image}
-									alt={item.title}
-									width={400}
-									height={300}
-									className={styles.img}
-								/>
-							</div>
-							<div className={styles.content}>
-								<h3 className={styles.title}>{item.title}</h3>
-								<p className={styles.text}>{item.description}</p>
-								<a href='#' className={styles.btn}>
-									Learn More
-								</a>
-							</div>
-						</div>
-					))} */}
+				<div className={styles.bottom}>
+					<div className={styles.contentWrapper}>
+						<p>{thirdSection.cards[0].text}</p>
+						<button className={styles.button}>Learn More</button>
+					</div>
+					<div className={styles.contentWrapper}>
+						<p>{thirdSection.cards[1].text}</p>
+						<Button className='purple' href='#' text='Learn More' />
+					</div>
+					<div className={styles.contentWrapper}>
+						<p>{thirdSection.cards[2].text}</p>
+						<Button className='orange' href='#' text='Learn More' />
+					</div>
 				</div>
 			</div>
 		</section>

@@ -27,4 +27,8 @@
 		background: url('../../assets/images/purple-bg.png') no-repeat
 			center/contain;
 	}
+	&.orange {
+		color: var(--white);
+		background: url('../../assets/images/orange.png') no-repeat center/contain;
+	}
 }
