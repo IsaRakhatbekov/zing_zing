@@ -1,31 +1,35 @@
+import Button from '@/components/ui/Button'
+import { fetchProducts } from '@/shared/api/fetchProducts'
 import Image from 'next/image'
 import styles from './page.module.scss'
 
-import growTogetherImg from '@/assets/images/growTogether-img.png'
-import Button from '@/components/ui/Button'
-// import { fetchProducts } from '@/shared/api/fetchProducts'
-// import { ProductsPageData } from '@/types/product'
-
 // Products page
 export default async function Page() {
-	// const data: ProductsPageData = await fetchProducts()
+	const data = await fetchProducts()
+	const {
+		hero,
+		secondSectionSmallCard,
+		thirdSectionBigCards,
+		fourthSectionGrowTogether,
+	} = data
 
 	return (
 		<>
 			{/* HERO */}
-			{/* <section className={styles.secondHero}>
+			<section className={styles.secondHero}>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
 						<div className={styles.textWrapper}>
-							<h2 className={styles.title}>{data.hero.title}
-								<spam>{data.colord}</spam>
-								<spam>{data.colord}</spam>
+							<h2 className={styles.title}>
+								{hero.mainTitle}
+								<span>{hero.mainTitleSpan1}</span>
+								<span>{hero.mainTitleSpan2}</span>
 							</h2>
 						</div>
 						<div className={styles.imagesWrapper}>
 							<div className={`${styles.imgWrapper} ${styles.leftImg}`}>
 								<Image
-									src={data.hero.leftImage}
+									src={hero.leftSideImage}
 									alt='Hero left'
 									width={400}
 									height={400}
@@ -33,7 +37,7 @@ export default async function Page() {
 							</div>
 							<div className={`${styles.imgWrapper} ${styles.rightImg}`}>
 								<Image
-									src={data.hero.rightImage}
+									src={hero.rightSideImage}
 									alt='Hero right'
 									width={400}
 									height={400}
@@ -42,19 +46,19 @@ export default async function Page() {
 						</div>
 					</div>
 				</div>
-			</section> */}
+			</section>
 
 			{/* МАЛЕНЬКИЕ КАРТОЧКИ */}
-			{/* <section className={styles.products}>
+			<section className={styles.products}>
 				<div className='container'>
 					<ul className={styles.list}>
-						{data.products.map(p => (
-							<li key={p.id} className={styles.card}>
+						{secondSectionSmallCard.cards.map((p, index) => (
+							<li key={index} className={styles.card}>
 								<div className={styles.yellow}></div>
 								<div className={styles.pink}>
 									<h3 className={styles.title}>
 										ZingZing <br />
-										<span>{p.flavor}</span>
+										<span>{p.titleSpan}</span>
 									</h3>
 									<div className={styles.imgWrapper}>
 										<Image
@@ -69,65 +73,121 @@ export default async function Page() {
 						))}
 					</ul>
 				</div>
-			</section> */}
+			</section>
 
 			{/* БОЛЬШИЕ БЛОКИ */}
-			{/* <section className={styles.productsDetailed}>
+			<section className={styles.productsDetailed}>
 				<div className={`${styles.container} container`}>
 					<ul className={styles.list}>
-						{data.productsDetailed.map(p => (
-							<li
-								key={p.id}
-								className={styles.block}
-								style={{ backgroundColor: p.bgColor, color: p.textColor }}
-							>
+						{thirdSectionBigCards?.bigCard?.[0] && (
+							<li className={styles.block}>
 								<div className={styles.content}>
 									<h2 className={styles.title}>
-										ZingZing
+										{thirdSectionBigCards.bigCard[0].title}
 										<br />
-										<span>{p.flavor}</span>
+										<span>{thirdSectionBigCards.bigCard[0].titleSpan}</span>
 									</h2>
-									<p className={styles.text}>{p.description}</p>
+									<p className={styles.text}>
+										{thirdSectionBigCards.bigCard[0].text}
+									</p>
 								</div>
 								<div className={styles.rightSide}>
-									<h3 className={styles.elementTitle}>{p.flavor}</h3>
+									<h3 className={styles.elementTitle}>
+										{thirdSectionBigCards.bigCard[0].titleSpan}
+									</h3>
 									<div className={styles.imgWrapper}>
 										<Image
-											src={p.image}
-											alt={p.title}
-											width={260}
-											height={260}
+											src={thirdSectionBigCards.bigCard[0].image}
+											alt=''
+											width={100}
+											height={100}
 										/>
 									</div>
 								</div>
 							</li>
-						))}
+						)}
+						{thirdSectionBigCards?.bigCard?.[1] && (
+							<li className={styles.block}>
+								<div className={styles.content}>
+									<h2 className={styles.title}>
+										{thirdSectionBigCards.bigCard[1].title}
+										<br />
+										<span>{thirdSectionBigCards.bigCard[1].titleSpan}</span>
+									</h2>
+									<p className={styles.text}>
+										{thirdSectionBigCards.bigCard[1].text}
+									</p>
+								</div>
+								<div className={styles.rightSide}>
+									<h3 className={styles.elementTitle}>
+										{thirdSectionBigCards.bigCard[1].titleSpan}
+									</h3>
+									<div className={styles.imgWrapper}>
+										<Image
+											src={thirdSectionBigCards.bigCard[1].image}
+											alt=''
+											width={100}
+											height={100}
+										/>
+									</div>
+								</div>
+							</li>
+						)}
+						{thirdSectionBigCards?.bigCard?.[2] && (
+							<li className={styles.block}>
+								<div className={styles.content}>
+									<h2 className={styles.title}>
+										{thirdSectionBigCards.bigCard[2].title}
+										<br />
+										<span>{thirdSectionBigCards.bigCard[2].titleSpan}</span>
+									</h2>
+									<p className={styles.text}>
+										{thirdSectionBigCards.bigCard[2].text}
+									</p>
+								</div>
+								<div className={styles.rightSide}>
+									<h3 className={styles.elementTitle}>
+										{thirdSectionBigCards.bigCard[2].titleSpan}
+									</h3>
+									<div className={styles.imgWrapper}>
+										<Image
+											src={thirdSectionBigCards.bigCard[2].image}
+											alt=''
+											width={100}
+											height={100}
+										/>
+									</div>
+								</div>
+							</li>
+						)}
 					</ul>
 				</div>
-			</section> */}
+			</section>
 
 			{/* Остальное как было */}
-			{/* <section className={styles.growTogether}>
+			<section className={styles.growTogether}>
 				<div className={`${styles.container} container`}>
 					<div className={`${styles.wrapper} pink-bg-reverse`}>
 						<div className={styles.content}>
 							<h2 className={styles.title}>
-								Let’s Grow <span>Together</span>
+								{fourthSectionGrowTogether.title}{' '}
+								<span>{fourthSectionGrowTogether.titleSpan}</span>
 							</h2>
-							<p className={styles.text}>
-								Whether you’re looking to expand your snack portfolio or
-								introduce something fresh and exciting to your region, ZingZing
-								brings energy, color, and fun that customers can’t resist.
-							</p>
+							<p className={styles.text}>{fourthSectionGrowTogether.text}</p>
 							<Button text='Contact Us' href='#' className='purple' />
 						</div>
 
 						<div className={styles.imgWrapper}>
-							<Image src={growTogetherImg} alt='Grow Together' />
+							<Image
+								src={fourthSectionGrowTogether.image}
+								alt='#'
+								width={100}
+								height={100}
+							/>
 						</div>
 					</div>
 				</div>
-			</section> */}
+			</section>
 		</>
 	)
 }

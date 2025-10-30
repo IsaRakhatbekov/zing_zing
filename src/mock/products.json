@@ -1,0 +1,79 @@
+{
+	"hero": {
+		"mainTitle": "Crafted with  Shared with",
+		"mainTitleSpan1": "Spice",
+		"mainTitleSpan2": "Joy",
+		"leftSideImage": "/mock/products/products-hero-girl.png",
+		"rightSideImage": "/mock/products/products-hero-packet.png"
+	},
+
+	"secondSectionSmallCard": {
+		"cards": [
+			{
+				"id": 1,
+				"title": "ZingZing",
+				"titleSpan": "Classic",
+				"image": "/mock/products/product-mock-purple.png"
+			},
+			{
+				"id": 2,
+				"title": "ZingZing",
+				"titleSpan": "BBQ",
+				"image": "/mock/products/product-mock-purple.png"
+			},
+			{
+				"id": 3,
+				"title": "ZingZing",
+				"titleSpan": "Hot Pot",
+				"image": "/mock/products/product-mock-purple.png"
+			},
+			{
+				"id": 4,
+				"title": "ZingZing",
+				"titleSpan": "Chill",
+				"image": "/mock/products/product-mock-purple.png"
+			},
+			{
+				"id": 5,
+				"title": "ZingZing",
+				"titleSpan": "Joy",
+				"image": "/mock/products/product-mock-purple.png"
+			},
+			{
+				"id": 6,
+				"title": "ZingZing",
+				"titleSpan": "Lopster",
+				"image": "/mock/products/product-mock-purple.png"
+			}
+		]
+	},
+
+	"thirdSectionBigCards": {
+		"bigCard": [
+			{
+				"title": "ZingZing",
+				"titleSpan": "Hot Pot",
+				"text": "Inspired by Asia’s favorite sharing dish, our Hot Pot flavor blends pepper, broth, and joy — a perfect choice for those who like their spice with a story.",
+				"image": "/mock/products/product-mock.png"
+			},
+			{
+				"title": "ZingZing",
+				"titleSpan": "Chill",
+				"text": "A modern twist on our original spice — sleek, balanced, and perfectly portioned for your desk break. When you need focus and flavor, reach for Chill.",
+				"image": "/mock/products/product-mock.png"
+			},
+			{
+				"title": "ZingZing",
+				"titleSpan": "Joy",
+				"text": "A smoky touch, a joyful bite the perfect choice for family moments, parties, or picnics. Crafted for connection.",
+				"image": "/mock/products/product-mock.png"
+			}
+		]
+	},
+	"fourthSectionGrowTogether": {
+		"image": "/mock/products/growTogether-img.png",
+		"title": "Let's Grow",
+		"titleSpan": "Together",
+		"text": "Whether you're looking to expand your snack portfolio or introduce something fresh and exciting to your region, ZingZing brings energy, color, and fun that customers can't resist."
+	}
+}
