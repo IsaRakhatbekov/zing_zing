@@ -1,23 +1,22 @@
-export interface Hero {
-	leftImage: string
-	rightImage: string
-	title: string
-}
-
 export interface Product {
-	id: string
+	id: number // ← было string, ставим number
 	title: string
 	flavor: string
 	image: string
-	description?: string
 	bgColor?: string
 	textColor?: string
-	buttonColor?: 'pink' | 'purple' | 'orange'
 }
 
-/** ДАННЫЕ СТРАНИЦЫ /products */
+export interface ProductDetailed extends Product {
+	description: string
+}
+
 export interface ProductsPageData {
-	hero: Hero
+	hero: {
+		leftImage: string
+		rightImage: string
+		title: string
+	}
 	products: Product[]
-	productsDetailed: Product[]
+	productsDetailed: ProductDetailed[]
 }
