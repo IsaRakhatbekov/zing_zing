@@ -1,0 +1,69 @@
+{
+	"hero": {
+		"mainTitle": "Born from Built on",
+		"mainTitleSpan1": "Spice.",
+		"mainTitleSpan2": " Passion.",
+		"text": "We are ZingZing — a new generation of snack makers who believe that great taste can be bold, fun, and crafted with care.",
+		"leftSideImage1": "/mock/images/hero-pack-1.png",
+		"leftSideImage2": "/mock/images/hero-pack-2.png",
+		"leftSideImage3": "/mock/images/hero-pack-3.png",
+		"rightSideImage": "/mock/images/hero-girl.png"
+	},
+	"secondSection": {
+		"image": "/mock/images/quality-hat.png",
+		"title": "Our",
+		"titleSpan": "Quality",
+		"text": "We don’t just meet standards — we build them into every step. From ingredients to packaging, our promise is simple: safe, consistent, and delicious."
+	},
+	"thirdSection": {
+		"dropsList": [
+			{
+				"id": 1,
+				"image": "/mock/images/quality-certified.png",
+				"dropsTitle": "Certified Facility",
+				"dropsText": "Produced in an ISO-certified facility under strict hygiene and safety control."
+			},
+			{
+				"id": 2,
+				"image": "/mock/images/quality-halal.png",
+				"dropsTitle": "Halal Assurance",
+				"dropsText": "Formulas and processes fully comply with Halal standards."
+			},
+			{
+				"id": 3,
+				"image": "/mock/images/quality-supplier.png",
+				"dropsTitle": "Supplier Approval",
+				"dropsText": "We work only with verified, qualified suppliers."
+			},
+			{
+				"id": 4,
+				"image": "/mock/images/quality-transparent.png",
+				"dropsTitle": "Transparent Practice",
+				"dropsText": "We share our certifications openly to build lasting trust."
+			}
+		]
+	},
+	"fourthSection": {
+		"ensure": {
+			"image": "/mock/images/quality-doctor.png",
+			"title": "How We Ensure",
+			"titleSpan": "Quality",
+			"text": "From ingredient selection to final packaging, every step of production is closely monitored. Our lab conducts routine tests for safety, texture, and flavor balance — ensuring that every ZingZing snack tastes just as good as the first one."
+		},
+		"accountability": {
+			"image": "/mock/images/quality-purple-box.png",
+			"title": "Accountability",
+			"text": "Each pack includes a batch code linked to our records, ensuring full traceability for every ZingZing snack — from production to its source, because we stand behind every flavor we make."
+		},
+		"stewardship": {
+			"image": "/mock/images/quality-tree.png",
+			"title": "Stewardship",
+			"text": "We care for taste and for the planet. ZingZing continuously improves its packaging efficiency, reduces waste, and seeks recyclable materials wherever possible."
+		},
+		"certifications": {
+			"image": "/mock/images/quality-certificates.png",
+			"title": "Our Certifications",
+			"text": "We proudly hold ISO and Halal certifications. To request copies or verify our documents, please contact our quality team."
+		}
+	}
+}
