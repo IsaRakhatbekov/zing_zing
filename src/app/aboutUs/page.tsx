@@ -1,16 +1,8 @@
-import styles from './page.module.scss'
-
-import aboutGirl from '@/assets/images/about-girl.png'
-import aboutPacket from '@/assets/images/about-packet.png'
-
 import Form from '@/components/Form/Form'
 import Button from '@/components/ui/Button'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Image from 'next/image'
-
 import AboutUsAnimations from './AboutUsAnimations'
-gsap.registerPlugin(ScrollTrigger)
+import styles from './page.module.scss'
 
 export default async function page() {
 	const data = (await import('@/mock/aboutUs.json')).default as any
@@ -25,25 +17,27 @@ export default async function page() {
 					<div className={styles.wrapper}>
 						<div className={styles.textWrapper}>
 							<h2 className={styles.title}>
-								Born from <span className={styles.yellow}>Spice.</span> Built on{' '}
-								<span className={styles.purple}>Passion.</span>
+								{hero.mainTitle}{' '}
+								<span className={styles.yellow}>{hero.mainTitleSpan1}</span>{' '}
+								<span className={styles.purple}>{hero.mainTitleSpan2}</span>
 							</h2>
-							<p className={styles.text}>
-								We are ZingZing — a new generation of snack makers who believe
-								that great taste can be bold, fun, and crafted with care.
-							</p>
+							<p className={styles.text}>{hero.text}</p>
 						</div>
+
 						<div className={styles.imagesWrapper}>
 							<div className={`${styles.imgWrapper} ${styles.leftImg}`}>
-								<Image src={aboutPacket} alt='#' />
+								<Image src={hero.leftSideImage1} alt='#' />
+								<Image src={hero.leftSideImage2} alt='#' />
+								<Image src={hero.leftSideImage3} alt='#' />
 							</div>
 							<div className={`${styles.imgWrapper} ${styles.rightImg}`}>
-								<Image src={aboutGirl} alt='#' />
+								<Image src={hero.rightSideImage} alt='#' />
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
+
 			<section className={styles.centralAsia}>
 				<div className={`${styles.container} container`}>
 					<h2 className={styles.title}>

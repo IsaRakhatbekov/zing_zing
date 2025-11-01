@@ -1,38 +1,64 @@
+import Button from '@/components/ui/Button'
+import { fetchNews } from '@/shared/api/fetchNews'
+import Image from 'next/image'
 import NewsAnimations from './NewsAnimations'
+import styles from './page.module.scss'
 
 // === News Page ===
 export default async function Page() {
+	const data = await fetchNews()
+	const {
+		hero,
+		secondSection: { firstBlock, secondBlock, thirdBlock },
+	} = data
+
 	return (
 		<>
 			<NewsAnimations />
-			{/* === HERO === */}
-			{/* <section className={styles.secondHero}>
+
+			<section className={styles.secondHero}>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
 						<div className={styles.textWrapper}>
 							<div className={styles.titleWrapper}>
-								<h2 className={styles.title}>{hero.title}</h2>
+								<h2 className={styles.title}>{hero.mainTitle}</h2>
+
+								{/* Просто два спана с текстом */}
 								<span className={styles.innerTitle}>
-									{hero.subtitle.split(' ').map((w, i) => (
-										<span key={i}>{w} </span>
-									))}
+									<span>{hero.titleSpan1}</span>
+									<span>{hero.titleSpan2}</span>
 								</span>
 							</div>
+
 							<p className={styles.text}>{hero.text}</p>
 						</div>
 
 						<div className={styles.imagesWrapper}>
+							{/* leftImg: три картинки */}
 							<div className={`${styles.imgWrapper} ${styles.leftImg}`}>
 								<Image
-									src={hero.leftImage}
-									alt='hero left'
+									src={hero.leftSideImage1}
+									alt='hero left 1'
+									width={300}
+									height={300}
+								/>
+								<Image
+									src={hero.leftSideImage2}
+									alt='hero left 2'
+									width={300}
+									height={300}
+								/>
+								<Image
+									src={hero.leftSideImage3}
+									alt='hero left 3'
 									width={300}
 									height={300}
 								/>
 							</div>
+
 							<div className={`${styles.imgWrapper} ${styles.rightImg}`}>
 								<Image
-									src={hero.rightImage}
+									src={hero.rightSideImage}
 									alt='hero right'
 									width={300}
 									height={300}
@@ -41,80 +67,73 @@ export default async function Page() {
 						</div>
 					</div>
 				</div>
-			</section> */}
+			</section>
 
 			{/* === BRAND NEWS === */}
-			{/* {brandNews && (
-				<section className={styles.brandNews}>
-					<div className={`${styles.container} container`}>
-						<div className={styles.wrapper}>
-							<div className={styles.content}>
-								<h2 className={styles.title}>{brandNews.title}</h2>
-								<p className={styles.text}>{brandNews.text}</p>
-								<Button
-									text={brandNews.buttonText}
-									className='yellow'
-									href='#'
-								/>
-							</div>
-							<div className={styles.imgWrapper}>
-								<Image
-									src={brandNews.image}
-									alt={brandNews.title}
-									width={400}
-									height={300}
-								/>
-							</div>
+			<section className={styles.brandNews}>
+				<div className={`${styles.container} container`}>
+					<div className={styles.wrapper}>
+						<div className={styles.content}>
+							<h2 className={styles.title}>
+								{firstBlock.title}
+								<span>{firstBlock.titleSpan}</span>
+							</h2>
+							<p className={styles.text}>{firstBlock.text}</p>
+							<Button text='Contact Us' className='yellow' href='#' />
+						</div>
+						<div className={styles.imgWrapper}>
+							<Image
+								src={firstBlock.image}
+								alt={`${firstBlock.title}${firstBlock.titleSpan}`}
+								width={400}
+								height={300}
+							/>
 						</div>
 					</div>
-				</section>
-			)} */}
+				</div>
+			</section>
 
 			{/* === EVENTS === */}
-			{/* {events && (
-				<section className={styles.events}>
-					<div className={`${styles.container} container`}>
-						<div className={styles.wrapper}>
-							<div className={styles.imgWrapper}>
-								<Image
-									src={events.image}
-									alt={events.title}
-									width={400}
-									height={300}
-								/>
-							</div>
-							<div className={styles.content}>
-								<h2 className={styles.title}>{events.title}</h2>
-								<p className={styles.text}>{events.text}</p>
-								<Button text={events.buttonText} className='purple' href='#' />
-							</div>
+			<section className={styles.events}>
+				<div className={`${styles.container} container`}>
+					<div className={styles.wrapper}>
+						<div className={styles.imgWrapper}>
+							<Image
+								src={secondBlock.image}
+								alt={secondBlock.title}
+								width={400}
+								height={300}
+							/>
+						</div>
+						<div className={styles.content}>
+							<h2 className={styles.title}>{secondBlock.title}</h2>
+							<p className={styles.text}>{secondBlock.text}</p>
+							<Button text='Contact Us' className='purple' href='#' />
 						</div>
 					</div>
-				</section>
-			)} */}
+				</div>
+			</section>
 
 			{/* === GIVEAWAYS === */}
-			{/* {giveaways && (
-				<section className={styles.giveaways}>
-					<div className={`${styles.container} container`}>
-						<div className={styles.wrapper}>
-							<div className={styles.content}>
-								<h2 className={styles.title}>{giveaways.title}</h2>
-								<p className={styles.text}>{giveaways.text}</p>
-								<button className={styles.btn}>{giveaways.buttonText}</button>
-							</div>
-							<div className={styles.imgWrapper}>
-								<Image
-									src={giveaways.image}
-									alt={giveaways.title}
-									width={400}
-									height={300}
-								/>
-							</div>
+			<section className={styles.giveaways}>
+				<div className={`${styles.container} container`}>
+					<div className={styles.wrapper}>
+						<div className={styles.content}>
+							<h2 className={styles.title}>{thirdBlock.title}</h2>
+							<p className={styles.text}>{thirdBlock.text}</p>
+							<Button text='Contact Us' className='pink' href='#' />
+						</div>
+						<div className={styles.imgWrapper}>
+							<Image
+								src={thirdBlock.image}
+								alt={thirdBlock.title}
+								width={400}
+								height={300}
+							/>
 						</div>
 					</div>
-				</section>
-			)} */}
+				</div>
+			</section>
 		</>
 	)
 }

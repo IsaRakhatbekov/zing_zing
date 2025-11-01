@@ -27,9 +27,9 @@ export type AboutUs = {
 	}
 	thirdSection: {
 		blocks: Array<{
-			id: number // 1 — Our Community, 2 — Why Choose Us, 3 — Our Mission
+			id: number 
 			title: string
-			titleSpan: string // один спан
+			titleSpan: string 
 			text: string
 			image: string
 		}>
