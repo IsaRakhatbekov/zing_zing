@@ -17,8 +17,11 @@ export default async function page() {
 					<div className={styles.wrapper}>
 						<div className={styles.textWrapper}>
 							<h2 className={styles.title}>
-								{hero.mainTitle}{' '}
-								<span className={styles.yellow}>{hero.mainTitleSpan1}</span>{' '}
+								{hero.title1} <br />
+								<span className={styles.yellow}>{hero.mainTitleSpan1}</span>
+								<br />
+								{hero.title2}
+								<br />
 								<span className={styles.purple}>{hero.mainTitleSpan2}</span>
 							</h2>
 							<p className={styles.text}>{hero.text}</p>
@@ -26,24 +29,30 @@ export default async function page() {
 
 						<div className={styles.imagesWrapper}>
 							<div className={`${styles.imgWrapper} ${styles.leftImg}`}>
-								<Image
-									src={hero.leftSideImage1}
-									alt='#'
-									width={400}
-									height={300}
-								/>
-								<Image
-									src={hero.leftSideImage2}
-									alt='#'
-									width={400}
-									height={300}
-								/>
-								<Image
-									src={hero.leftSideImage3}
-									alt='#'
-									width={400}
-									height={300}
-								/>
+								<div className={styles.leftImgWrapper}>
+									<Image
+										src={hero.leftSideImage1}
+										alt='#'
+										width={400}
+										height={300}
+									/>
+								</div>
+								<div className={styles.leftImgWrapper}>
+									<Image
+										src={hero.leftSideImage2}
+										alt='#'
+										width={400}
+										height={300}
+									/>
+								</div>
+								<div className={styles.leftImgWrapper}>
+									<Image
+										src={hero.leftSideImage3}
+										alt='#'
+										width={400}
+										height={300}
+									/>
+								</div>
 							</div>
 							<div className={`${styles.imgWrapper} ${styles.rightImg}`}>
 								<Image src={hero.rightSideImage} alt='#' fill />
@@ -77,7 +86,7 @@ export default async function page() {
 							<li className={styles.dropsItem} key={d.id}>
 								<div className={styles.iconWrapper}>
 									{/* вместо inline SVG — картинка из моков */}
-									<Image src={d.image} alt='' width={400} height={300} />
+									<Image src={d.image} alt='' width={150} height={150} />
 								</div>
 								<h3 className={styles.dropsTitle}>{d.dropsTitle}</h3>
 								<p className={styles.dropsText}>{d.dropsText}</p>

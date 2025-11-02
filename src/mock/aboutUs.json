@@ -1,12 +1,13 @@
 {
 	"hero": {
-		"mainTitle": "Born from Built on",
+		"title1": "Born from ",
 		"mainTitleSpan1": "Spice.",
+		"title2": "Built on",
 		"mainTitleSpan2": " Passion.",
 		"text": "We are ZingZing — a new generation of snack makers who believe that great taste can be bold, fun, and crafted with care.",
-		"leftSideImage1": "/mock/aboutUs/paks.png",
-		"leftSideImage2": "/mock/aboutUs/paks.png",
-		"leftSideImage3": "/mock/aboutUs/paks.png",
+		"leftSideImage1": "/mock/aboutUs/purple.png",
+		"leftSideImage2": "/mock/aboutUs/purple.png",
+		"leftSideImage3": "/mock/aboutUs/purple.png",
 		"rightSideImage": "/mock/aboutUs/hero-model.png"
 	},
 	"secondSection": {
@@ -15,25 +16,25 @@
 		"list": [
 			{
 				"id": 1,
-				"image": "/mock/images/kz.png",
+				"image": "/mock/aboutUs/kz.png",
 				"innerTitle": "Kazakhstan",
 				"text": "Proudly made and loved in Kazakhstan — where ZingZing began its spicy journey. From Almaty to Astana, our snacks bring energy and flavor to every moment."
 			},
 			{
 				"id": 2,
-				"image": "/mock/images/ru.png",
+				"image": "/mock/aboutUs/ru.png",
 				"innerTitle": "Russia",
 				"text": "Expanding across Russia with bold taste and colorful energy. ZingZing unites spice lovers from every corner — from Moscow streets to Vladivostok vibes."
 			},
 			{
 				"id": 3,
-				"image": "/mock/images/kg.png",
+				"image": "/mock/aboutUs/kg.png",
 				"innerTitle": "Kyrgyzstan",
 				"text": "Rooted in Kyrgyzstan, inspired by its mountains and vibrant youth. ZingZing is more than a snack — it’s a taste of creativity and community."
 			},
 			{
 				"id": 4,
-				"image": "/mock/images/uz.png",
+				"image": "/mock/aboutUs/uz.png",
 				"innerTitle": "Uzbekistan",
 				"text": "From Tashkent to Samarkand, ZingZing adds spice to every celebration. A snack that connects generations through bold flavor and joyful design."
 			}

@@ -1,7 +1,8 @@
 export type AboutUs = {
 	hero: {
-		mainTitle: string
+		title1: string
 		mainTitleSpan1: string
+		title2: string
 		mainTitleSpan2: string
 		text: string
 		leftSideImage1: string
@@ -27,9 +28,9 @@ export type AboutUs = {
 	}
 	thirdSection: {
 		blocks: Array<{
-			id: number 
+			id: number
 			title: string
-			titleSpan: string 
+			titleSpan: string
 			text: string
 			image: string
 		}>
