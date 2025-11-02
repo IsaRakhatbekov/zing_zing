@@ -1,10 +1,13 @@
 {
 	"hero": {
-		"mainTitle": "Crafted with  Shared with",
+		"title1": "Crafted with",
 		"mainTitleSpan1": "Spice",
+		"title2": "Shared with",
 		"mainTitleSpan2": "Joy",
-		"leftSideImage": "/mock/products/products-hero-girl.png",
-		"rightSideImage": "/mock/products/products-hero-packet.png"
+		"leftSideImage": "/mock/products/model.png",
+		"rightSideImage1": "/mock/products/yellow.png",
+		"rightSideImage2": "/mock/products/pink.png",
+		"rightSideImage3": "/mock/products/purple.png"
 	},
 
 	"secondSectionSmallCard": {

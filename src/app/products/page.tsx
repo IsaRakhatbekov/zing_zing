@@ -2,6 +2,7 @@ import Button from '@/components/ui/Button'
 import { fetchProducts } from '@/shared/api/fetchProducts'
 import Image from 'next/image'
 import styles from './page.module.scss'
+import ProductsAnimations from './ProductsAnimations'
 
 // Products page
 export default async function Page() {
@@ -15,15 +16,20 @@ export default async function Page() {
 
 	return (
 		<>
+			<ProductsAnimations />
 			{/* HERO */}
-			<section className={styles.secondHero}>
+			<section className={styles.secondHero} id='products-hero'>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
 						<div className={styles.textWrapper}>
 							<h2 className={styles.title}>
-								{hero.mainTitle}
-								<span>{hero.mainTitleSpan1}</span>
-								<span>{hero.mainTitleSpan2}</span>
+								{hero.title1}
+								<br />
+								<span className={styles.pink}>{hero.mainTitleSpan1}</span>
+								<br />
+								{hero.title2}
+								<br />
+								<span className={styles.yellow}>{hero.mainTitleSpan2}</span>
 							</h2>
 						</div>
 						<div className={styles.imagesWrapper}>
@@ -36,12 +42,30 @@ export default async function Page() {
 								/>
 							</div>
 							<div className={`${styles.imgWrapper} ${styles.rightImg}`}>
-								<Image
-									src={hero.rightSideImage}
-									alt='Hero right'
-									width={400}
-									height={400}
-								/>
+								<div className={styles.rightSideImgWrapper}>
+									<Image
+										src={hero.rightSideImage1}
+										alt='Hero right'
+										width={400}
+										height={400}
+									/>
+								</div>
+								<div className={styles.rightSideImgWrapper}>
+									<Image
+										src={hero.rightSideImage2}
+										alt='Hero right'
+										width={400}
+										height={400}
+									/>
+								</div>
+								<div className={styles.rightSideImgWrapper}>
+									<Image
+										src={hero.rightSideImage3}
+										alt='Hero right'
+										width={400}
+										height={400}
+									/>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -49,7 +73,7 @@ export default async function Page() {
 			</section>
 
 			{/* МАЛЕНЬКИЕ КАРТОЧКИ */}
-			<section className={styles.products}>
+			<section className={styles.products} id='products-small-cards'>
 				<div className='container'>
 					<ul className={styles.list}>
 						{secondSectionSmallCard.cards.map((p, index) => (

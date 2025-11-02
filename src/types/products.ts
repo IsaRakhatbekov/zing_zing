@@ -1,10 +1,13 @@
 export type ProductPage = {
 	hero: {
-		mainTitle: string
+		title1: string
 		mainTitleSpan1: string
+		title2: string
 		mainTitleSpan2: string
 		leftSideImage: string
-		rightSideImage: string
+		rightSideImage1: string
+		rightSideImage2: string
+		rightSideImage3: string
 	}
 	secondSectionSmallCard: {
 		cards: Array<{

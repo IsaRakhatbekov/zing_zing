@@ -1,14 +1,16 @@
 .secondHero {
 	margin: 50px 0;
+
 	.wrapper {
 		position: relative;
-		height: 380px;
+		min-height: 450px; // вместо фиксированной высоты
 		padding: 0 80px;
 		color: var(--white);
 		background-color: var(--purple);
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		overflow: hidden;
 	}
 
 	.title {
@@ -17,11 +19,11 @@
 		font-weight: 900;
 		font-size: clamp(18px, calc(22px + 32px * (100vw / 1315px)), 52px);
 
-		& .pink {
+		.pink {
 			color: var(--pink);
 		}
 
-		& .yellow {
+		.yellow {
 			color: var(--yellow);
 		}
 	}
@@ -30,12 +32,17 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		gap: 40px;
+		overflow: visible;
 	}
 
 	.imgWrapper {
-		overflow: hidden;
+		overflow: visible; // убираем обрезку
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-		& img {
+		img {
 			width: 100%;
 			height: 100%;
 			object-fit: contain;
@@ -45,15 +52,46 @@
 	.leftImg {
 		width: 300px;
 		height: 450px;
-		position: absolute;
-		left: 50%;
+		position: relative;
 		bottom: -15px;
-		transform: translate(-50%);
 	}
 
 	.rightImg {
-		width: 350px;
-		height: 240px;
+		width: 380px;
+		height: 260px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.rightSideImgWrapper {
+			width: 130px;
+			height: 210px;
+			position: absolute;
+			top: 0;
+			overflow: visible;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+
+			&:nth-child(1) {
+				transform: rotate(-30deg) translateX(-90px);
+				z-index: 1;
+				top: 20px;
+			}
+			&:nth-child(2) {
+				transform: rotate(0);
+				z-index: 2;
+			}
+			&:nth-child(3) {
+				top: 20px;
+				transform: rotate(30deg) translateX(90px);
+				z-index: 3;
+			}
+		}
 	}
 }
 
