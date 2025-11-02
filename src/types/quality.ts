@@ -1,7 +1,8 @@
 export type QualityType = {
 	hero: {
-		mainTitle: string
+		title1: string
 		mainTitleSpan1: string
+		title2: string
 		mainTitleSpan2: string
 		text: string
 		leftSideImage1: string

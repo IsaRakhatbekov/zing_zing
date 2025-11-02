@@ -1,13 +1,14 @@
 {
 	"hero": {
-		"mainTitle": "Born from Built on",
-		"mainTitleSpan1": "Spice.",
-		"mainTitleSpan2": " Passion.",
+		"title1": "Quality You Can ",
+		"mainTitleSpan1": "Trust.",
+		"title2": " Spice You’ll",
+		"mainTitleSpan2": " Love.",
 		"text": "We are ZingZing — a new generation of snack makers who believe that great taste can be bold, fun, and crafted with care.",
-		"leftSideImage1": "/mock/quality/Quality-herio-packet.png",
-		"leftSideImage2": "/mock/quality/Quality-herio-packet.png",
-		"leftSideImage3": "/mock/quality/Quality-herio-packet.png",
-		"rightSideImage": "/mock/quality/Quality-model.png"
+		"leftSideImage1": "/mock/quality/pink.png",
+		"leftSideImage2": "/mock/quality/pink.png",
+		"leftSideImage3": "/mock/quality/pink.png",
+		"rightSideImage": "/mock/quality/model.png"
 	},
 	"secondSection": {
 		"image": "/mock/quality/hat.png",

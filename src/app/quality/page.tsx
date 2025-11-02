@@ -4,6 +4,7 @@ import Button from '@/components/ui/Button'
 import { fetchQuality } from '@/shared/api/fetchQuality'
 import Image from 'next/image'
 import styles from './page.module.scss'
+import QualityAnimations from './QualityAnimation'
 
 export default async function page() {
 	// Quality page
@@ -13,13 +14,16 @@ export default async function page() {
 
 	return (
 		<>
-			<section className={styles.secondHero}>
+			<QualityAnimations />
+			<section className={styles.secondHero} id='quality-hero'>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
 						<div className={styles.textWrapper}>
 							<h2 className={styles.title}>
-								{hero.mainTitle}
+								{hero.title1} <br />
 								<span className={styles.purple}>{hero.mainTitleSpan1}</span>
+								<br />
+								{hero.title2}
 								<br />
 								<span className={styles.pink}>{hero.mainTitleSpan2}</span>
 							</h2>
@@ -28,12 +32,30 @@ export default async function page() {
 
 						<div className={styles.imagesWrapper}>
 							<div className={`${styles.imgWrapper} ${styles.leftImg}`}>
-								<Image
-									src={hero.leftSideImage1}
-									alt='#'
-									width={100}
-									height={100}
-								/>
+								<div className={styles.leftImgWrapper}>
+									<Image
+										src={hero.leftSideImage1}
+										alt='#'
+										width={100}
+										height={100}
+									/>
+								</div>
+								<div className={styles.leftImgWrapper}>
+									<Image
+										src={hero.leftSideImage2}
+										alt='#'
+										width={100}
+										height={100}
+									/>
+								</div>
+								<div className={styles.leftImgWrapper}>
+									<Image
+										src={hero.leftSideImage3}
+										alt='#'
+										width={100}
+										height={100}
+									/>
+								</div>
 							</div>
 							<div className={`${styles.imgWrapper} ${styles.rightImg}`}>
 								<Image
@@ -48,7 +70,7 @@ export default async function page() {
 				</div>
 			</section>
 
-			<section className={styles.quality}>
+			<section className={styles.quality} id='quality-section'>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
 						<div className={styles.imgWrapper}>
@@ -71,7 +93,7 @@ export default async function page() {
 				</div>
 			</section>
 
-			<section className={styles.drops}>
+			<section className={styles.drops} id='quality-drops'>
 				<div className={`${styles.container} container`}>
 					<ul className={styles.dropsList}>
 						{thirdSection.dropsList.map(
@@ -89,7 +111,7 @@ export default async function page() {
 				</div>
 			</section>
 
-			<section className={styles.ensureQuality}>
+			<section className={styles.ensureQuality} id='ensure-quality'>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
 						<div className={styles.content}>
