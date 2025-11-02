@@ -1,0 +1,31 @@
+{
+	"hero": {
+		"mainTitle": "Made with Crafted with",
+		"titleSpan1": "Care.",
+		"titleSpan2": "Zing.",
+		"text": "Behind every pack of ZingZing lies a world of precision and passion.Our factory blends advanced technology with human touch — ensuring every stick, slice, and bite meets the highest standards of safety and flavor.",
+		"image": "/mock/factory/hero.png"
+	},
+	"secondSection": {
+		"title": "Quality Innovation",
+		"text": "Our production line is designed for efficiency, hygiene, and creativity. From ingredient preparation to packaging, each process is automated yet carefully supervised by our experienced team.",
+		"image": "/mock/factory/quality.png"
+	},
+	"thirdSection": {
+		"title": "Certified & Safe",
+		"text": "We proudly operate under ISO-certified food safety systems. Regular audits and real-time monitoring keep our processes transparent and reliable — so every ZingZing product is safe to enjoy.",
+		"image": "/mock/factory/certified.png"
+	},
+	"fourthSection": {
+		"title": "Our Power",
+		"text": "Behind our machines are real people — engineers, testers, and dreamers who care deeply about quality. Their skill and spirit bring ZingZing to life every single day.",
+		"image": "/mock/factory/power.png"
+	},
+	"swiper": {
+		"slides": [
+			{ "image": "/mock/factory/power.png", "alt": "Factory slide 1" },
+			{ "image": "/mock/factory/power.png", "alt": "Factory slide 2" },
+			{ "image": "/mock/factory/power.png", "alt": "Factory slide 3" }
+		]
+	}
+}

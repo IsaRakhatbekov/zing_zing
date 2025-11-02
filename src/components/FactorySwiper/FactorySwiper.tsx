@@ -1,4 +1,4 @@
-'use client' // обязательно!
+'use client'
 
 import Image from 'next/image'
 import 'swiper/css'
@@ -6,13 +6,15 @@ import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import styles from './FactorySwiper.module.scss'
 
-import {
-	default as img1,
-	default as img2,
-	default as img3,
-} from '@/assets/images/Factory-Quality.png'
+type FactorySwiperData = {
+	slides: { image: string; alt: string }[]
+}
 
-const FactorySwiper = () => {
+type Props = { data: FactorySwiperData }
+
+const FactorySwiper = ({ data }: Props) => {
+	const { slides } = data
+
 	return (
 		<div className={styles.sliderWrapper}>
 			<Swiper
@@ -27,15 +29,11 @@ const FactorySwiper = () => {
 				modules={[Autoplay]}
 				className={styles.mySwiper}
 			>
-				<SwiperSlide className={styles.slide}>
-					<Image src={img1} alt='Factory 1' />
-				</SwiperSlide>
-				<SwiperSlide className={styles.slide}>
-					<Image src={img2} alt='Factory 2' />
-				</SwiperSlide>
-				<SwiperSlide className={styles.slide}>
-					<Image src={img3} alt='Factory 3' />
-				</SwiperSlide>
+				{slides.map((s, i) => (
+					<SwiperSlide className={styles.slide} key={i}>
+						<Image src={s.image} alt={s.alt} width={600} height={400} />
+					</SwiperSlide>
+				))}
 			</Swiper>
 		</div>
 	)
