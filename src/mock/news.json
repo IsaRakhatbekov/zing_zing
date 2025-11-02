@@ -4,27 +4,27 @@
 		"titleSpan1": "Spicy. ",
 		"titleSpan2": "Updated.",
 		"text": "At ZingZing, every month brings something new — new flavors, new faces, and new adventures. Here you’ll find the latest updates, event highlights, and stories from our journey across Central Asia and beyond.",
-		"leftSideImage1": "/mock/products/product-mock-purple.png",
-		"leftSideImage2": "/mock/products/product-mock-purple.png",
-		"leftSideImage3": "/mock/products/product-mock-purple.png",
-		"rightSideImage": "/mock/news/news-hero-model.png"
+		"leftSideImage1": "/mock/news/yellow.png",
+		"leftSideImage2": "/mock/news/yellow.png",
+		"leftSideImage3": "/mock/news/yellow.png",
+		"rightSideImage": "/mock/news/hero-model.png"
 	},
 	"secondSection": {
 		"firstBlock": {
 			"title": "Brand ",
 			"titleSpan": "News",
 			"text": "Discover what’s cooking behind the scenes! From product launches to packaging updates, our team constantly works to make every ZingZing snack fresher, bolder, and better than before.",
-			"image": "/mock/news/news-paper.png"
+			"image": "/mock/news/books.png"
 		},
 		"secondBlock": {
-			"image": "/mock/news/news-Events-model.png",
+			"image": "/mock/news/second-model.png",
 			"title": "Events & Exhibitions",
 			"text": "ZingZing loves to meet people!We take part in food fairs, expos, and local festivals — sharing our story, our spice, and our smiles with everyone we meet."
 		},
 		"thirdBlock": {
 			"title": "Giveaways",
 			"text": "We love giving back to our fans! Follow ZingZing on social media for monthly giveaways, surprise snack boxes, and limited-edition merchandise.",
-			"image": "/mock/news/news-tshirts.png"
+			"image": "/mock/news/tshirts.png"
 		}
 	}
 }

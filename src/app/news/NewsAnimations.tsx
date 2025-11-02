@@ -10,94 +10,111 @@ gsap.registerPlugin(ScrollTrigger)
 export default function NewsAnimations() {
 	useEffect(() => {
 		const ctx = gsap.context(() => {
-			// === HERO ===
-			const heroLeft = document.querySelector<HTMLElement>(
-				`.${styles.secondHero} .${styles.leftImg}`
-			)
-			const heroRight = document.querySelector<HTMLElement>(
-				`.${styles.secondHero} .${styles.rightImg}`
-			)
+			// === HERO (как на About Us) ===
+			{
+				const root = document.querySelector<HTMLElement>(
+					`.${styles.secondHero}`
+				)
+				if (root) {
+					const title = root.querySelector<HTMLElement>(`.${styles.title}`)
+					const text = root.querySelector<HTMLElement>(`.${styles.text}`)
+					const leftWrappers = root.querySelectorAll<HTMLElement>(
+						`.${styles.leftImg} .${styles.leftImgWrapper}`
+					)
+					const rightWrap = root.querySelector<HTMLElement>(
+						`.${styles.rightImg}`
+					)
+					const rightImg = rightWrap
+						? (rightWrap.querySelector('img') as HTMLElement | null)
+						: null
 
-			if (heroLeft) {
-				gsap.set(heroLeft, { x: -100, opacity: 0 })
-				gsap
-					.timeline({
-						scrollTrigger: {
-							trigger: heroLeft,
-							start: 'top 60%',
-							toggleActions: 'play none none none',
-						},
-						defaults: { ease: 'power3.out' },
-					})
-					.to(heroLeft, { x: 0, opacity: 1, duration: 1 })
-			}
+					if (title) gsap.set(title, { x: -160, opacity: 0 })
+					if (text) gsap.set(text, { x: -160, opacity: 0 })
+					if (leftWrappers.length)
+						gsap.set(leftWrappers, { y: 160, opacity: 0 })
+					if (rightImg) gsap.set(rightImg, { y: 180, opacity: 1 }) // «выплывает» из контейнера
 
-			if (heroRight) {
-				gsap.set(heroRight, { y: 120, opacity: 0 })
-				gsap
-					.timeline({
+					const tl = gsap.timeline({
 						scrollTrigger: {
-							trigger: heroRight,
-							start: 'top 60%',
-							toggleActions: 'play none none none',
-						},
-						defaults: { ease: 'power3.out' },
-					})
-					.to(heroRight, { y: 0, opacity: 1, duration: 1 })
-			}
-
-			// === BRAND NEWS === (картинка справа → налево)
-			const brandImg = document.querySelector<HTMLElement>(
-				`.${styles.brandNews} .${styles.imgWrapper}`
-			)
-			if (brandImg) {
-				gsap.set(brandImg, { x: 120, opacity: 0 })
-				gsap
-					.timeline({
-						scrollTrigger: {
-							trigger: brandImg,
-							start: 'top 60%',
+							trigger: root,
+							start: 'top 65%',
 							toggleActions: 'play none none none',
 						},
 						defaults: { ease: 'power2.out' },
 					})
-					.to(brandImg, { x: 0, opacity: 1, duration: 1 })
+
+					tl.to(
+						[title, text],
+						{ x: 0, opacity: 1, duration: 0.7, stagger: 0.1 },
+						0
+					).to(
+						leftWrappers,
+						{ y: 0, opacity: 1, duration: 0.7, stagger: 0.12 },
+						0
+					)
+
+					if (rightImg) tl.to(rightImg, { y: 0, duration: 0.7 }, 0)
+				}
 			}
 
-			// === EVENTS === (картинка слева → направо)
-			const eventsImg = document.querySelector<HTMLElement>(
-				`.${styles.events} .${styles.imgWrapper}`
-			)
-			if (eventsImg) {
-				gsap.set(eventsImg, { x: -120, opacity: 0 })
-				gsap
-					.timeline({
-						scrollTrigger: {
-							trigger: eventsImg,
-							start: 'top 60%',
-							toggleActions: 'play none none none',
-						},
-						defaults: { ease: 'power2.out' },
-					})
-					.to(eventsImg, { x: 0, opacity: 1, duration: 1 })
+			// === BRAND NEWS ===
+			{
+				const brandImg = document.querySelector<HTMLElement>(
+					`.${styles.brandNews} .${styles.imgWrapper}`
+				)
+				if (brandImg) {
+					gsap.set(brandImg, { x: 120, opacity: 0 })
+					gsap
+						.timeline({
+							scrollTrigger: {
+								trigger: brandImg,
+								start: 'top 60%',
+								toggleActions: 'play none none none',
+							},
+							defaults: { ease: 'power2.out' },
+						})
+						.to(brandImg, { x: 0, opacity: 1, duration: 1 })
+				}
 			}
 
-			// === GIVEAWAYS === (картинка снизу → вверх)
-			const giveImg = document.querySelector<HTMLElement>(
-				`.${styles.giveaways} .${styles.imgWrapper}`
-			)
-			if (giveImg) {
-				gsap.set(giveImg, { y: 100, opacity: 0 })
-				gsap
-					.timeline({
-						scrollTrigger: {
-							trigger: giveImg,
-							start: 'top 60%',
-							toggleActions: 'play none none none',
-						},
-						defaults: { ease: 'power2.out' },
-					})
-					.to(giveImg, { y: 0, opacity: 1, duration: 1 })
+			// === EVENTS ===
+			{
+				const eventsImg = document.querySelector<HTMLElement>(
+					`.${styles.events} .${styles.imgWrapper}`
+				)
+				if (eventsImg) {
+					gsap.set(eventsImg, { x: -120, opacity: 0 })
+					gsap
+						.timeline({
+							scrollTrigger: {
+								trigger: eventsImg,
+								start: 'top 60%',
+								toggleActions: 'play none none none',
+							},
+							defaults: { ease: 'power2.out' },
+						})
+						.to(eventsImg, { x: 0, opacity: 1, duration: 1 })
+				}
+			}
+
+			// === GIVEAWAYS ===
+			{
+				const giveImg = document.querySelector<HTMLElement>(
+					`.${styles.giveaways} .${styles.imgWrapper}`
+				)
+				if (giveImg) {
+					gsap.set(giveImg, { y: 100, opacity: 0 })
+					gsap
+						.timeline({
+							scrollTrigger: {
+								trigger: giveImg,
+								start: 'top 60%',
+								toggleActions: 'play none none none',
+							},
+							defaults: { ease: 'power2.out' },
+						})
+						.to(giveImg, { y: 0, opacity: 1, duration: 1 })
+				}
 			}
 		})
 

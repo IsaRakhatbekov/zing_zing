@@ -22,11 +22,9 @@ export default async function Page() {
 						<div className={styles.textWrapper}>
 							<div className={styles.titleWrapper}>
 								<h2 className={styles.title}>{hero.mainTitle}</h2>
-
-								{/* Просто два спана с текстом */}
 								<span className={styles.innerTitle}>
-									<span>{hero.titleSpan1}</span>
-									<span>{hero.titleSpan2}</span>
+									<span className={styles.pink}>{hero.titleSpan1}</span>
+									<span className={styles.yellow}>{hero.titleSpan2}</span>
 								</span>
 							</div>
 
@@ -34,26 +32,31 @@ export default async function Page() {
 						</div>
 
 						<div className={styles.imagesWrapper}>
-							{/* leftImg: три картинки */}
 							<div className={`${styles.imgWrapper} ${styles.leftImg}`}>
-								<Image
-									src={hero.leftSideImage1}
-									alt='hero left 1'
-									width={300}
-									height={300}
-								/>
-								<Image
-									src={hero.leftSideImage2}
-									alt='hero left 2'
-									width={300}
-									height={300}
-								/>
-								<Image
-									src={hero.leftSideImage3}
-									alt='hero left 3'
-									width={300}
-									height={300}
-								/>
+								<div className={styles.leftImgWrapper}>
+									<Image
+										src={hero.leftSideImage1}
+										alt='hero left 1'
+										width={120}
+										height={200}
+									/>
+								</div>
+								<div className={styles.leftImgWrapper}>
+									<Image
+										src={hero.leftSideImage2}
+										alt='hero left 1'
+										width={120}
+										height={200}
+									/>
+								</div>
+								<div className={styles.leftImgWrapper}>
+									<Image
+										src={hero.leftSideImage3}
+										alt='hero left 1'
+										width={120}
+										height={200}
+									/>
+								</div>
 							</div>
 
 							<div className={`${styles.imgWrapper} ${styles.rightImg}`}>
