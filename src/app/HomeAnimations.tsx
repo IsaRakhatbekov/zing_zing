@@ -10,29 +10,26 @@ gsap.registerPlugin(ScrollTrigger)
 export default function HomeAnimations() {
 	useEffect(() => {
 		const ctx = gsap.context(() => {
-			// Небольшая задержка, чтобы DOM успел прогрузиться
 			setTimeout(() => {
 				// === HERO ===
 				const hero = document.querySelector(`.${styles.hero}`)
 				if (hero) {
-					const title = hero.querySelector(`.${styles.title}`)
-					const text = hero.querySelector(`.${styles.text}`)
-					const pinkText = hero.querySelector(`.${styles.pinkText}`)
-					const imgWrap = hero.querySelector(`.${styles.imgWrapper}`)
-					if (!title || !text || !pinkText || !imgWrap) return
+					// только secondText и картинка
+					const pinkText = hero.querySelector(
+						`.${styles.pinkText}`
+					) as HTMLElement | null
+					const imgWrap = hero.querySelector(
+						`.${styles.imgWrapper}`
+					) as HTMLElement | null
+					if (pinkText) gsap.set(pinkText, { x: -60, opacity: 0 })
+					if (imgWrap) gsap.set(imgWrap, { y: 480, opacity: 0 })
 
-					gsap.set([title, text, pinkText], { x: -60, opacity: 0 })
-					gsap.set(imgWrap, { y: 480, opacity: 0 })
-
-					gsap
-						.timeline({ defaults: { ease: 'power1.out' } })
-						.to(title, { x: 0, opacity: 1, duration: 0.8 })
-						.to(text, { x: 0, opacity: 1, duration: 0.7 }, '-=0.3')
-						.to(pinkText, { x: 0, opacity: 1, duration: 0.7 }, '-=0.25')
-						.to(imgWrap, { y: 0, opacity: 1, duration: 0.9 }, '-=0.2')
+					const tl = gsap.timeline({ defaults: { ease: 'power1.out' } })
+					if (pinkText) tl.to(pinkText, { x: 0, opacity: 1, duration: 0.7 }, 0)
+					if (imgWrap) tl.to(imgWrap, { y: 0, opacity: 1, duration: 0.9 }, 0.1)
 				}
 
-				// WHO WE ARE анимация
+				// === WHO WE ARE ===
 				const whoSection = document.querySelector(`.${styles.whoWeAre}`)
 				if (whoSection) {
 					gsap.fromTo(
@@ -96,6 +93,7 @@ export default function HomeAnimations() {
 					)
 				}
 
+				// === GROW TOGETHER ===
 				const growSection = document.querySelector(`.${styles.growTogether}`)
 				if (growSection) {
 					gsap.fromTo(
@@ -159,9 +157,9 @@ export default function HomeAnimations() {
 					)
 				}
 
+				// === DIFFERENTIATORS ===
 				const diffSection = document.querySelector(`.${styles.Differentiators}`)
 				if (diffSection) {
-					// Анимация заголовка
 					gsap.fromTo(
 						`.${styles.Differentiators} .${styles.title}`,
 						{ y: 50, opacity: 0 },
@@ -177,7 +175,6 @@ export default function HomeAnimations() {
 						}
 					)
 
-					// Анимация карточек последовательно
 					gsap.fromTo(
 						`.${styles.Differentiators} .${styles.card}`,
 						{ y: 460, opacity: 0 },
@@ -185,7 +182,7 @@ export default function HomeAnimations() {
 							y: 0,
 							opacity: 1,
 							duration: 0.7,
-							stagger: 0.2, // задержка между карточками
+							stagger: 0.2,
 							scrollTrigger: {
 								trigger: `.${styles.Differentiators}`,
 								start: 'top 50%',
