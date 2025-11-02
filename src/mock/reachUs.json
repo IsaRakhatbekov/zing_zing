@@ -1,0 +1,15 @@
+{
+	"hero": {
+		"mainTitle": "We’re Just a Message Away!",
+		"text": "Got a question, an idea, or a business proposal? We’re here to help. Whether you’re a distributor, retailer, media partner, or simply a ZingZing fan — reach out and we’ll get back to you soon!",
+		"leftSideImage1": "/mock/reachUs/books.png",
+		"leftSideImage2": "/mock/reachUs/books.png",
+		"leftSideImage3": "/mock/reachUs/books.png",
+		"rightSideImage": "/mock/reachUs/model.png"
+	},
+	"secondSection": {
+		"title": "Work With Us",
+		"text": "Grow your business with a trusted, fun, and fast-moving snack brand. ZingZing offers quality products, strong support, and a partnership that truly adds value.",
+		"image": "/mock/reachUs/container.png"
+	}
+}

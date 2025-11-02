@@ -26,12 +26,27 @@ export default async function page() {
 
 						<div className={styles.imagesWrapper}>
 							<div className={`${styles.imgWrapper} ${styles.leftImg}`}>
-								<Image src={hero.leftSideImage1} alt='#' />
-								<Image src={hero.leftSideImage2} alt='#' />
-								<Image src={hero.leftSideImage3} alt='#' />
+								<Image
+									src={hero.leftSideImage1}
+									alt='#'
+									width={400}
+									height={300}
+								/>
+								<Image
+									src={hero.leftSideImage2}
+									alt='#'
+									width={400}
+									height={300}
+								/>
+								<Image
+									src={hero.leftSideImage3}
+									alt='#'
+									width={400}
+									height={300}
+								/>
 							</div>
 							<div className={`${styles.imgWrapper} ${styles.rightImg}`}>
-								<Image src={hero.rightSideImage} alt='#' />
+								<Image src={hero.rightSideImage} alt='#' fill />
 							</div>
 						</div>
 					</div>
@@ -49,7 +64,7 @@ export default async function page() {
 							<li className={styles.item} key={item.id}>
 								<div className={styles.imgWrapper}>
 									{/* imgWrapper должен быть position:relative в CSS */}
-									<Image src={item.image} alt='' fill />
+									<Image src={item.image} alt='' width={400} height={300} />
 								</div>
 								<h3 className={styles.innerTitle}>{item.innerTitle}</h3>
 								<p className={styles.text}>{item.text}</p>
@@ -62,7 +77,7 @@ export default async function page() {
 							<li className={styles.dropsItem} key={d.id}>
 								<div className={styles.iconWrapper}>
 									{/* вместо inline SVG — картинка из моков */}
-									<Image src={d.image} alt='' fill />
+									<Image src={d.image} alt='' width={400} height={300} />
 								</div>
 								<h3 className={styles.dropsTitle}>{d.dropsTitle}</h3>
 								<p className={styles.dropsText}>{d.dropsText}</p>
@@ -84,14 +99,14 @@ export default async function page() {
 							<Button text='Contact Us' className='purple' href='#' />
 						</div>
 						<div className={styles.imgWrapper}>
-							<Image src={community.image} alt='' fill />
+							<Image src={community.image} alt='' width={400} height={300} />
 						</div>
 					</div>
 
 					{/* 2) Why Choose Us (purple) */}
 					<div className={styles.purpleWrapper}>
 						<div className={styles.purpleImgWrapper}>
-							<Image src={whyUs.image} alt='' fill />
+							<Image src={whyUs.image} alt='' width={400} height={300} />
 						</div>
 						<div className={styles.content}>
 							<h2 className={styles.title}>
@@ -112,7 +127,7 @@ export default async function page() {
 							<Button text='Contact Us' href='#' className='purple' />
 						</div>
 						<div className={styles.imgWrapper}>
-							<Image src={mission.image} alt='' fill />
+							<Image src={mission.image} alt='' width={400} height={300} />
 						</div>
 					</div>
 				</div>
