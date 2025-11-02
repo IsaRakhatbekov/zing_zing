@@ -3,12 +3,14 @@ import Button from '@/components/ui/Button'
 import { fetchReachUs } from '@/shared/fetchReachUs'
 import Image from 'next/image'
 import styles from './page.module.scss'
+import ReachUsAnimations from './ReachUsAnimations'
 
 export default async function Page() {
 	const data = await fetchReachUs()
 	const { hero, secondSection } = data
 	return (
 		<>
+			<ReachUsAnimations />
 			<section className={styles.secondHero} id='reach-hero'>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
@@ -19,13 +21,30 @@ export default async function Page() {
 
 						<div className={styles.imagesWrapper}>
 							<div className={`${styles.imgWrapper} ${styles.leftImg}`}>
-								{/* можно один оставить — используем первый из трёх левых */}
-								<Image
-									src={hero.leftSideImage1}
-									alt='reach left'
-									width={400}
-									height={300}
-								/>
+								<div className={styles.leftImgWrapper}>
+									<Image
+										src={hero.leftSideImage1}
+										alt='reach left'
+										width={400}
+										height={300}
+									/>
+								</div>
+								<div className={styles.leftImgWrapper}>
+									<Image
+										src={hero.leftSideImage2}
+										alt='reach left'
+										width={400}
+										height={300}
+									/>
+								</div>
+								<div className={styles.leftImgWrapper}>
+									<Image
+										src={hero.leftSideImage3}
+										alt='reach left'
+										width={400}
+										height={300}
+									/>
+								</div>
 							</div>
 							<div className={`${styles.imgWrapper} ${styles.rightImg}`}>
 								<Image

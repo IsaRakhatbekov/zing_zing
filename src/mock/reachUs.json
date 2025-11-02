@@ -2,9 +2,9 @@
 	"hero": {
 		"mainTitle": "We’re Just a Message Away!",
 		"text": "Got a question, an idea, or a business proposal? We’re here to help. Whether you’re a distributor, retailer, media partner, or simply a ZingZing fan — reach out and we’ll get back to you soon!",
-		"leftSideImage1": "/mock/reachUs/books.png",
-		"leftSideImage2": "/mock/reachUs/books.png",
-		"leftSideImage3": "/mock/reachUs/books.png",
+		"leftSideImage1": "/mock/reachUs/book.png",
+		"leftSideImage2": "/mock/reachUs/book.png",
+		"leftSideImage3": "/mock/reachUs/book.png",
 		"rightSideImage": "/mock/reachUs/model.png"
 	},
 	"secondSection": {

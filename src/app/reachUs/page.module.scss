@@ -30,19 +30,42 @@
 		justify-content: space-between;
 	}
 
-	.imgWrapper {
-		overflow: hidden;
-
-		& img {
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
-		}
-	}
-
 	.leftImg {
-		max-width: 420px;
+		width: 420px;
 		height: 270px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		& .leftImgWrapper {
+			height: 250px;
+			width: 280px;
+			position: absolute;
+
+			& img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+
+			&:nth-child(1) {
+				transform: rotate(-20deg);
+				z-index: 1;
+				top: 30px;
+				left: 30px;
+			}
+			&:nth-child(2) {
+				transform: rotate(0);
+				z-index: 2;
+			}
+			&:nth-child(3) {
+				transform: rotate(20deg);
+				z-index: 3;
+				top: 40px;
+				right: 35px;
+			}
+		}
 	}
 
 	.rightImg {
