@@ -19,8 +19,11 @@ export default async function page() {
 					<div className={styles.wrapper}>
 						<div className={styles.textWrapper}>
 							<h2 className={styles.title}>
-								{hero.mainTitle}{' '}
-								<span className={styles.yellow}>{hero.titleSpan1}</span>{' '}
+								{hero.title1}
+								<br />
+								<span className={styles.yellow}>{hero.titleSpan1}</span> <br />
+								{hero.title2}
+								<br />
 								<span className={styles.purple}>{hero.titleSpan2}</span>
 							</h2>
 							<p className={styles.text}>{hero.text}</p>
@@ -28,13 +31,33 @@ export default async function page() {
 
 						<div className={styles.imagesWrapper}>
 							<div className={`${styles.imgWrapper} ${styles.leftImg}`}>
-								<Image
-									src={hero.image}
-									alt='factory hero'
-									width={600}
-									height={500}
-									priority
-								/>
+								<div className={styles.leftImgWrapper}>
+									<Image
+										src={hero.image1}
+										alt='#'
+										width={600}
+										height={500}
+										priority
+									/>
+								</div>
+								<div className={styles.leftImgWrapper}>
+									<Image
+										src={hero.image2}
+										alt='#'
+										width={600}
+										height={500}
+										priority
+									/>
+								</div>
+								<div className={styles.leftImgWrapper}>
+									<Image
+										src={hero.image3}
+										alt='#'
+										width={600}
+										height={500}
+										priority
+									/>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -77,7 +100,7 @@ export default async function page() {
 						<div className={styles.content}>
 							<h2 className={styles.title}>{thirdSection.title}</h2>
 							<p className={styles.text}>{thirdSection.text}</p>
-							<Button text='Learn More' className='yellowWithPurple' href='#' />
+							<Button text='Learn More' className='purple' href='#' />
 						</div>
 					</div>
 				</div>

@@ -6,11 +6,14 @@ export type FactorySwiperSlide = {
 
 export type FactoryType = {
 	hero: {
-		mainTitle: string
+		title1: string
 		titleSpan1: string
+		title2: string
 		titleSpan2: string
 		text: string
-		image: string
+		image1: string
+		image2: string
+		image3: string
 	}
 	secondSection: {
 		title: string

@@ -1,10 +1,13 @@
 {
 	"hero": {
-		"mainTitle": "Made with Crafted with",
+		"title1": "Made with",
 		"titleSpan1": "Care.",
+		"title2": " Crafted with",
 		"titleSpan2": "Zing.",
 		"text": "Behind every pack of ZingZing lies a world of precision and passion.Our factory blends advanced technology with human touch — ensuring every stick, slice, and bite meets the highest standards of safety and flavor.",
-		"image": "/mock/factory/hero.png"
+		"image1": "/mock/factory/hero1.png",
+		"image2": "/mock/factory/hero2.png",
+		"image3": "/mock/factory/hero3.png"
 	},
 	"secondSection": {
 		"title": "Quality Innovation",
