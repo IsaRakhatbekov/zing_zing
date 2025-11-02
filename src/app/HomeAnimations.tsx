@@ -22,10 +22,10 @@ export default function HomeAnimations() {
 					if (!title || !text || !pinkText || !imgWrap) return
 
 					gsap.set([title, text, pinkText], { x: -60, opacity: 0 })
-					gsap.set(imgWrap, { y: 80, opacity: 0 })
+					gsap.set(imgWrap, { y: 480, opacity: 0 })
 
 					gsap
-						.timeline({ defaults: { ease: 'power3.out' } })
+						.timeline({ defaults: { ease: 'power1.out' } })
 						.to(title, { x: 0, opacity: 1, duration: 0.8 })
 						.to(text, { x: 0, opacity: 1, duration: 0.7 }, '-=0.3')
 						.to(pinkText, { x: 0, opacity: 1, duration: 0.7 }, '-=0.25')
@@ -44,7 +44,7 @@ export default function HomeAnimations() {
 							duration: 1,
 							scrollTrigger: {
 								trigger: `.${styles.whoWeAre}`,
-								start: 'top 80%',
+								start: 'top 50%',
 								toggleActions: 'play none none none',
 							},
 						}
@@ -122,7 +122,7 @@ export default function HomeAnimations() {
 							duration: 0.8,
 							scrollTrigger: {
 								trigger: `.${styles.growTogether}`,
-								start: 'top 80%',
+								start: 'top 50%',
 								toggleActions: 'play none none none',
 							},
 						}
@@ -137,7 +137,7 @@ export default function HomeAnimations() {
 							duration: 0.7,
 							scrollTrigger: {
 								trigger: `.${styles.growTogether}`,
-								start: 'top 80%',
+								start: 'top 50%',
 								toggleActions: 'play none none none',
 							},
 						}
@@ -152,7 +152,7 @@ export default function HomeAnimations() {
 							duration: 0.6,
 							scrollTrigger: {
 								trigger: `.${styles.growTogether}`,
-								start: 'top 80%',
+								start: 'top 50%',
 								toggleActions: 'play none none none',
 							},
 						}
@@ -171,7 +171,7 @@ export default function HomeAnimations() {
 							duration: 0.8,
 							scrollTrigger: {
 								trigger: `.${styles.Differentiators}`,
-								start: 'top 80%',
+								start: 'top 50%',
 								toggleActions: 'play none none none',
 							},
 						}
@@ -188,7 +188,7 @@ export default function HomeAnimations() {
 							stagger: 0.2, // задержка между карточками
 							scrollTrigger: {
 								trigger: `.${styles.Differentiators}`,
-								start: 'top 70%',
+								start: 'top 50%',
 								toggleActions: 'play none none none',
 							},
 						}
