@@ -26,9 +26,16 @@
 	},
 	"swiper": {
 		"slides": [
-			{ "image": "/mock/factory/power.png", "alt": "Factory slide 1" },
-			{ "image": "/mock/factory/power.png", "alt": "Factory slide 2" },
-			{ "image": "/mock/factory/power.png", "alt": "Factory slide 3" }
+			{ "image": "/mock/factory/swiper-img.png", "alt": "Factory slide 1" },
+			{ "image": "/mock/factory/swiper-img.png", "alt": "Factory slide 2" },
+			{ "image": "/mock/factory/swiper-img.png", "alt": "Factory slide 3" },
+			{ "image": "/mock/factory/swiper-img.png", "alt": "Factory slide 3" },
+			{ "image": "/mock/factory/swiper-img.png", "alt": "Factory slide 3" },
+			{ "image": "/mock/factory/swiper-img.png", "alt": "Factory slide 3" },
+			{ "image": "/mock/factory/swiper-img.png", "alt": "Factory slide 3" },
+			{ "image": "/mock/factory/swiper-img.png", "alt": "Factory slide 3" },
+			{ "image": "/mock/factory/swiper-img.png", "alt": "Factory slide 3" },
+			{ "image": "/mock/factory/swiper-img.png", "alt": "Factory slide 3" }
 		]
 	}
 }

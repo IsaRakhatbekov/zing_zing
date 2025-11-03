@@ -1,9 +1,10 @@
 import Form from '@/components/Form/Form'
 import Button from '@/components/ui/Button'
-import { fetchReachUs } from '@/shared/fetchReachUs'
+
 import Image from 'next/image'
 import styles from './page.module.scss'
 import ReachUsAnimations from './ReachUsAnimations'
+import { fetchReachUs } from '@/shared/api/fetchReachUs'
 
 export default async function Page() {
 	const data = await fetchReachUs()
