@@ -1,5 +1,5 @@
-import HomeCards from '@/components/HomeCards/HomeCards'
-import Reviews from '@/components/Reviews/Reviews'
+// import HomeCards from '@/components/HomeCards/HomeCards'
+// import Reviews from '@/components/Reviews/Reviews'
 import Button from '@/components/ui/Button'
 import { fetchHome } from '@/shared/api/fetchHome'
 import Image from 'next/image'
@@ -25,8 +25,10 @@ export default async function Home() {
 					<div className={styles.wrapper}>
 						<div className={styles.content}>
 							<h1 className={styles.title}>
-								{hero.mainTitle}
+								{hero.title1}
 								<span className={styles.yellowSpan}>{hero.mainTitleSpan1}</span>
+								<br />
+								{hero.title2}
 								<span className={styles.pinkSpan}>{hero.mainTitleSpan2}</span>
 							</h1>
 							<p className={styles.text}>{hero.firstText}</p>
@@ -65,7 +67,7 @@ export default async function Home() {
 				</div>
 			</section>
 
-			<section className={styles.Differentiators}>
+			{/* <section className={styles.Differentiators}>
 				<div className='container'>
 					<h2 className={styles.title}>{secondSection.mainTitle}</h2>
 
@@ -86,11 +88,11 @@ export default async function Home() {
 						))}
 					</div>
 				</div>
-			</section>
+			</section> */}
 
-			<HomeCards thirdSection={thirdSection} />
+			{/* <HomeCards thirdSection={thirdSection} /> */}
 
-			<section className={styles.growTogether}>
+			{/* <section className={styles.growTogether}>
 				<div className={`${styles.container} container`}>
 					<div className={`${styles.wrapper} pink-bg-reverse`}>
 						<div className={styles.content}>
@@ -112,9 +114,9 @@ export default async function Home() {
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> */}
 
-			<Reviews />
+			{/* <Reviews /> */}
 		</>
 	)
 }

@@ -184,6 +184,19 @@
 
 .productsDetailed {
 	overflow: hidden;
+
+	.productsDetailedTitle {
+		text-align: center;
+		color: var(--purple);
+		font-weight: 900;
+		margin: 50px 0;
+		font-size: clamp(18px, calc(18px + 41px * (100vw / 1315px)), 59px);
+		font-family: var(--third-family);
+		& span {
+			color: var(--pink);
+		}
+	}
+
 	.block {
 		// background-color: #ccc;
 		position: relative;

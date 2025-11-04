@@ -1,7 +1,8 @@
 export type HomePageData = {
 	hero: {
-		mainTitle: string
+		title1: string
 		mainTitleSpan1: string
+		title2: string
 		mainTitleSpan2: string
 		firstText: string
 		image: string

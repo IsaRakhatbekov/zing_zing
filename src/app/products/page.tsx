@@ -102,6 +102,9 @@ export default async function Page() {
 			{/* БОЛЬШИЕ БЛОКИ */}
 			<section className={styles.productsDetailed}>
 				<div className={`${styles.container} container`}>
+					<h2 className={styles.productsDetailedTitle}>
+						OTHER DELISON <span>PRODUCTS</span>
+					</h2>
 					<ul className={styles.list}>
 						{thirdSectionBigCards?.bigCard?.[0] && (
 							<li className={styles.block}>
