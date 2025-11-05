@@ -1,7 +1,10 @@
+/* Reviews.module.scss */
+
 .reviews {
 	margin-top: 70px;
 	text-align: center;
 	padding-bottom: 100px;
+
 	.title {
 		font-family: var(--second-family);
 		font-weight: 700;
@@ -12,6 +15,7 @@
 		color: var(--pink);
 	}
 
+	/* ====== Десктопная сетка ====== */
 	.cards {
 		display: flex;
 		gap: 20px;
@@ -19,10 +23,11 @@
 		flex-wrap: wrap;
 	}
 
+	/* ====== Общий стиль карточки — одинаков для сетки и свайпера ====== */
 	.card {
 		position: relative;
-		width: 300px;
-		height: 550px;
+		width: 250px;
+		height: 450px;
 		border-radius: 16px;
 		overflow: hidden;
 		border: 3px solid #ff2fa1;
@@ -42,6 +47,7 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		display: block;
 	}
 
 	.playButton {
@@ -49,12 +55,61 @@
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%, -50%);
-		background: white;
+		background: #fff;
 		border-radius: 50%;
 		width: 60px;
 		height: 60px;
 		border: none;
 		font-size: 28px;
 		cursor: pointer;
+		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+	}
+
+	/* ====== Мобильный свайпер (отображается только до 768px) ====== */
+	.swiperRoot {
+		display: none; /* по умолчанию скрыт, включим на мобиле */
+	}
+
+	/* Базовые стили для свайпера */
+	.swiper {
+		overflow: visible; /* чтобы тени/масштабы не обрезались */
+		padding-bottom: 24px; /* место под пагинацию */
+	}
+
+	/* фиксированная ширина слайдов под наш дизайн */
+	:global(.swiper-slide) {
+		width: 300px !important; /* совпадает с .card */
+	}
+
+	/* чтоб было пространство по краям */
+	.slide {
+		/* пусто, можно добавить доп. отступы при желании */
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	/* pagination точки Swiper */
+	:global(.swiper-pagination-bullets) {
+		bottom: -15px !important;
+	}
+
+	:global(.swiper-pagination-bullet) {
+		opacity: 0.6;
+		background-color: var(--purple);
+	}
+	:global(.swiper-pagination-bullet-active) {
+		opacity: 1;
+		background-color: var(--pink);
+	}
+
+	/* ====== Переключатели отображения ====== */
+	@media (max-width: 768px) {
+		.cards {
+			display: none; /* сетку скрываем на мобиле */
+		}
+		.swiperRoot {
+			display: block; /* показываем свайпер */
+		}
 	}
 }

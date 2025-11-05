@@ -155,7 +155,7 @@
 	text-align: center;
 	color: #8037de;
 	max-width: 1328px;
-	margin: 150px auto 0;
+	margin: 150px auto;
 	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 
 	.title {
@@ -173,7 +173,8 @@
 
 	.card {
 		background: transparent;
-		width: 30%;
+		width: 100%;
+		max-width: 300px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -188,136 +189,18 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-
-			svg {
-				width: 40px;
-				height: 40px;
-				color: #fff;
-			}
 		}
 
 		.subtitle {
-			font-size: 24px;
-			font-weight: 600;
+			font-weight: 500;
+			font-size: 36px;
+			text-align: center;
+			width: 330px;
 		}
 
 		.text {
-			font-size: 18px;
-			line-height: 1.4;
-			color: #8037de;
-			max-width: 300px;
-		}
-
-		.btn {
-			margin-top: 10px;
-			background: #8037de;
-			color: #fff;
-			font-weight: 600;
-			font-size: 16px;
-			padding: 14px 34px;
-			border-radius: 40px;
-			text-decoration: none;
-			display: inline-block;
-			transform: skew(-10deg);
-			transition: 0.3s ease;
-
-			&:hover {
-				transform: skew(-10deg) scale(1.05);
-				background: #6726b0;
-			}
-		}
-	}
-
-	@media (max-width: 1024px) {
-		.cards {
-			flex-direction: column;
-			align-items: center;
-		}
-
-		.card {
-			width: 100%;
-			max-width: 500px;
-		}
-	}
-}
-
-// =======================================================
-// =======================================================
-// =======================================================
-
-.differentiators {
-	padding: 50px 0;
-
-	.wrapper {
-		padding: 50px;
-		border-radius: 112px;
-		color: var(--purple);
-		background-color: var(--yellow);
-	}
-
-	.title {
-		font-weight: 900;
-		font-size: 72px;
-		margin-bottom: 30px;
-		text-align: center;
-		font-size: clamp(18px, calc(18px + 54px * (100vw / 1315px)), 72px);
-	}
-
-	.list {
-		gap: 55px;
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-	}
-
-	.item {
-		text-align: center;
-	}
-
-	.imgWrapper {
-		width: 120px;
-		height: 120px;
-		border-radius: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-color: var(--purple);
-		margin: 0 auto 25px;
-	}
-
-	.innerTitle {
-		font-weight: 500;
-		font-size: 36px;
-		max-width: 300px;
-		font-size: clamp(18px, calc(18px + 18px * (100vw / 1315px)), 36px);
-		margin: 0 auto 15px;
-	}
-
-	.text {
-		text-align: center;
-		color: #7f37db;
-		line-height: 1.3em;
-		font-size: clamp(12px, calc(12px + 10px * (100vw / 1315px)), 22px);
-		margin-bottom: 35px;
-	}
-
-	.btn {
-		font-family: var(--font-family);
-		font-weight: 700;
-		font-size: 18px;
-		color: var(--white);
-		width: 212px;
-		height: 77px;
-		position: relative;
-		z-index: 1;
-
-		&::before {
-			content: '';
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
-			z-index: -1;
+			font-size: 22px;
+			max-width: 400px;
 		}
 	}
 }
@@ -337,7 +220,7 @@
 		max-width: 630px;
 		height: 400px;
 		overflow: hidden;
-		margin-right: -50px;
+		margin-right: 0;
 		flex-shrink: 1;
 
 		& img {
@@ -348,7 +231,8 @@
 	}
 
 	.content {
-		padding-left: 150px;
+		padding-left: 100px;
+		flex-shrink: 0;
 	}
 
 	.title {
@@ -387,6 +271,12 @@
 	}
 }
 
+@media (max-width: 1200px) {
+	.Differentiators {
+		padding: 40px 20px;
+	}
+}
+
 @media (max-width: 1150px) {
 	.hero {
 		.title {
@@ -414,6 +304,12 @@
 			margin-bottom: 20px;
 		}
 	}
+
+	.Differentiators {
+		.cards {
+			justify-content: space-around;
+		}
+	}
 }
 
 @media (max-width: 991px) {
@@ -434,24 +330,36 @@
 		}
 	}
 
+	/* на мобильных: класс pink-bg выключаем полностью */
+	:global(.pink-bg) {
+		background: none !important;
+		clip-path: none !important;
+		border-radius: 0 !important;
+		box-shadow: none !important;
+		padding: 0 !important;
+	}
+	:global(.pink-bg)::before,
+	:global(.pink-bg)::after {
+		content: none !important;
+	}
+
 	.whoWeAre {
 		position: relative;
-		isolation: isolate; /* свой стек, чтобы слои работали предсказуемо */
-		overflow: visible; /* рамка может выходить за границы */
-		background: none; /* фон перенесём на псевдоэлемент */
+		isolation: isolate;
+		overflow: visible;
+		background: none;
 
-		/* Розовая форма как фон, НЕ режет детей */
+		/* розовая форма как фон (не режет контент) */
 		&::after {
 			content: '';
 			position: absolute;
-			inset: 0; /* растянуть на весь блок */
-			background: #ff2684;
-			clip-path: polygon(0% 29%, 100% 5%, 100% 100%, 0% 70%);
-			z-index: 0; /* под контентом */
+			inset: 0;
+			background: var(--pink);
+			clip-path: polygon(0% 26%, 100% 5%, 100% 100%, 0% 70%);
+			z-index: 0;
 			pointer-events: none;
 		}
 
-		/* контент поверх формы */
 		.content,
 		.imgWrapper {
 			position: relative;
@@ -461,9 +369,139 @@
 		.content {
 			padding-right: 0;
 		}
+
 		.imgWrapper {
 			width: 400px;
 			height: 400px;
+			margin-left: 0;
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	:global(.pink-bg-reverse) {
+		background: none !important;
+		clip-path: none !important;
+		border-radius: 0 !important;
+		box-shadow: none !important;
+		padding: 0 !important;
+	}
+	:global(.pink-bg-reverse)::before,
+	:global(.pink-bg-reverse)::after {
+		content: none !important;
+	}
+
+	.growTogether {
+		position: relative;
+		isolation: isolate;
+		overflow: visible;
+		background: none;
+
+		&::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: var(--pink);
+			clip-path: polygon(0% 0%, 100% 26%, 100% 69%, 0% 91%);
+			z-index: 0;
+			pointer-events: none;
+		}
+
+		.wrapper,
+		.content,
+		.imgWrapper {
+			position: relative;
+			z-index: 1;
+			padding-left: 0;
+		}
+
+		.content {
+			width: 100%;
+			max-width: 500px;
+			flex-shrink: 1;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.Differentiators {
+		margin: 50px auto;
+	}
+	.growTogether {
+		padding: 100px 0;
+		&::after {
+			clip-path: polygon(0% 0%, 101% 29%, 101% 77%, 0% 99%);
+		}
+
+		.imgWrapper {
+			width: 300px;
+			height: 300px;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.whoWeAre {
+		background-color: var(--pink);
+		text-align: center;
+		.wrapper {
+			flex-direction: column;
+		}
+
+		.content {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			align-items: center;
+		}
+
+		.imgWrapper {
+			width: 100%;
+			max-width: 250px;
+			height: 250px;
+		}
+	}
+
+	.Differentiators {
+		background-color: #fff;
+		box-shadow: none;
+
+		.container {
+			background: #f9dc4d;
+			border-radius: 40px;
+			padding: 40px 20px;
+		}
+		.title {
+			font-size: 30px;
+		}
+
+		.card {
+			.subtitle {
+				font-size: 25px;
+			}
+
+			.text {
+				font-size: 18px;
+			}
+		}
+	}
+
+	.growTogether {
+		background-color: var(--pink);
+		padding: 40px 0;
+		.wrapper {
+			flex-direction: column-reverse;
+			align-items: center;
+		}
+
+		.container {
+			text-align: center;
+			align-items: center;
+		}
+
+		.imgWrapper {
+			width: 250px;
+			height: 190px;
 		}
 	}
 }

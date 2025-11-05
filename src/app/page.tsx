@@ -1,5 +1,5 @@
 // import HomeCards from '@/components/HomeCards/HomeCards'
-// import Reviews from '@/components/Reviews/Reviews'
+import Reviews from '@/components/Reviews/Reviews'
 import Button from '@/components/ui/Button'
 import { fetchHome } from '@/shared/api/fetchHome'
 import Image from 'next/image'
@@ -67,8 +67,8 @@ export default async function Home() {
 				</div>
 			</section>
 
-			{/* <section className={styles.Differentiators}>
-				<div className='container'>
+			<section className={styles.Differentiators}>
+				<div className={`${styles.container} container`}>
 					<h2 className={styles.title}>{secondSection.mainTitle}</h2>
 
 					<div className={styles.cards}>
@@ -81,18 +81,16 @@ export default async function Home() {
 								</div>
 								<h3 className={styles.subtitle}>{card.title}</h3>
 								<p className={styles.text}>{card.text}</p>
-								<a href='#' className={styles.btn}>
-									Learn More
-								</a>
+								<Button text='Learn More' href='#' className='purple' />
 							</div>
 						))}
 					</div>
 				</div>
-			</section> */}
+			</section>
 
 			{/* <HomeCards thirdSection={thirdSection} /> */}
 
-			{/* <section className={styles.growTogether}>
+			<section className={styles.growTogether}>
 				<div className={`${styles.container} container`}>
 					<div className={`${styles.wrapper} pink-bg-reverse`}>
 						<div className={styles.content}>
@@ -114,9 +112,9 @@ export default async function Home() {
 						</div>
 					</div>
 				</div>
-			</section> */}
+			</section>
 
-			{/* <Reviews /> */}
+			<Reviews />
 		</>
 	)
 }
