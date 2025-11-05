@@ -1,4 +1,5 @@
 .Header {
+	position: relative;	
 	.topText {
 		font-family: var(--second-family);
 		font-weight: 400;
@@ -18,6 +19,18 @@
 		justify-content: space-between;
 		gap: 10px;
 		padding: 40px 0 0 0;
+	}
+
+	.logoWrapper {
+		width: 207px;
+		height: 120px;
+		overflow: hidden;
+
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
 	}
 
 	.list {
@@ -62,8 +75,6 @@
 		&:hover {
 			color: var(--yellow);
 		}
-
-		&:focus{}
 	}
 
 	.activeLink {
@@ -237,19 +248,21 @@
 
 @media (max-width: 1200px) {
 	.Header {
-		.nav {
-			padding: 15px 0;
-		}
-		.logoWrapper {
-			width: 150px;
-			height: 80px;
-		}
 		.list {
-			gap: 20px;
+			gap: 30px;
 		}
 		.link {
 			font-weight: 400;
 			font-size: 18px;
+		}
+	}
+}
+
+@media (max-width: 1100px) {
+	.Header {
+		.logoWrapper {
+			width: 180px;
+			height: 90px;
 		}
 	}
 }
@@ -261,21 +274,31 @@
 			padding: 5px;
 		}
 		.logoWrapper {
-			width: 100px;
+			width: 130px;
 			height: 60px;
+		}
+
+		.nav {
+			padding: 20px 0 0 0;
+		}
+
+		.list {
+			gap: 20px;
 		}
 
 		.link {
 			font-size: 16px;
+
+			&::before {
+				width: 78px;
+				height: 30px;
+			}
 		}
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
 	.Header {
-		.topText {
-			font-size: 12px;
-		}
 		.list {
 			display: none;
 		}
@@ -293,6 +316,7 @@
 			overflow-y: auto;
 			transform: translateY(-200%);
 			transition: all 0.5s ease;
+			z-index: 90;
 
 			.list {
 				display: flex;
@@ -326,6 +350,15 @@
 
 		.burgerBtn {
 			display: flex;
+			z-index: 99;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.Header {
+		.topText {
+			font-size: 12px;
 		}
 	}
 }

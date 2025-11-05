@@ -3,7 +3,7 @@ import logo from '@/assets/images/logo.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import styles from './Header.module.scss'
 
 const Header = () => {
@@ -17,6 +17,21 @@ const Header = () => {
 		{ code: 'RUS', name: 'Русский' },
 		{ code: 'KAZ', name: 'Қазақша' },
 	]
+
+	// Эффект для управления скроллом
+	useEffect(() => {
+		const body = document.body;
+		if (burger) {
+			body.classList.add('lockScroll');
+		} else {
+			body.classList.remove('lockScroll');
+		}
+
+		// Очистка при размонтировании компонента
+		return () => {
+			body.classList.remove('lockScroll');
+		};
+	}, [burger]);
 
 	const handleLangSelect = (langCode: string) => {
 		setCurrentLang(langCode)
