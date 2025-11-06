@@ -28,7 +28,13 @@ const FactorySwiper = ({ data }: Props) => {
 				centeredSlides
 				loop
 				slidesPerView='auto'
-				coverflowEffect={{ rotate: 0, stretch: 0, depth: 200, modifier: 2.5 }}
+				coverflowEffect={{
+					rotate: 0,
+					stretch: 300, // отрицательное = перекрытие
+					depth: 300,
+					modifier: 1,
+					scale: 1, // боковые будут 80% от центральной
+				}}
 				modules={[EffectCoverflow]}
 				className={`swiper_container ${styles.swiper}`}
 				style={{ overflow: 'visible' }} // <— ключевая строка

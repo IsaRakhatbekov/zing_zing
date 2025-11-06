@@ -201,7 +201,11 @@ export default async function Page() {
 								<span>{fourthSectionGrowTogether.titleSpan}</span>
 							</h2>
 							<p className={styles.text}>{fourthSectionGrowTogether.text}</p>
-							<Button text='Contact Us' href='#' className='purple' />
+							<Button
+								text='Contact Us'
+								href='/aboutUs#aboutUsForm'
+								className='purple'
+							/>
 						</div>
 
 						<div className={styles.imgWrapper}>

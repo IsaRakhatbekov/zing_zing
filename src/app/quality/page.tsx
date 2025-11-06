@@ -87,7 +87,7 @@ export default async function page() {
 								{secondSection.title} <span>{secondSection.titleSpan}</span>
 							</h2>
 							<p className={styles.text}>{secondSection.text}</p>
-							<Button text='Contact Us' href='#' className='pink' />
+							<Button text='Contact Us' href='#qualityForm' className='pink' />
 						</div>
 					</div>
 				</div>
@@ -120,7 +120,11 @@ export default async function page() {
 								<span>{fourthSection.ensure.titleSpan}</span>
 							</h2>
 							<p className={styles.text}>{fourthSection.ensure.text}</p>
-							<Button text='Contact Us' className='purple' href='#' />
+							<Button
+								text='Contact Us'
+								className='purple'
+								href='#qualityForm'
+							/>
 						</div>
 						<div className={styles.imgWrapper}>
 							<Image
@@ -148,7 +152,11 @@ export default async function page() {
 							<p className={`${styles.text} ${styles.pinkText}`}>
 								{fourthSection.accountability.text}
 							</p>
-							<Button text='Contact Us' href='#' className='yellow' />
+							<Button
+								text='Contact Us'
+								href='#qualityForm'
+								className='yellow'
+							/>
 						</div>
 					</div>
 
@@ -158,7 +166,7 @@ export default async function page() {
 								{fourthSection.stewardship.title}
 							</h2>
 							<p className={styles.text}>{fourthSection.stewardship.text}</p>
-							<Button text='Contact Us' className='pink' href='#' />
+							<Button text='Contact Us' className='pink' href='#qualityForm' />
 						</div>
 						<div className={styles.imgWrapper}>
 							<Image
@@ -186,13 +194,19 @@ export default async function page() {
 							<p className={`${styles.text} ${styles.sertificationsText}`}>
 								{fourthSection.certifications.text}
 							</p>
-							<Button text='Contact Us' href='#' className='yellow' />
+							<Button
+								text='Contact Us'
+								href='#qualityForm'
+								className='yellow'
+							/>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<Form />
+			<section id='qualityForm'>
+				<Form />
+			</section>
 		</>
 	)
 }

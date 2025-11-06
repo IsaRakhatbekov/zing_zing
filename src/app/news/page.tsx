@@ -82,7 +82,7 @@ export default async function Page() {
 								<span>{firstBlock.titleSpan}</span>
 							</h2>
 							<p className={styles.text}>{firstBlock.text}</p>
-							<Button text='Contact Us' className='yellow' href='#' />
+							<Button text='Contact Us' className='yellow' href='/reachUs' />
 						</div>
 						<div className={styles.imgWrapper}>
 							<Image
@@ -111,7 +111,7 @@ export default async function Page() {
 						<div className={styles.content}>
 							<h2 className={styles.title}>{secondBlock.title}</h2>
 							<p className={styles.text}>{secondBlock.text}</p>
-							<Button text='Contact Us' className='purple' href='#' />
+							<Button text='Contact Us' className='purple' href='/reachUs' />
 						</div>
 					</div>
 				</div>
@@ -124,7 +124,7 @@ export default async function Page() {
 						<div className={styles.content}>
 							<h2 className={styles.title}>{thirdBlock.title}</h2>
 							<p className={styles.text}>{thirdBlock.text}</p>
-							<Button text='Contact Us' className='pink' href='#' />
+							<Button text='Contact Us' className='pink' href='/reachUs' />
 						</div>
 						<div className={styles.imgWrapper}>
 							<Image

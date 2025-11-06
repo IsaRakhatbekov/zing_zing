@@ -61,7 +61,8 @@ export default async function Home() {
 								<span>{firstSection.titleSpan}</span>
 							</h2>
 							<p className={styles.text}>{firstSection.text}</p>
-							<Button text='Learn More' href='#' className='yellow' />
+
+							<Button text='Learn More' href='/aboutUs' className='yellow' />
 						</div>
 					</div>
 				</div>
@@ -81,7 +82,7 @@ export default async function Home() {
 								</div>
 								<h3 className={styles.subtitle}>{card.title}</h3>
 								<p className={styles.text}>{card.text}</p>
-								<Button text='Learn More' href='#' className='purple' />
+								<Button text='Learn More' href='/aboutUs' className='purple' />
 							</div>
 						))}
 					</div>
@@ -99,7 +100,11 @@ export default async function Home() {
 								<span>{fourthSectionGrowTogether.titleSpan}</span>
 							</h2>
 							<p className={styles.text}>{fourthSectionGrowTogether.text}</p>
-							<Button text='Contact Us' href='#' className='purple' />
+							<Button
+								text='Contact Us'
+								href='/aboutUs#aboutUsForm'
+								className='purple'
+							/>
 						</div>
 
 						<div className={styles.imgWrapper}>

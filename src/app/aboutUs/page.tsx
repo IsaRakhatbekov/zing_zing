@@ -12,7 +12,7 @@ export default async function page() {
 	return (
 		<>
 			<AboutUsAnimations />
-			<section className={styles.secondHero}>
+			<section className={styles.secondHero} id='aboutUsHero'>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
 						<div className={styles.textWrapper}>
@@ -105,7 +105,11 @@ export default async function page() {
 								{community.title} <span>{community.titleSpan}</span>
 							</h2>
 							<p className={styles.text}>{community.text}</p>
-							<Button text='Contact Us' className='purple' href='#' />
+							<Button
+								text='Contact Us'
+								className='purple'
+								href='#aboutUsForm'
+							/>
 						</div>
 						<div className={styles.imgWrapper}>
 							<Image src={community.image} alt='' width={400} height={300} />
@@ -122,7 +126,7 @@ export default async function page() {
 								{whyUs.title} <span>{whyUs.titleSpan}</span>
 							</h2>
 							<p className={styles.text}>{whyUs.text}</p>
-							<Button text='Contact Us' href='#' className='pink' />
+							<Button text='Contact Us' href='#aboutUsForm' className='pink' />
 						</div>
 					</div>
 
@@ -133,7 +137,11 @@ export default async function page() {
 								{mission.title} <span>{mission.titleSpan}</span>
 							</h2>
 							<p className={styles.text}>{mission.text}</p>
-							<Button text='Contact Us' href='#' className='purple' />
+							<Button
+								text='Contact Us'
+								href='#aboutUsForm'
+								className='purple'
+							/>
 						</div>
 						<div className={styles.imgWrapper}>
 							<Image src={mission.image} alt='' width={400} height={300} />
@@ -141,7 +149,10 @@ export default async function page() {
 					</div>
 				</div>
 			</section>
-			<Form />
+
+			<section id='aboutUsForm'>
+				<Form />
+			</section>
 		</>
 	)
 }

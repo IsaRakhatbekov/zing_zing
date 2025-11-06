@@ -1,10 +1,10 @@
 import Form from '@/components/Form/Form'
 import Button from '@/components/ui/Button'
 
+import { fetchReachUs } from '@/shared/api/fetchReachUs'
 import Image from 'next/image'
 import styles from './page.module.scss'
 import ReachUsAnimations from './ReachUsAnimations'
-import { fetchReachUs } from '@/shared/api/fetchReachUs'
 
 export default async function Page() {
 	const data = await fetchReachUs()
@@ -66,7 +66,11 @@ export default async function Page() {
 						<div className={styles.content}>
 							<h2 className={styles.title}>{secondSection.title}</h2>
 							<p className={styles.text}>{secondSection.text}</p>
-							<Button text='Learn More' className='yellow' href='#' />
+							<Button
+								text='Learn More'
+								className='yellow'
+								href='#reachUsForm'
+							/>
 						</div>
 						<div className={styles.inner}>
 							<div className={styles.imgWrapper}>
@@ -82,7 +86,9 @@ export default async function Page() {
 				</div>
 			</section>
 
-			<Form />
+			<section id='reachUsForm'>
+				<Form />
+			</section>
 		</>
 	)
 }
