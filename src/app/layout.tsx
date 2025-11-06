@@ -2,7 +2,6 @@ import Footer from '@/components/Footer/Footer'
 import Header from '@/components/Header/Header'
 import '@/styles/global.scss'
 import { Inter, Montserrat, Roboto } from 'next/font/google'
-import ScrollManager from './ScrollManager'
 
 const roboto = Roboto({
 	variable: '--font-family',
@@ -42,7 +41,6 @@ export default function RootLayout({
 			<body
 				className={`${inter.variable} ${roboto.variable} ${montserrat.variable}`}
 			>
-				<ScrollManager />
 				<Header />
 				<main>{children}</main>
 				<Footer />

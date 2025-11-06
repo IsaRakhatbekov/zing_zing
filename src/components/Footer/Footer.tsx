@@ -1,3 +1,6 @@
+import footerLogo from '@/assets/images/footer-logo.svg'
+import Image from 'next/image'
+import Link from 'next/link'
 import styles from './Footer.module.scss'
 
 const Footer = () => {
@@ -8,34 +11,98 @@ const Footer = () => {
 					<div className={styles.column}>
 						<h3>Shop</h3>
 						<ul>
-							<li>Spicy Sticks</li>
-							<li>BBQ Flavor</li>
-							<li>Seaweed Snacks</li>
-							<li>Classic Taste</li>
-							<li>Party Mix</li>
-							<li>Limited Editions</li>
+							<li>
+								<Link className={styles.links} href={'/'}>
+									Spicy Sticks
+								</Link>
+							</li>
+							<li>
+								<Link className={styles.links} href={'/'}>
+									BBQ Flavor
+								</Link>
+							</li>
+							<li>
+								<Link className={styles.links} href={'/'}>
+									Seaweed Snacks
+								</Link>
+							</li>
+							<li>
+								<Link className={styles.links} href={'/'}>
+									Classic Taste
+								</Link>
+							</li>
+							<li>
+								<Link className={styles.links} href={'/'}>
+									Party Mix
+								</Link>
+							</li>
+							<li>
+								<Link className={styles.links} href={'/'}>
+									Limited Editions
+								</Link>
+							</li>
 						</ul>
 					</div>
 
 					<div className={styles.column}>
 						<h3>About Us</h3>
 						<ul>
-							<li>Our Story</li>
-							<li>Quality & Certifications</li>
-							<li>Manufacturing & Technology</li>
-							<li>News & Events</li>
-							<li>Careers</li>
+							<li>
+								<Link className={styles.links} href={'/'}>
+									Our Story
+								</Link>
+							</li>
+							<li>
+								<Link className={styles.links} href={'/'}>
+									Quality & Certifications
+								</Link>
+							</li>
+							<li>
+								<Link className={styles.links} href={'/'}>
+									Manufacturing & Technology
+								</Link>
+							</li>
+							<li>
+								<Link className={styles.links} href={'/'}>
+									News & Events
+								</Link>
+							</li>
+							<li>
+								<Link className={styles.links} href={'/'}>
+									Careers
+								</Link>
+							</li>
 						</ul>
 					</div>
 
 					<div className={styles.column}>
 						<h3>Support</h3>
 						<ul>
-							<li>FAQs</li>
-							<li>Contact Us</li>
-							<li>Find a Store</li>
-							<li>Become a Distributor</li>
-							<li>Partnership Inquiry</li>
+							<li>
+								<Link className={styles.links} href={'/'}>
+									FAQs
+								</Link>
+							</li>
+							<li>
+								<Link className={styles.links} href={'/'}>
+									Contact Us
+								</Link>
+							</li>
+							<li>
+								<Link className={styles.links} href={'/'}>
+									Find a Store
+								</Link>
+							</li>
+							<li>
+								<Link className={styles.links} href={'/'}>
+									Become a Distributor
+								</Link>
+							</li>
+							<li>
+								<Link className={styles.links} href={'/'}>
+									Partnership Inquiry
+								</Link>
+							</li>
 						</ul>
 					</div>
 
@@ -128,7 +195,7 @@ const Footer = () => {
 					<div className={styles.bottomInner}>
 						<div className={styles.logoWrapper}>
 							<span className={styles.logo}>
-								{/* <img src='../../../public/footer-logo.svg' alt='' /> */}
+								<Image src={footerLogo} alt='' />
 							</span>
 							<span>© 2025 ZingZing</span>
 						</div>

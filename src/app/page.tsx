@@ -5,6 +5,7 @@ import { fetchHome } from '@/shared/api/fetchHome'
 import Image from 'next/image'
 import HomeAnimations from './HomeAnimations'
 import styles from './page.module.scss'
+import HomeCards from '@/components/HomeCards/HomeCards'
 
 // SERVER COMPONENT
 export default async function Home() {
@@ -89,7 +90,7 @@ export default async function Home() {
 				</div>
 			</section>
 
-			{/* <HomeCards thirdSection={thirdSection} /> */}
+			<HomeCards thirdSection={thirdSection} />
 
 			<section className={styles.growTogether}>
 				<div className={`${styles.container} container`}>
