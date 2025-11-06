@@ -1,4 +1,4 @@
-
+import Button from '@/components/ui/Button'
 import { fetchProducts } from '@/shared/api/fetchProducts'
 import Image from 'next/image'
 import styles from './page.module.scss'
@@ -73,7 +73,7 @@ export default async function Page() {
 			</section>
 
 			{/* МАЛЕНЬКИЕ КАРТОЧКИ */}
-			{/* <section className={styles.products} id='products-small-cards'>
+			<section className={styles.products} id='products-small-cards'>
 				<div className='container'>
 					<ul className={styles.list}>
 						{secondSectionSmallCard.cards.map((p, index) => (
@@ -97,10 +97,10 @@ export default async function Page() {
 						))}
 					</ul>
 				</div>
-			</section> */}
+			</section>
 
 			{/* БОЛЬШИЕ БЛОКИ */}
-			{/* <section className={styles.productsDetailed}>
+			<section className={styles.productsDetailed}>
 				<div className={`${styles.container} container`}>
 					<h2 className={styles.productsDetailedTitle}>
 						OTHER DELISON <span>PRODUCTS</span>
@@ -189,10 +189,10 @@ export default async function Page() {
 						)}
 					</ul>
 				</div>
-			</section> */}
+			</section>
 
 			{/* Остальное как было */}
-			{/* <section className={styles.growTogether}>
+			<section className={styles.growTogether}>
 				<div className={`${styles.container} container`}>
 					<div className={`${styles.wrapper} pink-bg-reverse`}>
 						<div className={styles.content}>
@@ -218,7 +218,7 @@ export default async function Page() {
 						</div>
 					</div>
 				</div>
-			</section> */}
+			</section>
 		</>
 	)
 }
