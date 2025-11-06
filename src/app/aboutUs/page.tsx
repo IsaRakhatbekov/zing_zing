@@ -72,7 +72,6 @@ export default async function page() {
 						{secondSection.list.map((item: any) => (
 							<li className={styles.item} key={item.id}>
 								<div className={styles.imgWrapper}>
-									{/* imgWrapper должен быть position:relative в CSS */}
 									<Image src={item.image} alt='' width={400} height={300} />
 								</div>
 								<h3 className={styles.innerTitle}>{item.innerTitle}</h3>
@@ -85,7 +84,6 @@ export default async function page() {
 						{secondSection.dropsList.map((d: any) => (
 							<li className={styles.dropsItem} key={d.id}>
 								<div className={styles.iconWrapper}>
-									{/* вместо inline SVG — картинка из моков */}
 									<Image src={d.image} alt='' width={150} height={150} />
 								</div>
 								<h3 className={styles.dropsTitle}>{d.dropsTitle}</h3>
@@ -98,7 +96,6 @@ export default async function page() {
 
 			<section className={styles.ourCommunity}>
 				<div className={`${styles.container} container`}>
-					{/* 1) Our Community (pink) */}
 					<div className={`${styles.wrapper} pink-bg-reverse`}>
 						<div className={styles.content}>
 							<h2 className={styles.title}>
@@ -116,7 +113,6 @@ export default async function page() {
 						</div>
 					</div>
 
-					{/* 2) Why Choose Us (purple) */}
 					<div className={styles.purpleWrapper}>
 						<div className={styles.purpleImgWrapper}>
 							<Image src={whyUs.image} alt='' width={400} height={300} />
@@ -130,7 +126,6 @@ export default async function page() {
 						</div>
 					</div>
 
-					{/* 3) Our Mission (yellow) */}
 					<div className={styles.yellowWrapper}>
 						<div className={styles.content}>
 							<h2 className={styles.title}>

@@ -18,7 +18,7 @@
 	.title {
 		max-width: 268px;
 		font-weight: 900;
-		font-size: 52px;
+		font-size: clamp(28px, 4vw, 52px);
 
 		& .purple {
 			color: var(--purple);
@@ -31,7 +31,7 @@
 
 	.text {
 		font-weight: 400;
-		font-size: 18px;
+		font-size: clamp(14px, 1.5vw, 18px);
 		line-height: 100%;
 		max-width: 280px;
 	}
@@ -43,8 +43,6 @@
 	}
 
 	.imgWrapper {
-		// overflow: hidden;
-
 		& img {
 			width: 100%;
 			height: 100%;
@@ -54,14 +52,14 @@
 
 	.leftImg {
 		position: relative;
-		width: 420px;
-		height: 300px;
+		width: min(420px, 28vw);
+		height: min(300px, 20vw);
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		.leftImgWrapper {
-			width: 150px;
-			height: 230px;
+			width: min(150px, 10vw);
+			height: min(230px, 15vw);
 			overflow: hidden;
 
 			position: absolute;
@@ -125,23 +123,28 @@
 
 	.list {
 		display: flex;
-		align-items: center;
-		justify-content: space-between;
+		align-items: stretch;
+		justify-content: center;
 		flex-wrap: wrap;
 		gap: 60px;
 		margin-bottom: 80px;
 	}
 
 	.item {
-		width: 272px;
+		flex: 1 1 220px;
+		max-width: 272px;
+		min-width: 200px;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.imgWrapper {
-		width: 272px;
+		width: 100%;
 		height: 149px;
 		overflow: hidden;
 		margin-bottom: 40px;
 		position: relative;
+		flex-shrink: 0;
 
 		& img {
 			width: 100%;
@@ -152,28 +155,30 @@
 
 	.innerTitle {
 		font-weight: 900;
-		font-size: 24px;
+		font-size: clamp(18px, 2vw, 24px);
 		line-height: 100%;
 		text-transform: uppercase;
 		text-align: center;
 		color: var(--purple);
 		margin-bottom: 15px;
+		flex-shrink: 0;
 	}
 
 	.text {
 		font-weight: 400;
-		font-size: 18px;
+		font-size: clamp(14px, 1.5vw, 18px);
 		line-height: 100%;
 		text-align: center;
 		color: var(--purple);
+		flex-grow: 1;
 	}
 
 	.dropsList {
 		margin-top: 50px;
-		gap: 20px;
+		gap: 150px 20px;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: space-around;
 		flex-wrap: wrap;
 	}
 
@@ -189,10 +194,10 @@
 		&::after {
 			content: '';
 			position: absolute;
-			width: 135%;
-			height: 145%;
+			width: 100%;
+			height: 135%;
 			top: -12px;
-			left: -47px;
+			left: 6px;
 			background: url('../../assets/images/HotPutBg.png') no-repeat
 				center/contain;
 			z-index: -1;
@@ -200,8 +205,8 @@
 	}
 
 	.iconWrapper {
-		width: 180px;
-		height: 180px;
+		width: 170px;
+		height: 170px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -241,6 +246,8 @@
 .ourCommunity {
 	position: relative;
 	z-index: 1;
+	padding-bottom: 100px;
+
 	.wrapper {
 		height: 440px;
 		display: flex;
@@ -249,6 +256,11 @@
 		position: relative;
 		z-index: 1;
 	}
+
+	.content {
+		flex-shrink: 1;
+	}
+
 	.title {
 		font-size: clamp(18px, calc(18px + 42px * (100vw / 1315px)), 60px);
 		& span {
@@ -268,11 +280,12 @@
 		height: 850px;
 		overflow: hidden;
 		z-index: 2;
+		flex-shrink: 0;
 
 		& img {
 			width: 100%;
 			height: 100%;
-			object-fit: cover;
+			object-fit: contain;
 		}
 	}
 
@@ -356,3 +369,410 @@
 // ========================================
 // ========================================
 // ========================================
+
+@media (max-width: 1200px) {
+	.secondHero {
+		.wrapper {
+			padding: 40px;
+		}
+	}
+
+	.ourCommunity {
+		.purpleWrapper,
+		.yellowWrapper {
+			margin-top: 0px;
+		}
+
+		.imgWrapper {
+			width: 475px;
+			height: 800px;
+		}
+
+		.purpleImgWrapper {
+			height: 380px;
+			margin: 80px 0 80px 50px;
+		}
+
+		.yellowWrapper {
+			.title {
+				font-size: 40px;
+			}
+
+			.text {
+				margin: 8px 0 30px;
+			}
+
+			.imgWrapper {
+				flex-shrink: 1;
+				height: 380px;
+			}
+		}
+
+		.title {
+			font-size: 40px;
+		}
+
+		.text {
+			margin: 8px 0 30px;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.secondHero {
+		.wrapper {
+			height: 280px;
+		}
+		.rightImg {
+			width: 222px;
+			height: 350px;
+		}
+
+		.textWrapper {
+			flex-shrink: 1;
+		}
+	}
+
+	.centralAsia {
+		.dropsList {
+			.dropsItem {
+				&::after {
+					content: '';
+					position: absolute;
+					width: 99%;
+					height: 118%;
+				}
+			}
+			.dropsTitle {
+				font-size: 20px;
+			}
+
+			.iconWrapper {
+				width: 143px;
+				height: 143px;
+			}
+		}
+	}
+
+	.ourCommunity {
+		.imgWrapper {
+			width: 360px;
+			height: 580px;
+			margin-right: 30px;
+		}
+		.purpleImgWrapper {
+			height: 380px;
+			margin: 0px 0 0px 50px;
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.ourCommunity {
+		.title {
+			font-size: 30px;
+		}
+
+		.text {
+			font-size: 18px;
+		}
+
+		.wrapper {
+			padding-left: 80px;
+		}
+
+		.yellowWrapper {
+			.title {
+				font-size: 30px;
+			}
+
+			.text {
+				font-size: 18px;
+			}
+		}
+
+		.purpleWrapper {
+			.purpleImgWrapper {
+				max-width: 360px;
+				flex-shrink: 1;
+			}
+		}
+
+		.wrapper,
+		.purpleWrapper,
+		.yellowWrapper {
+			position: relative;
+			isolation: isolate;
+
+			.content,
+			.imgWrapper,
+			.purpleImgWrapper {
+				position: relative;
+				z-index: 1;
+			}
+		}
+
+		.wrapper {
+			background: none;
+			padding-left: 40px;
+
+			&::after {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: var(--pink);
+				clip-path: polygon(0% 38%, 100% 5%, 100% 96%, 0% 65%);
+				z-index: 0;
+				pointer-events: none;
+			}
+		}
+
+		.purpleWrapper {
+			padding-right: 40px;
+			&::after {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: var(--purple);
+				clip-path: polygon(0% 31%, 100% 4%, 100% 96%, 0% 67%);
+				transform: none;
+				z-index: 0;
+				pointer-events: none;
+			}
+		}
+
+		.yellowWrapper {
+			background: none;
+			padding-left: 40px;
+
+			&::after {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: var(--yellow);
+				clip-path: polygon(0% 2%, 100% 41%, 100% 65%, -1% 96%);
+				z-index: 0;
+				pointer-events: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.secondHero {
+		.rightImg {
+			width: 200px;
+			height: 310px;
+			bottom: 15px;
+		}
+	}
+
+	.ourCommunity {
+		.imgWrapper {
+			width: 300px;
+			height: 474px;
+			margin-right: 0;
+		}
+
+		.wrapper {
+			height: 350px;
+		}
+
+		.purpleImgWrapper {
+			height: 350px;
+		}
+	}
+}
+
+@media (max-width: 700px) {
+	.secondHero {
+		.leftImg {
+			.leftImgWrapper {
+				width: min(150px, 16vw);
+				height: min(230px, 25vw);
+
+				&:nth-child(1) {
+					left: -10%;
+					z-index: 1;
+					top: -25%;
+					transform: rotate(-40deg);
+				}
+				&:nth-child(2) {
+					left: 15%;
+					z-index: 2;
+					transform: rotate(-25deg);
+				}
+				&:nth-child(3) {
+					top: 10%;
+					left: 35%;
+					z-index: 3;
+					transform: rotate(5deg);
+				}
+			}
+		}
+
+		.rightImg {
+			display: none;
+		}
+	}
+
+	.centralAsia {
+		.dropsList {
+			gap: 90px;
+		}
+	}
+
+	.ourCommunity {
+		.imgWrapper {
+			width: 200px;
+			height: 315px;
+			margin-bottom: -120px;
+		}
+		.wrapper {
+			&::after {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: var(--pink);
+				clip-path: polygon(0% 39%, 100% 0%, 100% 100%, 0% 71%);
+				z-index: 0;
+				pointer-events: none;
+			}
+		}
+
+		.yellowWrapper {
+			background: none;
+			padding-left: 40px;
+			.imgWrapper {
+				height: 500px;
+				max-width: 500px;
+			}
+			&::after {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: var(--yellow);
+				clip-path: polygon(0% 2%, 100% 41%, 100% 65%, -1% 96%);
+				z-index: 0;
+				pointer-events: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.secondHero {
+		.wrapper {
+			padding: 20px;
+			height: 240px;
+		}
+	}
+
+	.ourCommunity {
+		padding-bottom: 60px;
+
+		.title {
+			text-align: center;
+		}
+		.text {
+			text-align: center;
+			max-width: 100%;
+		}
+
+		/* общие правила для трёх блоков */
+		.wrapper,
+		.purpleWrapper,
+		.yellowWrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			height: auto;
+			gap: 20px;
+			padding: 40px 20px;
+			text-align: center;
+
+			/* снимаем все формы */
+			&::after {
+				content: none !important;
+			}
+
+			/* ВСЕГДА: сначала картинка, потом контент */
+			.imgWrapper,
+			.purpleImgWrapper {
+				order: -1;
+				align-self: center;
+			}
+
+			.content {
+				order: 0;
+				width: 100%;
+			} /* явное поведение */
+		}
+
+		/* 1) Розовый блок */
+		.wrapper {
+			background: none;
+			background-color: var(--pink);
+		}
+
+		/* 2) Фиолетовый блок */
+		.purpleWrapper {
+			background: none;
+			background-color: var(--purple);
+			.purpleImgWrapper {
+				max-width: 200px;
+			}
+
+			.title,
+			.text {
+				color: var(--white);
+			}
+			.title span {
+				color: var(--yellow);
+			}
+
+			padding-right: 20px;
+			text-align: center;
+		}
+
+		/* 3) Жёлтый блок */
+		.yellowWrapper {
+			background: none;
+			background-color: var(--yellow);
+			.imgWrapper {
+				max-width: 300px;
+				height: 220px;
+			}
+
+			.title {
+				color: var(--purple);
+			}
+			.title span {
+				color: var(--pink);
+			}
+			.text {
+				color: var(--purple);
+			}
+
+			padding-left: 20px;
+		}
+
+		/* картинки — ужимаем и центрируем */
+		.imgWrapper,
+		.purpleImgWrapper {
+			width: 100%;
+			max-width: 200px;
+			height: auto;
+			margin: 0 auto;
+			overflow: hidden;
+
+			& img {
+				width: 100%;
+				height: auto;
+				object-fit: contain;
+			}
+		}
+	}
+}

@@ -42,25 +42,25 @@
 		"dropsList": [
 			{
 				"id": 1,
-				"image": "/mock/aboutUs/drops.svg",
+				"image": "/mock/aboutUs/drops.png",
 				"dropsTitle": "Quality with Heart",
 				"dropsText": "Every batch is made with care, under strict hygiene and safety standards."
 			},
 			{
 				"id": 2,
-				"image": "/mock/aboutUs/drops.svg",
+				"image": "/mock/aboutUs/drops.png",
 				"dropsTitle": "Fun with Purpose",
 				"dropsText": "We add humor and playfulness without losing our authenticity."
 			},
 			{
 				"id": 3,
-				"image": "/mock/aboutUs/drops.svg",
+				"image": "/mock/aboutUs/drops.png",
 				"dropsTitle": "Local Roots, Global Mind",
 				"dropsText": "Proudly crafted in Central Asia, designed for the world."
 			},
 			{
 				"id": 4,
-				"image": "/mock/aboutUs/drops.svg",
+				"image": "/mock/aboutUs/drops.png",
 				"dropsTitle": "Trust & Transparency",
 				"dropsText": "No hidden ingredients, no empty promises — only honest spice."
 			}

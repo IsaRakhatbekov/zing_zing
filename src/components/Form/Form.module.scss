@@ -41,14 +41,14 @@
 
 	.title {
 		font-weight: 900;
-		font-size: 52px;
+		font-size: clamp(32px, 4vw, 52px);
 		line-height: 100%;
 		margin-bottom: 30px;
 	}
 
 	.text {
 		font-weight: 400;
-		font-size: 18px;
+		font-size: clamp(14px, 1.5vw, 18px);
 		line-height: 100%;
 		color: #fff;
 	}
@@ -56,7 +56,8 @@
 	.rightSide {
 		width: 100%;
 		max-width: 577px;
-		height: 383px;
+		height: auto;
+		min-height: 383px;
 	}
 
 	.inputsWrapper {
@@ -70,7 +71,7 @@
 
 	.lbl {
 		font-weight: 400;
-		font-size: 18px;
+		font-size: clamp(14px, 1.5vw, 18px);
 		color: #fff;
 	}
 
@@ -131,7 +132,24 @@
 
 	.successText {
 		font-weight: 700;
-		font-size: 22px;
+		font-size: clamp(18px, 2vw, 22px);
 		color: #fff;
+	}
+
+	// Медиа-запрос для мобильных устройств
+	@media (max-width: 768px) {
+		flex-direction: column;
+		text-align: center;
+		padding: 30px 20px;
+
+		.textWrapper {
+			max-width: 100%;
+			margin-bottom: 30px;
+		}
+
+		.rightSide {
+			width: 100%;
+			max-width: 100%;
+		}
 	}
 }
