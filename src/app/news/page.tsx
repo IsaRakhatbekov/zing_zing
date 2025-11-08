@@ -1,4 +1,3 @@
-import Button from '@/components/ui/Button'
 import { fetchNews } from '@/shared/api/fetchNews'
 import Image from 'next/image'
 import NewsAnimations from './NewsAnimations'
@@ -73,7 +72,7 @@ export default async function Page() {
 			</section>
 
 			{/* === BRAND NEWS === */}
-			<section className={styles.brandNews}>
+			{/* <section className={styles.brandNews}>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
 						<div className={styles.content}>
@@ -94,10 +93,10 @@ export default async function Page() {
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> */}
 
 			{/* === EVENTS === */}
-			<section className={styles.events}>
+			{/* <section className={styles.events}>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
 						<div className={styles.imgWrapper}>
@@ -115,10 +114,10 @@ export default async function Page() {
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> */}
 
 			{/* === GIVEAWAYS === */}
-			<section className={styles.giveaways}>
+			{/* <section className={styles.giveaways}>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
 						<div className={styles.content}>
@@ -136,7 +135,7 @@ export default async function Page() {
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> */}
 		</>
 	)
 }
