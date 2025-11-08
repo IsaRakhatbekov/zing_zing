@@ -84,7 +84,7 @@ export default async function page() {
 				</div>
 			</section>
 
-			{/* <section className={styles.certified} id='factory-certified'>
+			<section className={styles.certified} id='factory-certified'>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
 						<div className={styles.imgWrapper}>
@@ -102,9 +102,9 @@ export default async function page() {
 						</div>
 					</div>
 				</div>
-			</section> */}
+			</section>
 
-			{/* <section className={styles.ourPower} id='factory-our-power'>
+			<section className={styles.ourPower} id='factory-our-power'>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
 						<div className={styles.content}>
@@ -124,7 +124,7 @@ export default async function page() {
 						</div>
 					</div>
 				</div>
-			</section> */}
+			</section>
 
 			{/* <FactorySwiper data={swiper} /> */}
 
