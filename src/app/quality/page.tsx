@@ -91,7 +91,7 @@ export default async function page() {
 				</div>
 			</section>
 
-			{/* <section className={styles.drops} id='quality-drops'>
+			<section className={styles.drops} id='quality-drops'>
 				<div className={`${styles.container} container`}>
 					<ul className={styles.dropsList}>
 						{thirdSection.dropsList.map(
@@ -107,7 +107,7 @@ export default async function page() {
 						)}
 					</ul>
 				</div>
-			</section> */}
+			</section>
 
 			{/* <section className={styles.ensureQuality} id='ensure-quality'>
 				<div className={`${styles.container} container`}>
