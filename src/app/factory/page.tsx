@@ -1,3 +1,4 @@
+import Button from '@/components/ui/Button'
 import { fetchFactory } from '@/shared/api/fetchFactory'
 import Image from 'next/image'
 import FactoryAnimations from './FactoryAnimation'
@@ -61,7 +62,7 @@ export default async function page() {
 				</div>
 			</section>
 
-			{/* <section className={styles.quality} id='factory-quality'>
+			<section className={styles.quality} id='factory-quality'>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
 						<div className={styles.content}>
@@ -81,7 +82,7 @@ export default async function page() {
 						</div>
 					</div>
 				</div>
-			</section> */}
+			</section>
 
 			{/* <section className={styles.certified} id='factory-certified'>
 				<div className={`${styles.container} container`}>
