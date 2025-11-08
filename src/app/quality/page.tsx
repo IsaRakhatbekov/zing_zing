@@ -3,6 +3,7 @@ import { fetchQuality } from '@/shared/api/fetchQuality'
 import Image from 'next/image'
 import styles from './page.module.scss'
 import QualityAnimations from './QualityAnimation'
+import Form from '@/components/Form/Form'
 
 export default async function page() {
 	// Quality page
@@ -109,9 +110,9 @@ export default async function page() {
 				</div>
 			</section>
 
-			{/* <section className={styles.ensureQuality} id='ensure-quality'>
+			<section className={styles.ensureQuality} id='ensure-quality'>
 				<div className={`${styles.container} container`}>
-					<div className={styles.wrapper}>
+					<div className={`${styles.wrapper} ${styles.firsBlock}`}>
 						<div className={styles.content}>
 							<h2 className={styles.title}>
 								{fourthSection.ensure.title}
@@ -200,11 +201,11 @@ export default async function page() {
 						</div>
 					</div>
 				</div>
-			</section> */}
+			</section>
 
-			{/* <section id='qualityForm'>
+			<section id='qualityForm'>
 				<Form />
-			</section> */}
+			</section> 
 		</>
 	)
 }

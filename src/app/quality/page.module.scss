@@ -224,12 +224,9 @@
 // ========================================================
 // ========================================================
 // ========================================================
-
-// ========================================================
-// ========================================================
-// ========================================================
 .ensureQuality {
 	margin-top: 200px;
+	margin-bottom: 100px;
 	position: relative;
 	z-index: 1;
 	.wrapper {
@@ -266,16 +263,24 @@
 		font-size: clamp(12px, calc(12px + 11px * (100vw / 1315px)), 23px);
 		max-width: 686px;
 	}
-	.imgWrapper {
-		width: 560px;
-		height: 703px;
-		overflow: hidden;
-		z-index: 2;
 
-		& img {
+	.firsBlock {
+		.text {
+			max-width: 600px;
+		}
+
+		.imgWrapper {
 			width: 100%;
-			height: 100%;
-			object-fit: cover;
+			max-width: 500px;
+			height: 703px;
+			overflow: hidden;
+			z-index: 2;
+
+			& img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
 		}
 	}
 	// ------------------------
@@ -329,6 +334,17 @@
 		padding-left: 100px;
 		z-index: 4;
 
+		&::before {
+			content: '';
+			position: absolute;
+			width: 400px;
+			height: 50px;
+			background-color: #fff;
+			transform: rotate(-6deg);
+			right: 55px;
+			bottom: 72px;
+			z-index: 50;
+		}
 		&::after {
 			content: '';
 			position: absolute;
@@ -422,6 +438,26 @@
 			padding: 40px;
 		}
 	}
+
+	.ensureQuality {
+		.title {
+			font-size: 37px;
+		}
+
+		.purpleWrapper {
+			.title {
+				font-size: 37px;
+			}
+
+			.imgWrapper {
+				width: 100%;
+				max-width: 530px;
+				& img {
+					object-fit: contain;
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: 1200px) {
@@ -433,6 +469,92 @@
 			width: 285px;
 			height: 330px;
 			bottom: 11px;
+		}
+	}
+
+	.ensureQuality {
+		.wrapper {
+			height: 370px;
+		}
+	}
+}
+
+@media (max-width: 1100px) {
+	.ensureQuality {
+		.wrapper {
+			padding-left: 20px;
+
+			&::after {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: var(--yellow);
+				clip-path: polygon(0% 0%, 100% 30%, 100% 70%, 0% 100%);
+				transform: none;
+				pointer-events: none;
+				z-index: -1;
+			}
+		}
+
+		.pinkWrapper {
+			padding-right: 20px;
+			&::after {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: var(--pink);
+				clip-path: polygon(0% 31%, 100% 4%, 100% 96%, 0% 67%);
+				transform: none;
+				pointer-events: none;
+				z-index: -1;
+			}
+		}
+
+		.purpleWrapper {
+			padding-left: 20px;
+
+			&::before {
+				content: '';
+				display: none;
+			}
+			&::after {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: var(--purple);
+				clip-path: polygon(0% 8%, 100% 30%, 100% 70%, 0% 92%);
+				transform: none;
+				pointer-events: none;
+				z-index: -1;
+			}
+		}
+
+		.ourCertifications {
+			padding-right: -20px;
+			&::after {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: var(--pink);
+				clip-path: polygon(0% 31%, 100% 4%, 100% 96%, 0% 67%);
+				transform: none;
+				pointer-events: none;
+				z-index: -1;
+			}
+		}
+
+		.wrapper::after,
+		.pinkWrapper::after,
+		.purpleWrapper::after,
+		.ourCertifications::after {
+			background-repeat: no-repeat;
+			background-image: none;
+			background-size: cover;
+			background-position: center;
+		}
+
+		.text {
+			font-size: 18px;
 		}
 	}
 }
@@ -467,6 +589,33 @@
 		.imgWrapper {
 			width: 300px;
 			height: 330px;
+		}
+	}
+
+	.ensureQuality {
+		.firsBlock {
+			.imgWrapper {
+				max-width: 430px;
+				height: 545px;
+			}
+		}
+
+		.pinkWrapper {
+			margin-top: 0;
+		}
+
+		.purpleWrapper {
+			.imgWrapper {
+				max-width: 300px;
+				height: 400px;
+				bottom: 35px;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				clip-path: polygon(0% 8%, 100% 38%, 100% 69%, 0% 93%);
+			}
 		}
 	}
 }
@@ -572,6 +721,139 @@
 		}
 		.rightImg {
 			display: none;
+		}
+	}
+	.ensureQuality {
+		margin-top: 100px;
+
+		.wrapper,
+		.pinkWrapper,
+		.purpleWrapper,
+		.ourCertifications {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			padding: 24px 20px;
+			gap: 16px;
+
+			&::after {
+				content: none !important;
+			}
+			&::before {
+				content: none !important;
+			}
+		}
+
+		.wrapper {
+			flex-direction: column-reverse;
+			background-color: var(--yellow);
+			padding-left: 20px;
+		}
+		.wrapper .imgWrapper {
+			width: 100%;
+			max-width: none;
+			height: auto;
+			aspect-ratio: 5 / 4;
+			overflow: visible;
+			margin: 0 0 10px;
+			z-index: 1;
+		}
+		.wrapper .imgWrapper img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			display: block;
+		}
+
+		.pinkWrapper {
+			flex-direction: column;
+			background-color: var(--pink);
+			padding-right: 20px;
+		}
+		.pinkWrapper .pinkImgWrapper {
+			width: 100%;
+			height: auto;
+			aspect-ratio: 5 / 3.5;
+			overflow: visible;
+			margin: 0 0 10px;
+		}
+		.pinkWrapper .pinkImgWrapper img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			display: block;
+		}
+		.pinkWrapper .text,
+		.pinkWrapper .title {
+			max-width: 100%;
+		}
+
+		.purpleWrapper {
+			flex-direction: column-reverse;
+			background-color: var(--purple);
+			padding-left: 20px;
+		}
+		.purpleWrapper .imgWrapper {
+			bottom: 0;
+			width: 100%;
+			height: auto;
+			aspect-ratio: 5 / 4;
+			overflow: visible;
+			margin: 0 0 10px;
+			z-index: 1;
+		}
+		.purpleWrapper .imgWrapper img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			display: block;
+		}
+		.purpleWrapper .text,
+		.purpleWrapper .title {
+			max-width: 100%;
+		}
+
+		.ourCertifications {
+			flex-direction: column;
+			background-color: var(--pink);
+			padding-right: 20px;
+			color: var(--white);
+		}
+		.ourCertifications .imgWrapper {
+			margin-left: 0;
+			width: 100%;
+			height: auto;
+			aspect-ratio: 5 / 4;
+			overflow: visible;
+			margin-bottom: 10px;
+		}
+		.ourCertifications .imgWrapper img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			display: block;
+		}
+		.ourCertifications .text,
+		.ourCertifications .title {
+			max-width: 100%;
+		}
+
+		.wrapper,
+		.pinkWrapper,
+		.purpleWrapper,
+		.ourCertifications {
+			height: fit-content;
+
+			.imgWrapper {
+				width: 300px;
+				height: 300px;
+			}
+			.pinkImgWrapper {
+				width: 300px;
+				height: 300px;
+			}
 		}
 	}
 }
