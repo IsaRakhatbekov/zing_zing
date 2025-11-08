@@ -1,6 +1,4 @@
-import Form from '@/components/Form/Form'
 import Button from '@/components/ui/Button'
-
 import { fetchQuality } from '@/shared/api/fetchQuality'
 import Image from 'next/image'
 import styles from './page.module.scss'
@@ -93,7 +91,7 @@ export default async function page() {
 				</div>
 			</section>
 
-			<section className={styles.drops} id='quality-drops'>
+			{/* <section className={styles.drops} id='quality-drops'>
 				<div className={`${styles.container} container`}>
 					<ul className={styles.dropsList}>
 						{thirdSection.dropsList.map(
@@ -109,9 +107,9 @@ export default async function page() {
 						)}
 					</ul>
 				</div>
-			</section>
+			</section> */}
 
-			<section className={styles.ensureQuality} id='ensure-quality'>
+			{/* <section className={styles.ensureQuality} id='ensure-quality'>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
 						<div className={styles.content}>
@@ -202,11 +200,11 @@ export default async function page() {
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> */}
 
-			<section id='qualityForm'>
+			{/* <section id='qualityForm'>
 				<Form />
-			</section>
+			</section> */}
 		</>
 	)
 }

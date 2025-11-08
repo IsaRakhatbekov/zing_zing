@@ -1,5 +1,7 @@
+/* hero of quality page */
 .secondHero {
 	margin: 50px 0;
+
 	.wrapper {
 		height: 380px;
 		position: relative;
@@ -18,23 +20,20 @@
 	.title {
 		max-width: 435px;
 		font-weight: 900;
-		font-size: 52px;
 		line-height: 100%;
 		margin-bottom: 20px;
+		font-size: clamp(28px, 4vw, 52px);
 
 		& .purple {
 			color: var(--purple);
 		}
-
 		& .pink {
 			color: var(--pink);
 		}
 	}
 
 	.text {
-		font-family: var(--second-family);
-		font-weight: 400;
-		font-size: 18px;
+		font-size: clamp(14px, 1.5vw, 18px);
 		line-height: 100%;
 		max-width: 280px;
 	}
@@ -56,23 +55,18 @@
 
 	.leftImg {
 		position: relative;
-		width: 400px;
-		height: 270px;
+		width: min(420px, 28vw);
+		height: min(300px, 20vw);
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		.leftImgWrapper {
-			transform: rotate(30deg);
-			position: absolute;
-			width: 130px;
-			height: 200px;
-			overflow: hidden;
 
-			& img {
-				width: 100%;
-				height: 100%;
-				object-fit: contain;
-			}
+		.leftImgWrapper {
+			width: min(150px, 10vw);
+			height: min(230px, 15vw);
+			overflow: hidden;
+			position: absolute;
+			transform: rotate(40deg);
 
 			&:nth-child(1) {
 				left: 10%;
@@ -90,15 +84,20 @@
 	}
 
 	.rightImg {
-		width: 387px;
-		height: 420px;
+		width: 335px;
+		height: 380px;
 		position: relative;
-		bottom: 20px;
 
-		& img {
+		/* как в aboutUs: окно */
+		overflow: hidden;
+		will-change: clip-path, transform;
+		contain: paint;
+
+		& > img {
 			width: 100%;
 			height: 100%;
-			object-fit: cover;
+			object-fit: cover; /* как в aboutUs */
+			display: block;
 		}
 	}
 }
@@ -414,3 +413,111 @@
 // ========================================================
 // ========================================================
 // ========================================================
+
+@media (max-width: 1300px) {
+	.secondHero {
+		.wrapper {
+			padding: 40px;
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.secondHero {
+		.wrapper {
+			height: 310px;
+		}
+		.rightImg {
+			width: 285px;
+			height: 330px;
+			bottom: 11px;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.secondHero {
+		.wrapper {
+			height: 265px;
+		}
+
+		.rightImg {
+			width: 230px;
+			height: 260px;
+			bottom: -1px;
+		}
+
+		.imagesWrapper {
+			justify-content: space-around;
+		}
+
+		.leftImg {
+			width: min(420px, 18vw);
+			height: min(300px, 13vw);
+			.leftImgWrapper {
+				width: min(150px, 6vw);
+				height: min(230px, 10vw);
+			}
+		}
+	}
+}
+
+@media (max-width: 850px) {
+	.secondHero {
+		.wrapper {
+			height: 215px;
+		}
+		.rightImg {
+			width: 200px;
+			height: 230px;
+			bottom: 8px;
+		}
+	}
+}
+
+@media (max-width: 700px) {
+	.secondHero {
+		.leftImg {
+			.leftImgWrapper {
+				width: min(150px, 12vw);
+				height: min(230px, 19vw);
+
+				&:nth-child(1) {
+					left: -10%;
+					z-index: 1;
+					top: -25%;
+					transform: rotate(-40deg);
+				}
+				&:nth-child(2) {
+					left: 15%;
+					z-index: 2;
+					transform: rotate(-15deg);
+				}
+				&:nth-child(3) {
+					top: 10%;
+					left: 35%;
+					z-index: 3;
+					transform: rotate(25deg);
+				}
+			}
+		}
+		.rightImg {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.secondHero {
+		.wrapper {
+			padding: 20px;
+		}
+
+		.text {
+			width: 220px;
+		}
+		.title {
+			font-size: 22px;
+		}
+	}
+}

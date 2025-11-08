@@ -1,4 +1,3 @@
-// app/(pages)/quality/QualityAnimations.tsx
 'use client'
 
 import gsap from 'gsap'
@@ -10,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function QualityAnimations() {
 	useEffect(() => {
-		// === SECOND HERO ===
+		// === SECOND HERO — КАК В aboutUs ===
 		{
 			const hero = document.getElementById('quality-hero')
 			if (hero) {
@@ -24,10 +23,12 @@ export default function QualityAnimations() {
 					? (rightWrap.querySelector('img') as HTMLElement | null)
 					: null
 
+				// стартовые состояния — как в aboutUs
 				if (title) gsap.set(title, { x: -160, opacity: 0 })
 				if (text) gsap.set(text, { x: -160, opacity: 0 })
 				if (leftWrappers.length) gsap.set(leftWrappers, { y: 160, opacity: 0 })
-				if (rightImg) gsap.set(rightImg, { y: 180, opacity: 1 }) // «выплывает» из окна
+				// двигаем IMG внутри правого окна
+				if (rightImg) gsap.set(rightImg, { y: 180, opacity: 1 })
 
 				const tl = gsap.timeline({
 					scrollTrigger: {
@@ -52,7 +53,7 @@ export default function QualityAnimations() {
 			}
 		}
 
-		// === QUALITY ===
+		// === QUALITY (как было) ===
 		{
 			const quality = document.getElementById('quality-section')
 			if (quality) {
@@ -73,7 +74,7 @@ export default function QualityAnimations() {
 			}
 		}
 
-		// === DROPS (по очереди снизу вверх) ===
+		// === DROPS (как было) ===
 		{
 			const drops = document.getElementById('quality-drops')
 			if (drops) {
@@ -98,7 +99,7 @@ export default function QualityAnimations() {
 			}
 		}
 
-		// === ENSURE QUALITY ===
+		// === ENSURE QUALITY (как было) ===
 		{
 			const ensure = document.getElementById('ensure-quality')
 			if (ensure) {
