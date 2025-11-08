@@ -118,7 +118,7 @@ export default async function Page() {
 			</section>
 
 			{/* === GIVEAWAYS === */}
-			{/* <section className={styles.giveaways}>
+			<section className={styles.giveaways}>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
 						<div className={styles.content}>
@@ -136,7 +136,7 @@ export default async function Page() {
 						</div>
 					</div>
 				</div>
-			</section> */}
+			</section>
 		</>
 	)
 }

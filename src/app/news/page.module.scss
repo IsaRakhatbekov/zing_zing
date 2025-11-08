@@ -217,6 +217,8 @@
 // ======================================================
 // ======================================================
 .giveaways {
+	margin-bottom: 100px;
+
 	.wrapper {
 		position: relative;
 		display: flex;
@@ -238,7 +240,7 @@
 	}
 
 	.title {
-		font-size: clamp(18px, calc(18px + 42px * (100vw / 1315px)), 60px);
+		font-size: clamp(28px, 4vw, 52px);
 	}
 
 	.text {
@@ -317,6 +319,15 @@
 	}
 }
 
+@media (max-width: 991px) {
+	.giveaways {
+		.imgWrapper {
+			width: 400px;
+			height: 280px;
+		}
+	}
+}
+
 @media (max-width: 900px) {
 	.brandNews {
 		.imgWrapper {
@@ -327,6 +338,17 @@
 	.events {
 		.wrapper {
 			padding-right: 70px;
+		}
+	}
+
+	.giveaways {
+		.wrapper {
+			padding-left: 65px;
+		}
+
+		.text {
+			font-size: 17px;
+			margin: 5px 0 15px;
 		}
 	}
 }
@@ -439,6 +461,28 @@
 			}
 		}
 	}
+
+	.giveaways {
+		.wrapper {
+			position: relative;
+			z-index: 1;
+			padding-left: 20px;
+
+			&::after {
+				content: '';
+				background: var(--purple);
+				clip-path: polygon(0% 0%, 100% 38%, 100% 78%, 0% 100%);
+				z-index: -1;
+				pointer-events: none;
+				position: absolute;
+			}
+		}
+
+		.imgWrapper {
+			margin-bottom: -64px;
+			height: 330px;
+		}
+	}
 }
 @media (max-width: 600px) {
 	.events {
@@ -536,13 +580,33 @@
 			height: 250px;
 			margin-left: 0;
 			margin-top: 0;
-			bottom: 0;	
+			bottom: 0;
 		}
 
 		.content {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+		}
+	}
+
+	.giveaways {
+		.wrapper {
+			gap: 40px;
+			flex-direction: column-reverse;
+			background-color: var(--purple);
+
+			.content {
+				display: flex;
+				text-align: center;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.imgWrapper {
+				width: 250px;
+				height: 250px;
+			}
 		}
 	}
 }
