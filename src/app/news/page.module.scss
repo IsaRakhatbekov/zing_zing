@@ -41,7 +41,6 @@
 	.text {
 		font-weight: 300;
 		font-size: clamp(14px, 1.5vw, 18px);
-
 		line-height: 100%;
 		max-width: 400px;
 	}
@@ -133,13 +132,13 @@
 		text-align: left;
 	}
 	.title {
-		font-size: clamp(18px, calc(18px + 42px * (100vw / 1315px)), 60px);
+		font-size: clamp(28px, 4vw, 52px);
 	}
 
 	.text {
 		margin: 15px 0 30px;
 		font-weight: 300;
-		font-size: clamp(12px, calc(12px + 11px * (100vw / 1315px)), 23px);
+		font-size: clamp(14px, 1.5vw, 18px);
 		max-width: 580px;
 	}
 
@@ -302,6 +301,15 @@
 	}
 }
 
+@media (max-width: 900px) {
+	.brandNews {
+
+		.imgWrapper {
+			height: 280px;
+		}
+	}
+}
+
 @media (max-width: 768px) {
 	.secondHero {
 		.rightImg {
@@ -309,6 +317,10 @@
 			height: 315px;
 			bottom: 15px;
 		}
+	}
+
+	.brandNews {
+		
 	}
 }
 

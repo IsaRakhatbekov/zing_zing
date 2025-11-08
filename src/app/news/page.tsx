@@ -2,6 +2,7 @@ import { fetchNews } from '@/shared/api/fetchNews'
 import Image from 'next/image'
 import NewsAnimations from './NewsAnimations'
 import styles from './page.module.scss'
+import Button from '@/components/ui/Button'
 
 // === News Page ===
 export default async function Page() {
@@ -72,7 +73,7 @@ export default async function Page() {
 			</section>
 
 			{/* === BRAND NEWS === */}
-			{/* <section className={styles.brandNews}>
+			<section className={styles.brandNews}>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
 						<div className={styles.content}>
@@ -93,7 +94,7 @@ export default async function Page() {
 						</div>
 					</div>
 				</div>
-			</section> */}
+			</section>
 
 			{/* === EVENTS === */}
 			{/* <section className={styles.events}>
