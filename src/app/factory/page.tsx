@@ -1,8 +1,10 @@
+import FactorySwiper from '@/components/FactorySwiper/FactorySwiper'
 import Button from '@/components/ui/Button'
 import { fetchFactory } from '@/shared/api/fetchFactory'
 import Image from 'next/image'
 import FactoryAnimations from './FactoryAnimation'
 import styles from './page.module.scss'
+import Form from '@/components/Form/Form'
 
 export default async function page() {
 	const data = await fetchFactory()
@@ -126,9 +128,9 @@ export default async function page() {
 				</div>
 			</section>
 
-			{/* <FactorySwiper data={swiper} /> */}
+			<FactorySwiper data={swiper} />
 
-			{/* <Form /> */}
+			<Form />
 		</>
 	)
 }

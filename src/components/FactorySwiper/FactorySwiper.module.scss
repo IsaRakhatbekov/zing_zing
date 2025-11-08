@@ -1,32 +1,45 @@
-/* FactorySwiper.module.scss */
+/* Скрываем то, что выходит за пределы видимой области: видно ровно 5 */
+.viewportClip {
+	overflow: hidden;
+	width: 100%;
 
+}
+
+/* Параметры разметки: 5 карточек и зазоры между ними */
 .swiper {
-	/* корневой .swiper уже открыт инлайном, но на всякий случай: */
-	overflow: visible !important;
+	--slides: 5; /* всегда 5 видимых */
+	--gap: 24px;
+	padding: 50px 0;
 
-	:global(.swiper-slide) {
-		overflow: visible;
-		/* если нужны «вылеты» за пределы — z-index, чтобы было поверх */
-		position: relative;
-		z-index: 1;
-	}
+	/* ширина вьюпорта для вычислений */
+	--viewport: 100vw;
 
-	/* Когда включён coverflow, на корень навешивается .swiper-3d —
-     тоже откроем */
-	:global(.swiper-3d) {
-		overflow: visible;
-	}
+	/* суммарный зазор между 5 карточками = 4 * gap */
+	--gaps-sum: calc((var(--slides) - 1) * var(--gap));
+
+	/* Ширина одного слота, куда мы вписываем карточку */
+	--slot-w: calc((var(--viewport) - var(--gaps-sum)) / var(--slides));
+
+	/* Коэффициент масштаба для карточки 800×500, чтобы поместить её в слот */
+	--k: clamp(0.2, calc(var(--slot-w) / 800), 1);
 }
 
-/* твои размеры — можно оставить как есть */
-.swiper_container {
-	height: 300px;
-	padding: 2rem 0;
+/* SwiperSlide должен подстраиваться под ширину слота */
+.swiperSlideAuto {
+	width: var(--slot-w) !important; /* критично: так Swiper считает ширину */
+}
+
+/* Сам «слот»: задаём фактическую ширину/высоту видимого места */
+.slot {
+	width: var(--slot-w);
+	height: calc(500px * var(--k)); /* реальная занимаемая высота ряда */
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	position: relative;
-	/* на случай, если родитель .container у тебя где-то с overflow:hidden */
-	overflow: visible;
 }
 
+/* ====== ТВОЙ ДИЗАЙН КАРТОЧКИ — НЕ МЕНЯЕМ ====== */
 .slide {
 	width: 800px !important;
 	height: 500px !important;
@@ -37,10 +50,46 @@
 	align-items: center;
 	justify-content: center;
 	padding: 30px 100px;
-	box-shadow: 9px 12px 78px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 5px 22px 28px 0 rgba(0, 0, 0, 0.1);
+
+	/* Вписываем карточку в слот ПОЛНОСТЬЮ за счёт масштаба */
+	transform: scale(var(--k));
+	transform-origin: center center;
+	transition: transform 250ms ease;
 }
+
+/* Картинка показывается целиком, без обрезки */
 .img {
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	object-fit: contain; /* важно: не обрезаем */
+	background: #fff;
+}
+
+@media (max-width: 1300px) {
+	.slide {
+		padding: 20px;
+		width: 500px !important;
+		height: 300px !important;
+	}
+}
+
+@media (max-width: 991px) {
+	.slide {
+		width: 450px !important;
+		height: 250px !important;
+	}
+}
+
+@media (max-width: 768px) {
+	.slide {
+		width: 290px !important;
+		height: 175px !important;
+	}
+}
+@media (max-width: 500px) {
+	.slide {
+		width: 220px !important;
+		height: 160px !important;
+	}
 }

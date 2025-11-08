@@ -3,77 +3,52 @@
 import Image from 'next/image'
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-
 import { EffectCoverflow } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import styles from './FactorySwiper.module.scss'
 
-type FactorySwiperData = {
-	slides: { image: string; alt: string }[]
-}
-
+type FactorySwiperData = { slides: { image: string; alt: string }[] }
 type Props = { data: FactorySwiperData }
 
-const FactorySwiper = ({ data }: Props) => {
-	const { slides } = data
-
+export default function FactorySwiper({ data }: Props) {
 	return (
-		<div className='container'>
-			<h1 className='heading'>Flower Gallery</h1>
+		<div className={styles.viewportClip}>
 			<Swiper
 				effect='coverflow'
-				grabCursor
-				centeredSlides
+				modules={[EffectCoverflow]}
 				loop
-				slidesPerView='auto'
+				centeredSlides
+				slidesPerView='auto' // ширину зададим сами через .slot
+				spaceBetween={24}
 				coverflowEffect={{
 					rotate: 0,
-					stretch: 300, // отрицательное = перекрытие
-					depth: 300,
-					modifier: 1,
-					scale: 1, // боковые будут 80% от центральной
+					stretch: 0,
+					depth: 140,
+					modifier: 1.1,
+					scale: 1,
+					slideShadows: false,
 				}}
-				modules={[EffectCoverflow]}
-				className={`swiper_container ${styles.swiper}`}
-				style={{ overflow: 'visible' }} // <— ключевая строка
+				className={styles.swiper}
 			>
-				{slides.map((s, i) => (
-					<SwiperSlide className={styles.slide} key={i}>
-						<Image
-							src={s.image}
-							alt={s.alt}
-							width={800}
-							height={500}
-							className={styles.img}
-						/>
+				{data.slides.map((s, i) => (
+					<SwiperSlide key={i} className={styles.swiperSlideAuto}>
+						{/* Слот задаёт фактическую ширину для Swiper (5 шт. на экран) */}
+						<div className={styles.slot}>
+							{/* ТВОЯ карточка — дизайн не меняем */}
+							<div className={styles.slide}>
+								<Image
+									src={s.image}
+									alt={s.alt}
+									width={800}
+									height={500}
+									className={styles.img}
+									priority={i < 3}
+								/>
+							</div>
+						</div>
 					</SwiperSlide>
 				))}
 			</Swiper>
 		</div>
-		// <div className={styles.sliderWrapper}>
-		// 	<Swiper
-		// 		spaceBetween={-20}
-		// 		centeredSlides={true}
-		// 		slidesPerView={'auto'}
-		// 		grabCursor={true}
-		// 		loop={true}
-		// 		autoplay={{
-		// 			delay: 2500,
-		// 			disableOnInteraction: false,
-		// 		}}
-		// 		modules={[Autoplay]}
-		// 		className={styles.mySwiper}
-		// 	>
-		// 		{slides.map((s, i) => (
-		// 			<SwiperSlide className={styles.slide} key={i}>
-		// 				<Image src={s.image} alt={s.alt} width={600} height={400} />
-		// 			</SwiperSlide>
-		// 		))}
-		// 	</Swiper>
-		// </div>
 	)
 }
-
-export default FactorySwiper
