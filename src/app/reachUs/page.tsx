@@ -1,5 +1,4 @@
 import Form from '@/components/Form/Form'
-import Button from '@/components/ui/Button'
 
 import { fetchReachUs } from '@/shared/api/fetchReachUs'
 import Image from 'next/image'
@@ -60,7 +59,7 @@ export default async function Page() {
 				</div>
 			</section>
 
-			<section className={styles.ourPower} id='reach-power'>
+			{/* <section className={styles.ourPower} id='reach-power'>
 				<div className={`${styles.container} container`}>
 					<div className={styles.wrapper}>
 						<div className={styles.content}>
@@ -84,7 +83,7 @@ export default async function Page() {
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> */}
 
 			<section id='reachUsForm'>
 				<Form />
