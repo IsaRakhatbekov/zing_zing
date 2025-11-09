@@ -114,7 +114,7 @@
 		}
 	}
 	.title {
-		font-size: clamp(18px, calc(18px + 42px * (100vw / 1315px)), 60px);
+		font-size: clamp(28px, 4vw, 52px);
 	}
 	.text {
 		max-width: 460px;
@@ -192,6 +192,19 @@
 	}
 }
 
+@media (max-width: 991px) {
+	.ourPower {
+		.text {
+			margin: 5px 0 15px;
+		}
+
+		.imgWrapper {
+			max-width: 450px;
+			height: 300px;
+		}
+	}
+}
+
 @media (max-width: 900px) {
 	.secondHero {
 		.wrapper {
@@ -211,6 +224,18 @@
 		.rightImg {
 			width: 200px;
 			height: 312px;
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.ourPower {
+		.wrapper {
+			height: 250px;
+			padding: 0 0px 0 65px;
+		}
+		.text {
+			font-size: 16px;
 		}
 	}
 }
@@ -252,6 +277,28 @@
 			}
 		}
 	}
+
+	.ourPower {
+		.wrapper {
+			position: relative;
+			padding-left: 20px;
+			&::after {
+				content: '';
+				background: var(--pink);
+				clip-path: polygon(0% 23%, 100% 0%, 100% 100%, 0% 67%);
+				z-index: -1;
+				pointer-events: none;
+				position: absolute;
+			}
+
+			.title {
+				font-size: 24px;
+			}
+			.text {
+				font-size: 14px;
+			}
+		}
+	}
 }
 
 @media (max-width: 500px) {
@@ -274,6 +321,28 @@
 					right: 25px;
 				}
 			}
+		}
+	}
+
+	.ourPower {
+		.wrapper {
+			flex-direction: column-reverse;
+			background-color: var(--pink);
+			height: fit-content;
+			padding: 30px 20px;
+
+			&::after {
+				display: none;
+			}
+		}
+
+		.imgWrapper {
+			width: 200px;
+			height: 165px;
+		}
+
+		.content {
+			text-align: center;
 		}
 	}
 }
