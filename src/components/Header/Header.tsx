@@ -7,6 +7,24 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import styles from './Header.module.scss'
 
+// Типы для переводов
+type HeaderTranslation = {
+	topText: string
+	home: string
+	products: string
+	aboutUs: string
+	quality: string
+	news: string
+	factory: string
+	reachUs: string
+}
+
+type HeaderTranslations = {
+	ENG: HeaderTranslation
+	RUS: HeaderTranslation
+	KAZ: HeaderTranslation
+}
+
 const Header = () => {
 	const [burger, setBurger] = useState(false)
 	const [isLangOpen, setIsLangOpen] = useState(false)
@@ -17,6 +35,54 @@ const Header = () => {
 		{ code: 'ENG' as const, name: 'English' },
 		{ code: 'RUS' as const, name: 'Русский' },
 		{ code: 'KAZ' as const, name: 'Қазақша' },
+	]
+
+	// Переводы для текстов в Header
+	const headerTranslations: HeaderTranslations = {
+		ENG: {
+			topText:
+				"Spicy. Crunchy. Unforgettable. That's the true taste of ZingZing.",
+			home: 'Home',
+			products: 'Products',
+			aboutUs: 'About Us',
+			quality: 'Quality',
+			news: 'News',
+			factory: 'Factory',
+			reachUs: 'Reach Us',
+		},
+		RUS: {
+			topText: 'Острые. Хрустящие. Незабываемые. Это настоящий вкус ZingZing.',
+			home: 'Главная',
+			products: 'Продукты',
+			aboutUs: 'О нас',
+			quality: 'Качество',
+			news: 'Новости',
+			factory: 'Фабрика',
+			reachUs: 'Связаться',
+		},
+		KAZ: {
+			topText: 'Ащы. Қытырлақ. Ұмытылмас. Бұл ZingZing-тің шынайы дәмі.',
+			home: 'Басты',
+			products: 'Өнімдер',
+			aboutUs: 'Біз туралы',
+			quality: 'Сапа',
+			news: 'Жаңалықтар',
+			factory: 'Фабрика',
+			reachUs: 'Байланысу',
+		},
+	}
+
+	const t = headerTranslations[currentLang]
+
+	// Массив навигационных ссылок для удобного рендеринга
+	const navItems: { href: string; key: keyof HeaderTranslation }[] = [
+		{ href: '/', key: 'home' },
+		{ href: '/products', key: 'products' },
+		{ href: '/aboutUs', key: 'aboutUs' },
+		{ href: '/quality', key: 'quality' },
+		{ href: '/news', key: 'news' },
+		{ href: '/factory', key: 'factory' },
+		{ href: '/reachUs', key: 'reachUs' },
 	]
 
 	useEffect(() => {
@@ -44,7 +110,7 @@ const Header = () => {
 	return (
 		<header className={styles.Header}>
 			<p className={`${styles.topText} ${burger ? styles.topTextActive : ''}`}>
-				Spicy. Crunchy. Unforgettable. That's the true taste of ZingZing.
+				{t.topText}
 			</p>
 			<div className={`${styles.container} container`}>
 				<nav className={styles.nav}>
@@ -52,76 +118,18 @@ const Header = () => {
 						<Image src={logo} alt='ZingZing' />
 					</a>
 					<ul className={styles.list}>
-						<li className={styles.item}>
-							<Link
-								className={`${styles.link} ${
-									pathName === '/' ? styles.activeLink : ''
-								}`}
-								href='/'
-							>
-								Home
-							</Link>
-						</li>
-						<li className={styles.item}>
-							<Link
-								className={`${styles.link} ${
-									pathName === '/products' ? styles.activeLink : ''
-								}`}
-								href='/products'
-							>
-								Products
-							</Link>
-						</li>
-						<li className={styles.item}>
-							<Link
-								className={`${styles.link} ${
-									pathName === '/aboutUs' ? styles.activeLink : ''
-								}`}
-								href='/aboutUs'
-							>
-								About Us
-							</Link>
-						</li>
-						<li className={styles.item}>
-							<Link
-								className={`${styles.link} ${
-									pathName === '/quality' ? styles.activeLink : ''
-								}`}
-								href='/quality'
-							>
-								Quality
-							</Link>
-						</li>
-						<li className={styles.item}>
-							<Link
-								className={`${styles.link} ${
-									pathName === '/news' ? styles.activeLink : ''
-								}`}
-								href='/news'
-							>
-								News
-							</Link>
-						</li>
-						<li className={styles.item}>
-							<Link
-								className={`${styles.link} ${
-									pathName === '/factory' ? styles.activeLink : ''
-								}`}
-								href='/factory'
-							>
-								Factory
-							</Link>
-						</li>
-						<li className={styles.item}>
-							<Link
-								className={`${styles.link} ${
-									pathName === '/reachUs' ? styles.activeLink : ''
-								}`}
-								href='/reachUs'
-							>
-								Reach Us
-							</Link>
-						</li>
+						{navItems.map(item => (
+							<li key={item.href} className={styles.item}>
+								<Link
+									className={`${styles.link} ${
+										pathName === item.href ? styles.activeLink : ''
+									}`}
+									href={item.href}
+								>
+									{t[item.key]}
+								</Link>
+							</li>
+						))}
 						<li className={`${styles.item} ${styles.langItem}`}>
 							<button className={styles.lang} onClick={toggleLangMenu}>
 								{currentLang}
@@ -156,89 +164,26 @@ const Header = () => {
 				</nav>
 			</div>
 
+			{/* === МОБИЛЬНОЕ МЕНЮ === */}
 			<div
 				className={`${styles.mobMenuWrapper} ${
 					burger ? styles.mobMenuWrapperActive : ''
 				}`}
 			>
 				<ul className={styles.list}>
-					<li className={styles.item}>
-						<Link
-							className={`${styles.link} ${
-								pathName === '/' ? styles.activeLink : ''
-							}`}
-							href='/'
-							onClick={() => setBurger(false)}
-						>
-							Home
-						</Link>
-					</li>
-					<li className={styles.item}>
-						<Link
-							className={`${styles.link} ${
-								pathName === '/products' ? styles.activeLink : ''
-							}`}
-							href='/products'
-							onClick={() => setBurger(false)}
-						>
-							Products
-						</Link>
-					</li>
-					<li className={styles.item}>
-						<Link
-							className={`${styles.link} ${
-								pathName === '/aboutUs' ? styles.activeLink : ''
-							}`}
-							href='/aboutUs'
-							onClick={() => setBurger(false)}
-						>
-							About Us
-						</Link>
-					</li>
-					<li className={styles.item}>
-						<Link
-							className={`${styles.link} ${
-								pathName === '/quality' ? styles.activeLink : ''
-							}`}
-							href='/quality'
-							onClick={() => setBurger(false)}
-						>
-							Quality
-						</Link>
-					</li>
-					<li className={styles.item}>
-						<Link
-							className={`${styles.link} ${
-								pathName === '/news' ? styles.activeLink : ''
-							}`}
-							href='/news'
-							onClick={() => setBurger(false)}
-						>
-							News
-						</Link>
-					</li>
-					<li className={styles.item}>
-						<Link
-							className={`${styles.link} ${
-								pathName === '/factory' ? styles.activeLink : ''
-							}`}
-							href='/factory'
-							onClick={() => setBurger(false)}
-						>
-							Factory
-						</Link>
-					</li>
-					<li className={styles.item}>
-						<Link
-							className={`${styles.link} ${
-								pathName === '/reachUs' ? styles.activeLink : ''
-							}`}
-							href='/reachUs'
-							onClick={() => setBurger(false)}
-						>
-							Reach Us
-						</Link>
-					</li>
+					{navItems.map(item => (
+						<li key={item.href} className={styles.item}>
+							<Link
+								className={`${styles.link} ${
+									pathName === item.href ? styles.activeLink : ''
+								}`}
+								href={item.href}
+								onClick={() => setBurger(false)}
+							>
+								{t[item.key]}
+							</Link>
+						</li>
+					))}
 					<li className={`${styles.item} ${styles.langItem}`}>
 						<button className={styles.lang} onClick={toggleLangMenu}>
 							{currentLang}
