@@ -1,5 +1,5 @@
 'use client'
-import logo from '@/assets/images/logo.svg'
+import logo from '@/assets/images/logo.png'
 import { useLanguage } from '@/context/LanguageContext'
 import Image from 'next/image'
 import Link from 'next/link'

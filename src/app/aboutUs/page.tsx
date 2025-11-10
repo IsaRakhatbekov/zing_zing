@@ -1,20 +1,32 @@
+// src/app/aboutUs/page.tsx
 'use client'
 import Form from '@/components/Form/Form'
 import Button from '@/components/ui/Button'
 import { useLanguage } from '@/context/LanguageContext'
-import aboutUsData from '@/mock/aboutUs.json'
-import { AboutUsDataByLanguage } from '@/types/aboutUs'
+import { fetchAboutUs } from '@/shared/api/fetchAboutUs'
+import type { AboutUs } from '@/types/aboutUs'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 import AboutUsAnimations from './AboutUsAnimations'
 import styles from './page.module.scss'
 
 export default function Page() {
 	const { currentLang } = useLanguage()
+	const [aboutUsData, setAboutUsData] = useState<AboutUs | null>(null)
 
-	const typedAboutUsData = aboutUsData as AboutUsDataByLanguage
-	const data = typedAboutUsData[currentLang] || typedAboutUsData.ENG
+	useEffect(() => {
+		const loadData = async () => {
+			const data = await fetchAboutUs(currentLang)
+			setAboutUsData(data)
+		}
+		loadData()
+	}, [currentLang])
 
-	const { hero, secondSection, thirdSection } = data
+	if (!aboutUsData) {
+		return <div>Loading...</div>
+	}
+
+	const { hero, secondSection, thirdSection } = aboutUsData
 	const [community, whyUs, mission] = thirdSection.blocks
 
 	return (

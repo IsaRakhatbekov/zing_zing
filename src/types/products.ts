@@ -1,4 +1,5 @@
-export type ProductsPageData = {
+// src/types/products.ts
+export type Products = {
 	hero: {
 		title1: string
 		mainTitleSpan1: string
@@ -29,10 +30,4 @@ export type ProductsPageData = {
 		text: string
 		image: string
 	}
-}
-
-export type ProductsDataByLanguage = {
-	ENG: ProductsPageData
-	RUS: ProductsPageData
-	KAZ: ProductsPageData
 }

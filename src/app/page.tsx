@@ -1,19 +1,31 @@
+// src/app/page.tsx
 'use client'
 import HomeCards from '@/components/HomeCards/HomeCards'
 import Reviews from '@/components/Reviews/Reviews'
 import Button from '@/components/ui/Button'
 import { useLanguage } from '@/context/LanguageContext'
-import homeData from '@/mock/home.json'
-import { HomeDataByLanguage } from '@/types/home'
+import { fetchHome } from '@/shared/api/fetchHome'
+import type { Home } from '@/types/home'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 import HomeAnimations from './HomeAnimations'
 import styles from './page.module.scss'
 
 export default function Home() {
 	const { currentLang } = useLanguage()
+	const [homeData, setHomeData] = useState<Home | null>(null)
 
-	const typedHomeData = homeData as HomeDataByLanguage
-	const data = typedHomeData[currentLang] || typedHomeData.ENG
+	useEffect(() => {
+		const loadData = async () => {
+			const data = await fetchHome(currentLang)
+			setHomeData(data)
+		}
+		loadData()
+	}, [currentLang])
+
+	if (!homeData) {
+		return <div>Loading...</div>
+	}
 
 	const {
 		hero,
@@ -21,7 +33,7 @@ export default function Home() {
 		secondSection,
 		thirdSection,
 		fourthSectionGrowTogether,
-	} = data
+	} = homeData
 
 	return (
 		<>

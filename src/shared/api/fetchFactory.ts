@@ -1,18 +1,36 @@
+// src/shared/api/fetchFactory.ts
 import factoryMock from '@/mock/factory.json'
-import type { FactoryType } from '@/types/factory'
+import type { Factory } from '@/types/factory'
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || ''
 
-export async function fetchFactory(): Promise<FactoryType> {
+// Маппинг твоих кодов языков на те, что ожидает бэкенд
+const languageMap = {
+	ENG: 'en',
+	RUS: 'ru',
+	KAZ: 'kk',
+} as const
+
+export async function fetchFactory(
+	lang: keyof typeof languageMap = 'ENG'
+): Promise<Factory> {
 	try {
 		if (!API_URL) {
-			return factoryMock as FactoryType
+			// В мок-режиме берем данные для нужного языка
+			return (factoryMock as any)[lang] as Factory
 		}
-		const res = await fetch(`${API_URL}/factory`, { cache: 'no-store' })
+
+		const res = await fetch(`${API_URL}/factory`, {
+			cache: 'no-store',
+			headers: {
+				'Accept-Language': languageMap[lang],
+			},
+		})
+
 		if (!res.ok) throw new Error('Ошибка при получении данных страницы Factory')
-		return (await res.json()) as FactoryType
+		return (await res.json()) as Factory
 	} catch (err) {
 		console.warn('▲ Используются моки (сервер недоступен):', err)
-		return factoryMock as FactoryType
+		return (factoryMock as any)[lang] as Factory
 	}
 }

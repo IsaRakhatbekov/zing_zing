@@ -1,24 +1,36 @@
+// src/app/products/page.tsx
 'use client'
 import Button from '@/components/ui/Button'
 import { useLanguage } from '@/context/LanguageContext'
-import productsData from '@/mock/products.json'
-import { ProductsDataByLanguage } from '@/types/products'
+import { fetchProducts } from '@/shared/api/fetchProducts'
+import type { Products } from '@/types/products'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 import styles from './page.module.scss'
 import ProductsAnimations from './ProductsAnimations'
 
 export default function Page() {
 	const { currentLang } = useLanguage()
+	const [productsData, setProductsData] = useState<Products | null>(null)
 
-	const typedProductsData = productsData as ProductsDataByLanguage
-	const data = typedProductsData[currentLang] || typedProductsData.ENG
+	useEffect(() => {
+		const loadData = async () => {
+			const data = await fetchProducts(currentLang)
+			setProductsData(data)
+		}
+		loadData()
+	}, [currentLang])
+
+	if (!productsData) {
+		return <div>Loading...</div>
+	}
 
 	const {
 		hero,
 		secondSectionSmallCard,
 		thirdSectionBigCards,
 		fourthSectionGrowTogether,
-	} = data
+	} = productsData
 
 	return (
 		<>

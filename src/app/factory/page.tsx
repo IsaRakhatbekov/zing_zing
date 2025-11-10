@@ -1,21 +1,34 @@
+// src/app/factory/page.tsx
 'use client'
 import FactorySwiper from '@/components/FactorySwiper/FactorySwiper'
 import Form from '@/components/Form/Form'
 import Button from '@/components/ui/Button'
 import { useLanguage } from '@/context/LanguageContext'
-import factoryData from '@/mock/factory.json'
-import { FactoryDataByLanguage } from '@/types/factory'
+import { fetchFactory } from '@/shared/api/fetchFactory'
+import type { Factory } from '@/types/factory'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 import FactoryAnimations from './FactoryAnimation'
 import styles from './page.module.scss'
 
 export default function Page() {
 	const { currentLang } = useLanguage()
+	const [factoryData, setFactoryData] = useState<Factory | null>(null)
 
-	const typedFactoryData = factoryData as FactoryDataByLanguage
-	const data = typedFactoryData[currentLang] || typedFactoryData.ENG
+	useEffect(() => {
+		const loadData = async () => {
+			const data = await fetchFactory(currentLang)
+			setFactoryData(data)
+		}
+		loadData()
+	}, [currentLang])
 
-	const { hero, secondSection, thirdSection, fourthSection, swiper } = data
+	if (!factoryData) {
+		return <div>Loading...</div>
+	}
+
+	const { hero, secondSection, thirdSection, fourthSection, swiper } =
+		factoryData
 
 	return (
 		<>

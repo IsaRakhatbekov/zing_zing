@@ -1,20 +1,32 @@
+// src/app/reachUs/page.tsx
 'use client'
 import Form from '@/components/Form/Form'
 import Button from '@/components/ui/Button'
 import { useLanguage } from '@/context/LanguageContext'
-import reachUsData from '@/mock/reachUs.json'
-import { ReachUsDataByLanguage } from '@/types/reachUs'
+import { fetchReachUs } from '@/shared/api/fetchReachUs'
+import type { ReachUs } from '@/types/reachUs'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 import ReachUsAnimations from './ReachUsAnimations'
 import styles from './page.module.scss'
 
 export default function Page() {
 	const { currentLang } = useLanguage()
+	const [reachUsData, setReachUsData] = useState<ReachUs | null>(null)
 
-	const typedReachUsData = reachUsData as ReachUsDataByLanguage
-	const data = typedReachUsData[currentLang] || typedReachUsData.ENG
+	useEffect(() => {
+		const loadData = async () => {
+			const data = await fetchReachUs(currentLang)
+			setReachUsData(data)
+		}
+		loadData()
+	}, [currentLang])
 
-	const { hero, secondSection } = data
+	if (!reachUsData) {
+		return <div>Loading...</div>
+	}
+
+	const { hero, secondSection } = reachUsData
 
 	return (
 		<>

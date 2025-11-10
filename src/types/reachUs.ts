@@ -1,4 +1,5 @@
-export type ReachUsPageData = {
+// src/types/reachUs.ts
+export type ReachUs = {
 	hero: {
 		mainTitle: string
 		text: string
@@ -12,10 +13,4 @@ export type ReachUsPageData = {
 		text: string
 		image: string
 	}
-}
-
-export type ReachUsDataByLanguage = {
-	ENG: ReachUsPageData
-	RUS: ReachUsPageData
-	KAZ: ReachUsPageData
 }

@@ -1,20 +1,32 @@
+// src/app/quality/page.tsx
 'use client'
 import Form from '@/components/Form/Form'
 import Button from '@/components/ui/Button'
 import { useLanguage } from '@/context/LanguageContext'
-import qualityData from '@/mock/quality.json'
-import { QualityDataByLanguage } from '@/types/quality'
+import { fetchQuality } from '@/shared/api/fetchQuality'
+import type { Quality } from '@/types/quality'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 import QualityAnimations from './QualityAnimation'
 import styles from './page.module.scss'
 
 export default function Page() {
 	const { currentLang } = useLanguage()
+	const [qualityData, setQualityData] = useState<Quality | null>(null)
 
-	const typedQualityData = qualityData as QualityDataByLanguage
-	const data = typedQualityData[currentLang] || typedQualityData.ENG
+	useEffect(() => {
+		const loadData = async () => {
+			const data = await fetchQuality(currentLang)
+			setQualityData(data)
+		}
+		loadData()
+	}, [currentLang])
 
-	const { hero, secondSection, thirdSection, fourthSection } = data
+	if (!qualityData) {
+		return <div>Loading...</div>
+	}
+
+	const { hero, secondSection, thirdSection, fourthSection } = qualityData
 
 	return (
 		<>

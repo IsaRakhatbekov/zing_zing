@@ -1,19 +1,37 @@
-import productMock from '@/mock/products.json' // создай этот файл
-import type { ProductPage } from '@/types/products' // создай этот тип
+// src/shared/api/fetchProducts.ts
+import productMock from '@/mock/products.json'
+import type { Products } from '@/types/products'
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || ''
 
-export async function fetchProducts(): Promise<ProductPage> {
+// Маппинг твоих кодов языков на те, что ожидает бэкенд
+const languageMap = {
+	ENG: 'en',
+	RUS: 'ru',
+	KAZ: 'kk',
+} as const
+
+export async function fetchProducts(
+	lang: keyof typeof languageMap = 'ENG'
+): Promise<Products> {
 	try {
 		if (!API_URL) {
-			return productMock as ProductPage
+			// В мок-режиме берем данные для нужного языка
+			return (productMock as any)[lang] as Products
 		}
-		const res = await fetch(`${API_URL}/products`, { cache: 'no-store' })
+
+		const res = await fetch(`${API_URL}/products`, {
+			cache: 'no-store',
+			headers: {
+				'Accept-Language': languageMap[lang],
+			},
+		})
+
 		if (!res.ok)
 			throw new Error('Ошибка при получении данных страницы продуктов')
-		return await res.json()
+		return (await res.json()) as Products
 	} catch (err) {
 		console.warn('▲ Используются моки (сервер недоступен):', err)
-		return productMock as ProductPage
+		return (productMock as any)[lang] as Products
 	}
 }

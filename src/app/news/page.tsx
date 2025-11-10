@@ -1,22 +1,34 @@
+// src/app/news/page.tsx
 'use client'
 import Button from '@/components/ui/Button'
 import { useLanguage } from '@/context/LanguageContext'
-import newsData from '@/mock/news.json'
-import { NewsDataByLanguage } from '@/types/news'
+import { fetchNews } from '@/shared/api/fetchNews'
+import type { News } from '@/types/news'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 import NewsAnimations from './NewsAnimations'
 import styles from './page.module.scss'
 
 export default function Page() {
 	const { currentLang } = useLanguage()
+	const [newsData, setNewsData] = useState<News | null>(null)
 
-	const typedNewsData = newsData as NewsDataByLanguage
-	const data = typedNewsData[currentLang] || typedNewsData.ENG
+	useEffect(() => {
+		const loadData = async () => {
+			const data = await fetchNews(currentLang)
+			setNewsData(data)
+		}
+		loadData()
+	}, [currentLang])
+
+	if (!newsData) {
+		return <div>Loading...</div>
+	}
 
 	const {
 		hero,
 		secondSection: { firstBlock, secondBlock, thirdBlock },
-	} = data
+	} = newsData
 
 	return (
 		<>
