@@ -115,7 +115,7 @@
 	}
 
 	.title {
-		font-size: clamp(28px, 4vw, 52px);
+		font-size: clamp(28px, 4vw, 48px);
 	}
 
 	.text {
@@ -181,7 +181,7 @@
 	}
 
 	.title {
-		font-size: clamp(28px, 4vw, 52px);
+		font-size: clamp(28px, 4vw, 44px);
 	}
 
 	.text {
@@ -190,6 +190,8 @@
 		font-size: 22px;
 		margin: 15px 0 30px;
 		line-height: 120%;
+		width: 100%;
+		margin-left: auto;
 	}
 
 	.inner {
@@ -221,7 +223,6 @@
 // =================================================================
 .ourPower {
 	.wrapper {
-		/* адаптивная высота и отступы, фон — как был */
 		min-height: clamp(360px, 42vw, 520px);
 		position: relative;
 		display: flex;
@@ -245,7 +246,7 @@
 	}
 
 	.title {
-		font-size: clamp(28px, 4vw, 52px);
+		font-size: clamp(28px, 4vw, 48px);
 	}
 
 	.text {

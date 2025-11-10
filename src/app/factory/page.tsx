@@ -1,13 +1,20 @@
+'use client'
 import FactorySwiper from '@/components/FactorySwiper/FactorySwiper'
+import Form from '@/components/Form/Form'
 import Button from '@/components/ui/Button'
-import { fetchFactory } from '@/shared/api/fetchFactory'
+import { useLanguage } from '@/context/LanguageContext'
+import factoryData from '@/mock/factory.json'
+import { FactoryDataByLanguage } from '@/types/factory'
 import Image from 'next/image'
 import FactoryAnimations from './FactoryAnimation'
 import styles from './page.module.scss'
-import Form from '@/components/Form/Form'
 
-export default async function page() {
-	const data = await fetchFactory()
+export default function Page() {
+	const { currentLang } = useLanguage()
+
+	const typedFactoryData = factoryData as FactoryDataByLanguage
+	const data = typedFactoryData[currentLang] || typedFactoryData.ENG
+
 	const { hero, secondSection, thirdSection, fourthSection, swiper } = data
 
 	return (
@@ -34,7 +41,7 @@ export default async function page() {
 								<div className={styles.leftImgWrapper}>
 									<Image
 										src={hero.image1}
-										alt='#'
+										alt='Factory production 1'
 										width={600}
 										height={500}
 										priority
@@ -43,7 +50,7 @@ export default async function page() {
 								<div className={styles.leftImgWrapper}>
 									<Image
 										src={hero.image2}
-										alt='#'
+										alt='Factory production 2'
 										width={600}
 										height={500}
 										priority
@@ -52,7 +59,7 @@ export default async function page() {
 								<div className={styles.leftImgWrapper}>
 									<Image
 										src={hero.image3}
-										alt='#'
+										alt='Factory production 3'
 										width={600}
 										height={500}
 										priority
@@ -76,7 +83,7 @@ export default async function page() {
 							<div className={styles.imgWrapper}>
 								<Image
 									src={secondSection.image}
-									alt='#'
+									alt={secondSection.title}
 									width={100}
 									height={100}
 								/>
@@ -92,7 +99,7 @@ export default async function page() {
 						<div className={styles.imgWrapper}>
 							<Image
 								src={thirdSection.image}
-								alt='#'
+								alt={thirdSection.title}
 								width={100}
 								height={100}
 							/>
@@ -118,7 +125,7 @@ export default async function page() {
 							<div className={styles.imgWrapper}>
 								<Image
 									src={fourthSection.image}
-									alt='#'
+									alt={fourthSection.title}
 									width={100}
 									height={100}
 								/>

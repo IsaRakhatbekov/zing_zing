@@ -1,41 +1,170 @@
 {
-	"hero": {
-		"title1": "Made with",
-		"titleSpan1": "Care.",
-		"title2": " Crafted with",
-		"titleSpan2": "Zing.",
-		"text": "Behind every pack of ZingZing lies a world of precision and passion.Our factory blends advanced technology with human touch — ensuring every stick, slice, and bite meets the highest standards of safety and flavor.",
-		"image1": "/mock/factory/hero1.png",
-		"image2": "/mock/factory/hero2.png",
-		"image3": "/mock/factory/hero3.png"
+	"ENG": {
+		"hero": {
+			"title1": "Made with",
+			"titleSpan1": "Care.",
+			"title2": " Crafted with",
+			"titleSpan2": "Zing.",
+			"text": "Behind every pack of ZingZing lies a world of precision and passion. Our factory blends advanced technology with human touch — ensuring every stick, slice, and bite meets the highest standards of safety and flavor.",
+			"image1": "/mock/factory/hero1.png",
+			"image2": "/mock/factory/hero2.png",
+			"image3": "/mock/factory/hero3.png"
+		},
+		"secondSection": {
+			"title": "Quality Innovation",
+			"text": "Our production line is designed for efficiency, hygiene, and creativity. From ingredient preparation to packaging, each process is automated yet carefully supervised by our experienced team.",
+			"image": "/mock/factory/quality.png"
+		},
+		"thirdSection": {
+			"title": "Certified & Safe",
+			"text": "We proudly operate under ISO-certified food safety systems. Regular audits and real-time monitoring keep our processes transparent and reliable — so every ZingZing product is safe to enjoy.",
+			"image": "/mock/factory/certified.png"
+		},
+		"fourthSection": {
+			"title": "Our Power",
+			"text": "Behind our machines are real people — engineers, testers, and dreamers who care deeply about quality. Their skill and spirit bring ZingZing to life every single day.",
+			"image": "/mock/factory/power.png"
+		},
+		"swiper": {
+			"slides": [
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "Factory production line"
+				},
+				{ "image": "/mock/factory/swiper-img.png", "alt": "Factory equipment" },
+				{ "image": "/mock/factory/swiper-img.png", "alt": "Factory process" },
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "Factory quality control"
+				},
+				{ "image": "/mock/factory/swiper-img.png", "alt": "Factory packaging" },
+				{ "image": "/mock/factory/swiper-img.png", "alt": "Factory team" },
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "Factory technology"
+				},
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "Factory innovation"
+				},
+				{ "image": "/mock/factory/swiper-img.png", "alt": "Factory standards" },
+				{ "image": "/mock/factory/swiper-img.png", "alt": "Factory excellence" }
+			]
+		}
 	},
-	"secondSection": {
-		"title": "Quality Innovation",
-		"text": "Our production line is designed for efficiency, hygiene, and creativity. From ingredient preparation to packaging, each process is automated yet carefully supervised by our experienced team.",
-		"image": "/mock/factory/quality.png"
+	"RUS": {
+		"hero": {
+			"title1": "Сделано с",
+			"titleSpan1": "Заботой.",
+			"title2": " Создано с",
+			"titleSpan2": "Zing.",
+			"text": "Каждая пачка ZingZing — это точность и страсть. Наша фабрика сочетает технологии с человеческим подходом для высочайших стандартов безопасности и вкуса.",
+			"image1": "/mock/factory/hero1.png",
+			"image2": "/mock/factory/hero2.png",
+			"image3": "/mock/factory/hero3.png"
+		},
+		"secondSection": {
+			"title": "Инновации Качества",
+			"text": "Наша линия — это эффективность, гигиена и креативность. Каждый процесс автоматизирован и контролируется опытной командой.",
+			"image": "/mock/factory/quality.png"
+		},
+		"thirdSection": {
+			"title": "Сертифицировано и Безопасно",
+			"text": "Работаем по сертифицированным системам ISO. Регулярные аудиты и мониторинг обеспечивают прозрачность и надежность.",
+			"image": "/mock/factory/certified.png"
+		},
+		"fourthSection": {
+			"title": "Наша Сила",
+			"text": "За нашими машинами стоят реальные люди — инженеры, тестировщики и мечтатели, которые глубоко заботятся о качестве. Их мастерство и дух вдыхают жизнь в ZingZing каждый день.",
+			"image": "/mock/factory/power.png"
+		},
+		"swiper": {
+			"slides": [
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "Производственная линия фабрики"
+				},
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "Оборудование фабрики"
+				},
+				{ "image": "/mock/factory/swiper-img.png", "alt": "Процесс фабрики" },
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "Контроль качества фабрики"
+				},
+				{ "image": "/mock/factory/swiper-img.png", "alt": "Упаковка фабрики" },
+				{ "image": "/mock/factory/swiper-img.png", "alt": "Команда фабрики" },
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "Технологии фабрики"
+				},
+				{ "image": "/mock/factory/swiper-img.png", "alt": "Инновации фабрики" },
+				{ "image": "/mock/factory/swiper-img.png", "alt": "Стандарты фабрики" },
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "Превосходство фабрики"
+				}
+			]
+		}
 	},
-	"thirdSection": {
-		"title": "Certified & Safe",
-		"text": "We proudly operate under ISO-certified food safety systems. Regular audits and real-time monitoring keep our processes transparent and reliable — so every ZingZing product is safe to enjoy.",
-		"image": "/mock/factory/certified.png"
-	},
-	"fourthSection": {
-		"title": "Our Power",
-		"text": "Behind our machines are real people — engineers, testers, and dreamers who care deeply about quality. Their skill and spirit bring ZingZing to life every single day.",
-		"image": "/mock/factory/power.png"
-	},
-	"swiper": {
-		"slides": [
-			{ "image": "/mock/factory/swiper-img.png", "alt": "Factory slide 1" },
-			{ "image": "/mock/factory/swiper-img.png", "alt": "Factory slide 2" },
-			{ "image": "/mock/factory/swiper-img.png", "alt": "Factory slide 3" },
-			{ "image": "/mock/factory/swiper-img.png", "alt": "Factory slide 3" },
-			{ "image": "/mock/factory/swiper-img.png", "alt": "Factory slide 3" },
-			{ "image": "/mock/factory/swiper-img.png", "alt": "Factory slide 3" },
-			{ "image": "/mock/factory/swiper-img.png", "alt": "Factory slide 3" },
-			{ "image": "/mock/factory/swiper-img.png", "alt": "Factory slide 3" },
-			{ "image": "/mock/factory/swiper-img.png", "alt": "Factory slide 3" },
-			{ "image": "/mock/factory/swiper-img.png", "alt": "Factory slide 3" }
-		]
+	"KAZ": {
+		"hero": {
+			"title1": "Қамқорлықпен",
+			"titleSpan1": "Жасалған.",
+			"title2": " Zing-мен",
+			"titleSpan2": "Өңделген.",
+			"text": "Әрбір ZingZing орамасы — дәлдік пен құштарлық. Біздің фабрика технология мен адамгершілікті үйлестіреді, қауіпсіздік пен дәмнің жоғары стандарттары үшін.",
+			"image1": "/mock/factory/hero1.png",
+			"image2": "/mock/factory/hero2.png",
+			"image3": "/mock/factory/hero3.png"
+		},
+		"secondSection": {
+			"title": "Сапалы Инновация",
+			"text": "Біздің желі — тиімділік, гигиена және шығармашылық. Әр процесс автоматтандырылған және тәжірибелі команда бақылайды.",
+			"image": "/mock/factory/quality.png"
+		},
+		"thirdSection": {
+			"title": "Сертификатталған және Қауіпсіз",
+			"text": "ISO сертификатталған жүйелерде жұмыс істейміз. Тұрақты аудиттер мен бақылау ашықтық пен сенімділікті қамтамасыз етеді.",
+			"image": "/mock/factory/certified.png"
+		},
+		"fourthSection": {
+			"title": "Біздің Күшіміз",
+			"text": "Біздің машиналарымыздың артында нақты адамдар тұр — инженерлер, тестерлер және сапаға терең қамқорлық танытатын армандаушылар. Олардың шеберлігі мен рухы ZingZing-ке күн сайын өмір сыйлайды.",
+			"image": "/mock/factory/power.png"
+		},
+		"swiper": {
+			"slides": [
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "Фабриканың өндіріс желісі"
+				},
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "Фабрика жабдықтары"
+				},
+				{ "image": "/mock/factory/swiper-img.png", "alt": "Фабрика процесі" },
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "Фабрика сапасын бақылау"
+				},
+				{ "image": "/mock/factory/swiper-img.png", "alt": "Фабрика орамасы" },
+				{ "image": "/mock/factory/swiper-img.png", "alt": "Фабрика командасы" },
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "Фабрика технологиясы"
+				},
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "Фабрика инновациясы"
+				},
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "Фабрика стандарттары"
+				},
+				{ "image": "/mock/factory/swiper-img.png", "alt": "Фабрика жетістігі" }
+			]
+		}
 	}
 }

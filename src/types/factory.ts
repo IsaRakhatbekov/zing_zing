@@ -1,10 +1,9 @@
-// types/factory.ts
 export type FactorySwiperSlide = {
 	image: string
 	alt: string
 }
 
-export type FactoryType = {
+export type FactoryPageData = {
 	hero: {
 		title1: string
 		titleSpan1: string
@@ -33,4 +32,10 @@ export type FactoryType = {
 	swiper: {
 		slides: FactorySwiperSlide[]
 	}
+}
+
+export type FactoryDataByLanguage = {
+	ENG: FactoryPageData
+	RUS: FactoryPageData
+	KAZ: FactoryPageData
 }
