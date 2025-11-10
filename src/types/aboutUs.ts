@@ -1,4 +1,4 @@
-export type AboutUs = {
+export type AboutUsPageData = {
 	hero: {
 		title1: string
 		mainTitleSpan1: string
@@ -35,4 +35,10 @@ export type AboutUs = {
 			image: string
 		}>
 	}
+}
+
+export type AboutUsDataByLanguage = {
+	ENG: AboutUsPageData
+	RUS: AboutUsPageData
+	KAZ: AboutUsPageData
 }

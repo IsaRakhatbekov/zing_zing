@@ -2,7 +2,7 @@
 .secondHero {
 	margin: 50px 0;
 	.wrapper {
-		height: 380px;
+		height: 420px;
 		position: relative;
 		padding: 40px 80px;
 		color: var(--white);
@@ -17,7 +17,7 @@
 	}
 
 	.title {
-		max-width: 268px;
+		max-width: fit-content;
 		font-weight: 900;
 		font-size: clamp(28px, 4vw, 52px);
 
@@ -84,7 +84,7 @@
 		width: 309px;
 		height: 447px;
 		position: relative;
-		bottom: 34px;
+		bottom: 14px;
 
 		/* ключ: окно-«маска» только для этого блока */
 		overflow: hidden;
@@ -262,7 +262,7 @@
 	}
 
 	.title {
-		font-size: clamp(18px, calc(18px + 42px * (100vw / 1315px)), 60px);
+		font-size: clamp(18px, calc(18px + 42px * (100vw / 1315px)), 52px);
 		& span {
 			color: var(--yellow);
 		}
@@ -426,6 +426,7 @@
 		.rightImg {
 			width: 222px;
 			height: 350px;
+			bottom: 20px;
 		}
 
 		.textWrapper {
@@ -563,7 +564,7 @@
 		.rightImg {
 			width: 200px;
 			height: 310px;
-			bottom: 15px;
+			bottom: 4px;
 		}
 	}
 
