@@ -1,70 +1,212 @@
 {
-	"hero": {
-		"title1": "Quality You Can ",
-		"mainTitleSpan1": "Trust.",
-		"title2": " Spice You’ll",
-		"mainTitleSpan2": " Love.",
-		"text": "We are ZingZing — a new generation of snack makers who believe that great taste can be bold, fun, and crafted with care.",
-		"leftSideImage1": "/mock/quality/pink.png",
-		"leftSideImage2": "/mock/quality/pink.png",
-		"leftSideImage3": "/mock/quality/pink.png",
-		"rightSideImage": "/mock/quality/model.png"
-	},
-	"secondSection": {
-		"image": "/mock/quality/hat.png",
-		"title": "Our",
-		"titleSpan": "Quality",
-		"text": "We don’t just meet standards — we build them into every step. From ingredients to packaging, our promise is simple: safe, consistent, and delicious."
-	},
-	"thirdSection": {
-		"dropsList": [
-			{
-				"id": 1,
-				"image": "/mock/quality/arrow.svg",
-				"dropsTitle": "Certified Facility",
-				"dropsText": "Produced in an ISO-certified facility under strict hygiene and safety control."
-			},
-			{
-				"id": 2,
-				"image": "/mock/quality/arrow.svg",
-				"dropsTitle": "Halal Assurance",
-				"dropsText": "Formulas and processes fully comply with Halal standards."
-			},
-			{
-				"id": 3,
-				"image": "/mock/quality/arrow.svg",
-				"dropsTitle": "Supplier Approval",
-				"dropsText": "We work only with verified, qualified suppliers."
-			},
-			{
-				"id": 4,
-				"image": "/mock/quality/arrow.svg",
-				"dropsTitle": "Transparent Practice",
-				"dropsText": "We share our certifications openly to build lasting trust."
-			}
-		]
-	},
-	"fourthSection": {
-		"ensure": {
-			"image": "/mock/quality/doctor.png",
-			"title": "How We Ensure",
+	"ENG": {
+		"hero": {
+			"title1": "Quality You Can ",
+			"mainTitleSpan1": "Trust.",
+			"title2": " Spice You'll",
+			"mainTitleSpan2": " Love.",
+			"text": "We are ZingZing — a new generation of snack makers who believe that great taste can be bold, fun, and crafted with care.",
+			"leftSideImage1": "/mock/quality/pink.png",
+			"leftSideImage2": "/mock/quality/pink.png",
+			"leftSideImage3": "/mock/quality/pink.png",
+			"rightSideImage": "/mock/quality/model.png"
+		},
+		"secondSection": {
+			"image": "/mock/quality/hat.png",
+			"title": "Our",
 			"titleSpan": "Quality",
-			"text": "From ingredient selection to final packaging, every step of production is closely monitored. Our lab conducts routine tests for safety, texture, and flavor balance — ensuring that every ZingZing snack tastes just as good as the first one."
+			"text": "We don't just meet standards — we build them into every step. From ingredients to packaging, our promise is simple: safe, consistent, and delicious."
 		},
-		"accountability": {
-			"image": "/mock/quality/purpleBox.png",
-			"title": "Accountability",
-			"text": "Each pack includes a batch code linked to our records, ensuring full traceability for every ZingZing snack — from production to its source, because we stand behind every flavor we make."
+		"thirdSection": {
+			"dropsList": [
+				{
+					"id": 1,
+					"image": "/mock/quality/arrow.svg",
+					"dropsTitle": "Certified Facility",
+					"dropsText": "Produced in an ISO-certified facility under strict hygiene and safety control."
+				},
+				{
+					"id": 2,
+					"image": "/mock/quality/arrow.svg",
+					"dropsTitle": "Halal Assurance",
+					"dropsText": "Formulas and processes fully comply with Halal standards."
+				},
+				{
+					"id": 3,
+					"image": "/mock/quality/arrow.svg",
+					"dropsTitle": "Supplier Approval",
+					"dropsText": "We work only with verified, qualified suppliers."
+				},
+				{
+					"id": 4,
+					"image": "/mock/quality/arrow.svg",
+					"dropsTitle": "Transparent Practice",
+					"dropsText": "We share our certifications openly to build lasting trust."
+				}
+			]
 		},
-		"stewardship": {
-			"image": "/mock/quality/tree.png",
-			"title": "Stewardship",
-			"text": "We care for taste and for the planet. ZingZing continuously improves its packaging efficiency, reduces waste, and seeks recyclable materials wherever possible."
+		"fourthSection": {
+			"ensure": {
+				"image": "/mock/quality/doctor.png",
+				"title": "How We Ensure",
+				"titleSpan": "Quality",
+				"text": "From ingredient selection to final packaging, every step of production is closely monitored. Our lab conducts routine tests for safety, texture, and flavor balance — ensuring that every ZingZing snack tastes just as good as the first one."
+			},
+			"accountability": {
+				"image": "/mock/quality/purpleBox.png",
+				"title": "Accountability",
+				"text": "Each pack includes a batch code linked to our records, ensuring full traceability for every ZingZing snack — from production to its source, because we stand behind every flavor we make."
+			},
+			"stewardship": {
+				"image": "/mock/quality/tree.png",
+				"title": "Stewardship",
+				"text": "We care for taste and for the planet. ZingZing continuously improves its packaging efficiency, reduces waste, and seeks recyclable materials wherever possible."
+			},
+			"certifications": {
+				"image": "/mock/quality/Our-Certifications.png",
+				"title": "Our Certifications",
+				"text": "We proudly hold ISO and Halal certifications. To request copies or verify our documents, please contact our quality team."
+			}
+		}
+	},
+	"RUS": {
+		"hero": {
+			"title1": "Качество",
+			"mainTitleSpan1": "Надежное.",
+			"title2": "Вкус",
+			"mainTitleSpan2": "Любимый.",
+			"text": "Мы ZingZing — новое поколение создателей закусок, которые верят, что отличный вкус может быть смелым, веселым и созданным с заботой.",
+			"leftSideImage1": "/mock/quality/pink.png",
+			"leftSideImage2": "/mock/quality/pink.png",
+			"leftSideImage3": "/mock/quality/pink.png",
+			"rightSideImage": "/mock/quality/model.png"
 		},
-		"certifications": {
-			"image": "/mock/quality/Our-Certifications.png",
-			"title": "Our Certifications",
-			"text": "We proudly hold ISO and Halal certifications. To request copies or verify our documents, please contact our quality team."
+		"secondSection": {
+			"image": "/mock/quality/hat.png",
+			"title": "Наше",
+			"titleSpan": "Качество",
+			"text": "Мы не просто соответствуем стандартам — мы встраиваем их в каждый шаг. От ингредиентов до упаковки, наше обещание простое: безопасно, стабильно и вкусно."
+		},
+		"thirdSection": {
+			"dropsList": [
+				{
+					"id": 1,
+					"image": "/mock/quality/arrow.svg",
+					"dropsTitle": "Сертифицированное Производство",
+					"dropsText": "Производится на сертифицированном по ISO предприятии под строгим контролем гигиены и безопасности."
+				},
+				{
+					"id": 2,
+					"image": "/mock/quality/arrow.svg",
+					"dropsTitle": "Халяль Гарантия",
+					"dropsText": "Рецептуры и процессы полностью соответствуют стандартам Халяль."
+				},
+				{
+					"id": 3,
+					"image": "/mock/quality/arrow.svg",
+					"dropsTitle": "Проверенные Поставщики",
+					"dropsText": "Мы работаем только с проверенными, квалифицированными поставщиками."
+				},
+				{
+					"id": 4,
+					"image": "/mock/quality/arrow.svg",
+					"dropsTitle": "Прозрачная Практика",
+					"dropsText": "Мы открыто делимся нашими сертификатами для построения долговременного доверия."
+				}
+			]
+		},
+		"fourthSection": {
+			"ensure": {
+				"image": "/mock/quality/doctor.png",
+				"title": "Обеспечение",
+				"titleSpan": " Качества",
+				"text": "От выбора ингредиентов до финальной упаковки, каждый этап производства тщательно контролируется. Наша лаборатория проводит регулярные тесты на безопасность, текстуру и баланс вкуса."
+			},
+			"accountability": {
+				"image": "/mock/quality/purpleBox.png",
+				"title": "Подотчетность",
+				"text": "Каждая упаковка содержит код партии, связанный с нашими записями, обеспечивая полную прослеживаемость для каждого снэка ZingZing."
+			},
+			"stewardship": {
+				"image": "/mock/quality/tree.png",
+				"title": "Ответственность",
+				"text": "Мы заботимся о вкусе и о планете. ZingZing постоянно улучшает эффективность упаковки, сокращает отходы и ищет перерабатываемые материалы."
+			},
+			"certifications": {
+				"image": "/mock/quality/Our-Certifications.png",
+				"title": "Наши Сертификаты",
+				"text": "Мы с гордостью имеем сертификаты ISO и Халяль. Для получения копий или проверки документов, свяжитесь с нашей командой по качеству."
+			}
+		}
+	},
+	"KAZ": {
+		"hero": {
+			"title1": "Сенім артқан ",
+			"mainTitleSpan1": "Сапа.",
+			"title2": " Сіз ұнататын",
+			"mainTitleSpan2": " Дәмдер.",
+			"text": "Біз ZingZing - керемет дәм батыл, көңілді және қамқорлықпен жасалуы мүмкін деп сенетін снәк өндірушілердің жаңа ұрпағымыз.",
+			"leftSideImage1": "/mock/quality/pink.png",
+			"leftSideImage2": "/mock/quality/pink.png",
+			"leftSideImage3": "/mock/quality/pink.png",
+			"rightSideImage": "/mock/quality/model.png"
+		},
+		"secondSection": {
+			"image": "/mock/quality/hat.png",
+			"title": "Біздің",
+			"titleSpan": "Сапа",
+			"text": "Біз стандарттарға сай болудан гөрі, оларды әрбір қадамға енгіземіз. Ингредиенттерден бастап орамаға дейін, біздің уәде қарапайым: қауіпсіз, тұрақты және дәмді."
+		},
+		"thirdSection": {
+			"dropsList": [
+				{
+					"id": 1,
+					"image": "/mock/quality/arrow.svg",
+					"dropsTitle": "Сертификатталған Өндіріс",
+					"dropsText": "ISO бойынша сертификатталған кәсіпорында қатаң гигиена және қауіпсіздік бақылауымен өндіріледі."
+				},
+				{
+					"id": 2,
+					"image": "/mock/quality/arrow.svg",
+					"dropsTitle": "Халал Кепілдігі",
+					"dropsText": "Формулалар мен процестер Халал стандарттарына толығымен сәйкес келеді."
+				},
+				{
+					"id": 3,
+					"image": "/mock/quality/arrow.svg",
+					"dropsTitle": "Тексерілген Жеткізушілер",
+					"dropsText": "Біз тек тексерілген, білікті жеткізушілермен жұмыс істейміз."
+				},
+				{
+					"id": 4,
+					"image": "/mock/quality/arrow.svg",
+					"dropsTitle": "Ашық Тәжірибе",
+					"dropsText": "Біз өз сертификатарымызды ашық бөлісеміз, ұзақ мерзімді сенім құру үшін."
+				}
+			]
+		},
+		"fourthSection": {
+			"ensure": {
+				"image": "/mock/quality/doctor.png",
+				"title": "Сапаны",
+				"titleSpan": " Қамтамасыз Ету",
+				"text": "Ингредиенттерді таңдаудан бастап соңғы орамаға дейін, өндірістің әрбір кезеңі мұқият бақыланады. Біздің зертхана қауіпсіздік, құрылым және дәм балансы үшін тұрақты тесттер жүргізеді."
+			},
+			"accountability": {
+				"image": "/mock/quality/purpleBox.png",
+				"title": "Жауапкершілік",
+				"text": "Әрбір орамада біздің жазбаларымызға байланысты партия коды бар, әрбір ZingZing снәгі үшін толық қайдан келгенін бақылауды қамтамасыз етеді."
+			},
+			"stewardship": {
+				"image": "/mock/quality/tree.png",
+				"title": "Қамқорлық",
+				"text": "Біз дәм және планета үшін қам көреміз. ZingZing үнемі орама тиімділігін жақсартады, қалдықтарды азайтады және мүмкіндігінше қайта өңделетін материалдарды іздейді."
+			},
+			"certifications": {
+				"image": "/mock/quality/Our-Certifications.png",
+				"title": "Сертификаттар",
+				"text": "Біз мақтан тұтамыз ISO және Халал сертификаттарын ұстаймыз. Көшірмелерді сұрау немесе құжаттарды тексеру үшін, біздің сапа бөлімімізге хабарласыңыз."
+			}
 		}
 	}
 }

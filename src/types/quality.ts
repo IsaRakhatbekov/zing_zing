@@ -1,4 +1,4 @@
-export type QualityType = {
+export type QualityPageData = {
 	hero: {
 		title1: string
 		mainTitleSpan1: string
@@ -47,4 +47,10 @@ export type QualityType = {
 			text: string
 		}
 	}
+}
+
+export type QualityDataByLanguage = {
+	ENG: QualityPageData
+	RUS: QualityPageData
+	KAZ: QualityPageData
 }

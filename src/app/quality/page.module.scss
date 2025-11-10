@@ -9,6 +9,7 @@
 		color: var(--white);
 		background-color: var(--yellow);
 		display: flex;
+		gap: 20px;
 		align-items: center;
 		justify-content: space-between;
 	}
@@ -18,7 +19,7 @@
 	}
 
 	.title {
-		max-width: 435px;
+		max-width: fit-content;
 		font-weight: 900;
 		line-height: 100%;
 		margin-bottom: 20px;
@@ -129,7 +130,7 @@
 	}
 
 	.title {
-		font-size: clamp(18px, calc(18px + 42px * (100vw / 1315px)), 60px);
+		font-size: clamp(18px, calc(18px + 42px * (100vw / 1315px)), 52px);
 		& span {
 			color: var(--yellow);
 		}
@@ -251,7 +252,7 @@
 	}
 	.title {
 		color: var(--purple);
-		font-size: clamp(18px, calc(18px + 37px * (100vw / 1315px)), 55px);
+		font-size: clamp(18px, calc(18px + 37px * (100vw / 1315px)), 52px);
 		& span {
 			color: var(--pink);
 		}

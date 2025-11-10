@@ -1,14 +1,19 @@
-import Button from '@/components/ui/Button'
-import { fetchQuality } from '@/shared/api/fetchQuality'
-import Image from 'next/image'
-import styles from './page.module.scss'
-import QualityAnimations from './QualityAnimation'
+'use client'
 import Form from '@/components/Form/Form'
+import Button from '@/components/ui/Button'
+import { useLanguage } from '@/context/LanguageContext'
+import qualityData from '@/mock/quality.json'
+import { QualityDataByLanguage } from '@/types/quality'
+import Image from 'next/image'
+import QualityAnimations from './QualityAnimation'
+import styles from './page.module.scss'
 
-export default async function page() {
-	// Quality page
+export default function Page() {
+	const { currentLang } = useLanguage()
 
-	const data = await fetchQuality()
+	const typedQualityData = qualityData as QualityDataByLanguage
+	const data = typedQualityData[currentLang] || typedQualityData.ENG
+
 	const { hero, secondSection, thirdSection, fourthSection } = data
 
 	return (
@@ -34,7 +39,7 @@ export default async function page() {
 								<div className={styles.leftImgWrapper}>
 									<Image
 										src={hero.leftSideImage1}
-										alt='#'
+										alt='ZingZing quality'
 										width={100}
 										height={100}
 									/>
@@ -42,7 +47,7 @@ export default async function page() {
 								<div className={styles.leftImgWrapper}>
 									<Image
 										src={hero.leftSideImage2}
-										alt='#'
+										alt='ZingZing quality'
 										width={100}
 										height={100}
 									/>
@@ -50,7 +55,7 @@ export default async function page() {
 								<div className={styles.leftImgWrapper}>
 									<Image
 										src={hero.leftSideImage3}
-										alt='#'
+										alt='ZingZing quality'
 										width={100}
 										height={100}
 									/>
@@ -59,7 +64,7 @@ export default async function page() {
 							<div className={`${styles.imgWrapper} ${styles.rightImg}`}>
 								<Image
 									src={hero.rightSideImage}
-									alt='#'
+									alt='ZingZing quality hero'
 									width={100}
 									height={100}
 								/>
@@ -75,7 +80,7 @@ export default async function page() {
 						<div className={styles.imgWrapper}>
 							<Image
 								src={secondSection.image}
-								alt='#'
+								alt='Quality standards'
 								width={800}
 								height={600}
 							/>
@@ -99,7 +104,12 @@ export default async function page() {
 							({ id, image, dropsTitle, dropsText }) => (
 								<li className={styles.dropsItem} key={id}>
 									<div className={styles.iconWrapper}>
-										<Image src={image} alt='' width={110} height={110} />
+										<Image
+											src={image}
+											alt={dropsTitle}
+											width={110}
+											height={110}
+										/>
 									</div>
 									<h3 className={styles.dropsTitle}>{dropsTitle}</h3>
 									<p className={styles.dropsText}>{dropsText}</p>
@@ -128,7 +138,7 @@ export default async function page() {
 						<div className={styles.imgWrapper}>
 							<Image
 								src={fourthSection.ensure.image}
-								alt=''
+								alt='Quality assurance'
 								width={100}
 								height={100}
 							/>
@@ -139,7 +149,7 @@ export default async function page() {
 						<div className={styles.pinkImgWrapper}>
 							<Image
 								src={fourthSection.accountability.image}
-								alt=''
+								alt='Accountability'
 								width={100}
 								height={100}
 							/>
@@ -170,7 +180,7 @@ export default async function page() {
 						<div className={styles.imgWrapper}>
 							<Image
 								src={fourthSection.stewardship.image}
-								alt=''
+								alt='Stewardship'
 								width={100}
 								height={100}
 							/>
@@ -181,7 +191,7 @@ export default async function page() {
 						<div className={styles.imgWrapper}>
 							<Image
 								src={fourthSection.certifications.image}
-								alt=''
+								alt='Certifications'
 								width={100}
 								height={100}
 							/>
@@ -205,7 +215,7 @@ export default async function page() {
 
 			<section id='qualityForm'>
 				<Form />
-			</section> 
+			</section>
 		</>
 	)
 }
