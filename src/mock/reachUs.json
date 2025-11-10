@@ -1,15 +1,48 @@
 {
-	"hero": {
-		"mainTitle": "We’re Just a Message Away!",
-		"text": "Got a question, an idea, or a business proposal? We’re here to help. Whether you’re a distributor, retailer, media partner, or simply a ZingZing fan — reach out and we’ll get back to you soon!",
-		"leftSideImage1": "/mock/reachUs/book.png",
-		"leftSideImage2": "/mock/reachUs/book.png",
-		"leftSideImage3": "/mock/reachUs/book.png",
-		"rightSideImage": "/mock/reachUs/model.png"
+	"ENG": {
+		"hero": {
+			"mainTitle": "We're Just a Message Away!",
+			"text": "Got a question, an idea, or a business proposal? We're here to help. Whether you're a distributor, retailer, media partner, or simply a ZingZing fan — reach out and we'll get back to you soon!",
+			"leftSideImage1": "/mock/reachUs/book.png",
+			"leftSideImage2": "/mock/reachUs/book.png",
+			"leftSideImage3": "/mock/reachUs/book.png",
+			"rightSideImage": "/mock/reachUs/model.png"
+		},
+		"secondSection": {
+			"title": "Work With Us",
+			"text": "Grow your business with a trusted, fun, and fast-moving snack brand. ZingZing offers quality products, strong support, and a partnership that truly adds value.",
+			"image": "/mock/reachUs/container.png"
+		}
 	},
-	"secondSection": {
-		"title": "Work With Us",
-		"text": "Grow your business with a trusted, fun, and fast-moving snack brand. ZingZing offers quality products, strong support, and a partnership that truly adds value.",
-		"image": "/mock/reachUs/container.png"
+	"RUS": {
+		"hero": {
+			"mainTitle": "Мы Всего в Одном Сообщении!",
+			"text": "Есть вопрос или предложение? Мы здесь, чтобы помочь. Свяжитесь с нами — скоро ответим!",
+			"leftSideImage1": "/mock/reachUs/book.png",
+			"leftSideImage2": "/mock/reachUs/book.png",
+			"leftSideImage3": "/mock/reachUs/book.png",
+			"rightSideImage": "/mock/reachUs/model.png"
+		},
+		"secondSection": {
+			"title": "Работайте с Нами",
+			"text": "Развивайте бизнес с надежным брендом закусок. ZingZing предлагает качественные продукты и сильную поддержку.",
+
+			"image": "/mock/reachUs/container.png"
+		}
+	},
+	"KAZ": {
+		"hero": {
+			"mainTitle": "Біз Бір Хабарлама Қашықтықтамыз!",
+			"text": "Сұрағыңыз немесе ұсынысыңыз бар ма? Біз көмектесуге дайынбыз. Хабарласыңыз — жауап береміз!",
+			"leftSideImage1": "/mock/reachUs/book.png",
+			"leftSideImage2": "/mock/reachUs/book.png",
+			"leftSideImage3": "/mock/reachUs/book.png",
+			"rightSideImage": "/mock/reachUs/model.png"
+		},
+		"secondSection": {
+			"title": "Бізбен Жұмыс Істеңіз",
+			"text": "Сенімді снәк брендімен бизнесіңізді дамытыңыз. ZingZing сапалы өнімдер мен күшті қолдауды ұсынады.",
+			"image": "/mock/reachUs/container.png"
+		}
 	}
 }

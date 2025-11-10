@@ -1,14 +1,21 @@
+'use client'
 import Form from '@/components/Form/Form'
-
 import Button from '@/components/ui/Button'
-import { fetchReachUs } from '@/shared/api/fetchReachUs'
+import { useLanguage } from '@/context/LanguageContext'
+import reachUsData from '@/mock/reachUs.json'
+import { ReachUsDataByLanguage } from '@/types/reachUs'
 import Image from 'next/image'
-import styles from './page.module.scss'
 import ReachUsAnimations from './ReachUsAnimations'
+import styles from './page.module.scss'
 
-export default async function Page() {
-	const data = await fetchReachUs()
+export default function Page() {
+	const { currentLang } = useLanguage()
+
+	const typedReachUsData = reachUsData as ReachUsDataByLanguage
+	const data = typedReachUsData[currentLang] || typedReachUsData.ENG
+
 	const { hero, secondSection } = data
+
 	return (
 		<>
 			<ReachUsAnimations />
@@ -25,7 +32,7 @@ export default async function Page() {
 								<div className={styles.leftImgWrapper}>
 									<Image
 										src={hero.leftSideImage1}
-										alt='reach left'
+										alt='Contact ZingZing'
 										width={400}
 										height={300}
 									/>
@@ -33,7 +40,7 @@ export default async function Page() {
 								<div className={styles.leftImgWrapper}>
 									<Image
 										src={hero.leftSideImage2}
-										alt='reach left'
+										alt='Contact ZingZing'
 										width={400}
 										height={300}
 									/>
@@ -41,7 +48,7 @@ export default async function Page() {
 								<div className={styles.leftImgWrapper}>
 									<Image
 										src={hero.leftSideImage3}
-										alt='reach left'
+										alt='Contact ZingZing'
 										width={400}
 										height={300}
 									/>
@@ -50,7 +57,7 @@ export default async function Page() {
 							<div className={`${styles.imgWrapper} ${styles.rightImg}`}>
 								<Image
 									src={hero.rightSideImage}
-									alt='reach right'
+									alt='ZingZing contact'
 									width={400}
 									height={300}
 								/>
@@ -76,7 +83,7 @@ export default async function Page() {
 							<div className={styles.imgWrapper}>
 								<Image
 									src={secondSection.image}
-									alt='#'
+									alt={secondSection.title}
 									width={100}
 									height={100}
 								/>
