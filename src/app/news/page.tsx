@@ -1,12 +1,18 @@
+'use client'
 import Button from '@/components/ui/Button'
-import { fetchNews } from '@/shared/api/fetchNews'
+import { useLanguage } from '@/context/LanguageContext'
+import newsData from '@/mock/news.json'
+import { NewsDataByLanguage } from '@/types/news'
 import Image from 'next/image'
 import NewsAnimations from './NewsAnimations'
 import styles from './page.module.scss'
 
-// === News Page ===
-export default async function Page() {
-	const data = await fetchNews()
+export default function Page() {
+	const { currentLang } = useLanguage()
+
+	const typedNewsData = newsData as NewsDataByLanguage
+	const data = typedNewsData[currentLang] || typedNewsData.ENG
+
 	const {
 		hero,
 		secondSection: { firstBlock, secondBlock, thirdBlock },
@@ -36,7 +42,7 @@ export default async function Page() {
 								<div className={styles.leftImgWrapper}>
 									<Image
 										src={hero.leftSideImage1}
-										alt='hero left 1'
+										alt='ZingZing news'
 										width={120}
 										height={200}
 									/>
@@ -44,7 +50,7 @@ export default async function Page() {
 								<div className={styles.leftImgWrapper}>
 									<Image
 										src={hero.leftSideImage2}
-										alt='hero left 1'
+										alt='ZingZing news'
 										width={120}
 										height={200}
 									/>
@@ -52,7 +58,7 @@ export default async function Page() {
 								<div className={styles.leftImgWrapper}>
 									<Image
 										src={hero.leftSideImage3}
-										alt='hero left 1'
+										alt='ZingZing news'
 										width={120}
 										height={200}
 									/>
@@ -62,7 +68,7 @@ export default async function Page() {
 							<div className={`${styles.imgWrapper} ${styles.rightImg}`}>
 								<Image
 									src={hero.rightSideImage}
-									alt='hero right'
+									alt='ZingZing news hero'
 									width={300}
 									height={300}
 								/>

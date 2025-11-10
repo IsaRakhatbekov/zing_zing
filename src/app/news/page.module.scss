@@ -61,7 +61,7 @@
 
 	.leftImg {
 		position: relative;
-		width: min(420px, 28vw);
+		width: min(300px, 21vw);
 		height: min(300px, 20vw);
 		display: flex;
 		align-items: center;
@@ -187,7 +187,7 @@
 	}
 
 	.title {
-		font-size: clamp(18px, calc(18px + 42px * (100vw / 1315px)), 60px);
+		font-size: clamp(18px, calc(18px + 42px * (100vw / 1315px)), 52px);
 	}
 
 	.text {

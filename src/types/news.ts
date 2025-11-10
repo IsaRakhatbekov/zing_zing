@@ -1,4 +1,4 @@
-export type NewsTypes = {
+export type NewsPageData = {
 	hero: {
 		mainTitle: string
 		titleSpan1: string
@@ -27,4 +27,10 @@ export type NewsTypes = {
 			image: string
 		}
 	}
+}
+
+export type NewsDataByLanguage = {
+	ENG: NewsPageData
+	RUS: NewsPageData
+	KAZ: NewsPageData
 }

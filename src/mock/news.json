@@ -1,30 +1,92 @@
 {
-	"hero": {
-		"mainTitle": "STAY",
-		"titleSpan1": "Spicy. ",
-		"titleSpan2": "Updated.",
-		"text": "New flavors, new faces, and new adventures - Here you’ll find the latest updates, event highlights, and stories from our journey across Russian speaking world and beyond.",
-		"leftSideImage1": "/mock/news/yellow.png",
-		"leftSideImage2": "/mock/news/yellow.png",
-		"leftSideImage3": "/mock/news/yellow.png",
-		"rightSideImage": "/mock/news/hero-model.png"
+	"ENG": {
+		"hero": {
+			"mainTitle": "STAY",
+			"titleSpan1": "Spicy. ",
+			"titleSpan2": "Updated.",
+			"text": "New flavors, new faces, and new adventures - Here you'll find the latest updates, event highlights, and stories from our journey across Russian speaking world and beyond.",
+			"leftSideImage1": "/mock/news/yellow.png",
+			"leftSideImage2": "/mock/news/yellow.png",
+			"leftSideImage3": "/mock/news/yellow.png",
+			"rightSideImage": "/mock/news/hero-model.png"
+		},
+		"secondSection": {
+			"firstBlock": {
+				"title": "Brand ",
+				"titleSpan": "News",
+				"text": "Discover what's cooking behind the scenes! From product launches to packaging updates, our team constantly works to make every ZingZing snack fresher, bolder, and better than before.",
+				"image": "/mock/news/books.png"
+			},
+			"secondBlock": {
+				"image": "/mock/news/second-model.png",
+				"title": "Events & Exhibitions",
+				"text": "ZingZing loves to meet people! We take part in food fairs, expos, and local festivals — sharing our story, our spice, and our smiles with everyone we meet."
+			},
+			"thirdBlock": {
+				"title": "Giveaways",
+				"text": "We love giving back to our fans! Follow ZingZing on social media for monthly giveaways, surprise snack boxes, and limited-edition merchandise.",
+				"image": "/mock/news/tshirts.png"
+			}
+		}
 	},
-	"secondSection": {
-		"firstBlock": {
-			"title": "Brand ",
-			"titleSpan": "News",
-			"text": "Discover what’s cooking behind the scenes! From product launches to packaging updates, our team constantly works to make every ZingZing snack fresher, bolder, and better than before.",
-			"image": "/mock/news/books.png"
+	"RUS": {
+		"hero": {
+			"mainTitle": "БУДЬТЕ",
+			"titleSpan1": "В КУРСЕ. ",
+			"titleSpan2": "С НАМИ.",
+			"text": "Новые вкусы, новые лица и новые приключения - здесь вы найдете последние обновления, основные события и истории из нашего путешествия по русскоязычному миру и не только.",
+			"leftSideImage1": "/mock/news/yellow.png",
+			"leftSideImage2": "/mock/news/yellow.png",
+			"leftSideImage3": "/mock/news/yellow.png",
+			"rightSideImage": "/mock/news/hero-model.png"
 		},
-		"secondBlock": {
-			"image": "/mock/news/second-model.png",
-			"title": "Events & Exhibitions",
-			"text": "ZingZing loves to meet people!We take part in food fairs, expos, and local festivals — sharing our story, our spice, and our smiles with everyone we meet."
+		"secondSection": {
+			"firstBlock": {
+				"title": "Новости ",
+				"titleSpan": "Бренда",
+				"text": "Узнайте, что готовится за кулисами! От запуска продуктов до обновления упаковки, наша команда постоянно работает над тем, чтобы каждый снэк ZingZing был свежее, смелее и лучше, чем раньше.",
+				"image": "/mock/news/books.png"
+			},
+			"secondBlock": {
+				"image": "/mock/news/second-model.png",
+				"title": "Мероприятия",
+				"text": "ZingZing любит встречаться с людьми! Участвуем в ярмарках, выставках и фестивалях, делясь нашей историей и специями."
+			},
+			"thirdBlock": {
+				"title": "Розыгрыши",
+				"text": "Благодарим наших фанатов! Подписывайтесь на нас в соцсетях для участия в розыгрышах и получения сюрпризов.",
+				"image": "/mock/news/tshirts.png"
+			}
+		}
+	},
+	"KAZ": {
+		"hero": {
+			"mainTitle": "БІЗМЕН",
+			"titleSpan1": "БІРГЕ. ",
+			"titleSpan2": "БОЛЫҢЫЗ.",
+			"text": "Жаңа дәмдер, жаңа жүздер және жаңа приключениялер - осы жерде сіз орыс тілді әлемдегі және одан тыс жерлердегі саяхатымыздың соңғы жаңалықтарын, іс-шараларды және әңгімелерді табасыз.",
+			"leftSideImage1": "/mock/news/yellow.png",
+			"leftSideImage2": "/mock/news/yellow.png",
+			"leftSideImage3": "/mock/news/yellow.png",
+			"rightSideImage": "/mock/news/hero-model.png"
 		},
-		"thirdBlock": {
-			"title": "Giveaways",
-			"text": "We love giving back to our fans! Follow ZingZing on social media for monthly giveaways, surprise snack boxes, and limited-edition merchandise.",
-			"image": "/mock/news/tshirts.png"
+		"secondSection": {
+			"firstBlock": {
+				"title": "Бренд ",
+				"titleSpan": "Жаңалықтары",
+				"text": "Күллі артта не дайындалып жатқанын біліңіз! Өнімдерді іске қосудан бастап ораманы жаңартуға дейін, біздің команда әрбір ZingZing снәгін бұрынғыдан жаңа, батыл және жақсырақ ету үшін үнемі жұмыс істейді.",
+				"image": "/mock/news/books.png"
+			},
+			"secondBlock": {
+				"image": "/mock/news/second-model.png",
+				"title": "Іс-шаралар",
+				"text": "ZingZing адамдармен кездесуді жақсы көреді! Біз ярмаркаларға, көрмелерге және фестивальдарға қатысамыз, тарихымызбен және дәмімізбен бөлісеміз."
+			},
+			"thirdBlock": {
+				"title": "Розыгрыштер",
+				"text": "Біз жанкүйерлерімізге алғыс білдіреміз! Розыгрыштерге қатысу және сюрприздер алу үшін әлеуметтік желілерде бізді қараңыз.",
+				"image": "/mock/news/tshirts.png"
+			}
 		}
 	}
 }
