@@ -125,6 +125,7 @@ const Header = () => {
 										pathName === item.href ? styles.activeLink : ''
 									}`}
 									href={item.href}
+									prefetch={false}
 								>
 									{t[item.key]}
 								</Link>
@@ -178,6 +179,7 @@ const Header = () => {
 									pathName === item.href ? styles.activeLink : ''
 								}`}
 								href={item.href}
+								prefetch={false}
 								onClick={() => setBurger(false)}
 							>
 								{t[item.key]}
