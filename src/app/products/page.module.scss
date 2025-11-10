@@ -18,16 +18,19 @@
 	}
 
 	.title {
+		text-transform: capitalize;
 		max-width: 336px;
 		font-family: var(--second-family);
 		font-weight: 900;
 		font-size: clamp(18px, calc(22px + 32px * (100vw / 1315px)), 52px);
 
 		.pink {
+			text-transform: capitalize;
 			color: var(--pink);
 		}
 
 		.yellow {
+			text-transform: capitalize;
 			color: var(--yellow);
 		}
 	}

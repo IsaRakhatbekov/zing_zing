@@ -1,5 +1,6 @@
 import Footer from '@/components/Footer/Footer'
 import Header from '@/components/Header/Header'
+import { LanguageProvider } from '@/context/LanguageContext'
 import '@/styles/global.scss'
 import { Inter, Montserrat, Roboto } from 'next/font/google'
 
@@ -17,6 +18,7 @@ const montserrat = Montserrat({
 	variable: '--third-family',
 	subsets: ['latin'],
 })
+
 export const metadata = {
 	title: 'ZingZing',
 	description: 'ZingZing — отзывы, видео и анимации',
@@ -41,9 +43,11 @@ export default function RootLayout({
 			<body
 				className={`${inter.variable} ${roboto.variable} ${montserrat.variable}`}
 			>
-				<Header />
-				<main>{children}</main>
-				<Footer />
+				<LanguageProvider>
+					<Header />
+					<main>{children}</main>
+					<Footer />
+				</LanguageProvider>
 			</body>
 		</html>
 	)

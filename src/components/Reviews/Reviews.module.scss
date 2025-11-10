@@ -1,5 +1,3 @@
-/* Reviews.module.scss */
-
 .reviews {
 	margin-top: 70px;
 	text-align: center;
@@ -8,14 +6,13 @@
 	.title {
 		font-family: var(--second-family);
 		font-weight: 700;
-		font-size: 80px;
 		font-size: clamp(18px, calc(18px + 62px * (100vw / 1315px)), 80px);
 		margin-bottom: 50px;
 		text-transform: capitalize;
 		color: var(--pink);
 	}
 
-	/* ====== Десктопная сетка ====== */
+	/* Десктопная сетка */
 	.cards {
 		display: flex;
 		gap: 20px;
@@ -23,10 +20,10 @@
 		flex-wrap: wrap;
 	}
 
-	/* ====== Общий стиль карточки — одинаков для сетки и свайпера ====== */
+	/* ====== СТИЛЬ КАРТОЧКИ — НЕ МЕНЯЕМ ====== */
 	.card {
 		position: relative;
-		width: 250px;
+		width: var(--card-w, 250px); /* РУЧНАЯ ширина */
 		height: 450px;
 		border-radius: 16px;
 		overflow: hidden;
@@ -36,7 +33,6 @@
 		&:nth-child(odd) {
 			background-color: var(--purple);
 		}
-
 		&:nth-child(even) {
 			background-color: var(--yellow);
 		}
@@ -65,35 +61,52 @@
 		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 	}
 
-	/* ====== Мобильный свайпер (отображается только до 768px) ====== */
+	/* ====== Моб. свайпер ====== */
 	.swiperRoot {
-		display: none; /* по умолчанию скрыт, включим на мобиле */
+		display: none;
 	}
 
-	/* Базовые стили для свайпера */
+	@media (max-width: 768px) {
+		.cards {
+			display: none;
+		}
+		.swiperRoot {
+			display: block;
+		}
+	}
+
+	/* Анти-скролл как в Factory */
+	.viewportClip {
+		overflow: hidden; /* обрезаем выезд по X */
+		width: 100%;
+	}
+
 	.swiper {
-		overflow: visible; /* чтобы тени/масштабы не обрезались */
 		padding-bottom: 24px; /* место под пагинацию */
 	}
 
-	/* фиксированная ширина слайдов под наш дизайн */
+	/* Сам слайд-элемент от Swiper — занимаем половину контейнера */
 	:global(.swiper-slide) {
-		width: 300px !important; /* совпадает с .card */
+		display: flex !important;
 	}
 
-	/* чтоб было пространство по краям */
+	/* Ячейка внутри слайда: центрируем карточку фиксированной ширины */
 	.slide {
-		/* пусто, можно добавить доп. отступы при желании */
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		/* класс на SwiperSlide */
 	}
 
-	/* pagination точки Swiper */
+	.cell {
+		width: 100%;
+		display: flex;
+		justify-content: center; /* карточка по центру колонки */
+		align-items: center;
+		padding: 0; /* можно добавить отступы при желании */
+	}
+
+	/* Пагинация */
 	:global(.swiper-pagination-bullets) {
 		bottom: -15px !important;
 	}
-
 	:global(.swiper-pagination-bullet) {
 		opacity: 0.6;
 		background-color: var(--purple);
@@ -101,15 +114,5 @@
 	:global(.swiper-pagination-bullet-active) {
 		opacity: 1;
 		background-color: var(--pink);
-	}
-
-	/* ====== Переключатели отображения ====== */
-	@media (max-width: 768px) {
-		.cards {
-			display: none; /* сетку скрываем на мобиле */
-		}
-		.swiperRoot {
-			display: block; /* показываем свайпер */
-		}
 	}
 }

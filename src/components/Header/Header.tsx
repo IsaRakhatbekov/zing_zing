@@ -1,39 +1,38 @@
 'use client'
 import logo from '@/assets/images/logo.svg'
+import { useLanguage } from '@/context/LanguageContext'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './Header.module.scss'
 
 const Header = () => {
 	const [burger, setBurger] = useState(false)
 	const [isLangOpen, setIsLangOpen] = useState(false)
-	const [currentLang, setCurrentLang] = useState('ENG')
+	const { currentLang, setCurrentLang } = useLanguage()
 	const pathName = usePathname()
 
 	const languages = [
-		{ code: 'ENG', name: 'English' },
-		{ code: 'RUS', name: 'Русский' },
-		{ code: 'KAZ', name: 'Қазақша' },
+		{ code: 'ENG' as const, name: 'English' },
+		{ code: 'RUS' as const, name: 'Русский' },
+		{ code: 'KAZ' as const, name: 'Қазақша' },
 	]
 
-	// Эффект для управления скроллом
 	useEffect(() => {
-		const body = document.body;
+		const body = document.body
 		if (burger) {
-			body.classList.add('lockScroll');
+			body.classList.add('lockScroll')
 		} else {
-			body.classList.remove('lockScroll');
+			body.classList.remove('lockScroll')
 		}
 
-		// Очистка при размонтировании компонента
 		return () => {
-			body.classList.remove('lockScroll');
-		};
-	}, [burger]);
+			body.classList.remove('lockScroll')
+		}
+	}, [burger])
 
-	const handleLangSelect = (langCode: string) => {
+	const handleLangSelect = (langCode: 'ENG' | 'RUS' | 'KAZ') => {
 		setCurrentLang(langCode)
 		setIsLangOpen(false)
 	}
@@ -157,7 +156,6 @@ const Header = () => {
 				</nav>
 			</div>
 
-			{/* === МОБИЛЬНОЕ МЕНЮ === */}
 			<div
 				className={`${styles.mobMenuWrapper} ${
 					burger ? styles.mobMenuWrapperActive : ''

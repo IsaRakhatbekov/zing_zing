@@ -1,4 +1,4 @@
-export type ProductPage = {
+export type ProductsPageData = {
 	hero: {
 		title1: string
 		mainTitleSpan1: string
@@ -11,15 +11,12 @@ export type ProductPage = {
 	}
 	secondSectionSmallCard: {
 		cards: Array<{
-			id: number
-			title: string
 			titleSpan: string
 			image: string
 		}>
 	}
 	thirdSectionBigCards: {
 		bigCard: Array<{
-			id: number
 			title: string
 			titleSpan: string
 			text: string
@@ -27,9 +24,15 @@ export type ProductPage = {
 		}>
 	}
 	fourthSectionGrowTogether: {
-		image: string
 		title: string
 		titleSpan: string
 		text: string
+		image: string
 	}
+}
+
+export type ProductsDataByLanguage = {
+	ENG: ProductsPageData
+	RUS: ProductsPageData
+	KAZ: ProductsPageData
 }

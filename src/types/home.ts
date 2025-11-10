@@ -16,39 +16,17 @@ export type HomePageData = {
 	}
 	secondSection: {
 		mainTitle: string
-		cardInfo: [
-			{
-				cardIcon: string
-				title: string
-				text: string
-			},
-			{
-				cardIcon: string
-				title: string
-				text: string
-			},
-			{
-				cardIcon: string
-				title: string
-				text: string
-			}
-		]
+		cardInfo: Array<{
+			cardIcon: string
+			title: string
+			text: string
+		}>
 	}
 	thirdSection: {
-		cards: [
-			{
-				image: string
-				text: string
-			},
-			{
-				image: string
-				text: string
-			},
-			{
-				image: string
-				text: string
-			}
-		]
+		cards: Array<{
+			image: string
+			text: string
+		}>
 	}
 	fourthSectionGrowTogether: {
 		image: string
@@ -56,8 +34,10 @@ export type HomePageData = {
 		titleSpan: string
 		text: string
 	}
-	fifthSectionReviews: {
-		image: string
-		video: string
-	}
+}
+
+export type HomeDataByLanguage = {
+	ENG: HomePageData
+	RUS: HomePageData
+	KAZ: HomePageData
 }

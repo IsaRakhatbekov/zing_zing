@@ -1,60 +1,180 @@
 {
-	"hero": {
-		"title1": "Bring the ",
-		"title2": "Feel the ",
-		"mainTitleSpan1": "Joy.",
-		"mainTitleSpan2": "Zing.",
-		"firstText": "Bold, crunchy, and bursting with flavor — ZingZing turns every bite into a moment of happiness! ",
-		"image": "/mock/products/product-mock-purple.png",
-		"secondText": "ZingZing isn’t just a snack — it’s a spark of happiness that wakes up your taste buds!"
-	},
-	"firstSection": {
-		"image": "/mock/products/whoWeAre.png",
-		"title": "Who Are We?",
-		"titleSpan": " We?",
-		"text": "ZingZing is where flavor meets fun! We craft tasty, spicy, and joyful snacks made to brighten your day. Whether you’re chilling with friends or powering through work, ZingZing is your go-to for flavor and good vibes."
-	},
-	"secondSection": {
-		"mainTitle": "Key Differentiators",
-		"cardInfo": [
-			{
-				"cardIcon": "/mock/products/icon.png",
-				"title": "Factory-Direct Quality",
-				"text": "Produced with care in our own certified facility for maximum freshness and consistency."
-			},
-			{
-				"cardIcon": "/mock/products/icon.png",
-				"title": "ISO & Halal Certified",
-				"text": "Every batch meets international quality and hygiene standards because your trust matters."
-			},
-			{
-				"cardIcon": "/mock/products/icon.png",
-				"title": "Unforgettable Taste",
-				"text": "A perfect mix of spice, crunch, and happiness — made for those who live life with flavor."
-			}
-		]
-	},
-	"thirdSection": {
-		"cards": [
-			{
-				"image": "/mock/products/product-mock.png",
-				"text": "Crafted for those who love timeless taste our original spicy sticks deliver pure satisfaction with every crunchy bite."
-			},
-			{
-				"image": "/mock/products/product-mock.png",
-				"text": "Made with bold heat and savory zest, these fiery wings-inspired bites bring the thrill of spice straight to your snack time."
-			},
-			{
-				"image": "/mock/products/product-mock.png",
-				"text": "Smoked to perfection and seasoned with joy, our BBQ flavor fills every moment with warmth, fun, and unforgettable taste."
-			}
-		]
-	},
+	"ENG": {
+		"hero": {
+			"title1": "Bring the ",
+			"title2": "Feel the ",
+			"mainTitleSpan1": "Joy.",
+			"mainTitleSpan2": "Zing.",
+			"firstText": "Bold, crunchy, and bursting with flavor — ZingZing turns every bite into a moment of happiness! ",
+			"image": "/mock/products/product-mock-purple.png",
+			"secondText": "ZingZing isn’t just a snack — it’s a spark of happiness that wakes up your taste buds!"
+		},
+		"firstSection": {
+			"image": "/mock/products/whoWeAre.png",
+			"title": "Who Are",
+			"titleSpan": " We?",
+			"text": "ZingZing is where flavor meets fun! We craft tasty, spicy, and joyful snacks made to brighten your day. Whether you’re chilling with friends or powering through work, ZingZing is your go-to for flavor and good vibes."
+		},
+		"secondSection": {
+			"mainTitle": "Key Differentiators",
+			"cardInfo": [
+				{
+					"cardIcon": "/mock/products/factory.png",
+					"title": "Factory-Direct Quality",
+					"text": "Produced with care in our own certified facility for maximum freshness and consistency."
+				},
+				{
+					"cardIcon": "/mock/products/iso.png",
+					"title": "ISO & Halal Certified",
+					"text": "Every batch meets international quality and hygiene standards because your trust matters."
+				},
+				{
+					"cardIcon": "/mock/products/star.png",
+					"title": "Unforgettable Taste",
+					"text": "A perfect mix of spice, crunch, and happiness — made for those who live life with flavor."
+				}
+			]
+		},
+		"thirdSection": {
+			"cards": [
+				{
+					"image": "/mock/products/product-mock.png",
+					"text": "Crafted for those who love timeless taste our original spicy sticks deliver pure satisfaction with every crunchy bite."
+				},
+				{
+					"image": "/mock/products/product-mock.png",
+					"text": "Made with bold heat and savory zest, these fiery wings-inspired bites bring the thrill of spice straight to your snack time."
+				},
+				{
+					"image": "/mock/products/product-mock.png",
+					"text": "Smoked to perfection and seasoned with joy, our BBQ flavor fills every moment with warmth, fun, and unforgettable taste."
+				}
+			]
+		},
 
-	"fourthSectionGrowTogether": {
-		"image": "/mock/products/growTogether-img.png",
-		"title": "Let's Grow",
-		"titleSpan": "Together",
-		"text": "Whether you're looking to expand your snack portfolio or introduce something fresh and exciting to your region, ZingZing brings energy, color, and fun that customers can't resist."
+		"fourthSectionGrowTogether": {
+			"image": "/mock/products/growTogether-img.png",
+			"title": "Let's Grow",
+			"titleSpan": "Together",
+			"text": "Whether you're looking to expand your snack portfolio or introduce something fresh and exciting to your region, ZingZing brings energy, color, and fun that customers can't resist."
+		}
+	},
+	"RUS": {
+		"hero": {
+			"title1": "Принеси ",
+			"mainTitleSpan1": "Радость.",
+			"title2": "Почувствуй ",
+			"mainTitleSpan2": "Зинг.",
+			"firstText": "Яркий, хрустящий, с взрывным вкусом — ZingZing превращает каждый кусочек в момент счастья!",
+			"image": "/mock/products/pink.png",
+			"secondText": "ZingZing — это не просто снек, а заряд настроения для ваших вкусовых рецепторов!"
+		},
+		"firstSection": {
+			"image": "/mock/products/whoWeAre.png",
+			"title": "Кто",
+			"titleSpan": " Мы?",
+			"text": "ZingZing — это вкус и настроение в одной упаковке! Мы создаем острые и яркие снеки, которые делают ваш день лучше. Для дружеских посиделок или рабочего перекуса — ZingZing ваш выбор для отличного настроения."
+		},
+		"secondSection": {
+			"mainTitle": "Наши Преимущества",
+			"cardInfo": [
+				{
+					"cardIcon": "/mock/products/factory.png",
+					"title": "Качество с завода",
+					"text": "Производим на собственном сертифицированном производстве для идеальной свежести."
+				},
+				{
+					"cardIcon": "/mock/products/iso.png",
+					"title": "Сертификаты ISO и Халяль",
+					"text": "Каждая партия соответствует высшим стандартам качества и гигиены."
+				},
+				{
+					"cardIcon": "/mock/products/star.png",
+					"title": "Незабываемый вкус",
+					"text": "Идеальный микс остроты, хруста и настроения для тех, кто ценит вкус жизни."
+				}
+			]
+		},
+		"thirdSection": {
+			"cards": [
+				{
+					"image": "/mock/products/product-mock.png",
+					"text": "Классические острые палочки для ценителей насыщенного вкуса и идеального хруста."
+				},
+				{
+					"image": "/mock/products/product-mock.png",
+					"text": "Смелые и пикантные, с жаром острых крылышек — адреналин для вашего перекуса."
+				},
+				{
+					"image": "/mock/products/product-mock.png",
+					"text": "С дымком и радостью от BBQ — теплое и уютное настроение в каждом кусочке."
+				}
+			]
+		},
+		"fourthSectionGrowTogether": {
+			"image": "/mock/products/growTogether-img.png",
+			"title": "Давайте Расти",
+			"titleSpan": " Вместе",
+			"text": "Расширьте ассортимент или представьте в своем регионе нечто новое — ZingZing приносит энергию и вкус, от которого не отказаться."
+		}
+	},
+	"KAZ": {
+		"hero": {
+			"title1": "Қуаныш  ",
+			"title2": "Шырынды ",
+			"mainTitleSpan1": "әкеліңіз.",
+			"mainTitleSpan2": "сез.",
+			"firstText": "Өткір, қытырлақ және дәмді – ZingZing әр тістеуді бақыт сәтіне айналдырады!",
+			"image": "/mock/products/product-mock-purple.png",
+			"secondText": "ZingZing – жай гана тәтті емес, бұл татым сезіміңізді оятатын бақыт ұшқыны!"
+		},
+		"firstSection": {
+			"image": "/mock/products/whoWeAre.png",
+			"title": "Біз",
+			"titleSpan": " Кімбіз?",
+			"text": "ZingZing – дәм мен көңілдің кездескен жері! Біз күніңізді жарқын ететін дәмді, өткір және көңілді тәттілер жасаймыз. Достармен болсын немесе жұмыс кезінде болсын – ZingZing дәм үшін сіздің сенімді таңдауыңыз."
+		},
+		"secondSection": {
+			"mainTitle": "Негізгі Артықшылықтар",
+			"cardInfo": [
+				{
+					"cardIcon": "/mock/products/factory.png",
+					"title": "Зауыттан Тікелей Сапа",
+					"text": "Өз сертификатталған зауытымызда жоғары сапа мен тұрақтылыққа баса назар салып өндіріледі."
+				},
+				{
+					"cardIcon": "/mock/products/iso.png",
+					"title": "ISO және Халал Сертификаттары",
+					"text": "Әр партия халықаралық сапа және гигиена стандарттарына сәйкес келеді."
+				},
+				{
+					"cardIcon": "/mock/products/star.png",
+					"title": "Естен кетпейтін дәм",
+					"text": "Өткірлік, қытырлақтық және бақыттың тамаша үйлесімі – өмірді дәммен сезетіндер үшін."
+				}
+			]
+		},
+		"thirdSection": {
+			"cards": [
+				{
+					"image": "/mock/products/product-mock.png",
+					"text": "Классикалық дәмі сүйетіндерге арналған, әр қытырлақ тістеуде тамаша ләззат беретін өткір таяқшалар."
+				},
+				{
+					"image": "/mock/products/product-mock.png",
+					"text": "Өткір қанаттарды еске түсіретін, есірік дәмді және өткір лездіктер – сіздің тәтті уақытыңызға адреналин әкеледі."
+				},
+				{
+					"image": "/mock/products/product-mock.png",
+					"text": "BBQB дәмі – әлемдік танымал дәмдерді сүйетіндерге арналған, әр уақытқа жылылық пен естен кетпейтін ләззат сіңіреді."
+				}
+			]
+		},
+		"fourthSectionGrowTogether": {
+			"image": "/mock/products/growTogether-img.png",
+			"title": "Бірге",
+			"titleSpan": " Өсейік",
+			"text": "Тәттілер ассортиментін кеңейткіңіз келсе де, өз аймағыңызға жаңа және қызықты бір нәрсені енгізгіңіз келсе де – ZingZing тұтынушылар бас тарта алмайтын энергия мен ләззат әкеледі."
+		}
 	}
 }

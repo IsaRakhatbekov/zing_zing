@@ -38,7 +38,7 @@ const reviews: Review[] = [
 	},
 ]
 
-// маленький хелпер, чтобы не падать при SSR
+// SSR-safe моб. флаг
 const useIsMobile = (breakpoint = 768) => {
 	const [isMobile, setIsMobile] = useState(false)
 	useEffect(() => {
@@ -50,20 +50,25 @@ const useIsMobile = (breakpoint = 768) => {
 	return isMobile
 }
 
-export default function Reviews() {
+type Props = {
+	/** РУЧНАЯ ширина карточки в пикселях (для свайпера на мобилке) */
+	cardWidthPx?: number
+	/** Зазор между слайдами */
+	gapPx?: number
+}
+
+export default function Reviews({ cardWidthPx = 250, gapPx = 16 }: Props) {
 	const [playing, setPlaying] = useState<number | null>(null)
 	const reviewsRef = useRef<HTMLElement | null>(null)
 	const isMobile = useIsMobile(768)
 
-	// GSAP-анимация только для десктопа (чтобы не конфликтовать со свайпером)
+	// GSAP-анимация (десктоп)
 	useEffect(() => {
 		if (isMobile) return
 		const ctx = gsap.context(() => {
 			const q = gsap.utils.selector(reviewsRef)
 			const cards = q(`.${styles.card}`)
-
 			gsap.set(cards, { y: 80, opacity: 0 })
-
 			gsap
 				.timeline({
 					scrollTrigger: {
@@ -73,18 +78,11 @@ export default function Reviews() {
 					},
 					defaults: { ease: 'power3.out' },
 				})
-				.to(cards, {
-					y: 0,
-					opacity: 1,
-					duration: 0.8,
-					stagger: 0.25,
-				})
+				.to(cards, { y: 0, opacity: 1, duration: 0.8, stagger: 0.25 })
 		}, reviewsRef)
-
 		return () => ctx.revert()
 	}, [isMobile])
 
-	// Компонент карточки, чтобы не дублировать разметку для сетки и свайпера
 	const ReviewCard = useMemo(
 		() =>
 			function ReviewCardInner({ r }: { r: Review }) {
@@ -140,30 +138,44 @@ export default function Reviews() {
 			<div className={`${styles.container} container`}>
 				<h2 className={styles.title}>Reviews Of Our Followers</h2>
 
-				{/* Десктопная сетка (>=769px) */}
+				{/* Десктопная сетка */}
 				<div className={styles.cards} aria-hidden={isMobile}>
 					{!isMobile && reviews.map(r => <ReviewCard key={r.id} r={r} />)}
 				</div>
 
-				{/* Мобильный свайпер (<=768px) */}
-				<div className={styles.swiperRoot} aria-hidden={!isMobile}>
+				{/* Мобильный свайпер (ровно 2 слайда, ширина карточек — вручную) */}
+				<div
+					className={styles.swiperRoot}
+					aria-hidden={!isMobile}
+					style={
+						{
+							// задаёшь вручную:
+							'--card-w': `${cardWidthPx}px`,
+							'--gap': `${gapPx}px`,
+						} as React.CSSProperties
+					}
+				>
 					{isMobile && (
-						<Swiper
-							modules={[Pagination]}
-							pagination={{ clickable: true }}
-							centeredSlides
-							slidesPerView={2}
-							spaceBetween={16}
-							// чтобы видео не продолжало играть при пролистывании
-							onSlideChange={() => setPlaying(null)}
-							className={styles.swiper}
-						>
-							{reviews.map(r => (
-								<SwiperSlide key={r.id} className={styles.slide}>
-									<ReviewCard r={r} />
-								</SwiperSlide>
-							))}
-						</Swiper>
+						<div className={styles.viewportClip}>
+							<Swiper
+								modules={[Pagination]}
+								pagination={{ clickable: true }}
+								slidesPerView={2} // ровно 2
+								centeredSlides={false}
+								spaceBetween={gapPx}
+								onSlideChange={() => setPlaying(null)}
+								className={styles.swiper}
+							>
+								{reviews.map(r => (
+									<SwiperSlide key={r.id} className={styles.slide}>
+										{/* Слайд-ячейка: центрируем карточку фикс. ширины */}
+										<div className={styles.cell}>
+											<ReviewCard r={r} />
+										</div>
+									</SwiperSlide>
+								))}
+							</Swiper>
+						</div>
 					)}
 				</div>
 			</div>

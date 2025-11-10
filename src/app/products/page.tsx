@@ -1,12 +1,18 @@
+'use client'
 import Button from '@/components/ui/Button'
-import { fetchProducts } from '@/shared/api/fetchProducts'
+import { useLanguage } from '@/context/LanguageContext'
+import productsData from '@/mock/products.json'
+import { ProductsDataByLanguage } from '@/types/products'
 import Image from 'next/image'
 import styles from './page.module.scss'
 import ProductsAnimations from './ProductsAnimations'
 
-// Products page
-export default async function Page() {
-	const data = await fetchProducts()
+export default function Page() {
+	const { currentLang } = useLanguage()
+
+	const typedProductsData = productsData as ProductsDataByLanguage
+	const data = typedProductsData[currentLang] || typedProductsData.ENG
+
 	const {
 		hero,
 		secondSectionSmallCard,
@@ -87,7 +93,7 @@ export default async function Page() {
 									<div className={styles.imgWrapper}>
 										<Image
 											src={p.image}
-											alt={p.title}
+											alt={p.titleSpan}
 											width={200}
 											height={200}
 										/>
@@ -125,7 +131,7 @@ export default async function Page() {
 									<div className={styles.imgWrapper}>
 										<Image
 											src={thirdSectionBigCards.bigCard[0].image}
-											alt=''
+											alt={thirdSectionBigCards.bigCard[0].titleSpan}
 											width={100}
 											height={100}
 										/>
@@ -152,7 +158,7 @@ export default async function Page() {
 									<div className={styles.imgWrapper}>
 										<Image
 											src={thirdSectionBigCards.bigCard[1].image}
-											alt=''
+											alt={thirdSectionBigCards.bigCard[1].titleSpan}
 											width={100}
 											height={100}
 										/>
@@ -179,7 +185,7 @@ export default async function Page() {
 									<div className={styles.imgWrapper}>
 										<Image
 											src={thirdSectionBigCards.bigCard[2].image}
-											alt=''
+											alt={thirdSectionBigCards.bigCard[2].titleSpan}
 											width={100}
 											height={100}
 										/>
@@ -211,7 +217,7 @@ export default async function Page() {
 						<div className={styles.imgWrapper}>
 							<Image
 								src={fourthSectionGrowTogether.image}
-								alt='#'
+								alt='Grow together'
 								width={100}
 								height={100}
 							/>

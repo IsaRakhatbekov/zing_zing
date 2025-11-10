@@ -27,16 +27,20 @@
 	}
 
 	.title {
-		max-width: 475px;
+		max-width: 640px;
 		margin-bottom: 40px;
 		font-weight: 900;
-		font-size: clamp(18px, calc(18px + 42px * (100vw / 1315px)), 60px);
+		font-size: clamp(28px, 4vw, 52px);
 
 		& .pinkSpan {
+			text-transform: capitalize;
 			color: var(--pink);
+			font-size: clamp(28px, 4vw, 52px);
 		}
 		& .yellowSpan {
+			text-transform: capitalize;
 			color: var(--yellow);
+			font-size: clamp(28px, 4vw, 52px);
 		}
 	}
 
@@ -236,6 +240,7 @@
 	}
 
 	.title {
+		text-transform: capitalize;
 		font-size: clamp(18px, calc(18px + 42px * (100vw / 1315px)), 60px);
 
 		& span {
@@ -330,7 +335,6 @@
 		}
 	}
 
-	/* на мобильных: класс pink-bg выключаем полностью */
 	:global(.pink-bg) {
 		background: none !important;
 		clip-path: none !important;
@@ -423,7 +427,89 @@
 	}
 }
 
+@media (max-width: 850px) {
+	.hero {
+		margin: 0;
+		padding-bottom: 0;
+		.wrapper {
+			height: 512px;
+			padding-left: 65px;
+		}
+		.text {
+			max-width: 310px;
+		}
+		.rightSide {
+			width: 500px;
+			bottom: 0;
+
+			&::before {
+				bottom: -46px;
+			}
+
+			.imgWrapper {
+				width: 130px;
+				height: 195px;
+				right: 74px;
+				bottom: 32px;
+			}
+
+			.pinkText {
+				padding-left: 34px;
+				font-size: 16px;
+				max-width: 270px;
+			}
+		}
+	}
+}
+
 @media (max-width: 768px) {
+	.hero {
+		.wrapper {
+			position: relative;
+			padding-left: 20px;
+			&::after {
+				content: '';
+				background: var(--purple);
+				clip-path: polygon(0% 20%, 100% 42%, 100% 60%, 0% 81%);
+				z-index: -1;
+				pointer-events: none;
+				position: absolute;
+			}
+
+			.rightSide {
+				position: relative;
+				background: none;
+				z-index: 2;
+				bottom: -140px;
+
+				&::before {
+					content: '';
+					transform: rotate(11deg);
+					bottom: -42px;
+					right: 0;
+				}
+				&::after {
+					content: '';
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					background: var(--pink);
+					clip-path: polygon(0% 38%, 100% 5%, 100% 96%, 0% 65%);
+					z-index: -1;
+					pointer-events: none;
+					position: absolute;
+				}
+
+				.imgWrapper {
+					width: 100px;
+					height: 150px;
+					bottom: 5px;
+					right: 10px;
+				}
+			}
+		}
+	}
+
 	.Differentiators {
 		margin: 50px auto;
 	}
@@ -440,7 +526,67 @@
 	}
 }
 
+@media (max-width: 650px) {
+	.hero {
+		.wrapper {
+			background-color: var(--purple);
+			flex-direction: column;
+			padding: 30px;
+			height: 350px;
+			&::after {
+				display: none;
+			}
+
+			.content {
+				text-align: center;
+			}
+
+			.title {
+				margin: 0 auto 20px;
+			}
+			.text {
+				max-width: 400px;
+				margin: 0 auto;
+			}
+
+			.rightSide {
+				bottom: 0;
+				gap: 20px;
+				justify-content: center;
+				.pinkText {
+					font-style: normal;
+					padding-left: 0;
+				}
+				&::before {
+					display: none;
+				}
+				&::after {
+					display: none;
+				}
+
+				.imgWrapper {
+					position: relative;
+					padding: 0;
+					bottom: -30px;
+				}
+			}
+		}
+	}
+}
+
 @media (max-width: 600px) {
+	.hero {
+		margin-bottom: 100px;
+		.rightSide {
+			.pinkText {
+				max-width: 150px;
+			}
+			.imgWrapper {
+				bottom: -38px;
+			}
+		}
+	}
+
 	.whoWeAre {
 		background-color: var(--pink);
 		text-align: center;

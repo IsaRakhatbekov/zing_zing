@@ -1,15 +1,20 @@
-// import HomeCards from '@/components/HomeCards/HomeCards'
+'use client'
+import HomeCards from '@/components/HomeCards/HomeCards'
 import Reviews from '@/components/Reviews/Reviews'
 import Button from '@/components/ui/Button'
-import { fetchHome } from '@/shared/api/fetchHome'
+import { useLanguage } from '@/context/LanguageContext'
+import homeData from '@/mock/home.json'
+import { HomeDataByLanguage } from '@/types/home'
 import Image from 'next/image'
 import HomeAnimations from './HomeAnimations'
 import styles from './page.module.scss'
-import HomeCards from '@/components/HomeCards/HomeCards'
 
-// SERVER COMPONENT
-export default async function Home() {
-	const data = await fetchHome()
+export default function Home() {
+	const { currentLang } = useLanguage()
+
+	const typedHomeData = homeData as HomeDataByLanguage
+	const data = typedHomeData[currentLang] || typedHomeData.ENG
+
 	const {
 		hero,
 		firstSection,
@@ -62,7 +67,6 @@ export default async function Home() {
 								<span>{firstSection.titleSpan}</span>
 							</h2>
 							<p className={styles.text}>{firstSection.text}</p>
-
 							<Button text='Learn More' href='/aboutUs' className='yellow' />
 						</div>
 					</div>
