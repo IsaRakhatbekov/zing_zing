@@ -20,7 +20,7 @@ export async function fetchProducts(
 			return (productMock as any)[lang] as Products
 		}
 
-		const res = await fetch(`${API_URL}/products`, {
+		const res = await fetch(`${API_URL}/api/products/`, {
 			cache: 'no-store',
 			headers: {
 				'Accept-Language': languageMap[lang],

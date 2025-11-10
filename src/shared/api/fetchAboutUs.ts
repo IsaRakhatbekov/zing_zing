@@ -20,7 +20,7 @@ export async function fetchAboutUs(
 			return (aboutUsMock as any)[lang] as AboutUs
 		}
 
-		const res = await fetch(`${API_URL}/aboutUs`, {
+		const res = await fetch(`${API_URL}/api/aboutUs/`, {
 			cache: 'no-store',
 			headers: {
 				'Accept-Language': languageMap[lang],

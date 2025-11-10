@@ -20,7 +20,7 @@ export async function fetchNews(
 			return (newsMock as any)[lang] as News
 		}
 
-		const res = await fetch(`${API_URL}/news`, {
+		const res = await fetch(`${API_URL}/api/news/`, {
 			cache: 'no-store',
 			headers: {
 				'Accept-Language': languageMap[lang],

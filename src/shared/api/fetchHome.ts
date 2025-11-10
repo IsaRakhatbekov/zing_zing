@@ -20,7 +20,7 @@ export async function fetchHome(
 			return (homeMock as any)[lang] as Home
 		}
 
-		const res = await fetch(`${API_URL}/home`, {
+		const res = await fetch(`${API_URL}/api/home/`, {
 			cache: 'no-store',
 			headers: {
 				'Accept-Language': languageMap[lang],

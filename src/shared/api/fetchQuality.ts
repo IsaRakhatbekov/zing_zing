@@ -20,7 +20,7 @@ export async function fetchQuality(
 			return (qualityMock as any)[lang] as Quality
 		}
 
-		const res = await fetch(`${API_URL}/quality`, {
+		const res = await fetch(`${API_URL}/api/quality/`, {
 			cache: 'no-store',
 			headers: {
 				'Accept-Language': languageMap[lang],

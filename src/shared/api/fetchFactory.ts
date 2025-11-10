@@ -20,7 +20,7 @@ export async function fetchFactory(
 			return (factoryMock as any)[lang] as Factory
 		}
 
-		const res = await fetch(`${API_URL}/factory`, {
+		const res = await fetch(`${API_URL}/api/factory/`, {
 			cache: 'no-store',
 			headers: {
 				'Accept-Language': languageMap[lang],

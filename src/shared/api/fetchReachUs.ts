@@ -20,7 +20,7 @@ export async function fetchReachUs(
 			return (reachUsMock as any)[lang] as ReachUs
 		}
 
-		const res = await fetch(`${API_URL}/reachUs`, {
+		const res = await fetch(`${API_URL}/api/reachUs/`, {
 			cache: 'no-store',
 			headers: {
 				'Accept-Language': languageMap[lang],
