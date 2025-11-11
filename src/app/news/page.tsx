@@ -1,4 +1,3 @@
-// src/app/news/page.tsx
 'use client'
 import Button from '@/components/ui/Button'
 import { useLanguage } from '@/context/LanguageContext'
@@ -39,7 +38,7 @@ export default function Page() {
 
 	return (
 		<>
-			<NewsAnimations />
+			<NewsAnimations newsData={newsData} />
 
 			{/* Рендерим секции только если есть данные */}
 			{newsData && (

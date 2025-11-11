@@ -33,15 +33,10 @@ export default function Page() {
 		loadData()
 	}, [currentLang])
 
-	// Если есть ошибка, показываем сообщение но не падаем
-	if (error) {
-		console.warn('ReachUs page error:', error)
-		// Можно показать заглушку или ничего не рендерить
-	}
-
 	return (
 		<>
-			<ReachUsAnimations />
+			{/* Передаем данные в анимации */}
+			<ReachUsAnimations reachUsData={reachUsData} />
 
 			{/* Рендерим секции только если есть данные */}
 			{reachUsData && (
@@ -127,7 +122,7 @@ export default function Page() {
 				</>
 			)}
 
-			{/* Форма рендерится всегда, так как не зависит от API данных */}
+			{/* Форма рендерится всегда */}
 			<section id='reachUsForm'>
 				<Form />
 			</section>

@@ -1,14 +1,21 @@
 'use client'
 
+import type { News } from '@/types/news'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useEffect } from 'react'
+import { useLayoutEffect } from 'react'
 import styles from './page.module.scss'
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function NewsAnimations() {
-	useEffect(() => {
+export default function NewsAnimations({
+	newsData,
+}: {
+	newsData: News | null
+}) {
+	useLayoutEffect(() => {
+		if (!newsData) return
+
 		const ctx = gsap.context(() => {
 			// === HERO (как на About Us) ===
 			{
@@ -119,7 +126,7 @@ export default function NewsAnimations() {
 		})
 
 		return () => ctx.revert()
-	}, [])
+	}, [newsData])
 
 	return null
 }

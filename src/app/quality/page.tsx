@@ -7,8 +7,8 @@ import { fetchQuality } from '@/shared/api/fetchQuality'
 import type { Quality } from '@/types/quality'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import QualityAnimations from './QualityAnimation'
 import styles from './page.module.scss'
+import QualityAnimations from './QualityAnimation'
 
 export default function Page() {
 	const { currentLang } = useLanguage()
@@ -40,7 +40,8 @@ export default function Page() {
 
 	return (
 		<>
-			<QualityAnimations />
+			{/* Передаем qualityData в анимации */}
+			<QualityAnimations qualityData={qualityData} />
 
 			{/* Рендерим секции только если есть данные */}
 			{qualityData && (
@@ -105,6 +106,7 @@ export default function Page() {
 						</div>
 					</section>
 
+					{/* ... остальные секции без изменений ... */}
 					<section className={styles.quality} id='quality-section'>
 						<div className={`${styles.container} container`}>
 							<div className={styles.wrapper}>

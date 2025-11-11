@@ -1,4 +1,3 @@
-// src/app/aboutUs/page.tsx
 'use client'
 import Form from '@/components/Form/Form'
 import Button from '@/components/ui/Button'
@@ -40,7 +39,7 @@ export default function Page() {
 
 	return (
 		<>
-			<AboutUsAnimations />
+			<AboutUsAnimations aboutUsData={aboutUsData} />
 
 			{/* Рендерим секции только если есть данные */}
 			{aboutUsData && (

@@ -1,15 +1,21 @@
-// app/(pages)/factory/FactoryAnimations.tsx
 'use client'
 
+import type { Factory } from '@/types/factory'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useEffect } from 'react'
+import { useLayoutEffect } from 'react'
 import styles from './page.module.scss'
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function FactoryAnimations() {
-	useEffect(() => {
+export default function FactoryAnimations({
+	factoryData,
+}: {
+	factoryData: Factory | null
+}) {
+	useLayoutEffect(() => {
+		if (!factoryData) return
+
 		const ctx = gsap.context(() => {
 			// === FACTORY HERO ===
 			{
@@ -190,7 +196,7 @@ export default function FactoryAnimations() {
 		})
 
 		return () => ctx.revert()
-	}, [])
+	}, [factoryData])
 
 	return null
 }

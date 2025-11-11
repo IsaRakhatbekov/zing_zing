@@ -1,4 +1,3 @@
-// src/app/products/page.tsx
 'use client'
 import Button from '@/components/ui/Button'
 import { useLanguage } from '@/context/LanguageContext'
@@ -39,7 +38,7 @@ export default function Page() {
 
 	return (
 		<>
-			<ProductsAnimations />
+			<ProductsAnimations productsData={productsData} />
 
 			{/* Рендерим секции только если есть данные */}
 			{productsData && (

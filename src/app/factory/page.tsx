@@ -1,4 +1,3 @@
-// src/app/factory/page.tsx
 'use client'
 import FactorySwiper from '@/components/FactorySwiper/FactorySwiper'
 import Form from '@/components/Form/Form'
@@ -8,8 +7,8 @@ import { fetchFactory } from '@/shared/api/fetchFactory'
 import type { Factory } from '@/types/factory'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import FactoryAnimations from './FactoryAnimation'
 import styles from './page.module.scss'
+import FactoryAnimations from './FactoryAnimation'
 
 export default function Page() {
 	const { currentLang } = useLanguage()
@@ -41,7 +40,7 @@ export default function Page() {
 
 	return (
 		<>
-			<FactoryAnimations />
+			<FactoryAnimations factoryData={factoryData} />
 
 			{/* Рендерим секции только если есть данные */}
 			{factoryData && (
