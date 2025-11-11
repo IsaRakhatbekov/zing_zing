@@ -1,3 +1,4 @@
+// Существующие стили формы остаются без изменений
 .form {
 	padding: 50px;
 	margin: 50px 0;
@@ -35,6 +36,7 @@
 			color: var(--white);
 		}
 	}
+
 	.textWrapper {
 		max-width: 345px;
 	}
@@ -112,30 +114,6 @@
 		margin: 0 auto;
 	}
 
-	.successBlock {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		padding: 50px 0;
-		text-align: center;
-		gap: 15px;
-		width: 100%;
-		height: 100%;
-	}
-
-	.successIcon {
-		width: 80px;
-		height: 80px;
-		color: #4ade80; // зелёный
-	}
-
-	.successText {
-		font-weight: 700;
-		font-size: clamp(18px, 2vw, 22px);
-		color: #fff;
-	}
-
 	// Медиа-запрос для мобильных устройств
 	@media (max-width: 768px) {
 		flex-direction: column;
@@ -151,5 +129,105 @@
 			width: 100%;
 			max-width: 100%;
 		}
+	}
+}
+
+// Новые стили для блока успеха
+.successContainer {
+	padding: 80px 50px;
+	margin: 50px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #262626;
+	color: var(--white);
+	border-radius: 12px;
+	text-align: center;
+
+	&.default {
+		background: #262626;
+	}
+
+	&.pink {
+		background: var(--pink);
+	}
+}
+
+.successContent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+	max-width: 400px;
+}
+
+.successIconWrapper {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background: rgba(76, 217, 100, 0.1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.successIcon {
+	width: 40px;
+	height: 40px;
+	color: #4cd964;
+}
+
+.successTitle {
+	font-weight: 900;
+	font-size: clamp(28px, 3vw, 36px);
+	line-height: 100%;
+	color: #fff;
+	margin: 0;
+}
+
+.successMessage {
+	font-weight: 400;
+	font-size: clamp(16px, 1.5vw, 18px);
+	line-height: 140%;
+	color: #fff;
+	margin: 0;
+}
+
+.successButton {
+	border-radius: 8px;
+	padding: 12px 24px;
+	background: #fff;
+	border: none;
+	font-family: var(--font-family);
+	font-weight: 700;
+	font-size: 16px;
+	color: #3c3c3c;
+	cursor: pointer;
+	transition: all 0.3s ease;
+
+	&:hover {
+		background: #f0f0f0;
+		transform: translateY(-2px);
+	}
+}
+
+// Медиа-запрос для мобильных устройств
+@media (max-width: 768px) {
+	.successContainer {
+		padding: 60px 20px;
+	}
+
+	.successContent {
+		gap: 20px;
+	}
+
+	.successIconWrapper {
+		width: 60px;
+		height: 60px;
+	}
+
+	.successIcon {
+		width: 30px;
+		height: 30px;
 	}
 }

@@ -23,8 +23,16 @@ export default function Home() {
 		loadData()
 	}, [currentLang])
 
+	// Простая версия
 	if (!homeData) {
-		return <div>Loading...</div>
+		return (
+			<div className='loading'>
+				<div className='loadingContent'>
+					<div className='spinner'></div>
+					<div className='loadingText'>Loading</div>
+				</div>
+			</div>
+		)
 	}
 
 	const {
@@ -38,103 +46,187 @@ export default function Home() {
 	return (
 		<>
 			<HomeAnimations />
-			<section className={styles.hero}>
-				<div className={`${styles.container} container`}>
-					<div className={styles.wrapper}>
-						<div className={styles.content}>
-							<h1 className={styles.title}>
-								{hero.title1}
-								<span className={styles.yellowSpan}>{hero.mainTitleSpan1}</span>
-								<br />
-								{hero.title2}
-								<span className={styles.pinkSpan}>{hero.mainTitleSpan2}</span>
-							</h1>
-							<p className={styles.text}>{hero.firstText}</p>
-						</div>
 
-						<div className={styles.rightSide}>
-							<p className={styles.pinkText}>{hero.secondText}</p>
-							<div className={styles.imgWrapper}>
-								<Image src={hero.image} alt='#' width={100} height={100} />
+			{/* Hero Section с безопасными обращениями */}
+			{hero && (
+				<section className={styles.hero}>
+					<div className={`${styles.container} container`}>
+						<div className={styles.wrapper}>
+							<div className={styles.content}>
+								<h1 className={styles.title}>
+									{hero.title1}
+									{hero.mainTitleSpan1 && (
+										<span className={styles.yellowSpan}>
+											{hero.mainTitleSpan1}
+										</span>
+									)}
+									<br />
+									{hero.title2}
+									{hero.mainTitleSpan2 && (
+										<span className={styles.pinkSpan}>
+											{hero.mainTitleSpan2}
+										</span>
+									)}
+								</h1>
+								{hero.firstText && (
+									<p className={styles.text}>{hero.firstText}</p>
+								)}
 							</div>
-						</div>
-					</div>
-				</div>
-			</section>
 
-			<section className={styles.whoWeAre}>
-				<div className={`${styles.container} container`}>
-					<div className={`${styles.wrapper} pink-bg`}>
-						<div className={styles.imgWrapper}>
-							<Image
-								src={firstSection.image}
-								alt='#'
-								width={100}
-								height={100}
-							/>
-						</div>
-						<div className={styles.content}>
-							<h2 className={styles.title}>
-								{firstSection.title}
-								<span>{firstSection.titleSpan}</span>
-							</h2>
-							<p className={styles.text}>{firstSection.text}</p>
-							<Button text='Learn More' href='/aboutUs' className='yellow' />
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section className={styles.Differentiators}>
-				<div className={`${styles.container} container`}>
-					<h2 className={styles.title}>{secondSection.mainTitle}</h2>
-
-					<div className={styles.cards}>
-						{secondSection.cardInfo.map((card, index) => (
-							<div key={index} className={styles.card}>
-								<div className={styles.iconWrapper}>
-									{card.cardIcon && (
-										<Image src={card.cardIcon} alt='' width={40} height={40} />
+							<div className={styles.rightSide}>
+								{hero.secondText && (
+									<p className={styles.pinkText}>{hero.secondText}</p>
+								)}
+								<div className={styles.imgWrapper}>
+									{hero.image && (
+										<Image
+											src={hero.image}
+											alt='Hero image'
+											width={100}
+											height={100}
+											onError={e => {
+												// Обработка ошибки загрузки изображения
+												console.error('Failed to load hero image:', hero.image)
+											}}
+										/>
 									)}
 								</div>
-								<h3 className={styles.subtitle}>{card.title}</h3>
-								<p className={styles.text}>{card.text}</p>
-								<Button text='Learn More' href='/aboutUs' className='purple' />
 							</div>
-						))}
-					</div>
-				</div>
-			</section>
-
-			<HomeCards thirdSection={thirdSection} />
-
-			<section className={styles.growTogether}>
-				<div className={`${styles.container} container`}>
-					<div className={`${styles.wrapper} pink-bg-reverse`}>
-						<div className={styles.content}>
-							<h2 className={styles.title}>
-								{fourthSectionGrowTogether.title}{' '}
-								<span>{fourthSectionGrowTogether.titleSpan}</span>
-							</h2>
-							<p className={styles.text}>{fourthSectionGrowTogether.text}</p>
-							<Button
-								text='Contact Us'
-								href='/aboutUs#aboutUsForm'
-								className='purple'
-							/>
-						</div>
-
-						<div className={styles.imgWrapper}>
-							<Image
-								src={fourthSectionGrowTogether.image}
-								alt='#'
-								width={100}
-								height={100}
-							/>
 						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+			)}
+
+			{/* First Section с безопасными обращениями */}
+			{firstSection && (
+				<section className={styles.whoWeAre}>
+					<div className={`${styles.container} container`}>
+						<div className={`${styles.wrapper} pink-bg`}>
+							{firstSection.image && (
+								<div className={styles.imgWrapper}>
+									<Image
+										src={firstSection.image}
+										alt='First section image'
+										width={100}
+										height={100}
+										onError={e => {
+											console.error(
+												'Failed to load first section image:',
+												firstSection.image
+											)
+										}}
+									/>
+								</div>
+							)}
+							<div className={styles.content}>
+								<h2 className={styles.title}>
+									{firstSection.title}
+									{firstSection.titleSpan && (
+										<span>{firstSection.titleSpan}</span>
+									)}
+								</h2>
+								{firstSection.text && (
+									<p className={styles.text}>{firstSection.text}</p>
+								)}
+								<Button text='Learn More' href='/aboutUs' className='yellow' />
+							</div>
+						</div>
+					</div>
+				</section>
+			)}
+
+			{/* Second Section с безопасными обращениями */}
+			{secondSection && (
+				<section className={styles.Differentiators}>
+					<div className={`${styles.container} container`}>
+						{secondSection.mainTitle && (
+							<h2 className={styles.title}>{secondSection.mainTitle}</h2>
+						)}
+
+						{secondSection.cardInfo && (
+							<div className={styles.cards}>
+								{secondSection.cardInfo.map((card, index) => (
+									<div key={index} className={styles.card}>
+										<div className={styles.iconWrapper}>
+											{card?.cardIcon && (
+												<Image
+													src={card.cardIcon}
+													alt={`Icon for ${card.title}`}
+													width={40}
+													height={40}
+													onError={e => {
+														console.error(
+															'Failed to load card icon:',
+															card.cardIcon
+														)
+													}}
+												/>
+											)}
+										</div>
+										{card?.title && (
+											<h3 className={styles.subtitle}>{card.title}</h3>
+										)}
+										{card?.text && <p className={styles.text}>{card.text}</p>}
+										<Button
+											text='Learn More'
+											href='/aboutUs'
+											className='purple'
+										/>
+									</div>
+								))}
+							</div>
+						)}
+					</div>
+				</section>
+			)}
+
+			{/* Third Section */}
+			{thirdSection && <HomeCards thirdSection={thirdSection} />}
+
+			{/* Fourth Section с безопасными обращениями */}
+			{fourthSectionGrowTogether && (
+				<section className={styles.growTogether}>
+					<div className={`${styles.container} container`}>
+						<div className={`${styles.wrapper} pink-bg-reverse`}>
+							<div className={styles.content}>
+								<h2 className={styles.title}>
+									{fourthSectionGrowTogether.title}{' '}
+									{fourthSectionGrowTogether.titleSpan && (
+										<span>{fourthSectionGrowTogether.titleSpan}</span>
+									)}
+								</h2>
+								{fourthSectionGrowTogether.text && (
+									<p className={styles.text}>
+										{fourthSectionGrowTogether.text}
+									</p>
+								)}
+								<Button
+									text='Contact Us'
+									href='/aboutUs#aboutUsForm'
+									className='purple'
+								/>
+							</div>
+
+							{fourthSectionGrowTogether.image && (
+								<div className={styles.imgWrapper}>
+									<Image
+										src={fourthSectionGrowTogether.image}
+										alt='Grow together image'
+										width={100}
+										height={100}
+										onError={e => {
+											console.error(
+												'Failed to load grow together image:',
+												fourthSectionGrowTogether.image
+											)
+										}}
+									/>
+								</div>
+							)}
+						</div>
+					</div>
+				</section>
+			)}
 
 			<Reviews />
 		</>

@@ -1,3 +1,4 @@
+// src/app/layout.tsx
 import Footer from '@/components/Footer/Footer'
 import Header from '@/components/Header/Header'
 import { LanguageProvider } from '@/context/LanguageContext'
@@ -39,7 +40,7 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang='en'>
+		<html lang='ru'>
 			<body
 				className={`${inter.variable} ${roboto.variable} ${montserrat.variable}`}
 			>
