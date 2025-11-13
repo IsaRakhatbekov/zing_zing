@@ -10,7 +10,6 @@
 			"rightSideImage2": "/mock/products/pink.png",
 			"rightSideImage3": "/mock/products/purple.png"
 		},
-
 		"secondSectionSmallCard": {
 			"cards": [
 				{
@@ -51,7 +50,6 @@
 				}
 			]
 		},
-
 		"thirdSectionBigCards": {
 			"bigCard": [
 				{
