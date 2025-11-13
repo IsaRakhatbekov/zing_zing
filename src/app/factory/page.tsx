@@ -135,8 +135,8 @@ export default function Page() {
 									<Image
 										src={factoryData.thirdSection.image}
 										alt={factoryData.thirdSection.title}
-										width={100}
-										height={100}
+										width={350}
+										height={350}
 									/>
 								</div>
 								<div className={styles.content}>
