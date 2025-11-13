@@ -97,8 +97,8 @@ export default function Page() {
 										<Image
 											src={qualityData.hero.rightSideImage}
 											alt='ZingZing quality hero'
-											width={100}
-											height={100}
+											width={350}
+											height={380}
 										/>
 									</div>
 								</div>
