@@ -23,21 +23,6 @@ interface Review {
 	videoId?: string
 }
 
-const reviews: Review[] = [
-	{
-		id: 1,
-		preview: '/images/reviews/reviews-1.png',
-		video: '/videos/review1.mp4',
-	},
-	{ id: 2, preview: '/images/reviews/reviews-2.png', videoId: 'dQw4w9WgXcQ' },
-	{ id: 3, preview: '/images/reviews/reviews-3.png', videoId: 'V-_O7nl0Ii0' },
-	{
-		id: 4,
-		preview: '/images/reviews/reviews-4.png',
-		video: '/videos/review4.mp4',
-	},
-]
-
 // SSR-safe моб. флаг
 const useIsMobile = (breakpoint = 768) => {
 	const [isMobile, setIsMobile] = useState(false)
@@ -51,16 +36,27 @@ const useIsMobile = (breakpoint = 768) => {
 }
 
 type Props = {
+	/** Данные отзывов */
+	reviews: Review[]
 	/** РУЧНАЯ ширина карточки в пикселях (для свайпера на мобилке) */
 	cardWidthPx?: number
 	/** Зазор между слайдами */
 	gapPx?: number
 }
 
-export default function Reviews({ cardWidthPx = 250, gapPx = 16 }: Props) {
+export default function Reviews({
+	reviews,
+	cardWidthPx = 250,
+	gapPx = 16,
+}: Props) {
 	const [playing, setPlaying] = useState<number | null>(null)
 	const reviewsRef = useRef<HTMLElement | null>(null)
 	const isMobile = useIsMobile(768)
+
+	// Если нет отзывов - не рендерим компонент
+	if (!reviews || reviews.length === 0) {
+		return null
+	}
 
 	// GSAP-анимация (десктоп)
 	useEffect(() => {

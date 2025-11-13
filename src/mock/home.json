@@ -7,13 +7,13 @@
 			"mainTitleSpan2": "Zing.",
 			"firstText": "Bold, crunchy, and bursting with flavor — ZingZing turns every bite into a moment of happiness! ",
 			"image": "/mock/products/product-mock-purple.png",
-			"secondText": "ZingZing isn’t just a snack — it’s a spark of happiness that wakes up your taste buds!"
+			"secondText": "ZingZing isn’t just a snack — it's a spark of happiness that wakes up your taste buds!"
 		},
 		"firstSection": {
 			"image": "/mock/products/whoWeAre.png",
 			"title": "Who Are",
 			"titleSpan": " We?",
-			"text": "ZingZing is where flavor meets fun! We craft tasty, spicy, and joyful snacks made to brighten your day. Whether you’re chilling with friends or powering through work, ZingZing is your go-to for flavor and good vibes."
+			"text": "ZingZing is where flavor meets fun! We craft tasty, spicy, and joyful snacks made to brighten your day. Whether you're chilling with friends or powering through work, ZingZing is your go-to for flavor and good vibes."
 		},
 		"secondSection": {
 			"mainTitle": "Key Differentiators",
@@ -51,13 +51,35 @@
 				}
 			]
 		},
-
 		"fourthSectionGrowTogether": {
 			"image": "/mock/products/growTogether-img.png",
 			"title": "Let's Grow",
 			"titleSpan": "Together",
 			"text": "Whether you're looking to expand your snack portfolio or introduce something fresh and exciting to your region, ZingZing brings energy, color, and fun that customers can't resist."
-		}
+		},
+
+		"reviews": [
+			{
+				"id": 1,
+				"preview": "/images/reviews/reviews-1.png",
+				"video": "/videos/review1.mp4"
+			},
+			{
+				"id": 2,
+				"preview": "/images/reviews/reviews-2.png",
+				"videoId": "dQw4w9WgXcQ"
+			},
+			{
+				"id": 3,
+				"preview": "/images/reviews/reviews-3.png",
+				"videoId": "V-_O7nl0Ii0"
+			},
+			{
+				"id": 4,
+				"preview": "/images/reviews/reviews-4.png",
+				"video": "/videos/review4.mp4"
+			}
+		]
 	},
 	"RUS": {
 		"hero": {
@@ -116,7 +138,30 @@
 			"title": "Давайте Расти",
 			"titleSpan": " Вместе",
 			"text": "Расширьте ассортимент или представьте в своем регионе нечто новое — ZingZing приносит энергию и вкус, от которого не отказаться."
-		}
+		},
+
+		"reviews": [
+			{
+				"id": 1,
+				"preview": "/images/reviews/reviews-1.png",
+				"video": "/videos/review1.mp4"
+			},
+			{
+				"id": 2,
+				"preview": "/images/reviews/reviews-2.png",
+				"videoId": "dQw4w9WgXcQ"
+			},
+			{
+				"id": 3,
+				"preview": "/images/reviews/reviews-3.png",
+				"videoId": "V-_O7nl0Ii0"
+			},
+			{
+				"id": 4,
+				"preview": "/images/reviews/reviews-4.png",
+				"video": "/videos/review4.mp4"
+			}
+		]
 	},
 	"KAZ": {
 		"hero": {
@@ -166,7 +211,7 @@
 				},
 				{
 					"image": "/mock/products/product-mock.png",
-					"text": "BBQB дәмі – әлемдік танымал дәмдерді сүйетіндерге арналған, әр уақытқа жылылық пен естен кетпейтін ләззат сіңіреді."
+					"text": "BBQB дәмі – әлемдік танымал дәмдерді сүйетіндерге арналған, әр уақытқa жылылық пен естен кетпейтін ләззат сіңіреді."
 				}
 			]
 		},
@@ -175,6 +220,29 @@
 			"title": "Бірге",
 			"titleSpan": " Өсейік",
 			"text": "Тәттілер ассортиментін кеңейткіңіз келсе де, өз аймағыңызға жаңа және қызықты бір нәрсені енгізгіңіз келсе де – ZingZing тұтынушылар бас тарта алмайтын энергия мен ләззат әкеледі."
-		}
+		},
+
+		"reviews": [
+			{
+				"id": 1,
+				"preview": "/images/reviews/reviews-1.png",
+				"video": "/videos/review1.mp4"
+			},
+			{
+				"id": 2,
+				"preview": "/images/reviews/reviews-2.png",
+				"videoId": "dQw4w9WgXcQ"
+			},
+			{
+				"id": 3,
+				"preview": "/images/reviews/reviews-3.png",
+				"videoId": "V-_O7nl0Ii0"
+			},
+			{
+				"id": 4,
+				"preview": "/images/reviews/reviews-4.png",
+				"video": "/videos/review4.mp4"
+			}
+		]
 	}
 }

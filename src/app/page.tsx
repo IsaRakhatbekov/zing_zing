@@ -1,4 +1,3 @@
-// src/app/page.tsx
 'use client'
 import HomeCards from '@/components/HomeCards/HomeCards'
 import Reviews from '@/components/Reviews/Reviews'
@@ -41,6 +40,7 @@ export default function Home() {
 		secondSection,
 		thirdSection,
 		fourthSectionGrowTogether,
+		reviews, // ДОБАВЛЯЕМ ОТЗЫВЫ
 	} = homeData
 
 	return (
@@ -228,7 +228,8 @@ export default function Home() {
 				</section>
 			)}
 
-			<Reviews />
+			{/* Reviews Section - ПЕРЕДАЕМ ДАННЫЕ ИЗ homeData */}
+			<Reviews reviews={reviews} />
 		</>
 	)
 }
