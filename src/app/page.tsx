@@ -107,8 +107,8 @@ export default function Home() {
 									<Image
 										src={firstSection.image}
 										alt='First section image'
-										width={100}
-										height={100}
+										width={600}
+										height={400}
 										onError={e => {
 											console.error(
 												'Failed to load first section image:',
@@ -212,8 +212,8 @@ export default function Home() {
 									<Image
 										src={fourthSectionGrowTogether.image}
 										alt='Grow together image'
-										width={100}
-										height={100}
+										width={600}
+										height={400}
 										onError={e => {
 											console.error(
 												'Failed to load grow together image:',

@@ -111,8 +111,8 @@ export default function Page() {
 										<Image
 											src={reachUsData.secondSection.image}
 											alt={reachUsData.secondSection.title}
-											width={100}
-											height={100}
+											width={500}
+											height={440}
 										/>
 									</div>
 								</div>

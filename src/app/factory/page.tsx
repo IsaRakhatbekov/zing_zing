@@ -7,8 +7,8 @@ import { fetchFactory } from '@/shared/api/fetchFactory'
 import type { Factory } from '@/types/factory'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import styles from './page.module.scss'
 import FactoryAnimations from './FactoryAnimation'
+import styles from './page.module.scss'
 
 export default function Page() {
 	const { currentLang } = useLanguage()
@@ -119,8 +119,8 @@ export default function Page() {
 										<Image
 											src={factoryData.secondSection.image}
 											alt={factoryData.secondSection.title}
-											width={100}
-											height={100}
+											width={500}
+											height={360}
 										/>
 									</div>
 								</div>
@@ -167,8 +167,8 @@ export default function Page() {
 										<Image
 											src={factoryData.fourthSection.image}
 											alt={factoryData.fourthSection.title}
-											width={100}
-											height={100}
+											width={500}
+											height={360}
 										/>
 									</div>
 								</div>

@@ -167,8 +167,8 @@ export default function Page() {
 														productsData.thirdSectionBigCards.bigCard[0]
 															.titleSpan
 													}
-													width={100}
-													height={100}
+													width={300}
+													height={500}
 												/>
 											</div>
 										</div>
@@ -204,8 +204,8 @@ export default function Page() {
 														productsData.thirdSectionBigCards.bigCard[1]
 															.titleSpan
 													}
-													width={100}
-													height={100}
+													width={300}
+													height={500}
 												/>
 											</div>
 										</div>
@@ -241,8 +241,8 @@ export default function Page() {
 														productsData.thirdSectionBigCards.bigCard[2]
 															.titleSpan
 													}
-													width={100}
-													height={100}
+													width={300}
+													height={500}
 												/>
 											</div>
 										</div>
@@ -277,8 +277,8 @@ export default function Page() {
 									<Image
 										src={productsData.fourthSectionGrowTogether.image}
 										alt='Grow together'
-										width={100}
-										height={100}
+										width={600}
+										height={400}
 									/>
 								</div>
 							</div>

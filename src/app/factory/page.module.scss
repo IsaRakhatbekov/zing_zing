@@ -133,9 +133,8 @@
 	}
 
 	.imgWrapper {
-		/* КЛЮЧ: ширина + aspect-ratio = пропорциональное авто-масштабирование */
 		width: clamp(220px, 36vw, 500px);
-		aspect-ratio: 500 / 287; /* соответствует размерам в <Image> */
+		aspect-ratio: 500 / 287;
 		height: auto;
 
 		overflow: hidden;

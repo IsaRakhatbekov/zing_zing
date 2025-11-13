@@ -106,7 +106,6 @@ export default function Page() {
 						</div>
 					</section>
 
-					{/* ... остальные секции без изменений ... */}
 					<section className={styles.quality} id='quality-section'>
 						<div className={`${styles.container} container`}>
 							<div className={styles.wrapper}>
@@ -181,8 +180,8 @@ export default function Page() {
 									<Image
 										src={qualityData.fourthSection.ensure.image}
 										alt='Quality assurance'
-										width={100}
-										height={100}
+										width={500}
+										height={700}
 									/>
 								</div>
 							</div>
@@ -192,8 +191,8 @@ export default function Page() {
 									<Image
 										src={qualityData.fourthSection.accountability.image}
 										alt='Accountability'
-										width={100}
-										height={100}
+										width={690}
+										height={450}
 									/>
 								</div>
 								<div className={styles.content}>
@@ -229,8 +228,8 @@ export default function Page() {
 									<Image
 										src={qualityData.fourthSection.stewardship.image}
 										alt='Stewardship'
-										width={100}
-										height={100}
+										width={530}
+										height={500}
 									/>
 								</div>
 							</div>
@@ -240,8 +239,8 @@ export default function Page() {
 									<Image
 										src={qualityData.fourthSection.certifications.image}
 										alt='Certifications'
-										width={100}
-										height={100}
+										width={370}
+										height={400}
 									/>
 								</div>
 								<div className={styles.content}>
