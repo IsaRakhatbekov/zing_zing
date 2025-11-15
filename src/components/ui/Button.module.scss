@@ -1,3 +1,4 @@
+// components/ui/Button.module.scss
 .button {
 	font-family: var(--font-family);
 	font-weight: 700;
@@ -5,30 +6,40 @@
 	transition: 0.3s;
 	padding: 20px 30px;
 	font-size: clamp(12px, calc(12px + 10px * (100vw / 1315px)), 22px);
+	display: inline-block; // Добавляем для правильного размера
+	min-width: 150px; // Минимальная ширина для коротких текстов
 
 	&.pink {
 		color: var(--white);
-		background: url('../../assets/images/pink-bg.png') no-repeat center/contain;
+		background: url('../../assets/images/pink-bg.png') no-repeat center/100%
+			100%;
+		background-size: 100% 100%; // Растягиваем на весь блок
 	}
 
 	&.yellow {
 		color: var(--pink);
 		background: url('../../assets/images/yellow-bg-small.png') no-repeat
-			center/contain;
+			center/100% 100%;
+		background-size: 100% 100%; // Растягиваем на весь блок
 	}
+
 	&.yellowWithPurple {
 		color: var(--purple);
 		background: url('../../assets/images/yellow-bg-small.png') no-repeat
-			center/contain;
+			center/100% 100%;
+		background-size: 100% 100%; // Растягиваем на весь блок
 	}
 
 	&.purple {
 		color: var(--white);
-		background: url('../../assets/images/purple-bg.png') no-repeat
-			center/contain;
+		background: url('../../assets/images/purple-bg.png') no-repeat center/100%
+			100%;
+		background-size: 100% 100%; // Растягиваем на весь блок
 	}
+
 	&.orange {
 		color: var(--white);
-		background: url('../../assets/images/orange.png') no-repeat center/contain;
+		background: url('../../assets/images/orange.png') no-repeat center/100% 100%;
+		background-size: 100% 100%; // Растягиваем на весь блок
 	}
 }

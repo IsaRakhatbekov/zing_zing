@@ -128,7 +128,11 @@ export default function Home() {
 								{firstSection.text && (
 									<p className={styles.text}>{firstSection.text}</p>
 								)}
-								<Button text='Learn More' href='/aboutUs' className='yellow' />
+								<Button
+									translationKey='learnMore'
+									href='/aboutUs'
+									className='yellow'
+								/>
 							</div>
 						</div>
 					</div>
@@ -168,7 +172,7 @@ export default function Home() {
 										)}
 										{card?.text && <p className={styles.text}>{card.text}</p>}
 										<Button
-											text='Learn More'
+											translationKey='learnMore'
 											href='/aboutUs'
 											className='purple'
 										/>
@@ -201,7 +205,7 @@ export default function Home() {
 									</p>
 								)}
 								<Button
-									text='Contact Us'
+									translationKey='contactUs'
 									href='/aboutUs#aboutUsForm'
 									className='purple'
 								/>

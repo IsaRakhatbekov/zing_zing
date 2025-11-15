@@ -267,7 +267,7 @@ export default function Page() {
 										{productsData.fourthSectionGrowTogether.text}
 									</p>
 									<Button
-										text='Contact Us'
+										translationKey='contactUs'
 										href='/aboutUs#aboutUsForm'
 										className='purple'
 									/>

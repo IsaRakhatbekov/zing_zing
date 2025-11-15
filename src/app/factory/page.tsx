@@ -109,7 +109,7 @@ export default function Page() {
 										{factoryData.secondSection.text}
 									</p>
 									<Button
-										text='Learn More'
+										translationKey='learnMore'
 										className='yellowWithPurple'
 										href='#'
 									/>
@@ -144,7 +144,11 @@ export default function Page() {
 										{factoryData.thirdSection.title}
 									</h2>
 									<p className={styles.text}>{factoryData.thirdSection.text}</p>
-									<Button text='Learn More' className='purple' href='#' />
+									<Button
+										translationKey='learnMore'
+										className='purple'
+										href='#'
+									/>
 								</div>
 							</div>
 						</div>
@@ -160,7 +164,11 @@ export default function Page() {
 									<p className={styles.text}>
 										{factoryData.fourthSection.text}
 									</p>
-									<Button text='Learn More' className='yellow' href='#' />
+									<Button
+										translationKey='learnMore'
+										className='yellow'
+										href='#'
+									/>
 								</div>
 								<div className={styles.inner}>
 									<div className={styles.imgWrapper}>

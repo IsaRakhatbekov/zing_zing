@@ -101,7 +101,7 @@ export default function Page() {
 										{reachUsData.secondSection.text}
 									</p>
 									<Button
-										text='Learn More'
+										translationKey='learnMore'
 										className='yellow'
 										href='#reachUsForm'
 									/>

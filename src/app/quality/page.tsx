@@ -127,7 +127,7 @@ export default function Page() {
 										{qualityData.secondSection.text}
 									</p>
 									<Button
-										text='Contact Us'
+										translationKey='contactUs'
 										href='#qualityForm'
 										className='pink'
 									/>
@@ -171,7 +171,7 @@ export default function Page() {
 										{qualityData.fourthSection.ensure.text}
 									</p>
 									<Button
-										text='Contact Us'
+										translationKey='contactUs'
 										className='purple'
 										href='#qualityForm'
 									/>
@@ -203,7 +203,7 @@ export default function Page() {
 										{qualityData.fourthSection.accountability.text}
 									</p>
 									<Button
-										text='Contact Us'
+										translationKey='contactUs'
 										href='#qualityForm'
 										className='yellow'
 									/>
@@ -219,7 +219,7 @@ export default function Page() {
 										{qualityData.fourthSection.stewardship.text}
 									</p>
 									<Button
-										text='Contact Us'
+										translationKey='contactUs'
 										className='pink'
 										href='#qualityForm'
 									/>
@@ -253,7 +253,7 @@ export default function Page() {
 										{qualityData.fourthSection.certifications.text}
 									</p>
 									<Button
-										text='Contact Us'
+										translationKey='contactUs'
 										href='#qualityForm'
 										className='yellow'
 									/>

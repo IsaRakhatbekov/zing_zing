@@ -117,7 +117,7 @@ export default function Page() {
 										{newsData.secondSection.firstBlock.text}
 									</p>
 									<Button
-										text='Contact Us'
+										translationKey='contactUs'
 										className='yellow'
 										href='/reachUs'
 									/>
@@ -154,7 +154,7 @@ export default function Page() {
 										{newsData.secondSection.secondBlock.text}
 									</p>
 									<Button
-										text='Contact Us'
+										translationKey='contactUs'
 										className='purple'
 										href='/reachUs'
 									/>
@@ -174,7 +174,11 @@ export default function Page() {
 									<p className={styles.text}>
 										{newsData.secondSection.thirdBlock.text}
 									</p>
-									<Button text='Contact Us' className='pink' href='/reachUs' />
+									<Button
+										translationKey='contactUs'
+										className='pink'
+										href='/reachUs'
+									/>
 								</div>
 								<div className={styles.imgWrapper}>
 									<Image

@@ -41,7 +41,6 @@ export default function Page() {
 		<>
 			<AboutUsAnimations aboutUsData={aboutUsData} />
 
-			{/* Рендерим секции только если есть данные */}
 			{aboutUsData && (
 				<>
 					<section className={styles.secondHero} id='aboutUsHero'>
@@ -149,7 +148,6 @@ export default function Page() {
 
 					<section className={styles.ourCommunity}>
 						<div className={`${styles.container} container`}>
-							{/* Компоненты thirdSection рендерятся только если blocks существует и имеет нужные элементы */}
 							{aboutUsData.thirdSection.blocks[0] && (
 								<div className={`${styles.wrapper} pink-bg-reverse`}>
 									<div className={styles.content}>
@@ -163,7 +161,7 @@ export default function Page() {
 											{aboutUsData.thirdSection.blocks[0].text}
 										</p>
 										<Button
-											text='Contact Us'
+											translationKey='contactUs'
 											className='purple'
 											href='#aboutUsForm'
 										/>
@@ -200,7 +198,7 @@ export default function Page() {
 											{aboutUsData.thirdSection.blocks[1].text}
 										</p>
 										<Button
-											text='Contact Us'
+											translationKey='contactUs'
 											href='#aboutUsForm'
 											className='pink'
 										/>
@@ -221,7 +219,7 @@ export default function Page() {
 											{aboutUsData.thirdSection.blocks[2].text}
 										</p>
 										<Button
-											text='Contact Us'
+											translationKey='contactUs'
 											href='#aboutUsForm'
 											className='purple'
 										/>
@@ -241,7 +239,6 @@ export default function Page() {
 				</>
 			)}
 
-			{/* Форма рендерится всегда */}
 			<section id='aboutUsForm'>
 				<Form />
 			</section>
