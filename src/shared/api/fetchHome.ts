@@ -1,10 +1,9 @@
 // src/shared/api/fetchHome.ts
+import { getDomainConfig } from '@/lib/domain-config'
 import homeMock from '@/mock/home.json'
 import type { Home } from '@/types/home'
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || ''
-
-// Маппинг твоих кодов языков на те, что ожидает бэкенд
+// Маппинг языков для бэкенда
 const languageMap = {
 	ENG: 'en',
 	RUS: 'ru',
@@ -15,10 +14,18 @@ export async function fetchHome(
 	lang: keyof typeof languageMap = 'ENG'
 ): Promise<Home> {
 	try {
+		// Получаем конфигурацию домена
+		const domainConfig = getDomainConfig()
+		const API_URL = domainConfig.apiUrl
+
 		if (!API_URL) {
-			// В мок-режиме берем данные для нужного языка
+			console.log('Using mock data for home')
 			return (homeMock as any)[lang] as Home
 		}
+
+		console.log(
+			`Fetching home data from: ${API_URL} with lang: ${languageMap[lang]}`
+		)
 
 		const res = await fetch(`${API_URL}/api/home/`, {
 			cache: 'no-store',

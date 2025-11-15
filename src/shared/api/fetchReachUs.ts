@@ -1,10 +1,8 @@
 // src/shared/api/fetchReachUs.ts
+import { getDomainConfig } from '@/lib/domain-config'
 import reachUsMock from '@/mock/reachUs.json'
 import type { ReachUs } from '@/types/reachUs'
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || ''
-
-// Маппинг твоих кодов языков на те, что ожидает бэкенд
 const languageMap = {
 	ENG: 'en',
 	RUS: 'ru',
@@ -15,10 +13,17 @@ export async function fetchReachUs(
 	lang: keyof typeof languageMap = 'ENG'
 ): Promise<ReachUs> {
 	try {
+		const domainConfig = getDomainConfig()
+		const API_URL = domainConfig.apiUrl
+
 		if (!API_URL) {
-			// В мок-режиме берем данные для нужного языка
+			console.log('Using mock data for reach us')
 			return (reachUsMock as any)[lang] as ReachUs
 		}
+
+		console.log(
+			`Fetching reach us data from: ${API_URL} with lang: ${languageMap[lang]}`
+		)
 
 		const res = await fetch(`${API_URL}/api/reachUs/`, {
 			cache: 'no-store',

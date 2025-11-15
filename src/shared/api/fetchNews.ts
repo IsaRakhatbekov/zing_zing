@@ -1,10 +1,8 @@
 // src/shared/api/fetchNews.ts
+import { getDomainConfig } from '@/lib/domain-config'
 import newsMock from '@/mock/news.json'
 import type { News } from '@/types/news'
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || ''
-
-// Маппинг твоих кодов языков на те, что ожидает бэкенд
 const languageMap = {
 	ENG: 'en',
 	RUS: 'ru',
@@ -15,10 +13,17 @@ export async function fetchNews(
 	lang: keyof typeof languageMap = 'ENG'
 ): Promise<News> {
 	try {
+		const domainConfig = getDomainConfig()
+		const API_URL = domainConfig.apiUrl
+
 		if (!API_URL) {
-			// В мок-режиме берем данные для нужного языка
+			console.log('Using mock data for news')
 			return (newsMock as any)[lang] as News
 		}
+
+		console.log(
+			`Fetching news data from: ${API_URL} with lang: ${languageMap[lang]}`
+		)
 
 		const res = await fetch(`${API_URL}/api/news/`, {
 			cache: 'no-store',
