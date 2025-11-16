@@ -31,7 +31,6 @@ export default function Page() {
 		loadData()
 	}, [currentLang])
 
-	// Логируем ошибки но не падаем
 	if (error) {
 		console.warn('Products page error:', error)
 	}
@@ -39,11 +38,8 @@ export default function Page() {
 	return (
 		<>
 			<ProductsAnimations productsData={productsData} />
-
-			{/* Рендерим секции только если есть данные */}
 			{productsData && (
 				<>
-					{/* HERO */}
 					<section className={styles.secondHero} id='products-hero'>
 						<div className={`${styles.container} container`}>
 							<div className={styles.wrapper}>
@@ -103,18 +99,32 @@ export default function Page() {
 						</div>
 					</section>
 
-					{/* МАЛЕНЬКИЕ КАРТОЧКИ */}
 					<section className={styles.products} id='products-small-cards'>
 						<div className='container'>
 							<ul className={styles.list}>
-								{productsData.secondSectionSmallCard.cards.map((p, index) => (
-									<li key={index} className={styles.card}>
+								{productsData.secondSectionSmallCard.cards.map(p => (
+									<li key={p.id} className={styles.card}>
 										<div className={styles.yellow}></div>
+
 										<div className={styles.pink}>
 											<h3 className={styles.title}>
-												ZingZing <br />
+												{p.title}
+												<br />
 												<span>{p.titleSpan}</span>
 											</h3>
+
+											{/* маленькие кусочки, максимум 2 */}
+											{p.littleImages?.map((src, idx) => (
+												<div key={idx} className={styles.littleImg}>
+													<Image
+														src={src}
+														alt={`${p.titleSpan} piece ${idx + 1}`}
+														width={40}
+														height={40}
+													/>
+												</div>
+											))}
+
 											<div className={styles.imgWrapper}>
 												<Image
 													src={p.image}
@@ -130,7 +140,6 @@ export default function Page() {
 						</div>
 					</section>
 
-					{/* БОЛЬШИЕ БЛОКИ */}
 					<section className={styles.productsDetailed}>
 						<div className={`${styles.container} container`}>
 							<h2 className={styles.productsDetailedTitle}>
@@ -252,7 +261,6 @@ export default function Page() {
 						</div>
 					</section>
 
-					{/* Остальное как было */}
 					<section className={styles.growTogether}>
 						<div className={`${styles.container} container`}>
 							<div className={`${styles.wrapper} pink-bg-reverse`}>

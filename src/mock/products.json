@@ -16,37 +16,64 @@
 					"id": 1,
 					"title": "ZingZing",
 					"titleSpan": "Classic",
-					"image": "/mock/products/product-mock-purple.png"
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
 				},
 				{
 					"id": 2,
 					"title": "ZingZing",
 					"titleSpan": "BBQ",
-					"image": "/mock/products/product-mock-purple.png"
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
 				},
 				{
 					"id": 3,
 					"title": "ZingZing",
 					"titleSpan": "Hot Pot",
-					"image": "/mock/products/product-mock-purple.png"
+					"image": "/mock/products/product-mock-purple.png",
+
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
 				},
 				{
 					"id": 4,
 					"title": "ZingZing",
 					"titleSpan": "Chill",
-					"image": "/mock/products/product-mock-purple.png"
+					"image": "/mock/products/product-mock-purple.png",
+
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
 				},
 				{
 					"id": 5,
 					"title": "ZingZing",
 					"titleSpan": "Joy",
-					"image": "/mock/products/product-mock-purple.png"
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
 				},
 				{
 					"id": 6,
 					"title": "ZingZing",
 					"titleSpan": "Lopster",
-					"image": "/mock/products/product-mock-purple.png"
+					"image": "/mock/products/product-mock-purple.png",
+
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
 				}
 			]
 		},
@@ -96,37 +123,61 @@
 					"id": 1,
 					"title": "ZingZing",
 					"titleSpan": "Классик",
-					"image": "/mock/products/product-mock-purple.png"
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
 				},
 				{
 					"id": 2,
 					"title": "ZingZing",
 					"titleSpan": "BBQ",
-					"image": "/mock/products/product-mock-purple.png"
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
 				},
 				{
 					"id": 3,
 					"title": "ZingZing",
 					"titleSpan": "Хот-Пот",
-					"image": "/mock/products/product-mock-purple.png"
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
 				},
 				{
 					"id": 4,
 					"title": "ZingZing",
 					"titleSpan": "Чилл",
-					"image": "/mock/products/product-mock-purple.png"
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
 				},
 				{
 					"id": 5,
 					"title": "ZingZing",
 					"titleSpan": "Джой",
-					"image": "/mock/products/product-mock-purple.png"
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
 				},
 				{
 					"id": 6,
 					"title": "ZingZing",
 					"titleSpan": "Лобстер",
-					"image": "/mock/products/product-mock-purple.png"
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
 				}
 			]
 		},
@@ -176,37 +227,61 @@
 					"id": 1,
 					"title": "ZingZing",
 					"titleSpan": "Классикалық",
-					"image": "/mock/products/product-mock-purple.png"
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
 				},
 				{
 					"id": 2,
 					"title": "ZingZing",
 					"titleSpan": "BBQ",
-					"image": "/mock/products/product-mock-purple.png"
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
 				},
 				{
 					"id": 3,
 					"title": "ZingZing",
 					"titleSpan": "Хот-Пот",
-					"image": "/mock/products/product-mock-purple.png"
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
 				},
 				{
 					"id": 4,
 					"title": "ZingZing",
 					"titleSpan": "Чилл",
-					"image": "/mock/products/product-mock-purple.png"
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
 				},
 				{
 					"id": 5,
 					"title": "ZingZing",
 					"titleSpan": "Рахат",
-					"image": "/mock/products/product-mock-purple.png"
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
 				},
 				{
 					"id": 6,
 					"title": "ZingZing",
 					"titleSpan": "Лобстер",
-					"image": "/mock/products/product-mock-purple.png"
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
 				}
 			]
 		},

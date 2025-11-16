@@ -12,8 +12,12 @@ export type Products = {
 	}
 	secondSectionSmallCard: {
 		cards: Array<{
+			id: number
+			title: string
 			titleSpan: string
 			image: string
+			// максимум 2 штуки, но бэку это не важно – просто массив строк
+			littleImages?: string[]
 		}>
 	}
 	thirdSectionBigCards: {
