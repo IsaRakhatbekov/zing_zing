@@ -23,6 +23,8 @@ type HeaderTranslations = {
 	ENG: HeaderTranslation
 	RUS: HeaderTranslation
 	KAZ: HeaderTranslation
+	UZB: HeaderTranslation
+	TUR: HeaderTranslation
 }
 
 const Header = () => {
@@ -32,9 +34,11 @@ const Header = () => {
 	const pathName = usePathname()
 
 	const languages = [
-		{ code: 'ENG' as const, name: 'English' },
-		{ code: 'RUS' as const, name: 'Русский' },
-		{ code: 'KAZ' as const, name: 'Қазақша' },
+		{ code: 'ENG' as const, name: 'EN', short: 'EN' },
+		{ code: 'RUS' as const, name: 'RU', short: 'RU' },
+		{ code: 'KAZ' as const, name: 'KZ', short: 'KZ' },
+		{ code: 'UZB' as const, name: 'UZ', short: 'UZ' },
+		{ code: 'TUR' as const, name: 'TR', short: 'TR' },
 	]
 
 	// Переводы для текстов в Header
@@ -70,9 +74,36 @@ const Header = () => {
 			factory: 'Фабрика',
 			reachUs: 'Байланысу',
 		},
+		UZB: {
+			topText:
+				'Achiq. Xirsillagan. Unutilmas. Bu ZingZing-ning haqiqiy lazzati.',
+			home: 'Bosh sahifa',
+			products: 'Mahsulotlar',
+			aboutUs: 'Biz haqimizda',
+			quality: 'Sifat',
+			news: 'Yangiliklar',
+			factory: 'Fabrika',
+			reachUs: "Bog'lanish",
+		},
+		TUR: {
+			topText: "Baharatlı. Çıtır. Unutulmaz. İşte ZingZing'in gerçek lezzeti.",
+			home: 'Ana Sayfa',
+			products: 'Ürünler',
+			aboutUs: 'Hakkımızda',
+			quality: 'Kalite',
+			news: 'Haberler',
+			factory: 'Fabrika',
+			reachUs: 'İletişim',
+		},
 	}
 
 	const t = headerTranslations[currentLang]
+
+	// Функция для получения сокращенного кода языка
+	const getShortLang = (langCode: string): string => {
+		const lang = languages.find(lang => lang.code === langCode)
+		return lang ? lang.short : langCode
+	}
 
 	// Массив навигационных ссылок для удобного рендеринга
 	const navItems: { href: string; key: keyof HeaderTranslation }[] = [
@@ -98,7 +129,9 @@ const Header = () => {
 		}
 	}, [burger])
 
-	const handleLangSelect = (langCode: 'ENG' | 'RUS' | 'KAZ') => {
+	const handleLangSelect = (
+		langCode: 'ENG' | 'RUS' | 'KAZ' | 'UZB' | 'TUR'
+	) => {
 		setCurrentLang(langCode)
 		setIsLangOpen(false)
 	}
@@ -133,7 +166,7 @@ const Header = () => {
 						))}
 						<li className={`${styles.item} ${styles.langItem}`}>
 							<button className={styles.lang} onClick={toggleLangMenu}>
-								{currentLang}
+								{getShortLang(currentLang)}
 							</button>
 							<div
 								className={`${styles.langMenu} ${
@@ -188,7 +221,7 @@ const Header = () => {
 					))}
 					<li className={`${styles.item} ${styles.langItem}`}>
 						<button className={styles.lang} onClick={toggleLangMenu}>
-							{currentLang}
+							{getShortLang(currentLang)}
 						</button>
 						<div
 							className={`${styles.langMenu} ${

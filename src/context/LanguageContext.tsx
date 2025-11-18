@@ -9,7 +9,7 @@ import React, {
 	useState,
 } from 'react'
 
-type Language = 'ENG' | 'RUS' | 'KAZ'
+type Language = 'ENG' | 'RUS' | 'KAZ' | 'UZB' | 'TUR'
 
 interface LanguageContextType {
 	currentLang: Language
@@ -30,7 +30,7 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({
 	useEffect(() => {
 		// Проверяем сохраненный язык, но только если он соответствует домену
 		const savedLang = localStorage.getItem('preferredLang') as Language
-		if (savedLang && ['ENG', 'RUS', 'KAZ'].includes(savedLang)) {
+		if (savedLang && ['ENG', 'RUS', 'KAZ', 'UZB', 'TUR'].includes(savedLang)) {
 			// Можно добавить логику проверки, что сохраненный язык доступен для этого домена
 			setCurrentLang(savedLang)
 		}
