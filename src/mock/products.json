@@ -313,5 +313,213 @@
 			"titleSpan": " Өсейік",
 			"text": "Тәттілер ассортиментін кеңейткіңіз келсе де, өз аймағыңызға жаңа нәрсе енгізгіңіз келсе де — ZingZing тұтынушылар бас тарта алмайтын энергия мен ләззат әкеледі."
 		}
+	},
+	"UZB": {
+		"hero": {
+			"title1": "000",
+			"mainTitleSpan1": "000",
+			"title2": "000",
+			"mainTitleSpan2": "000",
+			"leftSideImage": "/mock/products/model.png",
+			"rightSideImage1": "/mock/products/yellow.png",
+			"rightSideImage2": "/mock/products/pink.png",
+			"rightSideImage3": "/mock/products/purple.png"
+		},
+		"secondSectionSmallCard": {
+			"cards": [
+				{
+					"id": 1,
+					"title": "000",
+					"titleSpan": "000",
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
+				},
+				{
+					"id": 2,
+					"title": "000",
+					"titleSpan": "000",
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
+				},
+				{
+					"id": 3,
+					"title": "000",
+					"titleSpan": "000",
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
+				},
+				{
+					"id": 4,
+					"title": "000",
+					"titleSpan": "000",
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
+				},
+				{
+					"id": 5,
+					"title": "000",
+					"titleSpan": "000",
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
+				},
+				{
+					"id": 6,
+					"title": "000",
+					"titleSpan": "000",
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
+				}
+			]
+		},
+		"thirdSectionBigCards": {
+			"bigCard": [
+				{
+					"title": "000",
+					"titleSpan": "000",
+					"text": "000",
+					"image": "/mock/products/product-mock.png"
+				},
+				{
+					"title": "000",
+					"titleSpan": "000",
+					"text": "000",
+					"image": "/mock/products/product-mock.png"
+				},
+				{
+					"title": "000",
+					"titleSpan": "000",
+					"text": "000",
+					"image": "/mock/products/product-mock.png"
+				}
+			]
+		},
+		"fourthSectionGrowTogether": {
+			"image": "/mock/products/growTogether-img.png",
+			"title": "000",
+			"titleSpan": "000",
+			"text": "000"
+		}
+	},
+	"TUR": {
+		"hero": {
+			"title1": "000",
+			"mainTitleSpan1": "000",
+			"title2": "000",
+			"mainTitleSpan2": "000",
+			"leftSideImage": "/mock/products/model.png",
+			"rightSideImage1": "/mock/products/yellow.png",
+			"rightSideImage2": "/mock/products/pink.png",
+			"rightSideImage3": "/mock/products/purple.png"
+		},
+		"secondSectionSmallCard": {
+			"cards": [
+				{
+					"id": 1,
+					"title": "000",
+					"titleSpan": "000",
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
+				},
+				{
+					"id": 2,
+					"title": "000",
+					"titleSpan": "000",
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
+				},
+				{
+					"id": 3,
+					"title": "000",
+					"titleSpan": "000",
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
+				},
+				{
+					"id": 4,
+					"title": "000",
+					"titleSpan": "000",
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
+				},
+				{
+					"id": 5,
+					"title": "000",
+					"titleSpan": "000",
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
+				},
+				{
+					"id": 6,
+					"title": "000",
+					"titleSpan": "000",
+					"image": "/mock/products/product-mock-purple.png",
+					"littleImages": [
+						"/mock/products/little.png",
+						"/mock/products/little.png"
+					]
+				}
+			]
+		},
+		"thirdSectionBigCards": {
+			"bigCard": [
+				{
+					"title": "000",
+					"titleSpan": "000",
+					"text": "000",
+					"image": "/mock/products/product-mock.png"
+				},
+				{
+					"title": "000",
+					"titleSpan": "000",
+					"text": "000",
+					"image": "/mock/products/product-mock.png"
+				},
+				{
+					"title": "000",
+					"titleSpan": "000",
+					"text": "000",
+					"image": "/mock/products/product-mock.png"
+				}
+			]
+		},
+		"fourthSectionGrowTogether": {
+			"image": "/mock/products/growTogether-img.png",
+			"title": "000",
+			"titleSpan": "000",
+			"text": "000"
+		}
 	}
 }

@@ -88,5 +88,65 @@
 				"image": "/mock/news/tshirts.png"
 			}
 		}
+	},
+	"UZB": {
+		"hero": {
+			"mainTitle": "000",
+			"titleSpan1": "000",
+			"titleSpan2": "000",
+			"text": "000",
+			"leftSideImage1": "/mock/news/yellow.png",
+			"leftSideImage2": "/mock/news/yellow.png",
+			"leftSideImage3": "/mock/news/yellow.png",
+			"rightSideImage": "/mock/news/hero-model.png"
+		},
+		"secondSection": {
+			"firstBlock": {
+				"title": "000",
+				"titleSpan": "000",
+				"text": "000",
+				"image": "/mock/news/books.png"
+			},
+			"secondBlock": {
+				"image": "/mock/news/second-model.png",
+				"title": "000",
+				"text": "000"
+			},
+			"thirdBlock": {
+				"title": "000",
+				"text": "000",
+				"image": "/mock/news/tshirts.png"
+			}
+		}
+	},
+	"TUR": {
+		"hero": {
+			"mainTitle": "000",
+			"titleSpan1": "000",
+			"titleSpan2": "000",
+			"text": "000",
+			"leftSideImage1": "/mock/news/yellow.png",
+			"leftSideImage2": "/mock/news/yellow.png",
+			"leftSideImage3": "/mock/news/yellow.png",
+			"rightSideImage": "/mock/news/hero-model.png"
+		},
+		"secondSection": {
+			"firstBlock": {
+				"title": "000",
+				"titleSpan": "000",
+				"text": "000",
+				"image": "/mock/news/books.png"
+			},
+			"secondBlock": {
+				"image": "/mock/news/second-model.png",
+				"title": "000",
+				"text": "000"
+			},
+			"thirdBlock": {
+				"title": "000",
+				"text": "000",
+				"image": "/mock/news/tshirts.png"
+			}
+		}
 	}
 }

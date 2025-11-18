@@ -208,5 +208,145 @@
 				"text": "Біз мақтан тұтамыз ISO және Халал сертификаттарын ұстаймыз. Көшірмелерді сұрау немесе құжаттарды тексеру үшін, біздің сапа бөлімімізге хабарласыңыз."
 			}
 		}
+	},
+	"UZB": {
+		"hero": {
+			"title1": "000",
+			"mainTitleSpan1": "000",
+			"title2": "000",
+			"mainTitleSpan2": "000",
+			"text": "000",
+			"leftSideImage1": "/mock/quality/pink.png",
+			"leftSideImage2": "/mock/quality/pink.png",
+			"leftSideImage3": "/mock/quality/pink.png",
+			"rightSideImage": "/mock/quality/model.png"
+		},
+		"secondSection": {
+			"image": "/mock/quality/hat.png",
+			"title": "000",
+			"titleSpan": "000",
+			"text": "000"
+		},
+		"thirdSection": {
+			"dropsList": [
+				{
+					"id": 1,
+					"image": "/mock/quality/arrow.svg",
+					"dropsTitle": "000",
+					"dropsText": "000"
+				},
+				{
+					"id": 2,
+					"image": "/mock/quality/arrow.svg",
+					"dropsTitle": "000",
+					"dropsText": "000"
+				},
+				{
+					"id": 3,
+					"image": "/mock/quality/arrow.svg",
+					"dropsTitle": "000",
+					"dropsText": "000"
+				},
+				{
+					"id": 4,
+					"image": "/mock/quality/arrow.svg",
+					"dropsTitle": "000",
+					"dropsText": "000"
+				}
+			]
+		},
+		"fourthSection": {
+			"ensure": {
+				"image": "/mock/quality/doctor.png",
+				"title": "000",
+				"titleSpan": "000",
+				"text": "000"
+			},
+			"accountability": {
+				"image": "/mock/quality/purpleBox.png",
+				"title": "000",
+				"text": "000"
+			},
+			"stewardship": {
+				"image": "/mock/quality/tree.png",
+				"title": "000",
+				"text": "000"
+			},
+			"certifications": {
+				"image": "/mock/quality/Our-Certifications.png",
+				"title": "000",
+				"text": "000"
+			}
+		}
+	},
+	"TUR": {
+		"hero": {
+			"title1": "000",
+			"mainTitleSpan1": "000",
+			"title2": "000",
+			"mainTitleSpan2": "000",
+			"text": "000",
+			"leftSideImage1": "/mock/quality/pink.png",
+			"leftSideImage2": "/mock/quality/pink.png",
+			"leftSideImage3": "/mock/quality/pink.png",
+			"rightSideImage": "/mock/quality/model.png"
+		},
+		"secondSection": {
+			"image": "/mock/quality/hat.png",
+			"title": "000",
+			"titleSpan": "000",
+			"text": "000"
+		},
+		"thirdSection": {
+			"dropsList": [
+				{
+					"id": 1,
+					"image": "/mock/quality/arrow.svg",
+					"dropsTitle": "000",
+					"dropsText": "000"
+				},
+				{
+					"id": 2,
+					"image": "/mock/quality/arrow.svg",
+					"dropsTitle": "000",
+					"dropsText": "000"
+				},
+				{
+					"id": 3,
+					"image": "/mock/quality/arrow.svg",
+					"dropsTitle": "000",
+					"dropsText": "000"
+				},
+				{
+					"id": 4,
+					"image": "/mock/quality/arrow.svg",
+					"dropsTitle": "000",
+					"dropsText": "000"
+				}
+			]
+		},
+		"fourthSection": {
+			"ensure": {
+				"image": "/mock/quality/doctor.png",
+				"title": "000",
+				"titleSpan": "000",
+				"text": "000"
+			},
+			"accountability": {
+				"image": "/mock/quality/purpleBox.png",
+				"title": "000",
+				"text": "000"
+			},
+			"stewardship": {
+				"image": "/mock/quality/tree.png",
+				"title": "000",
+				"text": "000"
+			},
+			"certifications": {
+				"image": "/mock/quality/Our-Certifications.png",
+				"title": "000",
+				"text": "000"
+			}
+		}
 	}
 }

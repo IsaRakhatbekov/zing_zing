@@ -166,5 +166,147 @@
 				{ "image": "/mock/factory/swiper-img.png", "alt": "Фабрика жетістігі" }
 			]
 		}
+	},
+	"UZB": {
+		"hero": {
+			"title1": "000",
+			"titleSpan1": "000",
+			"title2": "000",
+			"titleSpan2": "000",
+			"text": "000",
+			"image1": "/mock/factory/hero1.png",
+			"image2": "/mock/factory/hero2.png",
+			"image3": "/mock/factory/hero3.png"
+		},
+		"secondSection": {
+			"title": "000",
+			"text": "000",
+			"image": "/mock/factory/quality.png"
+		},
+		"thirdSection": {
+			"title": "000",
+			"text": "000",
+			"image": "/mock/factory/certified.png"
+		},
+		"fourthSection": {
+			"title": "000",
+			"text": "000",
+			"image": "/mock/factory/power.png"
+		},
+		"swiper": {
+			"slides": [
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "000"
+				},
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "000"
+				},
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "000"
+				},
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "000"
+				},
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "000"
+				},
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "000"
+				},
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "000"
+				},
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "000"
+				},
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "000"
+				},
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "000"
+				}
+			]
+		}
+	},
+	"TUR": {
+		"hero": {
+			"title1": "000",
+			"titleSpan1": "000",
+			"title2": "000",
+			"titleSpan2": "000",
+			"text": "000",
+			"image1": "/mock/factory/hero1.png",
+			"image2": "/mock/factory/hero2.png",
+			"image3": "/mock/factory/hero3.png"
+		},
+		"secondSection": {
+			"title": "000",
+			"text": "000",
+			"image": "/mock/factory/quality.png"
+		},
+		"thirdSection": {
+			"title": "000",
+			"text": "000",
+			"image": "/mock/factory/certified.png"
+		},
+		"fourthSection": {
+			"title": "000",
+			"text": "000",
+			"image": "/mock/factory/power.png"
+		},
+		"swiper": {
+			"slides": [
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "000"
+				},
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "000"
+				},
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "000"
+				},
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "000"
+				},
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "000"
+				},
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "000"
+				},
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "000"
+				},
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "000"
+				},
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "000"
+				},
+				{
+					"image": "/mock/factory/swiper-img.png",
+					"alt": "000"
+				}
+			]
+		}
 	}
 }

@@ -44,5 +44,35 @@
 			"text": "Сенімді снәк брендімен бизнесіңізді дамытыңыз. ZingZing сапалы өнімдер мен күшті қолдауды ұсынады.",
 			"image": "/mock/reachUs/container.png"
 		}
+	},
+	"UZB": {
+		"hero": {
+			"mainTitle": "000",
+			"text": "000",
+			"leftSideImage1": "/mock/reachUs/book.png",
+			"leftSideImage2": "/mock/reachUs/book.png",
+			"leftSideImage3": "/mock/reachUs/book.png",
+			"rightSideImage": "/mock/reachUs/model.png"
+		},
+		"secondSection": {
+			"title": "000",
+			"text": "000",
+			"image": "/mock/reachUs/container.png"
+		}
+	},
+	"TUR": {
+		"hero": {
+			"mainTitle": "000",
+			"text": "000",
+			"leftSideImage1": "/mock/reachUs/book.png",
+			"leftSideImage2": "/mock/reachUs/book.png",
+			"leftSideImage3": "/mock/reachUs/book.png",
+			"rightSideImage": "/mock/reachUs/model.png"
+		},
+		"secondSection": {
+			"title": "000",
+			"text": "000",
+			"image": "/mock/reachUs/container.png"
+		}
 	}
 }

@@ -244,5 +244,168 @@
 				"video": "/videos/review4.mp4"
 			}
 		]
+	},
+
+	"UZB": {
+		"hero": {
+			"title1": "000",
+			"title2": "000",
+			"mainTitleSpan1": "000",
+			"mainTitleSpan2": "000",
+			"firstText": "000",
+			"image": "/mock/products/product-mock-purple.png",
+			"secondText": "000"
+		},
+		"firstSection": {
+			"image": "/mock/products/whoWeAre.png",
+			"title": "000",
+			"titleSpan": "000",
+			"text": "000"
+		},
+		"secondSection": {
+			"mainTitle": "000",
+			"cardInfo": [
+				{
+					"cardIcon": "/mock/products/factory.png",
+					"title": "000",
+					"text": "000"
+				},
+				{
+					"cardIcon": "/mock/products/iso.png",
+					"title": "000",
+					"text": "000"
+				},
+				{
+					"cardIcon": "/mock/products/star.png",
+					"title": "000",
+					"text": "000"
+				}
+			]
+		},
+		"thirdSection": {
+			"cards": [
+				{
+					"image": "/mock/products/product-mock.png",
+					"text": "000"
+				},
+				{
+					"image": "/mock/products/product-mock.png",
+					"text": "000"
+				},
+				{
+					"image": "/mock/products/product-mock.png",
+					"text": "000"
+				}
+			]
+		},
+		"fourthSectionGrowTogether": {
+			"image": "/mock/products/growTogether-img.png",
+			"title": "000",
+			"titleSpan": "000",
+			"text": "000"
+		},
+		"reviews": [
+			{
+				"id": 1,
+				"preview": "/images/reviews/reviews-1.png",
+				"video": "/videos/review1.mp4"
+			},
+			{
+				"id": 2,
+				"preview": "/images/reviews/reviews-2.png",
+				"videoId": "dQw4w9WgXcQ"
+			},
+			{
+				"id": 3,
+				"preview": "/images/reviews/reviews-3.png",
+				"videoId": "V-_O7nl0Ii0"
+			},
+			{
+				"id": 4,
+				"preview": "/images/reviews/reviews-4.png",
+				"video": "/videos/review4.mp4"
+			}
+		]
+	},
+	"TUR": {
+		"hero": {
+			"title1": "000",
+			"title2": "000",
+			"mainTitleSpan1": "000",
+			"mainTitleSpan2": "000",
+			"firstText": "000",
+			"image": "/mock/products/product-mock-purple.png",
+			"secondText": "000"
+		},
+		"firstSection": {
+			"image": "/mock/products/whoWeAre.png",
+			"title": "000",
+			"titleSpan": "000",
+			"text": "000"
+		},
+		"secondSection": {
+			"mainTitle": "000",
+			"cardInfo": [
+				{
+					"cardIcon": "/mock/products/factory.png",
+					"title": "000",
+					"text": "000"
+				},
+				{
+					"cardIcon": "/mock/products/iso.png",
+					"title": "000",
+					"text": "000"
+				},
+				{
+					"cardIcon": "/mock/products/star.png",
+					"title": "000",
+					"text": "000"
+				}
+			]
+		},
+		"thirdSection": {
+			"cards": [
+				{
+					"image": "/mock/products/product-mock.png",
+					"text": "000"
+				},
+				{
+					"image": "/mock/products/product-mock.png",
+					"text": "000"
+				},
+				{
+					"image": "/mock/products/product-mock.png",
+					"text": "000"
+				}
+			]
+		},
+		"fourthSectionGrowTogether": {
+			"image": "/mock/products/growTogether-img.png",
+			"title": "000",
+			"titleSpan": "000",
+			"text": "000"
+		},
+		"reviews": [
+			{
+				"id": 1,
+				"preview": "/images/reviews/reviews-1.png",
+				"video": "/videos/review1.mp4"
+			},
+			{
+				"id": 2,
+				"preview": "/images/reviews/reviews-2.png",
+				"videoId": "dQw4w9WgXcQ"
+			},
+			{
+				"id": 3,
+				"preview": "/images/reviews/reviews-3.png",
+				"videoId": "V-_O7nl0Ii0"
+			},
+			{
+				"id": 4,
+				"preview": "/images/reviews/reviews-4.png",
+				"video": "/videos/review4.mp4"
+			}
+		]
 	}
 }
