@@ -1,5 +1,5 @@
 // src/lib/domain-config.ts
-type Language = 'ENG' | 'RUS' | 'KAZ'
+type Language = 'ENG' | 'RUS' | 'KAZ' | 'UZB' | 'TUR'
 
 interface DomainConfig {
 	lang: Language
@@ -23,14 +23,21 @@ export const domainConfigs: Record<string, DomainConfig> = {
 			'',
 	},
 	'zingzing.uz': {
-		lang: 'KAZ',
+		lang: 'UZB',
 		apiUrl:
 			process.env.NEXT_PUBLIC_APL_URL_UZ ||
 			process.env.NEXT_PUBLIC_API_URL ||
 			'',
 	},
+	'zingzing.com.tr': {
+		lang: 'TUR',
+		apiUrl:
+			process.env.NEXT_PUBLIC_APL_URL_TR ||
+			process.env.NEXT_PUBLIC_API_URL ||
+			'',
+	},
 	localhost: {
-		lang: 'RUS',
+		lang: 'ENG',
 		apiUrl: process.env.NEXT_PUBLIC_API_URL || '',
 	},
 }

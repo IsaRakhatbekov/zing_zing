@@ -7,7 +7,6 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import styles from './Header.module.scss'
 
-// Типы для переводов
 type HeaderTranslation = {
 	topText: string
 	home: string
@@ -41,7 +40,6 @@ const Header = () => {
 		{ code: 'TUR' as const, name: 'TR', short: 'TR' },
 	]
 
-	// Переводы для текстов в Header
 	const headerTranslations: HeaderTranslations = {
 		ENG: {
 			topText:

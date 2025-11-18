@@ -1,195 +1,294 @@
+// components/Footer/Footer.tsx
+'use client'
 import footerLogo from '@/assets/images/footer-logo.svg'
+import { useLanguage } from '@/context/LanguageContext'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './Footer.module.scss'
 
 const Footer = () => {
+	const { currentLang } = useLanguage()
+
+	// Переводы для Footer
+	const footerTranslations = {
+		ENG: {
+			shop: 'Shop',
+			spicySticks: 'Spicy Sticks',
+			bbqFlavor: 'BBQ Flavor',
+			seaweedSnacks: 'Seaweed Snacks',
+			classicTaste: 'Classic Taste',
+			partyMix: 'Party Mix',
+			limitedEditions: 'Limited Editions',
+			aboutUs: 'About Us',
+			ourStory: 'Our Story',
+			qualityCertifications: 'Quality & Certifications',
+			manufacturingTechnology: 'Manufacturing & Technology',
+			newsEvents: 'News & Events',
+			careers: 'Careers',
+			support: 'Support',
+			faqs: 'FAQs',
+			contactUs: 'Contact Us',
+			findStore: 'Find a Store',
+			becomeDistributor: 'Become a Distributor',
+			partnershipInquiry: 'Partnership Inquiry',
+			followUs: 'Follow Us',
+			privacyPolicy: 'Privacy Policy',
+			termsOfUse: 'Terms of Use',
+			cookiePolicy: 'Cookie Policy',
+			quote:
+				"From the very first recipe, we've believed that snacks should do more than just fill you up — they should make you smile.",
+			bottomText:
+				'All products are produced in our certified facility under the Delison Group. Freshness, flavor, and fun — guaranteed in every pack!',
+			signature:
+				"ZingZing is more than a snack — it's a moment of joy shared with the world.",
+			copyright: '© 2025 ZingZing',
+		},
+		RUS: {
+			shop: 'Магазин',
+			spicySticks: 'Острые палочки',
+			bbqFlavor: 'Вкус барбекю',
+			seaweedSnacks: 'Снеки из водорослей',
+			classicTaste: 'Классический вкус',
+			partyMix: 'Пати микс',
+			limitedEditions: 'Лимитированные издания',
+			aboutUs: 'О нас',
+			ourStory: 'Наша история',
+			qualityCertifications: 'Качество и сертификаты',
+			manufacturingTechnology: 'Производство и технологии',
+			newsEvents: 'Новости и события',
+			careers: 'Карьера',
+			support: 'Поддержка',
+			faqs: 'Частые вопросы',
+			contactUs: 'Связаться с нами',
+			findStore: 'Найти магазин',
+			becomeDistributor: 'Стать дистрибьютором',
+			partnershipInquiry: 'Запрос о партнерстве',
+			followUs: 'Следите за нами',
+			privacyPolicy: 'Политика конфиденциальности',
+			termsOfUse: 'Условия использования',
+			cookiePolicy: 'Политика cookie',
+			quote:
+				'С самого первого рецепта мы верили, что закуски должны не просто утолять голод — они должны вызывать улыбку.',
+			bottomText:
+				'Все продукты производятся на нашем сертифицированном предприятии под группой Delison. Свежесть, вкус и веселье — гарантированы в каждой упаковке!',
+			signature:
+				'ZingZing — это больше, чем просто закуска — это момент радости, разделенный со всем миром.',
+			copyright: '© 2025 ZingZing',
+		},
+		KAZ: {
+			shop: 'Дүкен',
+			spicySticks: 'Ащы таяқшалар',
+			bbqFlavor: 'Барбекю дәмі',
+			seaweedSnacks: 'Балдырлардан жасалған снектер',
+			classicTaste: 'Классикалық дәм',
+			partyMix: 'Пати миксті',
+			limitedEditions: 'Шектеулі басылымдар',
+			aboutUs: 'Біз туралы',
+			ourStory: 'Біздің тарихымыз',
+			qualityCertifications: 'Сапа және сертификаттар',
+			manufacturingTechnology: 'Өндіріс және технологиялар',
+			newsEvents: 'Жаңалықтар мен оқиғалар',
+			careers: 'Мансап',
+			support: 'Қолдау',
+			faqs: 'Жиі қойылатын сұрақтар',
+			contactUs: 'Бізбен хабарласыңыз',
+			findStore: 'Дүкенді табу',
+			becomeDistributor: 'Дистрибьютор болу',
+			partnershipInquiry: 'Серіктестік туралы сұрау',
+			followUs: 'Бізді қарап отырыңыз',
+			privacyPolicy: 'Құпиялылық саясаты',
+			termsOfUse: 'Пайдалану шарттары',
+			cookiePolicy: 'Cookie саясаты',
+			quote:
+				'Алғашқы рецепттен бастап, біз газеттердің тек аштықты басуға ғана емес, сонымен қатар күлкі әкелуі керек деп сендік.',
+			bottomText:
+				'Барлық өнімдер Delison тобы аясында біздің сертификатталған нысанамызда өндіріледі. Әрбір орамдағыжайлылық, дәм және көңіл-күй — кепілдендірілген!',
+			signature:
+				'ZingZing — бұл газеттен гөрі — бұл бүкіл әлембен бөлісетін бақыт сәті.',
+			copyright: '© 2025 ZingZing',
+		},
+		UZB: {
+			shop: "Do'kon",
+			spicySticks: 'Achchiq tayoqchalar',
+			bbqFlavor: 'Barbekyu lazzati',
+			seaweedSnacks: "Suv o'tlari gazaklari",
+			classicTaste: 'Klassik lazzat',
+			partyMix: 'Parti aralashmasi',
+			limitedEditions: 'Cheklangan nashrlar',
+			aboutUs: 'Biz haqimizda',
+			ourStory: 'Bizning hikoyamiz',
+			qualityCertifications: 'Sifat va sertifikatlar',
+			manufacturingTechnology: 'Ishlab chiqarish va texnologiyalar',
+			newsEvents: 'Yangiliklar va voqealar',
+			careers: 'Karyera',
+			support: "Qo'llab-quvvatlash",
+			faqs: 'Tez-tez beriladigan savollar',
+			contactUs: "Biz bilan bog'lanish",
+			findStore: "Do'kon topish",
+			becomeDistributor: "Distribyutor bo'lish",
+			partnershipInquiry: "Hamkorlik so'rovi",
+			followUs: 'Bizni kuzatib boring',
+			privacyPolicy: 'Maxfiylik siyosati',
+			termsOfUse: 'Foydalanish shartlari',
+			cookiePolicy: 'Cookie siyosati',
+			quote:
+				'Eng birinchi retseptdan boshlab, biz gazaklar nafaqat ochlikni qondirishi, balki tabassum keltirishi kerak deb ishonamiz.',
+			bottomText:
+				'Barcha mahsulotlar Delison guruhi ostidagi sertifikatlangan inshootimizda ishlab chiqariladi. Har bir paketda yangilik, lazzat va quvonch — kafolatlangan!',
+			signature:
+				"ZingZing — bu oddiy gazakdan ko'proq — bu butun dunyo bilan baham ko'rilgan quvonch lahzasi.",
+			copyright: '© 2025 ZingZing',
+		},
+		TUR: {
+			shop: 'Mağaza',
+			spicySticks: 'Baharatlı Çubuklar',
+			bbqFlavor: 'Barbekü Lezzeti',
+			seaweedSnacks: 'Deniz Yosunu Atıştırmalıkları',
+			classicTaste: 'Klasik Lezzet',
+			partyMix: 'Parti Karışımı',
+			limitedEditions: 'Sınırlı Sayıda Baskılar',
+			aboutUs: 'Hakkımızda',
+			ourStory: 'Hikayemiz',
+			qualityCertifications: 'Kalite ve Sertifikalar',
+			manufacturingTechnology: 'Üretim ve Teknolojiler',
+			newsEvents: 'Haberler ve Etkinlikler',
+			careers: 'Kariyer',
+			support: 'Destek',
+			faqs: 'Sıkça Sorulan Sorular',
+			contactUs: 'Bize Ulaşın',
+			findStore: 'Mağaza Bul',
+			becomeDistributor: 'Distribütör Olun',
+			partnershipInquiry: 'Ortaklık Sorgusu',
+			followUs: 'Bizi Takip Edin',
+			privacyPolicy: 'Gizlilik Politikası',
+			termsOfUse: 'Kullanım Şartları',
+			cookiePolicy: 'Cookie Politikası',
+			quote:
+				'İlk tariften itibaren, atıştırmalıkların sadece karnınızı doyurmaktan daha fazlasını yapması gerektiğine inandık — gülümsetmeliler.',
+			bottomText:
+				'Tüm ürünler Delison Grubu altındaki sertifikalı tesisimizde üretilir. Tazelik, lezzet ve eğlence — her pakette garanti!',
+			signature:
+				'ZingZing sadece bir atıştırmalıktan daha fazlası — tüm dünyayla paylaşılan bir neşe anıdır.',
+			copyright: '© 2025 ZingZing',
+		},
+	}
+
+	const t = footerTranslations[currentLang]
+
 	return (
 		<footer className={styles.footer}>
 			<div className={`${styles.container} container`}>
 				<div className={styles.columns}>
 					<div className={styles.column}>
-						<h3>Shop</h3>
+						<h3>{t.shop}</h3>
 						<ul>
 							<li>
 								<Link className={styles.links} href={'/'}>
-									Spicy Sticks
+									{t.spicySticks}
 								</Link>
 							</li>
 							<li>
 								<Link className={styles.links} href={'/'}>
-									BBQ Flavor
+									{t.bbqFlavor}
 								</Link>
 							</li>
 							<li>
 								<Link className={styles.links} href={'/'}>
-									Seaweed Snacks
+									{t.seaweedSnacks}
 								</Link>
 							</li>
 							<li>
 								<Link className={styles.links} href={'/'}>
-									Classic Taste
+									{t.classicTaste}
 								</Link>
 							</li>
 							<li>
 								<Link className={styles.links} href={'/'}>
-									Party Mix
+									{t.partyMix}
 								</Link>
 							</li>
 							<li>
 								<Link className={styles.links} href={'/'}>
-									Limited Editions
+									{t.limitedEditions}
 								</Link>
 							</li>
 						</ul>
 					</div>
 
 					<div className={styles.column}>
-						<h3>About Us</h3>
+						<h3>{t.aboutUs}</h3>
 						<ul>
 							<li>
 								<Link className={styles.links} href={'/'}>
-									Our Story
+									{t.ourStory}
 								</Link>
 							</li>
 							<li>
 								<Link className={styles.links} href={'/'}>
-									Quality & Certifications
+									{t.qualityCertifications}
 								</Link>
 							</li>
 							<li>
 								<Link className={styles.links} href={'/'}>
-									Manufacturing & Technology
+									{t.manufacturingTechnology}
 								</Link>
 							</li>
 							<li>
 								<Link className={styles.links} href={'/'}>
-									News & Events
+									{t.newsEvents}
 								</Link>
 							</li>
 							<li>
 								<Link className={styles.links} href={'/'}>
-									Careers
+									{t.careers}
 								</Link>
 							</li>
 						</ul>
 					</div>
 
 					<div className={styles.column}>
-						<h3>Support</h3>
+						<h3>{t.support}</h3>
 						<ul>
 							<li>
 								<Link className={styles.links} href={'/'}>
-									FAQs
+									{t.faqs}
 								</Link>
 							</li>
 							<li>
 								<Link className={styles.links} href={'/'}>
-									Contact Us
+									{t.contactUs}
 								</Link>
 							</li>
 							<li>
 								<Link className={styles.links} href={'/'}>
-									Find a Store
+									{t.findStore}
 								</Link>
 							</li>
 							<li>
 								<Link className={styles.links} href={'/'}>
-									Become a Distributor
+									{t.becomeDistributor}
 								</Link>
 							</li>
 							<li>
 								<Link className={styles.links} href={'/'}>
-									Partnership Inquiry
+									{t.partnershipInquiry}
 								</Link>
 							</li>
 						</ul>
 					</div>
 
 					<div className={styles.column}>
-						<h3>Follow Us</h3>
-						<div className={styles.socials}>
-							<a className={styles.socialsLink} href='#'>
-								<svg
-									width='14'
-									height='20'
-									viewBox='0 0 14 20'
-									fill='none'
-									xmlns='http://www.w3.org/2000/svg'
-								>
-									<path
-										d='M0.672991 10.409H3.6762V19.2046C3.6762 19.4 3.8127 19.4977 4.08572 19.4977H9.13656C9.40957 19.4977 9.54608 19.4 9.54608 19.2046V10.409H12.9588C13.2319 10.409 13.3683 10.3113 13.3683 10.1158L13.9144 6.89078C13.9144 6.79305 13.9144 6.69532 13.7779 6.59759C13.6413 6.49987 13.6413 6.49987 13.5049 6.49987H9.54608V4.44757C9.54608 3.86121 9.95562 3.56802 10.9112 3.56802C11.0477 3.56802 13.5049 3.56802 13.5049 3.56802C13.7779 3.56802 13.9144 3.47029 13.9144 3.27483V0.342989C13.9144 0.147532 13.7779 0.0498047 13.5049 0.0498047H9.95562H9.81911C9.13656 0.0498047 7.08892 0.147532 5.3143 1.22255C3.40318 2.39528 3.6762 3.86121 3.8127 4.15439V6.49987H0.672991C0.399973 6.49987 0.126953 6.69532 0.126953 6.79305V10.018C0.126953 10.2135 0.399973 10.409 0.672991 10.409Z'
-										fill='white'
-									/>
-								</svg>
-							</a>
-							<a className={styles.socialsLink} href='#'>
-								<svg
-									width='28'
-									height='20'
-									viewBox='0 0 28 20'
-									fill='none'
-									xmlns='http://www.w3.org/2000/svg'
-								>
-									<mask
-										id='mask0_133_58206'
-										maskUnits='userSpaceOnUse'
-										x='0'
-										y='0'
-										width='28'
-										height='20'
-									>
-										<path
-											d='M27.6026 0H0.300781V19.5456H27.6026V0Z'
-											fill='white'
-										/>
-									</mask>
-									<g mask='url(#mask0_133_58206)'>
-										<path
-											d='M13.9518 1.88939C17.5405 1.88939 17.9618 1.90085 19.3802 1.94666C20.692 1.98865 21.4012 2.14517 21.8758 2.27879C22.505 2.45439 22.9529 2.66054 23.4221 2.99648C23.8914 3.33242 24.1847 3.65308 24.4246 4.10355C24.606 4.44331 24.8299 4.95104 24.8886 5.89015C24.9526 6.9056 24.9685 7.20719 24.9685 9.7764C24.9685 12.3456 24.9526 12.6471 24.8886 13.6626C24.8299 14.6017 24.6112 15.1094 24.4246 15.4492C24.1794 15.8997 23.8914 16.2204 23.4221 16.5563C22.9529 16.8922 22.505 17.1022 21.8758 17.274C21.4012 17.4037 20.692 17.5641 19.3802 17.6061C17.9618 17.6519 17.5405 17.6633 13.9518 17.6633C10.3631 17.6633 9.94187 17.6519 8.52345 17.6061C7.21168 17.5641 6.50248 17.4076 6.02789 17.274C5.39867 17.0983 4.95075 16.8922 4.4815 16.5563C4.01225 16.2204 3.71897 15.8997 3.47901 15.4492C3.29771 15.1094 3.07374 14.6017 3.01509 13.6626C2.9511 12.6471 2.9351 12.3456 2.9351 9.7764C2.9351 7.20719 2.9511 6.9056 3.01509 5.89015C3.07374 4.95104 3.29238 4.44331 3.47901 4.10355C3.7243 3.65308 4.01225 3.33242 4.4815 2.99648C4.95075 2.66054 5.39867 2.45057 6.02789 2.27879C6.50248 2.14899 7.21168 1.98865 8.52345 1.94666C9.94187 1.89703 10.3631 1.88939 13.9518 1.88939ZM13.9518 0.15625C10.3045 0.15625 9.84588 0.167702 8.41146 0.213513C6.98239 0.259322 6.00656 0.423476 5.15337 0.660161C4.2682 0.904481 3.52167 1.23661 2.77514 1.77106C2.0286 2.30551 1.57001 2.84377 1.22341 3.47366C0.892804 4.08446 0.663506 4.78307 0.599517 5.80997C0.535529 6.83307 0.519531 7.16137 0.519531 9.77253C0.519531 12.3838 0.535529 12.7121 0.599517 13.7389C0.663506 14.762 0.892804 15.4606 1.22341 16.0752C1.56467 16.7089 2.0286 17.2434 2.77514 17.7779C3.52167 18.3123 4.27353 18.6406 5.15337 18.8887C6.00656 19.1255 6.98239 19.2896 8.4168 19.3354C9.85122 19.3812 10.3045 19.3927 13.9572 19.3927C17.6099 19.3927 18.0631 19.3812 19.4976 19.3354C20.9267 19.2896 21.9024 19.1255 22.761 18.8887C23.6461 18.6444 24.3926 18.3123 25.1392 17.7779C25.8857 17.2434 26.3443 16.7052 26.6909 16.0752C27.0215 15.4645 27.2508 14.7658 27.3148 13.7389C27.3788 12.7121 27.3947 12.3875 27.3947 9.77253C27.3947 7.15756 27.3788 6.83307 27.3148 5.80617C27.2508 4.78307 27.0215 4.08446 26.6909 3.46985C26.3497 2.83614 25.8857 2.30169 25.1392 1.76724C24.3926 1.23279 23.6407 0.904481 22.761 0.656343C21.9077 0.419658 20.9319 0.255505 19.4976 0.209695C18.0578 0.167702 17.5992 0.15625 13.9518 0.15625Z'
-											fill='white'
-										/>
-										<path
-											d='M13.9528 4.83154C10.1455 4.83154 7.05273 7.04188 7.05273 9.77136C7.05273 12.5009 10.1455 14.7113 13.9528 14.7113C17.7601 14.7113 20.853 12.4971 20.853 9.77136C20.853 7.04569 17.7601 4.83154 13.9528 4.83154ZM13.9528 12.9781C11.4786 12.9781 9.47363 11.5427 9.47363 9.77136C9.47363 8.00007 11.4786 6.56469 13.9528 6.56469C16.4271 6.56469 18.4321 8.00007 18.4321 9.77136C18.4321 11.5427 16.4271 12.9781 13.9528 12.9781Z'
-											fill='white'
-										/>
-										<path
-											d='M21.1241 5.79063C22.0135 5.79063 22.7344 5.27447 22.7344 4.63774C22.7344 4.00102 22.0135 3.48486 21.1241 3.48486C20.2346 3.48486 19.5137 4.00102 19.5137 4.63774C19.5137 5.27447 20.2346 5.79063 21.1241 5.79063Z'
-											fill='white'
-										/>
-									</g>
-								</svg>
-							</a>
-							<a className={styles.socialsLink} href='#'>
-								<svg
-									width='24'
-									height='20'
-									viewBox='0 0 24 20'
-									fill='none'
-									xmlns='http://www.w3.org/2000/svg'
-								>
-									<path
-										fillRule='evenodd'
-										clipRule='evenodd'
-										d='M17.2894 0C17.7399 2.7738 19.9025 4.42753 23.6624 4.60345V7.72326C21.4834 7.87572 19.5748 7.36554 17.355 6.40379V12.2388C17.355 19.6512 6.06727 21.9675 1.52925 16.6545C-1.38688 13.2356 0.398839 7.23651 9.75339 6.99609V10.2859C9.04073 10.368 8.27893 10.497 7.58267 10.6671C5.50206 11.1714 4.3225 12.1156 4.65016 13.7811C5.2809 16.9712 13.4558 17.9153 12.776 11.6816V0.00586428H17.2894V0Z'
-										fill='white'
-									/>
-								</svg>
-							</a>
-						</div>
+						<h3>{t.followUs}</h3>
 					</div>
 				</div>
 
 				<div className={styles.bottomLinks}>
-					<span>Privacy Policy</span>
-					<span>Terms of Use</span>
-					<span>Cookie Policy</span>
+					<span>{t.privacyPolicy}</span>
+					<span>{t.termsOfUse}</span>
+					<span>{t.cookiePolicy}</span>
 				</div>
 
-				<div className={styles.quote}>
-					From the very first recipe, we’ve believed that snacks should do more
-					than just fill you up — they should make you smile.
-				</div>
+				<div className={styles.quote}>{t.quote}</div>
 
 				<div className={styles.bottom}>
 					<div className={styles.bottomInner}>
@@ -197,18 +296,11 @@ const Footer = () => {
 							<span className={styles.logo}>
 								<Image src={footerLogo} alt='' />
 							</span>
-							<span>© 2025 ZingZing</span>
+							<span>{t.copyright}</span>
 						</div>
-						<p className={styles.textLeft}>
-							All products are produced in our certified facility under the
-							Delison Group. Freshness, flavor, and fun — guaranteed in every
-							pack!
-						</p>
+						<p className={styles.textLeft}>{t.bottomText}</p>
 					</div>
-					<p className={styles.signature}>
-						ZingZing is more than a snack — it’s a moment of joy shared with the
-						world.
-					</p>
+					<p className={styles.signature}>{t.signature}</p>
 				</div>
 			</div>
 		</footer>
