@@ -142,7 +142,6 @@ export default function Page() {
 
 					<section className={styles.productsDetailed}>
 						<div className={`${styles.container} container`}>
-							{/* ЗАМЕНЯЕМ ЖЕСТКО ЗАДАННЫЙ ЗАГОЛОВОК НА ДИНАМИЧЕСКИЙ */}
 							<h2 className={styles.productsDetailedTitle}>
 								{productsData.thirdSectionBigCards.sectionTitle}{' '}
 								<span>

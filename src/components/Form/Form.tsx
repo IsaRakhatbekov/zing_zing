@@ -24,6 +24,8 @@ type FormTranslations = {
 	ENG: FormTranslation
 	RUS: FormTranslation
 	KAZ: FormTranslation
+	UZB: FormTranslation
+	TUR: FormTranslation
 }
 
 interface FormProps {
@@ -73,19 +75,49 @@ const Form = ({ variant = 'default', title, text }: FormProps) => {
 			networkError: 'Произошла ошибка. Пожалуйста, попробуйте еще раз.',
 		},
 		KAZ: {
-			title: 'Бірге Өсейік!',
-			text: 'Сіз дистрибьютор, сатушы немесе креативтік серіктес болсаңыз да — біз сізді естуге қуаныштымыз! ZingZing отбасына қосылыңыз және өз аймағыңызға батыл дәм, ойыншыл энергия және сенімді сапа әкеліңіз.',
-			emailLabel: 'Сіздің/Компания email',
+			title: 'Келіңіздер, бірге дамыйық!',
+			text: 'Сіз дистрибьютор, сатушы немесе креативті серіктес болсаңыз да — біз сіздің пікіріңізді естуге қуаныштымыз! ZingZing отбасына қосылыңыз және өз аймағыңызға батыл дәм, көңілді энергия және сенімді сапа әкеліңіз.',
+			emailLabel: 'Сіздің/Компанияңыздың email-і',
 			emailPlaceholder: 'name@company.com',
 			phoneLabel: 'Телефон нөмірі',
 			phonePlaceholder: '+7',
 			messageLabel: 'Хабарлама',
-			messagePlaceholder: 'Хабарлама жіберу немесе серіктес болу',
+			messagePlaceholder: 'Хабар жіберу немесе серіктес болу',
 			sendButton: 'Жіберу',
 			sendingButton: 'Жіберілуде...',
 			successMessage: 'Хабарлама сәтті жіберілді!',
 			errorMessage: 'Хабарламаны жіберу сәтсіз аяқталды.',
 			networkError: 'Қате орын алды. Қайталап көріңіз.',
+		},
+		UZB: {
+			title: 'Keling, birga o‘saylik!',
+			text: 'Siz diler, chakana sotuvchi yoki ijodiy hamkor bo‘lishingizdan qat’i nazar — biz sizning fikringizni eshitishni xohlaymiz! ZingZing oilasiga qo‘shiling va mintaqangizga jasur ta’m, zavqli energiya va ishonchli sifat olib keling.',
+			emailLabel: 'Sizning/Kompaniyangiz emaili',
+			emailPlaceholder: 'name@company.com',
+			phoneLabel: 'Telefon raqami',
+			phonePlaceholder: '+997',
+			messageLabel: 'Xabar',
+			messagePlaceholder: 'Xabar yuborish yoki hamkor bo‘lish',
+			sendButton: 'Yuborish',
+			sendingButton: 'Yuborilmoqda...',
+			successMessage: 'Xabar muvaffaqiyatli yuborildi!',
+			errorMessage: 'Xabar yuborishda xatolik yuz berdi.',
+			networkError: 'Tarmoqda xatolik. Qaytadan urinib ko‘ring.',
+		},
+		TUR: {
+			title: 'Hadi Birlikte Büyüyelim!',
+			text: 'Distribütör, perakendeci veya yaratıcı bir ortak olun — sizden haber almak isteriz! ZingZing ailesine katılın ve cesur lezzeti, eğlenceli enerjiyi ve güvenilir kaliteyi bölgenize taşıyın.',
+			emailLabel: 'E-posta Adresiniz / Şirket E-postası',
+			emailPlaceholder: 'name@company.com',
+			phoneLabel: 'Telefon Numarası',
+			phonePlaceholder: '+90',
+			messageLabel: 'Mesaj',
+			messagePlaceholder: 'Mesaj Gönder / Ortak Ol',
+			sendButton: 'Gönder',
+			sendingButton: 'Gönderiliyor...',
+			successMessage: 'Mesaj başarıyla gönderildi!',
+			errorMessage: 'Mesaj gönderilemedi.',
+			networkError: 'Bir hata oluştu. Lütfen tekrar deneyin.',
 		},
 	}
 
@@ -119,11 +151,9 @@ const Form = ({ variant = 'default', title, text }: FormProps) => {
 		}
 	}
 
-	// Используем переданные props или переводы
 	const displayTitle = title || t.title
 	const displayText = text || t.text
 
-	// Если успех - показываем красивый блок успеха
 	if (success) {
 		return (
 			<div className={`${styles.container} container`}>
@@ -166,7 +196,6 @@ const Form = ({ variant = 'default', title, text }: FormProps) => {
 		)
 	}
 
-	// Иначе показываем обычную форму
 	return (
 		<div className={`${styles.container} container`}>
 			<form

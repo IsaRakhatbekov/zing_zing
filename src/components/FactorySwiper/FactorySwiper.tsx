@@ -23,7 +23,7 @@ export default function FactorySwiper({ data }: Props) {
 				coverflowEffect={{
 					rotate: 0,
 					stretch: 0,
-					depth: 140,
+					depth: 90,
 					modifier: 1.1,
 					scale: 1,
 					slideShadows: false,

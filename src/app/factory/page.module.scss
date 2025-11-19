@@ -95,7 +95,6 @@
 // =================================================================
 .quality {
 	.wrapper {
-		/* авто-высота + адаптивные отступы */
 		min-height: clamp(360px, 42vw, 520px);
 		position: relative;
 		display: flex;

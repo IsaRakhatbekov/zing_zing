@@ -66,6 +66,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		margin-right: 60px;
 		.leftImgWrapper {
 			width: min(150px, 10vw);
 			height: min(230px, 15vw);
@@ -90,10 +91,10 @@
 	}
 
 	.rightImg {
-		width: 309px;
-		height: 447px;
 		position: relative;
-		bottom: 34px;
+		width: 320px;
+		bottom: 65px;
+		height: 511px;
 
 		& img {
 			width: 100%;
