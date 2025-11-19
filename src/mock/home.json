@@ -143,7 +143,7 @@
 			"text": "Хотите расширить ассортимент снеков или предложить что-то новое в регионе? ZingZing приносит энергию, цвет и веселье, которому невозможно устоять."
 		},
 		"reviews": {
-			"title": "Отзывы наших подписчиков",
+			"title": "отзывы наших подписчиков",
 			"items": [
 				{
 					"id": 1,
@@ -170,37 +170,37 @@
 	},
 	"KAZ": {
 		"hero": {
-			"title1": "Қуаныш  ",
-			"title2": "Шырынды ",
-			"mainTitleSpan1": "әкеліңіз.",
-			"mainTitleSpan2": "сез.",
-			"firstText": "Өткір, қытырлақ және дәмді – ZingZing әр тістеуді бақыт сәтіне айналдырады!",
+			"title1": "Қуаныш ",
+			"title2": "Зыңды ",
+			"mainTitleSpan1": " Сыйла.",
+			"mainTitleSpan2": "Сезін.",
+			"firstText": "Батыл, қытырлақ, дәмге толы — ZingZing әр тістеген сәтті бақытқа айналдырады!",
 			"image": "/mock/products/product-mock-purple.png",
-			"secondText": "ZingZing – жай гана тәтті емес, бұл татым сезіміңізді оятатын бақыт ұшқыны!"
+			"secondText": "ZingZing — жай тіскебасар емес, ол дәмді оятатын бақыт ұшқыны!"
 		},
 		"firstSection": {
 			"image": "/mock/products/whoWeAre.png",
 			"title": "Біз",
 			"titleSpan": " Кімбіз?",
-			"text": "ZingZing – дәм мен көңілдің кездескен жері! Біз күніңізді жарқын ететін дәмді, өткір және көңілді тәттілер жасаймыз. Достармен болсын немесе жұмыс кезінде болсын – ZingZing дәм үшін сіздің сенімді таңдауыңыз."
+			"text": "ZingZing — дәм мен көңілділік ордасы! Күніңізді жандандыратын дәмді, ащы тіскебасарларжасаймыз. Достармен немесе жұмыста болсаңыз да, ZingZing — жақсы дәм мен көңіл-күйге таңдауыңыз."
 		},
 		"secondSection": {
 			"mainTitle": "Негізгі Артықшылықтар",
 			"cardInfo": [
 				{
 					"cardIcon": "/mock/products/factory.png",
-					"title": "Зауыттан Тікелей Сапа",
-					"text": "Өз сертификатталған зауытымызда жоғары сапа мен тұрақтылыққа баса назар салып өндіріледі."
+					"title": "Зауыттан-Тікелей Сапа",
+					"text": "Барынша балғындық пен тұрақтылық үшін өзіміздің сертификатталған нысанымызда мұқият өндірілген."
 				},
 				{
 					"cardIcon": "/mock/products/iso.png",
-					"title": "ISO және Халал Сертификаттары",
-					"text": "Әр партия халықаралық сапа және гигиена стандарттарына сәйкес келеді."
+					"title": "ISO және Халал Сертификатталған",
+					"text": "Әрбір партия халықаралық сапа және гигиена стандарттарына сай келеді, өйткені сіздің сеніміңіз маңызды."
 				},
 				{
 					"cardIcon": "/mock/products/star.png",
-					"title": "Естен кетпейтін дәм",
-					"text": "Өткірлік, қытырлақтық және бақыттың тамаша үйлесімі – өмірді дәммен сезетіндер үшін."
+					"title": "Ұмытылмас Дәм",
+					"text": "Дәм, қытырлақтық және бақыттың тамаша үйлесімі — өмірді дәммен сүретіндерге арналған."
 				}
 			]
 		},
@@ -222,12 +222,12 @@
 		},
 		"fourthSectionGrowTogether": {
 			"image": "/mock/products/growTogether-img.png",
-			"title": "Бірге",
-			"titleSpan": " Өсейік",
-			"text": "Тәттілер ассортиментін кеңейткіңіз келсе де, өз аймағыңызға жаңа және қызықты бір нәрсені енгізгіңіз келсе де – ZingZing тұтынушылар бас тарта алмайтын энергия мен ләззат әкеледі."
+			"title": "Бірге ",
+			"titleSpan": "дамыйық",
+			"text": "Егер сіз тағам ассортиментін кеңейтуді немесе аймағыңызға жаңа әрі қызықты өнім енгізуді қаласаңыз, ZingZing тұтынушыларды баурайтын энергия, түстер және көңілді әкеледі."
 		},
 		"reviews": {
-			"title": "Біздің жазылушылардың пікірлері",
+			"title": "Біздің ізбасарлардың пікірлері",
 			"items": [
 				{
 					"id": 1,
@@ -254,37 +254,37 @@
 	},
 	"UZB": {
 		"hero": {
-			"title1": "000",
-			"title2": "000",
-			"mainTitleSpan1": "000",
-			"mainTitleSpan2": "000",
-			"firstText": "000",
+			"title1": "Quvonchni olib ",
+			"title2": "Zingni his ",
+			"mainTitleSpan1": "keling.",
+			"mainTitleSpan2": "eting.",
+			"firstText": "Qalin, qarsillagan va lazzatga to‘la — ZingZing har bir tishlashni quvonch lahzasiga aylantiradi!",
 			"image": "/mock/products/product-mock-purple.png",
-			"secondText": "000"
+			"secondText": "ZingZing shunchaki snak emas — bu sizning ta’m sezgilingizni uyg‘otadigan quvonch chaqmog‘i!"
 		},
 		"firstSection": {
 			"image": "/mock/products/whoWeAre.png",
-			"title": "000",
-			"titleSpan": "000",
-			"text": "000"
+			"title": "Biz ",
+			"titleSpan": "kimlar?",
+			"text": "ZingZing — bu ta’m va zavq uchrashadigan joy! Biz sizning kuningizni yorqin qiladigan mazali, achchiq va quvnoq snaklarni yaratamiz. Do‘stlar bilan dam olayotganda yoki ish bilan band bo‘lganingizda, ZingZing sizning ta’m va yaxshi kayfiyat manbangizdir."
 		},
 		"secondSection": {
-			"mainTitle": "000",
+			"mainTitle": "Asosiy farqlovchi jihatlar",
 			"cardInfo": [
 				{
 					"cardIcon": "/mock/products/factory.png",
-					"title": "000",
-					"text": "000"
+					"title": "To‘g‘ridan-to‘g‘ri zavod sifati",
+					"text": "Maksimal yangi va bir xilda ta’mini ta’minlash uchun barcha mahsulotlar bizning sertifikatlangan korxonamizda ehtiyotkorlik bilan ishlab chiqariladi."
 				},
 				{
 					"cardIcon": "/mock/products/iso.png",
-					"title": "000",
-					"text": "000"
+					"title": "ISO va Halol sertifikatlangan",
+					"text": "Har bir partiya xalqaro sifat va gigiena standartlariga javob beradi, chunki sizning ishonchingiz muhimdir."
 				},
 				{
 					"cardIcon": "/mock/products/star.png",
-					"title": "000",
-					"text": "000"
+					"title": "Unutilmas ta’m",
+					"text": "Achchiqlik, qarsillash va quvonchning mukammal aralashmasi — hayotni ta’m bilan yashovchilar uchun yaratilgan."
 				}
 			]
 		},
@@ -306,12 +306,12 @@
 		},
 		"fourthSectionGrowTogether": {
 			"image": "/mock/products/growTogether-img.png",
-			"title": "000",
-			"titleSpan": "000",
-			"text": "000"
+			"title": "Keling, birga ",
+			"titleSpan": "o‘saylik",
+			"text": "Siz snaklar portfelingizni kengaytirishni yoki mintaqangizga yangi va hayajonli narsalarni taqdim etishni istasangiz ham, ZingZing mijozlar chiday olmagan energiya, rang va zavq olib keladi."
 		},
 		"reviews": {
-			"title": "000",
+			"title": "Izohlar va sharhlar",
 			"items": [
 				{
 					"id": 1,
@@ -338,37 +338,37 @@
 	},
 	"TUR": {
 		"hero": {
-			"title1": "000",
-			"title2": "000",
-			"mainTitleSpan1": "000",
-			"mainTitleSpan2": "000",
-			"firstText": "000",
+			"title1": "Neşeyi ",
+			"title2": "Zing’i ",
+			"mainTitleSpan1": "Getir.",
+			"mainTitleSpan2": "Hissedin.",
+			"firstText": "Cesur, çıtır ve lezzet dolu — ZingZing her lokmayı bir mutluluk anına dönüştürür!",
 			"image": "/mock/products/product-mock-purple.png",
-			"secondText": "000"
+			"secondText": "ZingZing sadece bir atıştırmalık değil — damak tadınızı uyandıran bir mutluluk kıvılcımıdır!"
 		},
 		"firstSection": {
 			"image": "/mock/products/whoWeAre.png",
-			"title": "000",
-			"titleSpan": "000",
-			"text": "000"
+			"title": "Biz ",
+			"titleSpan": "Kimiz?",
+			"text": "ZingZing, lezzetin eğlenceyle buluştuğu yerdir! Günü aydınlatmak için lezzetli, baharatlı ve neşeli atıştırmalıklar üretiyoruz. Arkadaşlarla vakit geçirirken veya işin yoğunluğunu atlatırken, ZingZing lezzet ve iyi enerji için başvuracağınız adresinizdir."
 		},
 		"secondSection": {
-			"mainTitle": "000",
+			"mainTitle": "Öne Çıkan Özellikler",
 			"cardInfo": [
 				{
 					"cardIcon": "/mock/products/factory.png",
-					"title": "000",
-					"text": "000"
+					"title": "Fabrika Kalitesi",
+					"text": "Azami tazelik ve tutarlılık için kendi sertifikalı tesisimizde özenle üretilir."
 				},
 				{
 					"cardIcon": "/mock/products/iso.png",
-					"title": "000",
-					"text": "000"
+					"title": "ISO & Helal Sertifikalı",
+					"text": "Her parti, güveniniz önemli olduğu için uluslararası kalite ve hijyen standartlarına uygundur."
 				},
 				{
 					"cardIcon": "/mock/products/star.png",
-					"title": "000",
-					"text": "000"
+					"title": "Unutulmaz Tat",
+					"text": "Baharat, çıtırlık ve mutluluğun mükemmel karışımı — hayatı lezzetle yaşayanlar için üretildi."
 				}
 			]
 		},
@@ -390,12 +390,12 @@
 		},
 		"fourthSectionGrowTogether": {
 			"image": "/mock/products/growTogether-img.png",
-			"title": "000",
-			"titleSpan": "000",
-			"text": "000"
+			"title": "Hadi Birlikte ",
+			"titleSpan": "Büyüyelim",
+			"text": "İster atıştırmalık portföyünüzü genişletmek, ister bölgenize taze ve heyecan verici bir şey sunmak isteyin, ZingZing müşterilerin karşı koyamayacağı enerji, renk ve eğlence getirir."
 		},
 		"reviews": {
-			"title": "000",
+			"title": "Takipçilerimizin Yorumları",
 			"items": [
 				{
 					"id": 1,
