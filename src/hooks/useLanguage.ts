@@ -1,26 +1,26 @@
-'use client'
-import { useEffect, useState } from 'react'
+// 'use client'
+// import { useEffect, useState } from 'react'
 
-type Language = 'ENG' | 'RUS' | 'KAZ'
+// type Language = 'ENG' | 'RUS' | 'KAZ'
 
-export const useLanguage = () => {
-	const [currentLang, setCurrentLang] = useState<Language>('ENG')
+// export const useLanguage = () => {
+// 	const [currentLang, setCurrentLang] = useState<Language>('ENG')
 
-	useEffect(() => {
-		const savedLang = localStorage.getItem('preferredLang') as Language
-		if (savedLang && ['ENG', 'RUS', 'KAZ'].includes(savedLang)) {
-			setCurrentLang(savedLang)
-		}
-	}, [])
+// 	useEffect(() => {
+// 		const savedLang = localStorage.getItem('preferredLang') as Language
+// 		if (savedLang && ['ENG', 'RUS', 'KAZ'].includes(savedLang)) {
+// 			setCurrentLang(savedLang)
+// 		}
+// 	}, [])
 
-	const changeLanguage = (lang: Language) => {
-		setCurrentLang(lang)
-		localStorage.setItem('preferredLang', lang)
-		window.dispatchEvent(new Event('languageChange'))
-	}
+// 	const changeLanguage = (lang: Language) => {
+// 		setCurrentLang(lang)
+// 		localStorage.setItem('preferredLang', lang)
+// 		window.dispatchEvent(new Event('languageChange'))
+// 	}
 
-	return {
-		currentLang,
-		setCurrentLang: changeLanguage,
-	}
-}
+// 	return {
+// 		currentLang,
+// 		setCurrentLang: changeLanguage,
+// 	}
+// }

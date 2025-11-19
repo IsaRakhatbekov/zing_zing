@@ -7,23 +7,20 @@ const languageMap = {
 	ENG: 'en',
 	RUS: 'ru',
 	KAZ: 'kk',
+	UZB: 'uz',
+	TUR: 'tr',
 } as const
 
-export async function fetchNews(
-	lang: keyof typeof languageMap = 'ENG'
-): Promise<News> {
+type Language = keyof typeof languageMap
+
+export async function fetchNews(lang: Language = 'RUS'): Promise<News> {
 	try {
 		const domainConfig = getDomainConfig()
 		const API_URL = domainConfig.apiUrl
 
 		if (!API_URL) {
-			console.log('Using mock data for news')
-			return (newsMock as any)[lang] as News
+			return (newsMock as any)[lang] || (newsMock as any).ENG
 		}
-
-		console.log(
-			`Fetching news data from: ${API_URL} with lang: ${languageMap[lang]}`
-		)
 
 		const res = await fetch(`${API_URL}/api/news/`, {
 			cache: 'no-store',
@@ -36,6 +33,6 @@ export async function fetchNews(
 		return (await res.json()) as News
 	} catch (e) {
 		console.warn('▲ Используются моки (сервер недоступен):', e)
-		return (newsMock as any)[lang] as News
+		return (newsMock as any)[lang] || (newsMock as any).ENG
 	}
 }

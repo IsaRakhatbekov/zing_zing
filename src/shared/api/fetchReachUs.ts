@@ -7,23 +7,20 @@ const languageMap = {
 	ENG: 'en',
 	RUS: 'ru',
 	KAZ: 'kk',
+	UZB: 'uz',
+	TUR: 'tr',
 } as const
 
-export async function fetchReachUs(
-	lang: keyof typeof languageMap = 'ENG'
-): Promise<ReachUs> {
+type Language = keyof typeof languageMap
+
+export async function fetchReachUs(lang: Language = 'RUS'): Promise<ReachUs> {
 	try {
 		const domainConfig = getDomainConfig()
 		const API_URL = domainConfig.apiUrl
 
 		if (!API_URL) {
-			console.log('Using mock data for reach us')
-			return (reachUsMock as any)[lang] as ReachUs
+			return (reachUsMock as any)[lang] || (reachUsMock as any).ENG
 		}
-
-		console.log(
-			`Fetching reach us data from: ${API_URL} with lang: ${languageMap[lang]}`
-		)
 
 		const res = await fetch(`${API_URL}/api/reachUs/`, {
 			cache: 'no-store',
@@ -37,6 +34,6 @@ export async function fetchReachUs(
 		return (await res.json()) as ReachUs
 	} catch (err) {
 		console.warn('▲ Используются моки (сервер недоступен):', err)
-		return (reachUsMock as any)[lang] as ReachUs
+		return (reachUsMock as any)[lang] || (reachUsMock as any).ENG
 	}
 }

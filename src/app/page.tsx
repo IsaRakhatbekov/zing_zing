@@ -233,7 +233,7 @@ export default function Home() {
 			)}
 
 			{/* Reviews Section - ПЕРЕДАЕМ ДАННЫЕ ИЗ homeData */}
-			<Reviews reviews={reviews} />
+			<Reviews reviewsData={reviews} />
 		</>
 	)
 }

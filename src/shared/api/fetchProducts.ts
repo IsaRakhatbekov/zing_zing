@@ -1,39 +1,39 @@
 // src/shared/api/fetchProducts.ts
+import { getDomainConfig } from '@/lib/domain-config'
 import productMock from '@/mock/products.json'
 import type { Products } from '@/types/products'
-import { getDomainConfig } from '@/lib/domain-config'
 
 const languageMap = {
-  ENG: 'en',
-  RUS: 'ru',
-  KAZ: 'kk',
+	ENG: 'en',
+	RUS: 'ru',
+	KAZ: 'kk',
+	UZB: 'uz',
+	TUR: 'tr',
 } as const
 
-export async function fetchProducts(
-  lang: keyof typeof languageMap = 'ENG'
-): Promise<Products> {
-  try {
-    const domainConfig = getDomainConfig()
-    const API_URL = domainConfig.apiUrl
+type Language = keyof typeof languageMap
 
-    if (!API_URL) {
-      console.log('Using mock data for products')
-      return (productMock as any)[lang] as Products
-    }
+export async function fetchProducts(lang: Language = 'RUS'): Promise<Products> {
+	try {
+		const domainConfig = getDomainConfig()
+		const API_URL = domainConfig.apiUrl
 
-    console.log(`Fetching products data from: ${API_URL} with lang: ${languageMap[lang]}`)
+		if (!API_URL) {
+			return (productMock as any)[lang] || (productMock as any).ENG
+		}
 
-    const res = await fetch(`${API_URL}/api/products/`, {
-      cache: 'no-store',
-      headers: {
-        'Accept-Language': languageMap[lang],
-      },
-    })
+		const res = await fetch(`${API_URL}/api/products/`, {
+			cache: 'no-store',
+			headers: {
+				'Accept-Language': languageMap[lang],
+			},
+		})
 
-    if (!res.ok) throw new Error('Ошибка при получении данных страницы продуктов')
-    return (await res.json()) as Products
-  } catch (err) {
-    console.warn('▲ Используются моки (сервер недоступен):', err)
-    return (productMock as any)[lang] as Products
-  }
+		if (!res.ok)
+			throw new Error('Ошибка при получении данных страницы продуктов')
+		return (await res.json()) as Products
+	} catch (err) {
+		console.warn('▲ Используются моки (сервер недоступен):', err)
+		return (productMock as any)[lang] || (productMock as any).ENG
+	}
 }

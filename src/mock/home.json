@@ -7,7 +7,7 @@
 			"mainTitleSpan2": "Zing.",
 			"firstText": "Bold, crunchy, and bursting with flavor — ZingZing turns every bite into a moment of happiness! ",
 			"image": "/mock/products/product-mock-purple.png",
-			"secondText": "ZingZing isn’t just a snack — it's a spark of happiness that wakes up your taste buds!"
+			"secondText": "ZingZing isn't just a snack — it's a spark of happiness that wakes up your taste buds!"
 		},
 		"firstSection": {
 			"image": "/mock/products/whoWeAre.png",
@@ -58,28 +58,31 @@
 			"text": "Whether you're looking to expand your snack portfolio or introduce something fresh and exciting to your region, ZingZing brings energy, color, and fun that customers can't resist."
 		},
 
-		"reviews": [
-			{
-				"id": 1,
-				"preview": "/images/reviews/reviews-1.png",
-				"video": "/videos/review1.mp4"
-			},
-			{
-				"id": 2,
-				"preview": "/images/reviews/reviews-2.png",
-				"videoId": "dQw4w9WgXcQ"
-			},
-			{
-				"id": 3,
-				"preview": "/images/reviews/reviews-3.png",
-				"videoId": "V-_O7nl0Ii0"
-			},
-			{
-				"id": 4,
-				"preview": "/images/reviews/reviews-4.png",
-				"video": "/videos/review4.mp4"
-			}
-		]
+		"reviews": {
+			"title": "Reviews Of Our Followers",
+			"items": [
+				{
+					"id": 1,
+					"preview": "/images/reviews/reviews-1.png",
+					"video": "/videos/review1.mp4"
+				},
+				{
+					"id": 2,
+					"preview": "/images/reviews/reviews-2.png",
+					"videoId": "dQw4w9WgXcQ"
+				},
+				{
+					"id": 3,
+					"preview": "/images/reviews/reviews-3.png",
+					"videoId": "V-_O7nl0Ii0"
+				},
+				{
+					"id": 4,
+					"preview": "/images/reviews/reviews-4.png",
+					"video": "/videos/review4.mp4"
+				}
+			]
+		}
 	},
 	"RUS": {
 		"hero": {
@@ -87,33 +90,33 @@
 			"mainTitleSpan1": "Радость.",
 			"title2": "Почувствуй ",
 			"mainTitleSpan2": "Зинг.",
-			"firstText": "Яркий, хрустящий, с взрывным вкусом — ZingZing превращает каждый кусочек в момент счастья!",
+			"firstText": "Яркий, хрустящий и насыщенный вкусом — ZingZing превращает каждый укус в момент счастья!",
 			"image": "/mock/products/pink.png",
-			"secondText": "ZingZing — это не просто снек, а заряд настроения для ваших вкусовых рецепторов!"
+			"secondText": "ZingZing — это не просто снеки, а искра счастья, что будит твои вкусовые рецепторы!"
 		},
 		"firstSection": {
 			"image": "/mock/products/whoWeAre.png",
-			"title": "Кто",
-			"titleSpan": " Мы?",
-			"text": "ZingZing — это вкус и настроение в одной упаковке! Мы создаем острые и яркие снеки, которые делают ваш день лучше. Для дружеских посиделок или рабочего перекуса — ZingZing ваш выбор для отличного настроения."
+			"title": "Кто Мы",
+			"titleSpan": " Такие?",
+			"text": "ZingZing — это место, где вкус встречается с весельем! Мы создаём вкусные, острые и радостные снеки, чтобы сделать твой день ярче. Отдыхаешь с друзьями или работаешь — ZingZing всегда рядом, чтобы подарить вкус и хороший вайб."
 		},
 		"secondSection": {
-			"mainTitle": "Наши Преимущества",
+			"mainTitle": "Ключевые Отличия",
 			"cardInfo": [
 				{
 					"cardIcon": "/mock/products/factory.png",
-					"title": "Качество с завода",
-					"text": "Производим на собственном сертифицированном производстве для идеальной свежести."
+					"title": "Качество Прямо с Фабрики",
+					"text": "Произведено с заботой на нашей сертифицированной фабрике для свежести и стабильности."
 				},
 				{
 					"cardIcon": "/mock/products/iso.png",
-					"title": "Сертификаты ISO и Халяль",
-					"text": "Каждая партия соответствует высшим стандартам качества и гигиены."
+					"title": "ISO и Halal Сертификаты",
+					"text": "Каждая партия отвечает международным стандартам - ваше доверие важно."
 				},
 				{
 					"cardIcon": "/mock/products/star.png",
-					"title": "Незабываемый вкус",
-					"text": "Идеальный микс остроты, хруста и настроения для тех, кто ценит вкус жизни."
+					"title": "Незабываемый Вкус",
+					"text": "Идеальное сочетание остроты, хруста и радости - для тех, кто живёт с вкусом."
 				}
 			]
 		},
@@ -137,31 +140,33 @@
 			"image": "/mock/products/growTogether-img.png",
 			"title": "Давайте Расти",
 			"titleSpan": " Вместе",
-			"text": "Расширьте ассортимент или представьте в своем регионе нечто новое — ZingZing приносит энергию и вкус, от которого не отказаться."
+			"text": "Хотите расширить ассортимент снеков или предложить что-то новое в регионе? ZingZing приносит энергию, цвет и веселье, которому невозможно устоять."
 		},
-
-		"reviews": [
-			{
-				"id": 1,
-				"preview": "/images/reviews/reviews-1.png",
-				"video": "/videos/review1.mp4"
-			},
-			{
-				"id": 2,
-				"preview": "/images/reviews/reviews-2.png",
-				"videoId": "dQw4w9WgXcQ"
-			},
-			{
-				"id": 3,
-				"preview": "/images/reviews/reviews-3.png",
-				"videoId": "V-_O7nl0Ii0"
-			},
-			{
-				"id": 4,
-				"preview": "/images/reviews/reviews-4.png",
-				"video": "/videos/review4.mp4"
-			}
-		]
+		"reviews": {
+			"title": "Отзывы наших подписчиков",
+			"items": [
+				{
+					"id": 1,
+					"preview": "/images/reviews/reviews-1.png",
+					"video": "/videos/review1.mp4"
+				},
+				{
+					"id": 2,
+					"preview": "/images/reviews/reviews-2.png",
+					"videoId": "dQw4w9WgXcQ"
+				},
+				{
+					"id": 3,
+					"preview": "/images/reviews/reviews-3.png",
+					"videoId": "V-_O7nl0Ii0"
+				},
+				{
+					"id": 4,
+					"preview": "/images/reviews/reviews-4.png",
+					"video": "/videos/review4.mp4"
+				}
+			]
+		}
 	},
 	"KAZ": {
 		"hero": {
@@ -221,31 +226,32 @@
 			"titleSpan": " Өсейік",
 			"text": "Тәттілер ассортиментін кеңейткіңіз келсе де, өз аймағыңызға жаңа және қызықты бір нәрсені енгізгіңіз келсе де – ZingZing тұтынушылар бас тарта алмайтын энергия мен ләззат әкеледі."
 		},
-
-		"reviews": [
-			{
-				"id": 1,
-				"preview": "/images/reviews/reviews-1.png",
-				"video": "/videos/review1.mp4"
-			},
-			{
-				"id": 2,
-				"preview": "/images/reviews/reviews-2.png",
-				"videoId": "dQw4w9WgXcQ"
-			},
-			{
-				"id": 3,
-				"preview": "/images/reviews/reviews-3.png",
-				"videoId": "V-_O7nl0Ii0"
-			},
-			{
-				"id": 4,
-				"preview": "/images/reviews/reviews-4.png",
-				"video": "/videos/review4.mp4"
-			}
-		]
+		"reviews": {
+			"title": "Біздің жазылушылардың пікірлері",
+			"items": [
+				{
+					"id": 1,
+					"preview": "/images/reviews/reviews-1.png",
+					"video": "/videos/review1.mp4"
+				},
+				{
+					"id": 2,
+					"preview": "/images/reviews/reviews-2.png",
+					"videoId": "dQw4w9WgXcQ"
+				},
+				{
+					"id": 3,
+					"preview": "/images/reviews/reviews-3.png",
+					"videoId": "V-_O7nl0Ii0"
+				},
+				{
+					"id": 4,
+					"preview": "/images/reviews/reviews-4.png",
+					"video": "/videos/review4.mp4"
+				}
+			]
+		}
 	},
-
 	"UZB": {
 		"hero": {
 			"title1": "000",
@@ -304,28 +310,31 @@
 			"titleSpan": "000",
 			"text": "000"
 		},
-		"reviews": [
-			{
-				"id": 1,
-				"preview": "/images/reviews/reviews-1.png",
-				"video": "/videos/review1.mp4"
-			},
-			{
-				"id": 2,
-				"preview": "/images/reviews/reviews-2.png",
-				"videoId": "dQw4w9WgXcQ"
-			},
-			{
-				"id": 3,
-				"preview": "/images/reviews/reviews-3.png",
-				"videoId": "V-_O7nl0Ii0"
-			},
-			{
-				"id": 4,
-				"preview": "/images/reviews/reviews-4.png",
-				"video": "/videos/review4.mp4"
-			}
-		]
+		"reviews": {
+			"title": "000",
+			"items": [
+				{
+					"id": 1,
+					"preview": "/images/reviews/reviews-1.png",
+					"video": "/videos/review1.mp4"
+				},
+				{
+					"id": 2,
+					"preview": "/images/reviews/reviews-2.png",
+					"videoId": "dQw4w9WgXcQ"
+				},
+				{
+					"id": 3,
+					"preview": "/images/reviews/reviews-3.png",
+					"videoId": "V-_O7nl0Ii0"
+				},
+				{
+					"id": 4,
+					"preview": "/images/reviews/reviews-4.png",
+					"video": "/videos/review4.mp4"
+				}
+			]
+		}
 	},
 	"TUR": {
 		"hero": {
@@ -385,27 +394,30 @@
 			"titleSpan": "000",
 			"text": "000"
 		},
-		"reviews": [
-			{
-				"id": 1,
-				"preview": "/images/reviews/reviews-1.png",
-				"video": "/videos/review1.mp4"
-			},
-			{
-				"id": 2,
-				"preview": "/images/reviews/reviews-2.png",
-				"videoId": "dQw4w9WgXcQ"
-			},
-			{
-				"id": 3,
-				"preview": "/images/reviews/reviews-3.png",
-				"videoId": "V-_O7nl0Ii0"
-			},
-			{
-				"id": 4,
-				"preview": "/images/reviews/reviews-4.png",
-				"video": "/videos/review4.mp4"
-			}
-		]
+		"reviews": {
+			"title": "000",
+			"items": [
+				{
+					"id": 1,
+					"preview": "/images/reviews/reviews-1.png",
+					"video": "/videos/review1.mp4"
+				},
+				{
+					"id": 2,
+					"preview": "/images/reviews/reviews-2.png",
+					"videoId": "dQw4w9WgXcQ"
+				},
+				{
+					"id": 3,
+					"preview": "/images/reviews/reviews-3.png",
+					"videoId": "V-_O7nl0Ii0"
+				},
+				{
+					"id": 4,
+					"preview": "/images/reviews/reviews-4.png",
+					"video": "/videos/review4.mp4"
+				}
+			]
+		}
 	}
 }

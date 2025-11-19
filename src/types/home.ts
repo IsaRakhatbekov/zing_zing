@@ -41,6 +41,9 @@ export type Home = {
 		titleSpan: string
 		text: string
 	}
-	// ДОБАВЛЯЕМ СЕКЦИЮ ОТЗЫВОВ
-	reviews: Review[]
+	// ДОБАВЛЯЕМ СЕКЦИЮ ОТЗЫВОВ С ЗАГОЛОВКОМ
+	reviews: {
+		title: string
+		items: Review[]
+	}
 }

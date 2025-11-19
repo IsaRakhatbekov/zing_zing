@@ -36,8 +36,11 @@ const useIsMobile = (breakpoint = 768) => {
 }
 
 type Props = {
-	/** Данные отзывов */
-	reviews: Review[]
+	/** Данные секции отзывов */
+	reviewsData: {
+		title: string
+		items: Review[]
+	}
 	/** РУЧНАЯ ширина карточки в пикселях (для свайпера на мобилке) */
 	cardWidthPx?: number
 	/** Зазор между слайдами */
@@ -45,7 +48,7 @@ type Props = {
 }
 
 export default function Reviews({
-	reviews,
+	reviewsData,
 	cardWidthPx = 250,
 	gapPx = 16,
 }: Props) {
@@ -54,9 +57,11 @@ export default function Reviews({
 	const isMobile = useIsMobile(768)
 
 	// Если нет отзывов - не рендерим компонент
-	if (!reviews || reviews.length === 0) {
+	if (!reviewsData || !reviewsData.items || reviewsData.items.length === 0) {
 		return null
 	}
+
+	const { title, items: reviews } = reviewsData
 
 	// GSAP-анимация (десктоп)
 	useEffect(() => {
@@ -132,7 +137,8 @@ export default function Reviews({
 	return (
 		<section className={styles.reviews} ref={reviewsRef}>
 			<div className={`${styles.container} container`}>
-				<h2 className={styles.title}>Reviews Of Our Followers</h2>
+				{/* ИСПОЛЬЗУЕМ ДИНАМИЧЕСКИЙ ЗАГОЛОВОК ИЗ ДАННЫХ */}
+				<h2 className={styles.title}>{title}</h2>
 
 				{/* Десктопная сетка */}
 				<div className={styles.cards} aria-hidden={isMobile}>

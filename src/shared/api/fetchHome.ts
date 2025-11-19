@@ -3,16 +3,19 @@ import { getDomainConfig } from '@/lib/domain-config'
 import homeMock from '@/mock/home.json'
 import type { Home } from '@/types/home'
 
-// Маппинг языков для бэкенда
+// Обновленный маппинг языков для бэкенда с поддержкой 5 языков
 const languageMap = {
 	ENG: 'en',
 	RUS: 'ru',
 	KAZ: 'kk',
+	UZB: 'uz',
+	TUR: 'tr',
 } as const
 
-export async function fetchHome(
-	lang: keyof typeof languageMap = 'ENG'
-): Promise<Home> {
+// Обновленный тип для языка
+type Language = keyof typeof languageMap
+
+export async function fetchHome(lang: Language = 'RUS'): Promise<Home> {
 	try {
 		// Получаем конфигурацию домена
 		const domainConfig = getDomainConfig()
@@ -20,7 +23,8 @@ export async function fetchHome(
 
 		if (!API_URL) {
 			console.log('Using mock data for home')
-			return (homeMock as any)[lang] as Home
+			// Fallback на английский если данных для языка нет
+			return (homeMock as any)[lang] || (homeMock as any).ENG
 		}
 
 		console.log(
@@ -38,6 +42,7 @@ export async function fetchHome(
 		return (await res.json()) as Home
 	} catch (err) {
 		console.warn('▲ Используются моки (сервер недоступен):', err)
-		return (homeMock as any)[lang] as Home
+		// Fallback на английский если данных для языка нет
+		return (homeMock as any)[lang] || (homeMock as any).ENG
 	}
 }
