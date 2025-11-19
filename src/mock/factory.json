@@ -58,24 +58,24 @@
 			"titleSpan1": "Заботой.",
 			"title2": " Создано с",
 			"titleSpan2": "Zing.",
-			"text": "Каждая пачка ZingZing — это точность и страсть. Наша фабрика сочетает технологии с человеческим подходом для высочайших стандартов безопасности и вкуса.",
+			"text": "За каждой упаковкой ZingZing стоит мир точности и страсти. Наш завод сочетает передовые технологии с человеческим подходом — чтобы каждый стик, ломтик и кусочек соответствовал самым высоким стандартам безопасности и вкуса.",
 			"image1": "/mock/factory/hero1.png",
 			"image2": "/mock/factory/hero2.png",
 			"image3": "/mock/factory/hero3.png"
 		},
 		"secondSection": {
-			"title": "Инновации Качества",
-			"text": "Наша линия — это эффективность, гигиена и креативность. Каждый процесс автоматизирован и контролируется опытной командой.",
+			"title": "Качественные Инновации",
+			"text": "Наша производственная линия создана для эффективности, гигиены и креативности. От подготовки ингредиентов до упаковки каждый процесс автоматизирован, но тщательно контролируется нашей опытной командой.",
 			"image": "/mock/factory/quality.png"
 		},
 		"thirdSection": {
 			"title": "Сертифицировано и Безопасно",
-			"text": "Работаем по сертифицированным системам ISO. Регулярные аудиты и мониторинг обеспечивают прозрачность и надежность.",
+			"text": "Мы с гордостью работаем по сертифицированным системам безопасности пищевых продуктов ISO. Регулярные проверки и мониторинг в реальном времени делают наши процессы прозрачными и надежными — чтобы каждый продукт ZingZing был безопасен для вас.",
 			"image": "/mock/factory/certified.png"
 		},
 		"fourthSection": {
 			"title": "Наша Сила",
-			"text": "За нашими машинами стоят реальные люди — инженеры, тестировщики и мечтатели, которые глубоко заботятся о качестве. Их мастерство и дух вдыхают жизнь в ZingZing каждый день.",
+			"text": "За нашими машинами стоят настоящие люди — инженеры, тестировщики и мечтатели, которые искренне заботятся о качестве. Их умение и энергия оживляют ZingZing каждый день.",
 			"image": "/mock/factory/power.png"
 		},
 		"swiper": {
@@ -110,28 +110,28 @@
 	},
 	"KAZ": {
 		"hero": {
-			"title1": "Қамқорлықпен",
+			"title1": "Мұқият ",
 			"titleSpan1": "Жасалған.",
-			"title2": " Zing-мен",
+			"title2": "Zingмен ",
 			"titleSpan2": "Өңделген.",
-			"text": "Әрбір ZingZing орамасы — дәлдік пен құштарлық. Біздің фабрика технология мен адамгершілікті үйлестіреді, қауіпсіздік пен дәмнің жоғары стандарттары үшін.",
+			"text": "ZingZing-тің әр қаптамасының артында дәлдік пен құмарлық әлемі жатыр. Біздің зауыт озық технологияны адамдық жанасумен ұштастырады — әрбір таяқша, тілім және тістеу қауіпсіздік пен дәмнің ең жоғары стандарттарына сәйкес келуін қамтамасыз етеді.",
 			"image1": "/mock/factory/hero1.png",
 			"image2": "/mock/factory/hero2.png",
 			"image3": "/mock/factory/hero3.png"
 		},
 		"secondSection": {
 			"title": "Сапалы Инновация",
-			"text": "Біздің желі — тиімділік, гигиена және шығармашылық. Әр процесс автоматтандырылған және тәжірибелі команда бақылайды.",
+			"text": "Өндіріс желісі тиімділік, гигиена және шығармашылық үшін жасалған. Ингредиенттерді дайындаудан бастап қаптамаға дейінгі әр процесс автоматтандырылған, бірақ тәжірибелі командамыздың бақылауында.",
 			"image": "/mock/factory/quality.png"
 		},
 		"thirdSection": {
-			"title": "Сертификатталған және Қауіпсіз",
-			"text": "ISO сертификатталған жүйелерде жұмыс істейміз. Тұрақты аудиттер мен бақылау ашықтық пен сенімділікті қамтамасыз етеді.",
+			"title": "Сертификатталған, Қауіпсіз",
+			"text": "Біз ISO сертификатталған тамақ қауіпсіздігі жүйелері бойынша жұмыс істейміз. Тұрақты тексерулер және нақты уақыттағы мониторинг біздің процестерімізді ашық және сенімді ұстайды — сондықтан әрбір ZingZing өнімін қауіпсіз тұтынуға болады.",
 			"image": "/mock/factory/certified.png"
 		},
 		"fourthSection": {
 			"title": "Біздің Күшіміз",
-			"text": "Біздің машиналарымыздың артында нақты адамдар тұр — инженерлер, тестерлер және сапаға терең қамқорлық танытатын армандаушылар. Олардың шеберлігі мен рухы ZingZing-ке күн сайын өмір сыйлайды.",
+			"text": "Біздің машиналарымыздың артында нағыз адамдар тұр — сапаға қатты көңіл бөлетін инженерлер, тестілеушілер және армандаушылар. Олардың шеберлігі мен рухы ZingZing-ді күн сайын өмірге әкеледі.",
 			"image": "/mock/factory/power.png"
 		},
 		"swiper": {
@@ -169,142 +169,142 @@
 	},
 	"UZB": {
 		"hero": {
-			"title1": "000",
-			"titleSpan1": "000",
-			"title2": "000",
-			"titleSpan2": "000",
-			"text": "000",
+			"title1": "E’tibor ",
+			"titleSpan1": "bilan",
+			"title2": "Zing ",
+			"titleSpan2": "ruhida.",
+			"text": "Har bir ZingZing paketining ortida aniqlik va ishtiyoq dunyosi yotadi. Bizning fabrikamiz ilg‘or texnologiyani insoniy nigoh bilan uyg‘unlashtiradi — har bir tayoqcha, bo‘lak va tishlash eng yuqori xavfsizlik va ta’m standartlariga javob berishini ta’minlaydi.",
 			"image1": "/mock/factory/hero1.png",
 			"image2": "/mock/factory/hero2.png",
 			"image3": "/mock/factory/hero3.png"
 		},
 		"secondSection": {
-			"title": "000",
-			"text": "000",
+			"title": "Sifat yangiligi",
+			"text": "Ishlab chiqarish liniyamiz samaradorlik, gigiyena va ijodkorlik uchun yaratilgan. Masalliq tayyorlashdan tortib qadoqlashgacha — har bir jarayon avtomatlashtirilgan, biroq tajribali jamoamiz tomonidan sinchiklab nazorat qilinadi.",
 			"image": "/mock/factory/quality.png"
 		},
 		"thirdSection": {
-			"title": "000",
-			"text": "000",
+			"title": "Sertifikatlangan va xavfsiz",
+			"text": "Biz ISO sertifikatiga ega oziq-ovqat xavfsizligi tizimlari asosida faxr bilan ishlaymiz. Doimiy auditlar va real vaqt monitoringi jarayonlarimizni shaffof va ishonchli qiladi — har bir ZingZing mahsuloti xavfsiz bo‘lishi uchun.",
 			"image": "/mock/factory/certified.png"
 		},
 		"fourthSection": {
-			"title": "000",
-			"text": "000",
+			"title": "Kuchimiz",
+			"text": "Behind our machines are real people — engineers, testers, and dreamers who truly care about quality. Their skill and spirit bring ZingZing to life every single day.",
 			"image": "/mock/factory/power.png"
 		},
 		"swiper": {
 			"slides": [
 				{
 					"image": "/mock/factory/swiper-img.png",
-					"alt": "000"
+					"alt": ""
 				},
 				{
 					"image": "/mock/factory/swiper-img.png",
-					"alt": "000"
+					"alt": ""
 				},
 				{
 					"image": "/mock/factory/swiper-img.png",
-					"alt": "000"
+					"alt": ""
 				},
 				{
 					"image": "/mock/factory/swiper-img.png",
-					"alt": "000"
+					"alt": ""
 				},
 				{
 					"image": "/mock/factory/swiper-img.png",
-					"alt": "000"
+					"alt": ""
 				},
 				{
 					"image": "/mock/factory/swiper-img.png",
-					"alt": "000"
+					"alt": ""
 				},
 				{
 					"image": "/mock/factory/swiper-img.png",
-					"alt": "000"
+					"alt": ""
 				},
 				{
 					"image": "/mock/factory/swiper-img.png",
-					"alt": "000"
+					"alt": ""
 				},
 				{
 					"image": "/mock/factory/swiper-img.png",
-					"alt": "000"
+					"alt": ""
 				},
 				{
 					"image": "/mock/factory/swiper-img.png",
-					"alt": "000"
+					"alt": ""
 				}
 			]
 		}
 	},
 	"TUR": {
 		"hero": {
-			"title1": "000",
-			"titleSpan1": "000",
-			"title2": "000",
-			"titleSpan2": "000",
-			"text": "000",
+			"title1": "Özenle ",
+			"titleSpan1": "Üretildi.",
+			"title2": "Zing ile ",
+			"titleSpan2": "Hazırlandı.",
+			"text": "Her bir ZingZing paketinin ardında bir hassasiyet ve tutku dünyası yatar. Fabrikamız, ileri teknolojiyi insan dokunuşuyla harmanlar; böylece her çubuk, dilim ve ısırık en yüksek güvenlik ve lezzet standartlarını karşılar.",
 			"image1": "/mock/factory/hero1.png",
 			"image2": "/mock/factory/hero2.png",
 			"image3": "/mock/factory/hero3.png"
 		},
 		"secondSection": {
-			"title": "000",
-			"text": "000",
+			"title": "Kalite İnovasyonu",
+			"text": "Üretim hattımız verimlilik, hijyen ve yaratıcılık için tasarlanmıştır. İçerik hazırlığından ambalajlamaya kadar her süreç otomatiktir ancak deneyimli ekibimiz tarafından dikkatle denetlenir.",
 			"image": "/mock/factory/quality.png"
 		},
 		"thirdSection": {
-			"title": "000",
-			"text": "000",
+			"title": "Sertifikalı ve Güvenli",
+			"text": "Gururla ISO sertifikalı gıda güvenliği sistemleri altında faaliyet gösteriyoruz. Düzenli denetimler ve gerçek zamanlı izleme, süreçlerimizi şeffaf ve güvenilir tutar, böylece her ZingZing ürününün keyifle tüketilmesi güvenlidir.",
 			"image": "/mock/factory/certified.png"
 		},
 		"fourthSection": {
-			"title": "000",
-			"text": "000",
+			"title": "Gücümüz",
+			"text": "Makinelerimizin arkasında gerçek insanlar var — kaliteyi derinden önemseyen mühendisler, test uzmanları ve hayalperestler. Onların becerisi ve ruhu, ZingZing'i her gün hayata geçiriyor.",
 			"image": "/mock/factory/power.png"
 		},
 		"swiper": {
 			"slides": [
 				{
 					"image": "/mock/factory/swiper-img.png",
-					"alt": "000"
+					"alt": ""
 				},
 				{
 					"image": "/mock/factory/swiper-img.png",
-					"alt": "000"
+					"alt": ""
 				},
 				{
 					"image": "/mock/factory/swiper-img.png",
-					"alt": "000"
+					"alt": ""
 				},
 				{
 					"image": "/mock/factory/swiper-img.png",
-					"alt": "000"
+					"alt": ""
 				},
 				{
 					"image": "/mock/factory/swiper-img.png",
-					"alt": "000"
+					"alt": ""
 				},
 				{
 					"image": "/mock/factory/swiper-img.png",
-					"alt": "000"
+					"alt": ""
 				},
 				{
 					"image": "/mock/factory/swiper-img.png",
-					"alt": "000"
+					"alt": ""
 				},
 				{
 					"image": "/mock/factory/swiper-img.png",
-					"alt": "000"
+					"alt": ""
 				},
 				{
 					"image": "/mock/factory/swiper-img.png",
-					"alt": "000"
+					"alt": ""
 				},
 				{
 					"image": "/mock/factory/swiper-img.png",
-					"alt": "000"
+					"alt": ""
 				}
 			]
 		}

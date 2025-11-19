@@ -16,24 +16,24 @@
 	},
 	"RUS": {
 		"hero": {
-			"mainTitle": "Мы Всего в Одном Сообщении!",
-			"text": "Есть вопрос или предложение? Мы здесь, чтобы помочь. Свяжитесь с нами — скоро ответим!",
+			"mainTitle": "Мы всегда на связи!",
+			"text": "Есть вопрос, идея или деловое предложение? Мы готовы помочь. Независимо от того, вы дистрибьютор, ритейлер, медиапартнёр или просто фанат ZingZing — свяжитесь с нами, и мы ответим в ближайшее время!",
 			"leftSideImage1": "/mock/reachUs/book.png",
 			"leftSideImage2": "/mock/reachUs/book.png",
 			"leftSideImage3": "/mock/reachUs/book.png",
 			"rightSideImage": "/mock/reachUs/model.png"
 		},
 		"secondSection": {
-			"title": "Работайте с Нами",
-			"text": "Развивайте бизнес с надежным брендом закусок. ZingZing предлагает качественные продукты и сильную поддержку.",
+			"title": "Сотрудничайте с нами!",
+			"text": "Развивайте свой бизнес с надёжным, весёлым и динамичным брендом снеков. ZingZing предлагает качественные продукты, надёжную поддержку и партнёрство, которое действительно приносит пользу.",
 
 			"image": "/mock/reachUs/container.png"
 		}
 	},
 	"KAZ": {
 		"hero": {
-			"mainTitle": "Біз Бір Хабарлама Қашықтықтамыз!",
-			"text": "Сұрағыңыз немесе ұсынысыңыз бар ма? Біз көмектесуге дайынбыз. Хабарласыңыз — жауап береміз!",
+			"mainTitle": "Біз Сізбен Бір Хабарлама Аралығындамыз!",
+			"text": "Сұрағыңыз, идеяңыз немесе іскери ұсынысыңыз бар ма? Біз көмектесуге дайынбыз. Сіз дистрибьютор, бөлшек саудагер, медиа серіктес немесе жай ғана ZingZing жанкүйері болсаңыз да — бізге хабарласыңыз, біз сізге жақында жауап береміз!",
 			"leftSideImage1": "/mock/reachUs/book.png",
 			"leftSideImage2": "/mock/reachUs/book.png",
 			"leftSideImage3": "/mock/reachUs/book.png",
@@ -41,37 +41,37 @@
 		},
 		"secondSection": {
 			"title": "Бізбен Жұмыс Істеңіз",
-			"text": "Сенімді снәк брендімен бизнесіңізді дамытыңыз. ZingZing сапалы өнімдер мен күшті қолдауды ұсынады.",
+			"text": "Бизнесіңізді сенімді, көңілді және қарқынды дамып келе жатқан тіскебасар брендімен өсіріңіз. ZingZing сапалы өнімдерді, мықты қолдауды және шынайы құндылық қосатын серіктестікті ұсынады.",
 			"image": "/mock/reachUs/container.png"
 		}
 	},
 	"UZB": {
 		"hero": {
-			"mainTitle": "000",
-			"text": "000",
+			"mainTitle": "Biz bilan bog‘lanish uchun bir xabar yetar!",
+			"text": "Savolingiz, g‘oyangiz yoki biznes taklifingiz bormi? Biz yordam berishga tayyormiz. Siz distribyutor, chakana sotuvchi, media hamkor yoki shunchaki ZingZing ishqibozi bo‘lsangiz ham — murojaat qiling, tez orada javob beramiz!",
 			"leftSideImage1": "/mock/reachUs/book.png",
 			"leftSideImage2": "/mock/reachUs/book.png",
 			"leftSideImage3": "/mock/reachUs/book.png",
 			"rightSideImage": "/mock/reachUs/model.png"
 		},
 		"secondSection": {
-			"title": "000",
-			"text": "000",
+			"title": "Biz bilan ishlang",
+			"text": "Ishoning, quvnoq va tezkor snack brendi bilan biznesingizni rivojlantiring. ZingZing sifatli mahsulotlar, mustahkam yordam va haqiqiy qiymat qo‘shadigan hamkorlikni taqdim etadi.",
 			"image": "/mock/reachUs/container.png"
 		}
 	},
 	"TUR": {
 		"hero": {
-			"mainTitle": "000",
-			"text": "000",
+			"mainTitle": "Sadece Bir Mesaj Uzağınızdayız!",
+			"text": "Bir sorunuz, bir fikriniz veya bir iş teklifiniz mi var? Yardımcı olmak için buradayız. İster bir distribütör, perakendeci, medya ortağı, ister sadece bir ZingZing hayranı olun, bize ulaşın, size en kısa sürede geri döneceğiz!",
 			"leftSideImage1": "/mock/reachUs/book.png",
 			"leftSideImage2": "/mock/reachUs/book.png",
 			"leftSideImage3": "/mock/reachUs/book.png",
 			"rightSideImage": "/mock/reachUs/model.png"
 		},
 		"secondSection": {
-			"title": "000",
-			"text": "000",
+			"title": "Bizimle Çalışın",
+			"text": "Güvenilir, eğlenceli ve hızla büyüyen bir atıştırmalık markasıyla işinizi büyütün. ZingZing, kaliteli ürünler, güçlü destek ve gerçekten değer katan bir ortaklık sunar.",
 			"image": "/mock/reachUs/container.png"
 		}
 	}

@@ -142,8 +142,12 @@ export default function Page() {
 
 					<section className={styles.productsDetailed}>
 						<div className={`${styles.container} container`}>
+							{/* ЗАМЕНЯЕМ ЖЕСТКО ЗАДАННЫЙ ЗАГОЛОВОК НА ДИНАМИЧЕСКИЙ */}
 							<h2 className={styles.productsDetailedTitle}>
-								OTHER DELISON <span>PRODUCTS</span>
+								{productsData.thirdSectionBigCards.sectionTitle}{' '}
+								<span>
+									{productsData.thirdSectionBigCards.sectionTitleSpan}
+								</span>
 							</h2>
 							<ul className={styles.list}>
 								{productsData.thirdSectionBigCards?.bigCard?.[0] && (

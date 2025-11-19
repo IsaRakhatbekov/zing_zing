@@ -37,7 +37,6 @@
 					"title": "ZingZing",
 					"titleSpan": "Hot Pot",
 					"image": "/mock/products/product-mock-purple.png",
-
 					"littleImages": [
 						"/mock/products/little.png",
 						"/mock/products/little.png"
@@ -48,7 +47,6 @@
 					"title": "ZingZing",
 					"titleSpan": "Chill",
 					"image": "/mock/products/product-mock-purple.png",
-
 					"littleImages": [
 						"/mock/products/little.png",
 						"/mock/products/little.png"
@@ -69,7 +67,6 @@
 					"title": "ZingZing",
 					"titleSpan": "Lopster",
 					"image": "/mock/products/product-mock-purple.png",
-
 					"littleImages": [
 						"/mock/products/little.png",
 						"/mock/products/little.png"
@@ -78,11 +75,13 @@
 			]
 		},
 		"thirdSectionBigCards": {
+			"sectionTitle": "OTHER DELISON",
+			"sectionTitleSpan": "PRODUCTS",
 			"bigCard": [
 				{
 					"title": "ZingZing",
 					"titleSpan": "Hot Pot",
-					"text": "Inspired by Asia’s favorite sharing dish, our Hot Pot flavor blends pepper, broth, and joy — a perfect choice for those who like their spice with a story.",
+					"text": "Inspired by Asia's favorite sharing dish, our Hot Pot flavor blends pepper, broth, and joy — a perfect choice for those who like their spice with a story.",
 					"image": "/mock/products/product-mock.png"
 				},
 				{
@@ -110,7 +109,7 @@
 		"hero": {
 			"title1": "Создано с ",
 			"mainTitleSpan1": "Остротой",
-			"title2": "Раздели ",
+			"title2": "Поделено с ",
 			"mainTitleSpan2": "Радость",
 			"leftSideImage": "/mock/products/model.png",
 			"rightSideImage1": "/mock/products/yellow.png",
@@ -122,7 +121,7 @@
 				{
 					"id": 1,
 					"title": "ZingZing",
-					"titleSpan": "Классик",
+					"titleSpan": "Классика",
 					"image": "/mock/products/product-mock-purple.png",
 					"littleImages": [
 						"/mock/products/little.png",
@@ -182,23 +181,25 @@
 			]
 		},
 		"thirdSectionBigCards": {
+			"sectionTitle": "ДРУГИЕ DELISON",
+			"sectionTitleSpan": "ПРОДУКТЫ",
 			"bigCard": [
 				{
 					"title": "ZingZing",
 					"titleSpan": "Хот-Пот",
-					"text": "Вдохновлено популярным азиатским блюдом — сочетает перец, бульон и радость. Для тех, кто любит остроту с историей.",
+					"text": "Вдохновлённый любимым азиатским блюдом, вкус Hot Pot сочетает перец, бульон и радость — идеальный выбор для тех, кто любит остроту с историей.",
 					"image": "/mock/products/product-mock.png"
 				},
 				{
 					"title": "ZingZing",
 					"titleSpan": "Чилл",
-					"text": "Современная версия нашей остроты — стильная и сбалансированная. Идеально для перерыва на работе.",
+					"text": "Современная версия нашей оригинальной остроты — стильная, сбалансированная и идеально порционированная для перерыва за столом. Когда нужен фокус и вкус, бери Чилл",
 					"image": "/mock/products/product-mock.png"
 				},
 				{
 					"title": "ZingZing",
 					"titleSpan": "Джой",
-					"text": "Дымная нотка и радостный вкус — идеально для семьи, вечеринок и пикников. Создано для общения.",
+					"text": "Дымный вкус, радостный укус — идеальный выбор для семьи, вечеринок или пикников. Создано для общения.",
 					"image": "/mock/products/product-mock.png"
 				}
 			]
@@ -207,15 +208,15 @@
 			"image": "/mock/products/growTogether-img.png",
 			"title": "Давайте Расти",
 			"titleSpan": "Вместе",
-			"text": "Расширьте ассортимент или представьте в своем регионе нечто новое — ZingZing приносит энергию и вкус, от которого не отказаться."
+			"text": "Хотите расширить ассортимент снеков или предложить что-то новое в регионе? ZingZing приносит энергию, цвет и веселье, которому невозможно устоять."
 		}
 	},
 	"KAZ": {
 		"hero": {
-			"title1": "Шеберлікпен ",
-			"mainTitleSpan1": "жасалған",
+			"title1": "Дәммен ",
+			"mainTitleSpan1": "Жасалды ",
 			"title2": "Қуанышпен ",
-			"mainTitleSpan2": "бөлісу",
+			"mainTitleSpan2": "Бөлісті",
 			"leftSideImage": "/mock/products/model.png",
 			"rightSideImage1": "/mock/products/yellow.png",
 			"rightSideImage2": "/mock/products/pink.png",
@@ -266,7 +267,7 @@
 				{
 					"id": 5,
 					"title": "ZingZing",
-					"titleSpan": "Рахат",
+					"titleSpan": "қуаныш",
 					"image": "/mock/products/product-mock-purple.png",
 					"littleImages": [
 						"/mock/products/little.png",
@@ -276,7 +277,7 @@
 				{
 					"id": 6,
 					"title": "ZingZing",
-					"titleSpan": "Лобстер",
+					"titleSpan": "Омар",
 					"image": "/mock/products/product-mock-purple.png",
 					"littleImages": [
 						"/mock/products/little.png",
@@ -286,40 +287,42 @@
 			]
 		},
 		"thirdSectionBigCards": {
+			"sectionTitle": "БАСҚА DELISON",
+			"sectionTitleSpan": "ӨНІМДЕРІ",
 			"bigCard": [
 				{
 					"title": "ZingZing",
 					"titleSpan": "Хот-Пот",
-					"text": "Азияның сүйікті тағамынан серпін алған — бұрыш, сорпа және рахатты біріктіреді. Тарихы бар өткір дәмі сүйетіндерге.",
+					"text": "Азияның сүйікті ортақ тағамынан шабыт алған Hot Pot дәмі бұрыш, сорпа және қуанышты қосады — оқиғалы ащыны ұнататындарға керемет таңдау.",
 					"image": "/mock/products/product-mock.png"
 				},
 				{
 					"title": "ZingZing",
 					"titleSpan": "Чилл",
-					"text": "Біздің өткір дәміміздің заманауи нұсқасы — әдемі әрі теңдестірілген. Жұмыс кезіндегі үзіліске арналған.",
+					"text": "Түпнұсқа ащылықтың жаңа түрі — талғампаз, теңдестірілген әрі жұмыс үзілісіңізге арналған мөлшерде. Зейін мен дәм керек болса, Chill таңдаңыз.",
 					"image": "/mock/products/product-mock.png"
 				},
 				{
 					"title": "ZingZing",
-					"titleSpan": "Рахат",
-					"text": "Түтіндей іссі, рахатты дәм — отбасы, той немесе пикниктерге тамаша. Қарым-қатынас үшін жасалған.",
+					"titleSpan": "қуаныш",
+					"text": "Ысты дәм, қуанышты тістеу. Отбасы, кеш немее пикник үшін тамаша таңдау. Байланыс үшін жасалған.",
 					"image": "/mock/products/product-mock.png"
 				}
 			]
 		},
 		"fourthSectionGrowTogether": {
 			"image": "/mock/products/growTogether-img.png",
-			"title": "Бірге",
-			"titleSpan": " Өсейік",
-			"text": "Тәттілер ассортиментін кеңейткіңіз келсе де, өз аймағыңызға жаңа нәрсе енгізгіңіз келсе де — ZingZing тұтынушылар бас тарта алмайтын энергия мен ләззат әкеледі."
+			"title": "Бірге ",
+			"titleSpan": "Дамиық",
+			"text": "Сіз тіскебасар портфолиоңызды кеңейткіңіз келсе де, аймағыңызға жаңа әрі қызықты нәрсе әкелгіңіз келсе де, ZingZing тұтынушылар таңданатын қуат, бояу және көңілділік әкеледі."
 		}
 	},
 	"UZB": {
 		"hero": {
-			"title1": "000",
-			"mainTitleSpan1": "000",
-			"title2": "000",
-			"mainTitleSpan2": "000",
+			"title1": "Yaratuvchi ",
+			"mainTitleSpan1": "bilanAchchiqlik",
+			"title2": "Ulashiladigan bilan",
+			"mainTitleSpan2": "Quvonch",
 			"leftSideImage": "/mock/products/model.png",
 			"rightSideImage1": "/mock/products/yellow.png",
 			"rightSideImage2": "/mock/products/pink.png",
@@ -329,8 +332,8 @@
 			"cards": [
 				{
 					"id": 1,
-					"title": "000",
-					"titleSpan": "000",
+					"title": "ZingZing",
+					"titleSpan": "Klassik",
 					"image": "/mock/products/product-mock-purple.png",
 					"littleImages": [
 						"/mock/products/little.png",
@@ -339,8 +342,8 @@
 				},
 				{
 					"id": 2,
-					"title": "000",
-					"titleSpan": "000",
+					"title": "ZingZing",
+					"titleSpan": "BBQ",
 					"image": "/mock/products/product-mock-purple.png",
 					"littleImages": [
 						"/mock/products/little.png",
@@ -349,8 +352,8 @@
 				},
 				{
 					"id": 3,
-					"title": "000",
-					"titleSpan": "000",
+					"title": "ZingZing",
+					"titleSpan": "Hot Pot",
 					"image": "/mock/products/product-mock-purple.png",
 					"littleImages": [
 						"/mock/products/little.png",
@@ -359,8 +362,8 @@
 				},
 				{
 					"id": 4,
-					"title": "000",
-					"titleSpan": "000",
+					"title": "ZingZing",
+					"titleSpan": "Chill",
 					"image": "/mock/products/product-mock-purple.png",
 					"littleImages": [
 						"/mock/products/little.png",
@@ -369,8 +372,8 @@
 				},
 				{
 					"id": 5,
-					"title": "000",
-					"titleSpan": "000",
+					"title": "ZingZing",
+					"titleSpan": "Quvonch",
 					"image": "/mock/products/product-mock-purple.png",
 					"littleImages": [
 						"/mock/products/little.png",
@@ -379,8 +382,8 @@
 				},
 				{
 					"id": 6,
-					"title": "000",
-					"titleSpan": "000",
+					"title": "ZingZing",
+					"titleSpan": "Lobster",
 					"image": "/mock/products/product-mock-purple.png",
 					"littleImages": [
 						"/mock/products/little.png",
@@ -390,40 +393,42 @@
 			]
 		},
 		"thirdSectionBigCards": {
+			"sectionTitle": "BOSHQA DELISON",
+			"sectionTitleSpan": "MAHSULOTLARI",
 			"bigCard": [
 				{
-					"title": "000",
-					"titleSpan": "000",
-					"text": "000",
+					"title": "ZingZing",
+					"titleSpan": "Hot Pot",
+					"text": "Osiyoning sevimli bo'lishish taomidan ilhomlangan Hot Pot ta'mi qalampir, sho'rva va quvonchni uyg'unlashtiradi — o'zining hikoyasi bilan achchiqlikni yoqtiradiganlar uchun mukammal tanlov.",
 					"image": "/mock/products/product-mock.png"
 				},
 				{
-					"title": "000",
-					"titleSpan": "000",
-					"text": "000",
+					"title": "ZingZing",
+					"titleSpan": "Chill",
+					"text": "Asl achchiq ta'mimizga zamonaviy burilish — silliq, muvozanatli va ish stoli tanaffusi uchun mukammal porsiyalangan. Diqqat va ta'm kerak bo'lganda, Chillga qo'l yetkazing.",
 					"image": "/mock/products/product-mock.png"
 				},
 				{
-					"title": "000",
-					"titleSpan": "000",
-					"text": "000",
+					"title": "ZingZing",
+					"titleSpan": "Quvonch",
+					"text": "Tutunli ta'mi, quvnoq tishlashi — oilaviy lahzalar, partiyalar yoki pikniklar uchun mukammal tanlov. Aloqa uchun yaratilgan.",
 					"image": "/mock/products/product-mock.png"
 				}
 			]
 		},
 		"fourthSectionGrowTogether": {
 			"image": "/mock/products/growTogether-img.png",
-			"title": "000",
-			"titleSpan": "000",
-			"text": "000"
+			"title": "Keling, birga ",
+			"titleSpan": "o'saylik",
+			"text": "Siz snaklar portfelingizni kengaytirishni yoki mintaqangizga yangi va hayajonli narsalarni taqdim etishni istasangiz ham, ZingZing mijozlar chiday olmagan energiya, rang va zavq olib keladi."
 		}
 	},
 	"TUR": {
 		"hero": {
-			"title1": "000",
-			"mainTitleSpan1": "000",
-			"title2": "000",
-			"mainTitleSpan2": "000",
+			"title1": "Baharatla Üretildi",
+			"mainTitleSpan1": "Üretildi",
+			"title2": "Neşeyle ",
+			"mainTitleSpan2": "Paylaşıldı",
 			"leftSideImage": "/mock/products/model.png",
 			"rightSideImage1": "/mock/products/yellow.png",
 			"rightSideImage2": "/mock/products/pink.png",
@@ -433,8 +438,8 @@
 			"cards": [
 				{
 					"id": 1,
-					"title": "000",
-					"titleSpan": "000",
+					"title": "ZingZing",
+					"titleSpan": "Klasik",
 					"image": "/mock/products/product-mock-purple.png",
 					"littleImages": [
 						"/mock/products/little.png",
@@ -443,8 +448,8 @@
 				},
 				{
 					"id": 2,
-					"title": "000",
-					"titleSpan": "000",
+					"title": "ZingZing",
+					"titleSpan": "BBQ",
 					"image": "/mock/products/product-mock-purple.png",
 					"littleImages": [
 						"/mock/products/little.png",
@@ -453,8 +458,8 @@
 				},
 				{
 					"id": 3,
-					"title": "000",
-					"titleSpan": "000",
+					"title": "ZingZing",
+					"titleSpan": "Hot-Pot",
 					"image": "/mock/products/product-mock-purple.png",
 					"littleImages": [
 						"/mock/products/little.png",
@@ -463,8 +468,8 @@
 				},
 				{
 					"id": 4,
-					"title": "000",
-					"titleSpan": "000",
+					"title": "ZingZing",
+					"titleSpan": "Keyif",
 					"image": "/mock/products/product-mock-purple.png",
 					"littleImages": [
 						"/mock/products/little.png",
@@ -473,8 +478,8 @@
 				},
 				{
 					"id": 5,
-					"title": "000",
-					"titleSpan": "000",
+					"title": "ZingZing",
+					"titleSpan": "Neşe",
 					"image": "/mock/products/product-mock-purple.png",
 					"littleImages": [
 						"/mock/products/little.png",
@@ -483,8 +488,8 @@
 				},
 				{
 					"id": 6,
-					"title": "000",
-					"titleSpan": "000",
+					"title": "ZingZing",
+					"titleSpan": "Lopster",
 					"image": "/mock/products/product-mock-purple.png",
 					"littleImages": [
 						"/mock/products/little.png",
@@ -494,32 +499,34 @@
 			]
 		},
 		"thirdSectionBigCards": {
+			"sectionTitle": "DİĞER DELISON",
+			"sectionTitleSpan": "ÜRÜNLERİ",
 			"bigCard": [
 				{
-					"title": "000",
-					"titleSpan": "000",
-					"text": "000",
+					"title": "ZingZing",
+					"titleSpan": "Hot Pot",
+					"text": "Asya'nın en sevilen paylaşım yemeğinden ilham alan Hot Pot tadımız, biberi, suyu ve neşeyi harmanlıyor — hikayeli baharat sevenler için mükemmel bir seçim.",
 					"image": "/mock/products/product-mock.png"
 				},
 				{
-					"title": "000",
-					"titleSpan": "000",
-					"text": "000",
+					"title": "ZingZing",
+					"titleSpan": "Keyif",
+					"text": "Orijinal baharatımıza modern bir dokunuş — zarif, dengeli ve masa başı molanız için mükemmel porsiyonlanmış. Odağa ve tada ihtiyaç duyduğunuzda Chill'e uzanın.",
 					"image": "/mock/products/product-mock.png"
 				},
 				{
-					"title": "000",
-					"titleSpan": "000",
-					"text": "000",
+					"title": "ZingZing",
+					"titleSpan": "Neşe",
+					"text": "Dumanlı bir dokunuş, neşeli bir ısırık; aile anları, partiler veya piknikler için mükemmel bir seçim. Bağlantı kurmak için tasarlandı.",
 					"image": "/mock/products/product-mock.png"
 				}
 			]
 		},
 		"fourthSectionGrowTogether": {
 			"image": "/mock/products/growTogether-img.png",
-			"title": "000",
-			"titleSpan": "000",
-			"text": "000"
+			"title": "Birlikte ",
+			"titleSpan": "Büyüyelim",
+			"text": "İster atıştırmalık portföyünüzü genişletmek, ister bölgenize yeni ve heyecan verici bir ürün sunmak isteyin, ZingZing müşterilerin karşı koyamayacağı enerji, renk ve eğlence getirir."
 		}
 	}
 }

@@ -31,10 +31,10 @@
 	},
 	"RUS": {
 		"hero": {
-			"mainTitle": "БУДЬТЕ",
-			"titleSpan1": "В КУРСЕ. ",
-			"titleSpan2": "С НАМИ.",
-			"text": "Новые вкусы, новые лица и новые приключения - здесь вы найдете последние обновления, основные события и истории из нашего путешествия по русскоязычному миру и не только.",
+			"mainTitle": "Будьте",
+			"titleSpan1": "в остороте ",
+			"titleSpan2": "в курсе",
+			"text": "В ZingZing каждый месяц приносит что-то новое — вкусы, люди и приключения. Здесь вы найдёте свежие новости, яркие события и истории нашего пути по Центральной Азии и дальше.",
 			"leftSideImage1": "/mock/news/yellow.png",
 			"leftSideImage2": "/mock/news/yellow.png",
 			"leftSideImage3": "/mock/news/yellow.png",
@@ -44,17 +44,17 @@
 			"firstBlock": {
 				"title": "Новости ",
 				"titleSpan": "Бренда",
-				"text": "Узнайте, что готовится за кулисами! От запуска продуктов до обновления упаковки, наша команда постоянно работает над тем, чтобы каждый снэк ZingZing был свежее, смелее и лучше, чем раньше.",
+				"text": "Узнайте, что происходит за кулисами! От запусков новых продуктов до обновлений упаковки — наша команда постоянно работает над тем, чтобы каждая закуска ZingZing становилась свежее, ярче и лучше, чем раньше.",
 				"image": "/mock/news/books.png"
 			},
 			"secondBlock": {
 				"image": "/mock/news/second-model.png",
-				"title": "Мероприятия",
-				"text": "ZingZing любит встречаться с людьми! Участвуем в ярмарках, выставках и фестивалях, делясь нашей историей и специями."
+				"title": "События и Выставки",
+				"text": "ZingZing любит встречаться с людьми! Мы участвуем в ярмарках, выставках и местных фестивалях — делимся нашей историей, специями и улыбками со всеми, кого встречаем."
 			},
 			"thirdBlock": {
 				"title": "Розыгрыши",
-				"text": "Благодарим наших фанатов! Подписывайтесь на нас в соцсетях для участия в розыгрышах и получения сюрпризов.",
+				"text": "Мы любим радовать наших фанатов! Подписывайтесь на ZingZing в соцсетях, чтобы получать ежемесячные розыгрыши, сюрприз-боксы со снеками и лимитированные товары.",
 				"image": "/mock/news/tshirts.png"
 			}
 		}
@@ -64,7 +64,7 @@
 			"mainTitle": "БІЗМЕН",
 			"titleSpan1": "БІРГЕ. ",
 			"titleSpan2": "БОЛЫҢЫЗ.",
-			"text": "Жаңа дәмдер, жаңа жүздер және жаңа приключениялер - осы жерде сіз орыс тілді әлемдегі және одан тыс жерлердегі саяхатымыздың соңғы жаңалықтарын, іс-шараларды және әңгімелерді табасыз.",
+			"text": "ZingZing-те әр ай сайын жаңа дәмдер, тұлғалар және оқиғалар бар. Мұнда сіз Орталық Азиядағы сапарымыз туралы соңғы жаңалықтарды таба аласыз.",
 			"leftSideImage1": "/mock/news/yellow.png",
 			"leftSideImage2": "/mock/news/yellow.png",
 			"leftSideImage3": "/mock/news/yellow.png",
@@ -74,27 +74,27 @@
 			"firstBlock": {
 				"title": "Бренд ",
 				"titleSpan": "Жаңалықтары",
-				"text": "Күллі артта не дайындалып жатқанын біліңіз! Өнімдерді іске қосудан бастап ораманы жаңартуға дейін, біздің команда әрбір ZingZing снәгін бұрынғыдан жаңа, батыл және жақсырақ ету үшін үнемі жұмыс істейді.",
+				"text": "Сахна артында не пісіп жатқанын біліңіз! Өнімді шығарудан бастап қаптаманы жаңартуға дейін біздің команда әрбір ZingZing тіскебасарын бұрынғыдан да жаңа, батыл және жақсы ету үшін үнемі жұмыс істейді.",
 				"image": "/mock/news/books.png"
 			},
 			"secondBlock": {
 				"image": "/mock/news/second-model.png",
-				"title": "Іс-шаралар",
-				"text": "ZingZing адамдармен кездесуді жақсы көреді! Біз ярмаркаларға, көрмелерге және фестивальдарға қатысамыз, тарихымызбен және дәмімізбен бөлісеміз."
+				"title": "Іс-шаралар және Көрмелер",
+				"text": "ZingZing адамдармен кездескенді ұнатады! Біз тамақ жәрмеңкелеріне, көрмелерге және жергілікті фестивальдарға қатысып, әрбір кездескен адаммен әңгімемізді, дәмімізді және күлкімізді бөлісеміз."
 			},
 			"thirdBlock": {
-				"title": "Розыгрыштер",
-				"text": "Біз жанкүйерлерімізге алғыс білдіреміз! Розыгрыштерге қатысу және сюрприздер алу үшін әлеуметтік желілерде бізді қараңыз.",
+				"title": "Ұтыс Ойындары",
+				"text": "Жанкүйерлерімізге сыйлықтар жасағанды ұнатамыз! Ай сайынғы ұтыс ойындары, тосын сый тіскебасар қораптары және шектеулі тауарлар үшін ZingZing-ке әлеуметтік желілерде жазылыңыз.",
 				"image": "/mock/news/tshirts.png"
 			}
 		}
 	},
 	"UZB": {
 		"hero": {
-			"mainTitle": "000",
-			"titleSpan1": "000",
-			"titleSpan2": "000",
-			"text": "000",
+			"mainTitle": "Bo‘ling.",
+			"titleSpan1": "Achchiq va ",
+			"titleSpan2": "Yangilangan",
+			"text": "0ZingZingda har oy yangi narsa keltiradi — yangi ta’mlar, yangi yuzlar va yangi sarguzashtlar. Bu yerda siz eng so‘nggi yangilanishlar, tadbirlar yoritilishi va Markaziy Osiyo va undan tashqaridagi safarlarimiz haqidagi hikoyalarni topasiz.00",
 			"leftSideImage1": "/mock/news/yellow.png",
 			"leftSideImage2": "/mock/news/yellow.png",
 			"leftSideImage3": "/mock/news/yellow.png",
@@ -102,29 +102,29 @@
 		},
 		"secondSection": {
 			"firstBlock": {
-				"title": "000",
-				"titleSpan": "000",
-				"text": "000",
+				"title": "Brend ",
+				"titleSpan": "Yangiliklari",
+				"text": "Orqa sahnada nimalar bo‘layotganini kashf eting! Mahsulot taqdimotlaridan tortib qadoqlash yangilanishlarigacha, jamoamiz har bir ZingZing yeguligini yanada yangi, jasur va sifatli qilish ustida doimiy ishlaydi.",
 				"image": "/mock/news/books.png"
 			},
 			"secondBlock": {
 				"image": "/mock/news/second-model.png",
-				"title": "000",
-				"text": "000"
+				"title": "Tadbirlar va Ko‘rgazmalar",
+				"text": "ZingZing odamlar bilan uchrashishni yaxshi ko‘radi! Biz oziq-ovqat yarmarkalari, ko‘rgazmalar va mahalliy festivallarda ishtirok etamiz — hikoyamiz, achchiqligimiz va tabassumimizni hamma bilan bo‘lishamiz."
 			},
 			"thirdBlock": {
-				"title": "000",
-				"text": "000",
+				"title": "Sovrinlar",
+				"text": "Biz muxlislarimizga sovg‘a berishni yaxshi ko‘ramiz! Oylik sovrinlar, kutilmagan yegulik qutilari va cheklangan nashrdagi tovarlar uchun ZingZingni ijtimoiy tarmoqlarda kuzating.",
 				"image": "/mock/news/tshirts.png"
 			}
 		}
 	},
 	"TUR": {
 		"hero": {
-			"mainTitle": "000",
-			"titleSpan1": "000",
-			"titleSpan2": "000",
-			"text": "000",
+			"mainTitle": "Kalin",
+			"titleSpan1": "Baharatlı ",
+			"titleSpan2": "ve Güncel",
+			"text": "ZingZing'de her ay yeni bir şeyler getiriyor; yeni tatlar, yeni yüzler ve yeni maceralar. Burada, Orta Asya ve ötesindeki yolculuğumuzdan en son güncellemeleri, etkinlik özetlerini ve hikayeleri bulacaksınız.",
 			"leftSideImage1": "/mock/news/yellow.png",
 			"leftSideImage2": "/mock/news/yellow.png",
 			"leftSideImage3": "/mock/news/yellow.png",
@@ -132,19 +132,19 @@
 		},
 		"secondSection": {
 			"firstBlock": {
-				"title": "000",
-				"titleSpan": "000",
-				"text": "000",
+				"title": "Marka ",
+				"titleSpan": "Haberleri",
+				"text": "Perde arkasında neler piştiğini keşfedin! Ürün lansmanlarından ambalaj güncellemelerine kadar ekibimiz, her ZingZing atıştırmalığını öncekinden daha taze, daha cesur ve daha iyi hale getirmek için sürekli çalışıyor.",
 				"image": "/mock/news/books.png"
 			},
 			"secondBlock": {
 				"image": "/mock/news/second-model.png",
-				"title": "000",
-				"text": "000"
+				"title": "Etkinlikler ve Fuarlar",
+				"text": "ZingZing insanlarla tanışmayı çok seviyor! Gıda fuarlarına, sergilere ve yerel festivallere katılarak hikayemizi, baharatımızı ve gülümsemelerimizi tanıştığımız herkesle paylaşıyoruz."
 			},
 			"thirdBlock": {
-				"title": "000",
-				"text": "000",
+				"title": "Çekilişler",
+				"text": "Hayranlarımıza karşılık vermeyi seviyoruz! Aylık çekilişler, sürpriz atıştırmalık kutuları ve sınırlı sayıda üretilen ürünler için ZingZing'i sosyal medyada takip edin.",
 				"image": "/mock/news/tshirts.png"
 			}
 		}

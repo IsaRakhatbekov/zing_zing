@@ -95,43 +95,43 @@
 	},
 	"RUS": {
 		"hero": {
-			"title1": "Рожденные из ",
-			"mainTitleSpan1": "Пряностей.",
-			"title2": "Построенные на",
-			"mainTitleSpan2": " Страсти.",
-			"text": "Мы ZingZing — новое поколение создателей закусок, которые верят, что отличный вкус может быть смелым, веселым и созданным с заботой.",
+			"title1": "Рожден из ",
+			"mainTitleSpan1": "Остроты.",
+			"title2": "Создан на",
+			"mainTitleSpan2": " Энтузиазме.",
+			"text": "Мы — ZingZing, новое поколение производителей снеков, верим, что вкус может быть смелым, весёлым и сделан с заботой.",
 			"leftSideImage1": "/mock/aboutUs/purple.png",
 			"leftSideImage2": "/mock/aboutUs/purple.png",
 			"leftSideImage3": "/mock/aboutUs/purple.png",
 			"rightSideImage": "/mock/aboutUs/hero-model.png"
 		},
 		"secondSection": {
-			"mainTitle": "ZINGZING ПО",
-			"mainTitleSpan": "ЦЕНТРАЛЬНОЙ АЗИИ",
+			"mainTitle": "ZingZing ПО ВСЕЙ ",
+			"mainTitleSpan": "ЦЕнтральной АЗИИ",
 			"list": [
 				{
 					"id": 1,
 					"image": "/mock/aboutUs/kz.png",
-					"innerTitle": "Казахстан",
-					"text": "С гордостью производится и любим в Казахстане — где ZingZing начал свое острое путешествие. От Алматы до Астаны наши закуски приносят энергию и вкус в каждый момент."
+					"innerTitle": "КАЗАХСТАН",
+					"text": "Гордо сделано и любимо в Казахстане — здесь ZingZing начала своё острое путешествие. От Алматы до Астаны наши снеки дарят энергию и вкус каждому моменту."
 				},
 				{
 					"id": 2,
 					"image": "/mock/aboutUs/ru.png",
 					"innerTitle": "Россия",
-					"text": "Расширяемся по России со смелым вкусом и красочной энергией. ZingZing объединяет любителей специй со всех уголков — от улиц Москвы до атмосферы Владивостока."
+					"text": "Расширяемся по России с ярким вкусом и энергией. ZingZing объединяет любителей острого со всей страны — от Москвы до Владивостока."
 				},
 				{
 					"id": 3,
 					"image": "/mock/aboutUs/kg.png",
 					"innerTitle": "Кыргызстан",
-					"text": "Укоренен в Кыргызстане, вдохновлен его горами и vibrant молодежью. ZingZing — это больше чем закуска — это вкус творчества и сообщества."
+					"text": "С корнями в Кыргызстане, вдохновлённый горами и энергией молодёжи. ZingZing — больше, чем снеки — вкус креатива и сообщества."
 				},
 				{
 					"id": 4,
 					"image": "/mock/aboutUs/uz.png",
 					"innerTitle": "Узбекистан",
-					"text": "От Ташкента до Самарканда, ZingZing добавляет специй в каждое празднование. Закуска, которая соединяет поколения через смелый вкус и радостный дизайн."
+					"text": "От Ташкента до Самарканда ZingZing добавляет остроту каждому празднику. Снек, объединяющий поколения смелым вкусом и радостным дизайном."
 				}
 			],
 			"dropsList": [
@@ -167,21 +167,21 @@
 					"id": 1,
 					"title": "Наше",
 					"titleSpan": "Сообщество",
-					"text": "ZingZing — сообщество любителей специй, создателей и мечтателей. Растем вместе, делимся идеями и празднуем каждый вкус жизни. Станьте частью Zing!",
+					"text": "ZingZing — не просто закуска, это сообщество любителей специй, творцов и мечтателей. Растём вместе, делимся идеями и празднуем вкус жизни. Присоединяйтесь к Zing!",
 					"image": "/mock/aboutUs/second-model.png"
 				},
 				{
 					"id": 2,
-					"title": "Почему Выбирают",
-					"titleSpan": "Нас",
-					"text": "Мы создаем моменты, а не просто закуски. Каждый вкус — история специй, радости и творчества. Выбирая ZingZing, вы выбираете жизнь с искрой.",
+					"title": "Почему Именно ",
+					"titleSpan": "Мы",
+					"text": "Мы делаем не просто закуски — мы создаём моменты. Каждый вкус рассказывает о специях, радости и творчестве. С ZingZing жизнь становится ярче",
 					"image": "/mock/aboutUs/boxes.png"
 				},
 				{
 					"id": 3,
 					"title": "Наша",
 					"titleSpan": "Миссия",
-					"text": "Стать самым надежным брендом острых закусок в Центральной Азии, объединяя людей через смелый вкус, игривый дизайн и качество.",
+					"text": "Стать самым надёжным брендом острых закусок в Центральной Азии и за её пределами, объединяя людей ярким вкусом и честным качеством.",
 					"image": "/mock/aboutUs/car.png"
 				}
 			]
@@ -191,9 +191,9 @@
 		"hero": {
 			"title1": "Дәмден туған ",
 			"mainTitleSpan1": "Заттар.",
-			"title2": "Құрылған",
-			"mainTitleSpan2": " Құштарлықпен.",
-			"text": "Біз ZingZing - керемет дәм батыл, көңілді және қамқорлықпен жасалуы мүмкін деп сенетін снәк өндірушілердің жаңа ұрпағымыз.",
+			"title2": "Құмарлықпен ",
+			"mainTitleSpan2": " Салынған.",
+			"text": "Біз ZingZing-біз — тамаша дәм батыл, көңілді және мұқият жасалуы керек деп санайтын тіскебасар өндірушілердің жаңа буыны.",
 			"leftSideImage1": "/mock/aboutUs/purple.png",
 			"leftSideImage2": "/mock/aboutUs/purple.png",
 			"leftSideImage3": "/mock/aboutUs/purple.png",
@@ -207,25 +207,25 @@
 					"id": 1,
 					"image": "/mock/aboutUs/kz.png",
 					"innerTitle": "Қазақстан",
-					"text": "Бақытымызға орай Қазақстанда жасалып, сүйіспеншілікпен қабылданады - ZingZing өзінің ащы саяхатын осы жерден бастады. Алматыдан Астанаға дейін біздің снәктер әрбір сәтке энергия мен дәм әкеледі."
+					"text": "Қазақстанда жасалған. ZingZing ащы сапары осы жерден басталды. Алматыдан Астанаға дейін, тіскебасарлар әр сәтке қуат пен дәм әкеледі."
 				},
 				{
 					"id": 2,
 					"image": "/mock/aboutUs/ru.png",
 					"innerTitle": "Ресей",
-					"text": "Батыл дәм мен түрлі-түсті энергиямен Ресей бойынша кеңейеміз. ZingZing Мәскеу көшелерінен Владивосток атмосферасына дейін барлық бұрыштардан ащы заттарды жақсы көрушілерді біріктіреді."
+					"text": "Ресей бойынша батыл дәммен кеңеюде. ZingZing Мәскеуден Владивостокқа дейінгі ащы дәмді ұнатушыларды біріктіреді."
 				},
 				{
 					"id": 3,
 					"image": "/mock/aboutUs/kg.png",
 					"innerTitle": "Қырғызстан",
-					"text": "Қырғызстанда тамыр жайған, оның таулары мен жарқын жастарымен шабыттанған. ZingZing - бұл снәктен гөрі көп - бұл шығармашылық пен қоғамдастықтың дәмі."
+					"text": "Қырғызстанның таулары мен жастарынан шабыт алған. ZingZing — жай тіскебасар емес, ол шығармашылық пен қоғамдастық дәмі."
 				},
 				{
 					"id": 4,
 					"image": "/mock/aboutUs/uz.png",
 					"innerTitle": "Өзбекстан",
-					"text": "Ташкенттен Самарқандқа дейін ZingZing әрбір мерекеге дәм қосады. Батыл дәм мен көңілді дизайн арқылы ұрпақтарды байланыстыратын снәк."
+					"text": "Ташкенттен Самарқандқа дейін ZingZing әр мерекеге дәм қосады. Батыл дәм мен қуанышты дизайн арқылы ұрпақтарды байланыстыратын тағам."
 				}
 			],
 			"dropsList": [
@@ -233,25 +233,25 @@
 					"id": 1,
 					"image": "/mock/aboutUs/drops.png",
 					"dropsTitle": "Жүрекпен Сапа",
-					"dropsText": "Әрбір партия қамқорлықпен, гигиена стандарттарына сәйкес."
+					"dropsText": "Әр партия қатаң гигиена және қауіпсіздік стандарттарымен мұқият жасалады."
 				},
 				{
 					"id": 2,
 					"image": "/mock/aboutUs/drops.png",
-					"dropsTitle": "Мақсаты бар Көңілділік",
-					"dropsText": "Юмор мен ойыншылдық шынайылықты сақтай отырып."
+					"dropsTitle": "Мақсатты Қуаныш",
+					"dropsText": "Біз шынайылығымызды жоғалтпай әзіл мен ойнақылық қосамыз."
 				},
 				{
 					"id": 3,
 					"image": "/mock/aboutUs/drops.png",
-					"dropsTitle": "Жергілікті Тамырлар, Жаһандық Ой",
-					"dropsText": "Орталық Азияда жасалған, әлемге арналған."
+					"dropsTitle": "Жергілікті Тамыр, Жаһандық Ой",
+					"dropsText": "Орталық Азияда мақтанышпен жасалған, әлемге арналған."
 				},
 				{
 					"id": 4,
 					"image": "/mock/aboutUs/drops.png",
 					"dropsTitle": "Сенім және Ашықтық",
-					"dropsText": "Жасырын ингредиенттер жоқ, бос уәделер жоқ — тек шынайы ащы заттар."
+					"dropsText": "Жасырын ингредиенттер жоқ, бос уәделер жоқ — тек адал дәм."
 				}
 			]
 		},
@@ -261,21 +261,21 @@
 					"id": 1,
 					"title": "Біздің",
 					"titleSpan": "Қоғамдастық",
-					"text": "ZingZing - ащы заттарды жақсы көрушілер, жасаушылар мен армандаушылар қоғамдастығы. Бірге өсеміз, идеялармен бөлісеміз. Zing-ге қосылыңыз!",
+					"text": "ZingZing — ащы дәмді ұнатушылар, жасампаздар мен армандаушылар қауымдастығы. Бірге өсіп, өмірдің әр дәмін тойлаймыз. Бізге қосылып, Зыңның бір бөлігі болыңыз!",
 					"image": "/mock/aboutUs/second-model.png"
 				},
 				{
 					"id": 2,
-					"title": "Неге Бізді",
-					"titleSpan": "Таңдайды",
-					"text": "Біз сәттерді жасаймыз. Әрбір дәм - ащы заттар, қуаныш пен шығармашылық тарихы. ZingZing-ті таңдау - жарқын өмірді таңдау.",
+					"title": "Бізді Неге ",
+					"titleSpan": "Таңдайсыз",
+					"text": "Біз жай тіскебасар жасамаймыз — сәттер жасаймыз. Әр дәм ащылық, қуаныш, шығармашылық туралы әңгімелейді. ZingZing таңдасаңыз, өмірді Зың қосып сүресіз.",
 					"image": "/mock/aboutUs/boxes.png"
 				},
 				{
 					"id": 3,
-					"title": "Біздің",
-					"titleSpan": "Миссия",
-					"text": "Орталық Азияда ең сенімді ащы снәктер бренді болу - адамдарды батыл дәм, ойыншыл дизайн және сапа арқылы біріктіру.",
+					"title": "Біздің ",
+					"titleSpan": "Миссиямыз",
+					"text": "Орталық Азиядағы және одан тыс жерлердегі ең сенімді ащы тіскебасар бренді болу — батыл дәм, ойнақы дизайн және шынайы сапа арқылы адамдарды біріктіру.",
 					"image": "/mock/aboutUs/car.png"
 				}
 			]
@@ -283,69 +283,69 @@
 	},
 	"UZB": {
 		"hero": {
-			"title1": "000",
-			"mainTitleSpan1": "000",
-			"title2": "000",
-			"mainTitleSpan2": "000",
-			"text": "000",
+			"title1": "Achchiqlikdan .",
+			"mainTitleSpan1": "tug‘ilgan",
+			"title2": "Ishq bilan ",
+			"mainTitleSpan2": "yaratilgan.",
+			"text": "Biz ZingZingmiz — ajoyib ta’m jasur, qiziqarli va ehtiyotkorlik bilan yaratilishi mumkinligiga ishongan yangi avlod yegulik ishlab chiqaruvchilari.",
 			"leftSideImage1": "/mock/aboutUs/purple.png",
 			"leftSideImage2": "/mock/aboutUs/purple.png",
 			"leftSideImage3": "/mock/aboutUs/purple.png",
 			"rightSideImage": "/mock/aboutUs/hero-model.png"
 		},
 		"secondSection": {
-			"mainTitle": "000",
-			"mainTitleSpan": "000",
+			"mainTitle": "ZingZing Markaziy ",
+			"mainTitleSpan": "Osiyoda",
 			"list": [
 				{
 					"id": 1,
 					"image": "/mock/aboutUs/kz.png",
-					"innerTitle": "000",
-					"text": "000"
+					"innerTitle": "Qozog‘iston",
+					"text": "ZingZingning achchiq sayohati boshlangan Qozog‘istonda g‘urur bilan ishlab chiqarilgan va sevib iste’mol qilinadi. Olmaotadan Astanagacha, bizning yeguliklarimiz har lahzaga quvvat va ta’m qo‘shadi."
 				},
 				{
 					"id": 2,
 					"image": "/mock/aboutUs/ru.png",
-					"innerTitle": "000",
-					"text": "000"
+					"innerTitle": "Rossiya",
+					"text": "Rossiya bo‘ylab jasur ta’m va rang-barang quvvat bilan kengaymoqda. ZingZing har burchakdagi achchiq ta’m ixlosmandlarini birlashtiradi — Moskva ko‘chalaridan Vladivostok ruhigacha."
 				},
 				{
 					"id": 3,
 					"image": "/mock/aboutUs/kg.png",
-					"innerTitle": "000",
-					"text": "000"
+					"innerTitle": "Qirg‘iziston",
+					"text": "Qirg‘izistonda ildiz otgan, uning tog‘lari va jonli yoshlari ilhomi bilan yaratilgan. ZingZing shunchaki yegulik emas — bu ijod va hamjamiyat ta’mi."
 				},
 				{
 					"id": 4,
 					"image": "/mock/aboutUs/uz.png",
-					"innerTitle": "000",
-					"text": "000"
+					"innerTitle": "O‘zbekiston",
+					"text": "Toshkentdan Samarqandgacha, ZingZing har bayramga achchiqlik qo‘shadi. Jasur ta’m va quvonchli dizayn orqali avlodlarni bog‘laydigan yegulik."
 				}
 			],
 			"dropsList": [
 				{
 					"id": 1,
 					"image": "/mock/aboutUs/drops.png",
-					"dropsTitle": "000",
-					"dropsText": "000"
+					"dropsTitle": "Sifat va Samimiyat",
+					"dropsText": "Har bir partiya ehtiyotkorlik bilan, qat’iy gigiena va xavfsizlik standartlariga rioya qilgan holda tayyorlanadi."
 				},
 				{
 					"id": 2,
 					"image": "/mock/aboutUs/drops.png",
-					"dropsTitle": "000",
-					"dropsText": "000"
+					"dropsTitle": "Maqsadli Qiziqarli",
+					"dropsText": "Biz o‘z haqiqiyligimizni yo‘qotmasdan hazil va o‘yin-kulgi qo‘shamiz."
 				},
 				{
 					"id": 3,
 					"image": "/mock/aboutUs/drops.png",
-					"dropsTitle": "000",
-					"dropsText": "000"
+					"dropsTitle": "Mahalliy Ildiz, Global Fikr",
+					"dropsText": "Markaziy Osiyoda g‘urur bilan yaratilgan, dunyo uchun mo‘ljallangan."
 				},
 				{
 					"id": 4,
 					"image": "/mock/aboutUs/drops.png",
-					"dropsTitle": "000",
-					"dropsText": "000"
+					"dropsTitle": "Ishonch va Shaffoflik",
+					"dropsText": "Hech qanday yashirin tarkib yoki bo‘sh va’dalar yo‘q — faqat halol achchiqlik."
 				}
 			]
 		},
@@ -353,23 +353,23 @@
 			"blocks": [
 				{
 					"id": 1,
-					"title": "000",
-					"titleSpan": "000",
-					"text": "000",
+					"title": "Bizning ",
+					"titleSpan": "Hamjamiyatimiz",
+					"text": "ZingZing — bu shunchaki yegulik emas, balki achchiq ta’m ixlosmandlari, ijodkorlar va orzular jamoasidir. Biz birga o‘samiz, fikrlarni bo‘lishamiz va hayotning har bir ta’mini nishonlaymiz. Bizga qo‘shiling va Zingning bir qismi bo‘ling!",
 					"image": "/mock/aboutUs/second-model.png"
 				},
 				{
 					"id": 2,
-					"title": "000",
-					"titleSpan": "000",
-					"text": "000",
+					"title": "Nima Uchun Bizni ",
+					"titleSpan": "Tanlash",
+					"text": "Chunki biz faqat yegulik tayyorlamaymiz — biz lahzalar yaratamiz. Har bir ta’m achchiqlik, quvonch va ijod hikoyasini aytadi. ZingZingni tanlaganingizda, hayotni biroz qo‘shimcha shovqin bilan yashashni tanlaysiz.",
 					"image": "/mock/aboutUs/boxes.png"
 				},
 				{
 					"id": 3,
-					"title": "000",
-					"titleSpan": "000",
-					"text": "000",
+					"title": "Bizning ",
+					"titleSpan": "Maqsadimiz",
+					"text": "Markaziy Osiyo va undan tashqarida eng ishonchli achchiq atirli yegulik brendi bo‘lish — odamlarni jasur ta’m, o‘yinchoq dizayn va samimiy sifat orqali birlashtirish.",
 					"image": "/mock/aboutUs/car.png"
 				}
 			]
@@ -377,69 +377,69 @@
 	},
 	"TUR": {
 		"hero": {
-			"title1": "000",
-			"mainTitleSpan1": "000",
-			"title2": "000",
-			"mainTitleSpan2": "000",
-			"text": "000",
+			"title1": "Baharattan ",
+			"mainTitleSpan1": "Doğdu.",
+			"title2": "Tutku Üzerine ",
+			"mainTitleSpan2": "Kuruldu.",
+			"text": "Biz ZingZing’iz — harika lezzetin cesur, eğlenceli ve özenle hazırlanmış olabileceğine inanan yeni nesil atıştırmalık üreticileriyiz.",
 			"leftSideImage1": "/mock/aboutUs/purple.png",
 			"leftSideImage2": "/mock/aboutUs/purple.png",
 			"leftSideImage3": "/mock/aboutUs/purple.png",
 			"rightSideImage": "/mock/aboutUs/hero-model.png"
 		},
 		"secondSection": {
-			"mainTitle": "000",
-			"mainTitleSpan": "000",
+			"mainTitle": "ZingZing ",
+			"mainTitleSpan": "Orta Asya’da",
 			"list": [
 				{
 					"id": 1,
 					"image": "/mock/aboutUs/kz.png",
-					"innerTitle": "000",
-					"text": "000"
+					"innerTitle": "Kazakistan",
+					"text": "Gururla Kazakistan’da üretilmiş ve sevilen — ZingZing’in baharatlı yolculuğuna başladığı yer. Almatı’dan Astana’ya, atıştırmalıklarımız her anınıza enerji ve lezzet katar."
 				},
 				{
 					"id": 2,
 					"image": "/mock/aboutUs/ru.png",
-					"innerTitle": "000",
-					"text": "000"
+					"innerTitle": "Rusya",
+					"text": "Cesur lezzet ve renkli enerji ile Rusya genelinde yayılıyoruz. ZingZing, Moskova sokaklarından Vladivostok ruhuna kadar her köşeden baharat tutkunlarını bir araya getiriyor."
 				},
 				{
 					"id": 3,
 					"image": "/mock/aboutUs/kg.png",
-					"innerTitle": "000",
-					"text": "000"
+					"innerTitle": "Kırgızistan",
+					"text": "Kırgızistan kökenli, dağlarından ve enerjik gençliğinden ilham alan. ZingZing sadece bir atıştırmalık değil — yaratıcılık ve topluluk tadıdır."
 				},
 				{
 					"id": 4,
 					"image": "/mock/aboutUs/uz.png",
-					"innerTitle": "000",
-					"text": "000"
+					"innerTitle": "Özbekistan",
+					"text": "Taşkent’ten Semerkand’a, ZingZing her kutlamaya baharat katıyor. Cesur lezzeti ve neşeli tasarımıyla nesilleri bir araya getiren bir atıştırmalık."
 				}
 			],
 			"dropsList": [
 				{
 					"id": 1,
 					"image": "/mock/aboutUs/drops.png",
-					"dropsTitle": "000",
-					"dropsText": "000"
+					"dropsTitle": "Kalpte Kalite",
+					"dropsText": "Her parti özenle, sıkı hijyen ve güvenlik standartları altında üretilir."
 				},
 				{
 					"id": 2,
 					"image": "/mock/aboutUs/drops.png",
-					"dropsTitle": "000",
-					"dropsText": "000"
+					"dropsTitle": "Amacıyla Eğlence",
+					"dropsText": "Özgünlüğümüzü kaybetmeden mizah ve eğlence katıyoruz."
 				},
 				{
 					"id": 3,
 					"image": "/mock/aboutUs/drops.png",
-					"dropsTitle": "000",
-					"dropsText": "000"
+					"dropsTitle": "Yerel Köken, Küresel Zihin",
+					"dropsText": "Orta Asya’da gururla üretilmiş, dünyaya hitap edecek şekilde tasarlanmıştır."
 				},
 				{
 					"id": 4,
 					"image": "/mock/aboutUs/drops.png",
-					"dropsTitle": "000",
-					"dropsText": "000"
+					"dropsTitle": "Güven & Şeffaflık",
+					"dropsText": "Gizli içerik yok, boş söz yok — sadece dürüst baharat."
 				}
 			]
 		},
@@ -447,23 +447,23 @@
 			"blocks": [
 				{
 					"id": 1,
-					"title": "000",
-					"titleSpan": "000",
-					"text": "000",
+					"title": "Topluluğumuz",
+					"titleSpan": "",
+					"text": "ZingZing sadece bir atıştırmalık değil — baharat tutkunları, yaratıcılardan ve hayalperestlerden oluşan bir topluluktur. Birlikte büyür, fikirleri paylaşır ve hayatın her lezzetini kutlarız. Bize katılın ve Zing’in bir parçası olun!",
 					"image": "/mock/aboutUs/second-model.png"
 				},
 				{
 					"id": 2,
-					"title": "000",
-					"titleSpan": "000",
-					"text": "000",
+					"title": "Neden Bizi ",
+					"titleSpan": "Seçmelisiniz",
+					"text": "Çünkü biz sadece atıştırmalık üretmiyoruz — anılar yaratıyoruz. Her lezzet, baharat, neşe ve yaratıcılığın hikayesini anlatır. ZingZing’i seçtiğinizde, hayata biraz ekstra enerjiyle yaşamayı seçmiş olursunuz.",
 					"image": "/mock/aboutUs/boxes.png"
 				},
 				{
 					"id": 3,
-					"title": "000",
-					"titleSpan": "000",
-					"text": "000",
+					"title": "Misyonumuz",
+					"titleSpan": "",
+					"text": "Orta Asya ve ötesinde en güvenilir acılı atıştırmalık markası olmak — cesur lezzet, eğlenceli tasarım ve samimi kalite ile insanları bir araya getirmek.",
 					"image": "/mock/aboutUs/car.png"
 				}
 			]
