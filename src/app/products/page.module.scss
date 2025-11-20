@@ -179,14 +179,14 @@
 
 		.littleImg {
 			position: absolute;
-			width: 50px;
-			height: 50px;
+			width: 100px;
+			height: 100px;
 			/* базовая позиция около пакета */
 			right: 80px;
 			bottom: 0;
 
 			/* старт: как будто глубоко в пакете */
-			transform: translateY(-200%);
+			transform: translateY(0%);
 			transition: transform 0.35s ease-out;
 			z-index: -1;
 
@@ -199,20 +199,22 @@
 
 		/* если их две — немного раздвигаем */
 		.littleImg:nth-child(2) {
-			right: 115px;
+			z-index: -1;
+			right: 62px;
 		}
 		.littleImg:nth-child(3) {
-			right: 82px;
+			right: 115px;
+			z-index: -2;
 		}
 
 		/* hover по пинк-карточке — выезжают чуть выше */
 		&:hover {
 			.littleImg {
 				&:nth-child(2) {
-					transform: translateY(-400%) rotate(-34deg);
+					transform: translateY(-170%) rotate(-34deg);
 				}
 				&:nth-child(3) {
-					transform: translateY(-400%) rotate(34deg);
+					transform: translateY(-170%) rotate(34deg);
 				}
 			}
 		}
@@ -391,12 +393,12 @@
 	}
 
 	.imgWrapper {
-		width: 300px;
-		height: 480px;
+		width: 352px;
+		height: 570px;
 		overflow: hidden;
 		box-shadow: -31px 0 63px 0 rgba(0, 0, 0, 0.25);
 		position: absolute;
-		right: 133px;
+		right: 120px;
 		bottom: 0;
 
 		& img {
