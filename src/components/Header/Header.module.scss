@@ -57,7 +57,7 @@
 			left: 50%;
 			top: 50%;
 			transform: translate(-50%, -50%) scale(0.95);
-			width: 100px;
+			width: 100%;
 			height: 60px;
 			background: url('../../assets/images/hover-bg.png') no-repeat center /
 				contain;
@@ -65,9 +65,11 @@
 			pointer-events: none;
 			z-index: -1;
 			transition: opacity 0.3s ease, transform 0.3s ease;
+			min-width: 100px; // минимальная ширина как в оригинале
 		}
 
 		&:hover::before {
+			padding: 10px;
 			opacity: 1;
 			transform: translate(-50%, -50%) scale(1);
 		}
@@ -78,6 +80,7 @@
 	}
 
 	.activeLink {
+		padding: 10px;
 		color: var(--yellow);
 
 		&::before {
