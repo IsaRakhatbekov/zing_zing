@@ -1,5 +1,5 @@
 .HomeCards {
-	margin: 100px 0;
+	margin: 0 0 100px;
 
 	.container {
 		width: 100%;
@@ -33,7 +33,7 @@
 	}
 
 	.buttonsRow {
-		margin: 20px calc(20px + (130 - 20) * (100vw - 320px) / (1920 - 320)) 0;
+		margin: 10px calc(20px + (130 - 20) * (100vw - 320px) / (1920 - 320)) 0;
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
@@ -74,21 +74,18 @@
 				100%;
 			background-size: 100% 100%;
 		}
-
-		// Добавляем hover эффекты
-		&:hover {
-			transform: translateY(-2px);
-			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-		}
-
-		&:active {
-			transform: translateY(0);
-		}
 	}
 
 	@media (max-width: 1200px) {
 		.button {
-			padding: 10px 30px;
+			padding: 17px 25px;
+		}
+	}
+
+	@media (max-width: 800px) {
+		.button {
+			padding: 10px 20px;
+			font-size: clamp(12px, 8px + 0.760456vw, 18px);
 		}
 	}
 
@@ -105,7 +102,7 @@
 		}
 	}
 
-	@media (max-width: 500px) {
+	@media (max-width: 550px) {
 		margin: 40px 0;
 
 		.buttonsRow {

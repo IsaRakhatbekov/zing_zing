@@ -220,6 +220,13 @@ const Header = () => {
 					<li className={`${styles.item} ${styles.langItem}`}>
 						<button className={styles.lang} onClick={toggleLangMenu}>
 							{getShortLang(currentLang)}
+							<span
+								className={`${styles.arrow} ${
+									isLangOpen ? styles.arrowActive : ''
+								}`}
+							>
+								▼
+							</span>
 						</button>
 						<div
 							className={`${styles.langMenu} ${
