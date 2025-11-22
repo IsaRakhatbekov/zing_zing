@@ -457,14 +457,40 @@
 	}
 
 	.ourCommunity {
+		.text {
+			margin: 8px 0 15px;
+		}
 		.imgWrapper {
 			width: 360px;
 			height: 580px;
 			margin-right: 30px;
 		}
+
+		.wrapper {
+			.title {
+				font-size: 35px;
+			}
+			.text {
+				margin: 8px 0 15px;
+			}
+		}
 		.purpleImgWrapper {
 			height: 380px;
 			margin: 0px 0 0px 50px;
+
+			.title {
+				font-size: 35px;
+			}
+		}
+
+		.yellowWrapper {
+			font-size: 35px;
+			.imgWrapper {
+				padding-right: 60px;
+			}
+			.text {
+				margin: 8px 0 15px;
+			}
 		}
 	}
 }
@@ -536,7 +562,7 @@
 				position: absolute;
 				inset: 0;
 				background: var(--purple);
-				clip-path: polygon(0% 31%, 100% 4%, 100% 96%, 0% 67%);
+				clip-path: polygon(0% 24%, 100% 0%, 100% 99%, 0% 67%);
 				transform: none;
 				z-index: 0;
 				pointer-events: none;
@@ -582,6 +608,13 @@
 
 		.purpleImgWrapper {
 			height: 350px;
+		}
+
+		.yellowWrapper {
+			.imgWrapper {
+				padding-right: 30px;
+				margin-bottom: 10px;
+			}
 		}
 	}
 }
