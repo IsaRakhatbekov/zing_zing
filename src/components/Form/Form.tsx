@@ -130,7 +130,7 @@ const Form = ({ variant = 'default', title, text }: FormProps) => {
 		const formData = { email, phone, message }
 
 		try {
-			const response = await fetch('/api/contact', {
+			const response = await fetch('/api/partnership/', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify(formData),
