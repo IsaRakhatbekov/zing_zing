@@ -433,6 +433,10 @@
 		.textWrapper {
 			flex-shrink: 1;
 		}
+
+		.title {
+			font-size: clamp(27px, 2vw, 52px);
+		}
 	}
 
 	.centralAsia {
@@ -498,7 +502,7 @@
 @media (max-width: 900px) {
 	.ourCommunity {
 		.title {
-			font-size: 30px;
+			font-size: clamp(23px, 2vw, 52px);
 		}
 
 		.text {

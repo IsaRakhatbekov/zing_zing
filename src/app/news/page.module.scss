@@ -19,15 +19,14 @@
 		margin-bottom: 30px;
 	}
 	.title {
-		font-size: clamp(28px, 4vw, 52px);
+		font-size: clamp(28px, 4vw, 40px);
 	}
 	.innerTitle {
 		display: flex;
 		flex-direction: column;
 		& span {
 			font-weight: 900;
-			font-size: clamp(28px, 4vw, 52px);
-
+			font-size: clamp(28px, 4vw, 40px);
 			line-height: 100%;
 		}
 		& .pink {
@@ -300,6 +299,7 @@
 		.rightImg {
 			width: 230px;
 			height: 354px;
+			bottom: 35px;
 		}
 	}
 
@@ -321,6 +321,11 @@
 }
 
 @media (max-width: 991px) {
+	.secondHero {
+		.leftImg {
+			margin-right: 10px;
+		}
+	}
 	.giveaways {
 		.imgWrapper {
 			width: 400px;
@@ -396,6 +401,8 @@
 		}
 
 		.leftImg {
+			margin-right: 30px;
+
 			.leftImgWrapper {
 				width: min(150px, 16vw);
 				height: min(230px, 25vw);
@@ -535,6 +542,7 @@
 			display: block;
 			width: 132px;
 			height: 213px;
+			bottom: 43px;
 		}
 	}
 

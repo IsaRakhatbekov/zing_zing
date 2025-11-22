@@ -687,6 +687,9 @@
 
 @media (max-width: 768px) {
 	.secondHero {
+		.title {
+			max-width: 410px;
+		}
 		.wrapper {
 			padding: 40px;
 			align-items: flex-start;
@@ -694,7 +697,7 @@
 		}
 		.imagesWrapper {
 			flex-direction: column;
-			margin-left: 0;
+			margin-left: -65px;
 		}
 
 		.leftImg {
@@ -837,6 +840,9 @@
 
 @media (max-width: 600px) {
 	.secondHero {
+		.imagesWrapper {
+			margin-left: -115px;
+		}
 		.rightImg {
 			right: 280px;
 			width: min(280px, 30vw);
@@ -875,11 +881,14 @@
 			padding: 20px;
 		}
 		.leftImg {
-			height: 250px;
-			bottom: -71px;
+			height: 222px;
+			bottom: -99px;
 		}
 		.rightImg {
 			right: 220px;
+		}
+		.imagesWrapper {
+			margin-left: -150px;
 		}
 	}
 

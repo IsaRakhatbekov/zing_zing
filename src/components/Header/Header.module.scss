@@ -65,7 +65,7 @@
 			pointer-events: none;
 			z-index: -1;
 			transition: opacity 0.3s ease, transform 0.3s ease;
-			min-width: 100px; // минимальная ширина как в оригинале
+			min-width: 100px;
 		}
 
 		&:hover::before {
@@ -155,11 +155,52 @@
 	.mobMenuWrapper {
 		display: none;
 		padding: 50px 0;
+		overflow-y: auto;
+
+		/* Добавляем центрирование для мобильного меню */
+		.list {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+		}
+
+		.item {
+			width: 100%;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+		}
+
+		.link {
+			display: inline-block;
+			width: auto;
+			padding: 15px 0;
+			color: var(--white);
+			font-size: 18px;
+			text-align: center;
+		}
 
 		.langItem {
 			position: relative;
 			width: 100%;
-			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			margin-top: 10px;
+		}
+
+		.lang {
+			background: transparent;
+			color: var(--white);
+			font-size: 18px;
+			padding: 15px 20px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 
 		.langMenu {
@@ -167,20 +208,30 @@
 			background: transparent;
 			box-shadow: none;
 			display: none;
-		}
-
-		.langMenuActive {
-			display: block;
+			width: 100%;
+			max-width: 200px;
+			margin: 0 auto;
 			opacity: 1;
 			visibility: visible;
 			transform: none;
+		}
+
+		.langMenuActive {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 		}
 
 		.langOption {
 			background: transparent;
 			color: var(--white);
 			font-size: 16px;
-			padding: 8px 0;
+			padding: 12px 0;
+			text-align: center;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
 			&:hover {
 				background: rgba(255, 255, 255, 0.1);
@@ -312,43 +363,53 @@
 		}
 		.mobMenuWrapper {
 			display: block;
-			position: absolute;
+			position: fixed;
 			width: 100%;
-			min-height: 100vh;
+			height: 100vh;
 			top: 0;
 			left: 0;
 			background-color: var(--pink);
 			display: flex;
-			align-items: center;
-			justify-content: center;
+			align-items: flex-start;
+			justify-content: flex-start;
 			overflow-y: auto;
 			transform: translateY(-200%);
 			transition: all 0.5s ease;
 			z-index: 90;
+			padding: 120px 0 50px;
 
 			.list {
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-				justify-content: center;
+				justify-content: flex-start;
 				width: 100%;
+				min-height: auto;
+				padding: 0;
 			}
 
 			.item {
 				width: 100%;
 				text-align: center;
+				display: flex;
+				justify-content: center;
 			}
 
 			.link {
 				display: inline-block;
-				width: 100%;
+				width: auto;
 				padding: 15px 0;
 				color: var(--white);
 				font-size: 18px;
+				text-align: center;
 			}
 
 			.lang {
 				margin-top: 10px;
+				background: transparent;
+				color: var(--white);
+				font-size: 18px;
+				padding: 15px 20px;
 			}
 		}
 
@@ -380,6 +441,18 @@
 		.langOption {
 			padding: 8px 12px;
 			font-size: 13px;
+		}
+
+		.mobMenuWrapper {
+			.lang {
+				font-size: 16px;
+				padding: 12px 16px;
+			}
+
+			.langOption {
+				font-size: 14px;
+				padding: 10px 0;
+			}
 		}
 	}
 }
