@@ -19,8 +19,8 @@ import styles from './Reviews.module.scss'
 interface Review {
 	id: number
 	preview: string
-	video?: string
-	videoId?: string
+	video: string | null
+	videoId: string
 }
 
 // SSR-safe моб. флаг
@@ -36,11 +36,8 @@ const useIsMobile = (breakpoint = 768) => {
 }
 
 type Props = {
-	/** Данные секции отзывов */
-	reviewsData: {
-		title: string
-		items: Review[]
-	}
+	/** Данные секции отзывов (старая структура - массив) */
+	reviewsData: Review[]
 	/** РУЧНАЯ ширина карточки в пикселях (для свайпера на мобилке) */
 	cardWidthPx?: number
 	/** Зазор между слайдами */
@@ -57,11 +54,11 @@ export default function Reviews({
 	const isMobile = useIsMobile(768)
 
 	// Если нет отзывов - не рендерим компонент
-	if (!reviewsData || !reviewsData.items || reviewsData.items.length === 0) {
+	if (!reviewsData || reviewsData.length === 0) {
 		return null
 	}
 
-	const { title, items: reviews } = reviewsData
+	const reviews = reviewsData
 
 	// GSAP-анимация (десктоп)
 	useEffect(() => {
@@ -137,8 +134,8 @@ export default function Reviews({
 	return (
 		<section className={styles.reviews} ref={reviewsRef}>
 			<div className={`${styles.container} container`}>
-				{/* ИСПОЛЬЗУЕМ ДИНАМИЧЕСКИЙ ЗАГОЛОВОК ИЗ ДАННЫХ */}
-				<h2 className={styles.title}>{title}</h2>
+				{/* ЗАГОЛОВОК ТЕПЕРЬ СТАТИЧНЫЙ - БУДЕТ ПЕРЕВОДИТЬСЯ НА ФРОНТЕ */}
+				<h2 className={styles.title}>Reviews Of Our Followers</h2>
 
 				{/* Десктопная сетка */}
 				<div className={styles.cards} aria-hidden={isMobile}>

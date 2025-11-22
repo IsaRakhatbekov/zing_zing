@@ -57,32 +57,32 @@
 			"titleSpan": "Together",
 			"text": "Whether you're looking to expand your snack portfolio or introduce something fresh and exciting to your region, ZingZing brings energy, color, and fun that customers can't resist."
 		},
-
-		"reviews": {
-			"title": "Reviews Of Our Followers",
-			"items": [
-				{
-					"id": 1,
-					"preview": "/images/reviews/reviews-1.png",
-					"video": "/videos/review1.mp4"
-				},
-				{
-					"id": 2,
-					"preview": "/images/reviews/reviews-2.png",
-					"videoId": "dQw4w9WgXcQ"
-				},
-				{
-					"id": 3,
-					"preview": "/images/reviews/reviews-3.png",
-					"videoId": "V-_O7nl0Ii0"
-				},
-				{
-					"id": 4,
-					"preview": "/images/reviews/reviews-4.png",
-					"video": "/videos/review4.mp4"
-				}
-			]
-		}
+		"reviews": [
+			{
+				"id": 1,
+				"preview": "/images/reviews/reviews-1.png",
+				"video": "/videos/review1.mp4",
+				"videoId": "1"
+			},
+			{
+				"id": 2,
+				"preview": "/images/reviews/reviews-2.png",
+				"video": "/videos/review2.mp4",
+				"videoId": "2"
+			},
+			{
+				"id": 3,
+				"preview": "/images/reviews/reviews-3.png",
+				"video": null,
+				"videoId": "3"
+			},
+			{
+				"id": 4,
+				"preview": "/images/reviews/reviews-4.png",
+				"video": "/videos/review4.mp4",
+				"videoId": "4"
+			}
+		]
 	},
 	"RUS": {
 		"hero": {
@@ -142,31 +142,32 @@
 			"titleSpan": " Вместе",
 			"text": "Хотите расширить ассортимент снеков или предложить что-то новое в регионе? ZingZing приносит энергию, цвет и веселье, которому невозможно устоять."
 		},
-		"reviews": {
-			"title": "отзывы наших подписчиков",
-			"items": [
-				{
-					"id": 1,
-					"preview": "/images/reviews/reviews-1.png",
-					"video": "/videos/review1.mp4"
-				},
-				{
-					"id": 2,
-					"preview": "/images/reviews/reviews-2.png",
-					"videoId": "dQw4w9WgXcQ"
-				},
-				{
-					"id": 3,
-					"preview": "/images/reviews/reviews-3.png",
-					"videoId": "V-_O7nl0Ii0"
-				},
-				{
-					"id": 4,
-					"preview": "/images/reviews/reviews-4.png",
-					"video": "/videos/review4.mp4"
-				}
-			]
-		}
+		"reviews": [
+			{
+				"id": 1,
+				"preview": "/images/reviews/reviews-1.png",
+				"video": "/videos/review1.mp4",
+				"videoId": "1"
+			},
+			{
+				"id": 2,
+				"preview": "/images/reviews/reviews-2.png",
+				"video": "/videos/review2.mp4",
+				"videoId": "2"
+			},
+			{
+				"id": 3,
+				"preview": "/images/reviews/reviews-3.png",
+				"video": null,
+				"videoId": "3"
+			},
+			{
+				"id": 4,
+				"preview": "/images/reviews/reviews-4.png",
+				"video": "/videos/review4.mp4",
+				"videoId": "4"
+			}
+		]
 	},
 	"KAZ": {
 		"hero": {
@@ -226,31 +227,28 @@
 			"titleSpan": "дамыйық",
 			"text": "Егер сіз тағам ассортиментін кеңейтуді немесе аймағыңызға жаңа әрі қызықты өнім енгізуді қаласаңыз, ZingZing тұтынушыларды баурайтын энергия, түстер және көңілді әкеледі."
 		},
-		"reviews": {
-			"title": "Біздің ізбасарлардың пікірлері",
-			"items": [
-				{
-					"id": 1,
-					"preview": "/images/reviews/reviews-1.png",
-					"video": "/videos/review1.mp4"
-				},
-				{
-					"id": 2,
-					"preview": "/images/reviews/reviews-2.png",
-					"videoId": "dQw4w9WgXcQ"
-				},
-				{
-					"id": 3,
-					"preview": "/images/reviews/reviews-3.png",
-					"videoId": "V-_O7nl0Ii0"
-				},
-				{
-					"id": 4,
-					"preview": "/images/reviews/reviews-4.png",
-					"video": "/videos/review4.mp4"
-				}
-			]
-		}
+		"reviews": [
+			{
+				"id": 1,
+				"preview": "/images/reviews/reviews-1.png",
+				"video": "/videos/review1.mp4"
+			},
+			{
+				"id": 2,
+				"preview": "/images/reviews/reviews-2.png",
+				"videoId": "dQw4w9WgXcQ"
+			},
+			{
+				"id": 3,
+				"preview": "/images/reviews/reviews-3.png",
+				"videoId": "V-_O7nl0Ii0"
+			},
+			{
+				"id": 4,
+				"preview": "/images/reviews/reviews-4.png",
+				"video": "/videos/review4.mp4"
+			}
+		]
 	},
 	"UZB": {
 		"hero": {
@@ -310,31 +308,28 @@
 			"titleSpan": "o‘saylik",
 			"text": "Siz snaklar portfelingizni kengaytirishni yoki mintaqangizga yangi va hayajonli narsalarni taqdim etishni istasangiz ham, ZingZing mijozlar chiday olmagan energiya, rang va zavq olib keladi."
 		},
-		"reviews": {
-			"title": "Izohlar va sharhlar",
-			"items": [
-				{
-					"id": 1,
-					"preview": "/images/reviews/reviews-1.png",
-					"video": "/videos/review1.mp4"
-				},
-				{
-					"id": 2,
-					"preview": "/images/reviews/reviews-2.png",
-					"videoId": "dQw4w9WgXcQ"
-				},
-				{
-					"id": 3,
-					"preview": "/images/reviews/reviews-3.png",
-					"videoId": "V-_O7nl0Ii0"
-				},
-				{
-					"id": 4,
-					"preview": "/images/reviews/reviews-4.png",
-					"video": "/videos/review4.mp4"
-				}
-			]
-		}
+		"reviews": [
+			{
+				"id": 1,
+				"preview": "/images/reviews/reviews-1.png",
+				"video": "/videos/review1.mp4"
+			},
+			{
+				"id": 2,
+				"preview": "/images/reviews/reviews-2.png",
+				"videoId": "dQw4w9WgXcQ"
+			},
+			{
+				"id": 3,
+				"preview": "/images/reviews/reviews-3.png",
+				"videoId": "V-_O7nl0Ii0"
+			},
+			{
+				"id": 4,
+				"preview": "/images/reviews/reviews-4.png",
+				"video": "/videos/review4.mp4"
+			}
+		]
 	},
 	"TUR": {
 		"hero": {
@@ -394,30 +389,27 @@
 			"titleSpan": "Büyüyelim",
 			"text": "İster atıştırmalık portföyünüzü genişletmek, ister bölgenize taze ve heyecan verici bir şey sunmak isteyin, ZingZing müşterilerin karşı koyamayacağı enerji, renk ve eğlence getirir."
 		},
-		"reviews": {
-			"title": "Takipçilerimizin Yorumları",
-			"items": [
-				{
-					"id": 1,
-					"preview": "/images/reviews/reviews-1.png",
-					"video": "/videos/review1.mp4"
-				},
-				{
-					"id": 2,
-					"preview": "/images/reviews/reviews-2.png",
-					"videoId": "dQw4w9WgXcQ"
-				},
-				{
-					"id": 3,
-					"preview": "/images/reviews/reviews-3.png",
-					"videoId": "V-_O7nl0Ii0"
-				},
-				{
-					"id": 4,
-					"preview": "/images/reviews/reviews-4.png",
-					"video": "/videos/review4.mp4"
-				}
-			]
-		}
+		"reviews": [
+			{
+				"id": 1,
+				"preview": "/images/reviews/reviews-1.png",
+				"video": "/videos/review1.mp4"
+			},
+			{
+				"id": 2,
+				"preview": "/images/reviews/reviews-2.png",
+				"videoId": "dQw4w9WgXcQ"
+			},
+			{
+				"id": 3,
+				"preview": "/images/reviews/reviews-3.png",
+				"videoId": "V-_O7nl0Ii0"
+			},
+			{
+				"id": 4,
+				"preview": "/images/reviews/reviews-4.png",
+				"video": "/videos/review4.mp4"
+			}
+		]
 	}
 }

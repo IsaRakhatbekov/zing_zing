@@ -1,8 +1,8 @@
 export interface Review {
 	id: number
 	preview: string
-	video?: string
-	videoId?: string
+	video: string | null
+	videoId: string
 }
 
 export type Home = {
@@ -41,9 +41,6 @@ export type Home = {
 		titleSpan: string
 		text: string
 	}
-	// ДОБАВЛЯЕМ СЕКЦИЮ ОТЗЫВОВ С ЗАГОЛОВКОМ
-	reviews: {
-		title: string
-		items: Review[]
-	}
+	// ВОЗВРАТ К СТАРОЙ СТРУКТУРЕ - МАССИВ ОТЗЫВОВ
+	reviews: Review[]
 }

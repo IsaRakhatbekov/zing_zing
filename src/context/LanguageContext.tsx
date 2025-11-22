@@ -1,5 +1,6 @@
 // src/context/LanguageContext.tsx
 'use client'
+
 import { getDomainConfig } from '@/lib/domain-config'
 import React, {
 	createContext,
@@ -23,19 +24,36 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({
 	children,
 }) => {
-	const domainConfig = getDomainConfig()
-	const [currentLang, setCurrentLang] = useState<Language>(domainConfig.lang)
+	// ВАЖНО: и сервер, и первый рендер на клиенте стартуют с RUS
+	const [currentLang, setCurrentLang] = useState<Language>('RUS')
 
 	useEffect(() => {
-		const savedLang = localStorage.getItem('preferredLang') as Language
-		if (savedLang && ['ENG', 'RUS', 'KAZ', 'UZB', 'TUR'].includes(savedLang)) {
-			setCurrentLang(savedLang)
+		let initialLang: Language = 'RUS'
+
+		// 1) Пытаемся определить язык по домену (только в браузере)
+		try {
+			const domainConfig = getDomainConfig()
+			initialLang = domainConfig.lang
+		} catch (error) {
+			console.warn('Error in domain config, using RUS as fallback:', error)
 		}
+
+		// 2) Если в localStorage есть сохранённый язык — он важнее домена
+		const savedLang = localStorage.getItem('preferredLang') as Language | null
+		const allowed: Language[] = ['ENG', 'RUS', 'KAZ', 'UZB', 'TUR']
+
+		if (savedLang && allowed.includes(savedLang)) {
+			initialLang = savedLang
+		}
+
+		setCurrentLang(initialLang)
 	}, [])
 
 	const changeLanguage = (lang: Language) => {
 		setCurrentLang(lang)
-		localStorage.setItem('preferredLang', lang)
+		if (typeof window !== 'undefined') {
+			localStorage.setItem('preferredLang', lang)
+		}
 	}
 
 	return (

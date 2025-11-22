@@ -140,6 +140,11 @@ const Header = () => {
 
 	return (
 		<header className={styles.Header}>
+			{/*
+			<p className={`${styles.topText} ${burger ? styles.topTextActive : ''}`}>
+				{t.topText}
+			</p>
+			  */}
 			<p className={`${styles.topText} ${burger ? styles.topTextActive : ''}`}>
 				{t.topText}
 			</p>
