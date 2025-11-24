@@ -92,6 +92,7 @@
 
 .ourPower {
 	margin-bottom: 100px;
+
 	.wrapper {
 		height: 450px;
 		position: relative;
@@ -100,6 +101,7 @@
 		padding: 0 50px 0 100px;
 		justify-content: space-between;
 		text-align: left;
+
 		&::after {
 			content: '';
 			position: absolute;
@@ -113,27 +115,34 @@
 			z-index: -1;
 		}
 	}
+
 	.title {
 		font-size: clamp(28px, 4vw, 40px);
 	}
+
 	.text {
 		max-width: 460px;
 		font-weight: 300;
 		font-size: clamp(12px, calc(12px + 12px * (100vw / 1315px)), 22px);
 		margin: 15px 0 10px;
 	}
+
 	.imgWrapper {
 		max-width: 573px;
+		width: 100%;
 		height: 440px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		position: relative;
+	}
 
-		& img {
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
-		}
+	.image {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		-webkit-object-fit: contain;
+		display: block;
 	}
 }
 
@@ -344,5 +353,15 @@
 		.content {
 			text-align: center;
 		}
+	}
+}
+
+/* Safari-specific fixes */
+@supports (-webkit-touch-callout: none) {
+	.ourPower .image {
+		width: auto !important;
+		max-width: 100% !important;
+		height: auto !important;
+		max-height: 100% !important;
 	}
 }

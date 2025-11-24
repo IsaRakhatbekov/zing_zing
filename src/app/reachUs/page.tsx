@@ -108,11 +108,18 @@ export default function Page() {
 								</div>
 								<div className={styles.inner}>
 									<div className={styles.imgWrapper}>
-										<Image
+										<img
 											src={reachUsData.secondSection.image}
 											alt={reachUsData.secondSection.title}
-											width={500}
-											height={440}
+											className={styles.image}
+											onError={e => {
+												const target = e.target as HTMLImageElement
+												console.error(
+													'Failed to load image:',
+													reachUsData.secondSection.image
+												)
+												target.style.display = 'none'
+											}}
 										/>
 									</div>
 								</div>

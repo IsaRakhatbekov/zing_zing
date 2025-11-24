@@ -216,7 +216,7 @@ export default function Home() {
 									<Image
 										src={fourthSectionGrowTogether.image}
 										alt='Grow together image'
-										width={600}
+										width={630} // Измените на максимальную ширину контейнера
 										height={400}
 										onError={e => {
 											console.error(

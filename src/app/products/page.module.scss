@@ -422,15 +422,22 @@
 	}
 	.imgWrapper {
 		max-width: 630px;
+		width: 100%; /* Добавьте это */
 		height: 400px;
 		overflow: hidden;
 		margin-right: 0;
 		flex-shrink: 1;
+		-webkit-flex-shrink: 1;
+		display: flex; /* Добавьте flex */
+		align-items: center;
+		justify-content: center;
 
 		& img {
 			width: 100%;
 			height: 100%;
 			object-fit: contain;
+			-webkit-object-fit: contain;
+			display: block;
 		}
 	}
 

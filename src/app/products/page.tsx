@@ -288,7 +288,7 @@ export default function Page() {
 									<Image
 										src={productsData.fourthSectionGrowTogether.image}
 										alt='Grow together'
-										width={600}
+										width={630} // Измените на максимальную ширину контейнера
 										height={400}
 									/>
 								</div>

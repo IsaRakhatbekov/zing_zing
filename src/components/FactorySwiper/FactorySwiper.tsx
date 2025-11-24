@@ -22,7 +22,7 @@ export default function FactorySwiper({ data }: Props) {
 				spaceBetween={24}
 				coverflowEffect={{
 					rotate: 0,
-					stretch: 0,
+					stretch: -80,
 					depth: 90,
 					modifier: 1.1,
 					scale: 1,
