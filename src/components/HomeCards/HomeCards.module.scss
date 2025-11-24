@@ -9,6 +9,7 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: contain;
+		max-height: 1900px;
 	}
 
 	// Классы для разных языков
@@ -35,9 +36,18 @@
 	.buttonsRow {
 		margin: 10px calc(20px + (130 - 20) * (100vw - 320px) / (1920 - 320)) 0;
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between; // Изменено с space-around
 		align-items: center;
 		gap: 30px;
+
+		// Добавляем отступы для первой и последней кнопки
+		:first-child {
+			margin-right: 50px; // Регулируй это число для раздвижения
+		}
+
+		:last-child {
+			margin-left: 30px; // Регулируй это число для раздвижения
+		}
 	}
 
 	// Стили для локальных кнопок
@@ -66,6 +76,7 @@
 			background: url('../../assets/images/purple-bg.png') no-repeat center/100%
 				100%;
 			background-size: 100% 100%;
+			// Убрал margin: 10px 170px 0; - теперь позиционирование через .buttonsRow
 		}
 
 		&.orange {
@@ -73,12 +84,24 @@
 			background: url('../../assets/images/orange.png') no-repeat center/100%
 				100%;
 			background-size: 100% 100%;
+			margin-right: 30px;
 		}
 	}
 
 	@media (max-width: 1200px) {
 		.button {
 			padding: 17px 25px;
+		}
+
+		// Уменьшаем раздвижение на планшетах
+		.buttonsRow {
+			:first-child {
+				margin-right: 30px;
+			}
+
+			:last-child {
+				margin-left: 30px;
+			}
 		}
 	}
 
@@ -87,6 +110,17 @@
 			padding: 10px 20px;
 			font-size: clamp(12px, 8px + 0.760456vw, 18px);
 		}
+
+		// Еще меньше раздвижение
+		.buttonsRow {
+			:first-child {
+				margin-right: 15px;
+			}
+
+			:last-child {
+				margin-left: 15px;
+			}
+		}
 	}
 
 	@media (max-width: 768px) {
@@ -94,6 +128,15 @@
 
 		.buttonsRow {
 			gap: 20px;
+
+			// Убираем раздвижение на мобильных
+			:first-child {
+				margin-right: 0;
+			}
+
+			:last-child {
+				margin-left: 0;
+			}
 		}
 
 		.button {
@@ -107,6 +150,8 @@
 
 		.buttonsRow {
 			margin: 20px 20px;
+			flex-direction: column;
+			gap: 15px;
 		}
 
 		.button {
