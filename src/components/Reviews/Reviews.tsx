@@ -14,6 +14,7 @@ import 'swiper/css/pagination'
 import { Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
+import { useLanguage } from '@/context/LanguageContext'
 import styles from './Reviews.module.scss'
 
 interface Review {
@@ -44,6 +45,37 @@ type Props = {
 	gapPx?: number
 }
 
+// Типы и переводы заголовка для Reviews
+type ReviewsTranslation = {
+	title: string
+}
+
+type ReviewsTranslations = {
+	ENG: ReviewsTranslation
+	RUS: ReviewsTranslation
+	KAZ: ReviewsTranslation
+	UZB: ReviewsTranslation
+	TUR: ReviewsTranslation
+}
+
+const reviewsTranslations: ReviewsTranslations = {
+	ENG: {
+		title: 'Reviews Of Our Followers',
+	},
+	RUS: {
+		title: 'отзывы наших подписчиков',
+	},
+	KAZ: {
+		title: 'Біздің ізбасарлардың пікірлері',
+	},
+	UZB: {
+		title: 'Izohlar va sharhlar',
+	},
+	TUR: {
+		title: 'Takipçilerimizin Yorumları',
+	},
+}
+
 export default function Reviews({
 	reviewsData,
 	cardWidthPx = 250,
@@ -52,6 +84,8 @@ export default function Reviews({
 	const [playing, setPlaying] = useState<number | null>(null)
 	const reviewsRef = useRef<HTMLElement | null>(null)
 	const isMobile = useIsMobile(768)
+	const { currentLang } = useLanguage()
+	const t = reviewsTranslations[currentLang]
 
 	// Если нет отзывов - не рендерим компонент
 	if (!reviewsData || reviewsData.length === 0) {
@@ -135,7 +169,7 @@ export default function Reviews({
 		<section className={styles.reviews} ref={reviewsRef}>
 			<div className={`${styles.container} container`}>
 				{/* ЗАГОЛОВОК ТЕПЕРЬ СТАТИЧНЫЙ - БУДЕТ ПЕРЕВОДИТЬСЯ НА ФРОНТЕ */}
-				<h2 className={styles.title}>Reviews Of Our Followers</h2>
+				<h2 className={styles.title}>{t.title}</h2>
 
 				{/* Десктопная сетка */}
 				<div className={styles.cards} aria-hidden={isMobile}>

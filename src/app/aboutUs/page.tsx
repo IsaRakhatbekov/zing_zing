@@ -106,7 +106,8 @@ export default function Page() {
 					<section className={styles.centralAsia}>
 						<div className={`${styles.container} container`}>
 							<h2 className={styles.title}>
-								{aboutUsData.secondSection.mainTitle}{' '}
+								{aboutUsData.secondSection.mainTitle}
+								<br />
 								<span>{aboutUsData.secondSection.mainTitleSpan}</span>
 							</h2>
 

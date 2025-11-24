@@ -14,7 +14,8 @@
 	.title {
 		max-width: 450px;
 		font-weight: 900;
-		font-size: clamp(28px, 4vw, 48px);
+		font-size: clamp(28px, 4vw, 45px);
+		margin-bottom: 10px;
 	}
 
 	.text {
@@ -123,7 +124,7 @@
 	.text {
 		max-width: 460px;
 		font-weight: 300;
-		font-size: clamp(12px, calc(12px + 12px * (100vw / 1315px)), 22px);
+		font-size: clamp(12px, calc(12px + 12px * (100vw / 1315px)), 20px);
 		margin: 15px 0 10px;
 	}
 

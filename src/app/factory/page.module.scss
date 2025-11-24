@@ -19,7 +19,7 @@
 	.title {
 		max-width: 340px;
 		font-weight: 900;
-		font-size: clamp(28px, 4vw, 52px);
+		font-size: clamp(28px, 4vw, 45px);
 		line-height: 100%;
 		margin-bottom: 20px;
 
@@ -179,13 +179,13 @@
 	}
 
 	.title {
-		font-size: clamp(28px, 4vw, 44px);
+		font-size: clamp(28px, 4vw, 42px);
 	}
 
 	.text {
 		max-width: 460px;
 		font-weight: 300;
-		font-size: 22px;
+		font-size: 20px;
 		margin: 15px 0 30px;
 		line-height: 120%;
 		width: 100%;
@@ -250,7 +250,7 @@
 	.text {
 		max-width: 460px;
 		font-weight: 300;
-		font-size: 22px;
+		font-size: 20px;
 		margin: 15px 0 30px;
 		line-height: 120%;
 	}

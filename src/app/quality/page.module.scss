@@ -16,6 +16,7 @@
 
 	.textWrapper {
 		flex-shrink: 0;
+		min-width: 400px;
 	}
 
 	.title {
@@ -23,7 +24,7 @@
 		font-weight: 900;
 		line-height: 100%;
 		margin-bottom: 20px;
-		font-size: clamp(28px, 4vw, 52px);
+		font-size: clamp(28px, 4vw, 45px);
 
 		& .purple {
 			color: var(--purple);
@@ -56,15 +57,15 @@
 
 	.leftImg {
 		position: relative;
-		width: min(420px, 28vw);
+		width: min(364px, 28vw);
 		height: min(300px, 20vw);
 		display: flex;
 		align-items: center;
 		justify-content: center;
 
 		.leftImgWrapper {
-			width: min(150px, 10vw);
-			height: min(230px, 15vw);
+			width: min(100px, 10vw);
+			height: min(163px, 15vw);
 			overflow: hidden;
 			position: absolute;
 			transform: rotate(40deg);
@@ -131,7 +132,7 @@
 	}
 
 	.title {
-		font-size: clamp(18px, calc(18px + 42px * (100vw / 1315px)), 52px);
+		font-size: clamp(18px, calc(18px + 42px * (100vw / 1315px)), 44px);
 		& span {
 			color: var(--yellow);
 		}
@@ -207,11 +208,11 @@
 
 	.dropsTitle {
 		font-weight: 900;
-		font-size: 24px;
+		font-size: 17px;
 		line-height: 100%;
 		text-transform: uppercase;
 		text-align: center;
-		max-width: 200px;
+		max-width: 220px;
 	}
 
 	.dropsText {
@@ -220,7 +221,7 @@
 		text-align: center;
 		font-weight: 400;
 		font-size: 18px;
-		line-height: 100%;
+		line-height: 120%;
 	}
 }
 // ========================================================
@@ -235,7 +236,7 @@
 		height: 440px;
 		display: flex;
 		align-items: center;
-		padding-left: 100px;
+		padding-left: 124px;
 		position: relative;
 		z-index: 1;
 
@@ -253,7 +254,8 @@
 	}
 	.title {
 		color: var(--purple);
-		font-size: clamp(18px, calc(18px + 37px * (100vw / 1315px)), 52px);
+		font-size: clamp(18px, calc(18px + 37px * (100vw / 1315px)), 45px);
+		margin-right: 10px;
 		& span {
 			color: var(--pink);
 		}
@@ -262,7 +264,7 @@
 		color: var(--purple);
 		margin: 15px 0 30px;
 		font-weight: 300;
-		font-size: clamp(12px, calc(12px + 11px * (100vw / 1315px)), 23px);
+		font-size: clamp(12px, calc(12px + 11px * (100vw / 1315px)), 21px);
 		max-width: 686px;
 	}
 
@@ -273,7 +275,7 @@
 
 		.imgWrapper {
 			width: 100%;
-			max-width: 600px;
+			max-width: 500px;
 			height: 760px;
 			overflow: hidden;
 			z-index: 2;
@@ -342,7 +344,7 @@
 			width: 400px;
 			height: 50px;
 			background-color: #fff;
-			transform: rotate(-6deg);
+			transform: rotate(-7deg);
 			right: 55px;
 			bottom: 72px;
 			z-index: 50;
@@ -360,7 +362,7 @@
 		}
 		.title {
 			color: var(--white);
-			font-size: clamp(18px, calc(18px + 37px * (100vw / 1315px)), 55px);
+			font-size: clamp(18px, calc(18px + 37px * (100vw / 1315px)), 51px);
 			& span {
 				color: var(--pink);
 			}
@@ -479,9 +481,21 @@
 			height: 370px;
 		}
 	}
+
+	.quality {
+		.imgWrapper {
+			max-width: 415px;
+			height: 415px;
+		}
+	}
 }
 
 @media (max-width: 1100px) {
+	.secondHero {
+		.textWrapper {
+			min-width: 330px;
+		}
+	}
 	.ensureQuality {
 		.wrapper {
 			padding-left: 20px;
@@ -588,9 +602,31 @@
 	}
 
 	.quality {
+		position: relative;
+		background: none;
+
 		.imgWrapper {
 			width: 300px;
-			height: 330px;
+			height: 444px;
+			padding-right: 0;
+		}
+
+		.wrapper {
+			padding-right: 0;
+			&::after {
+				content: '';
+				display: none;
+			}
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: var(--purple);
+			clip-path: polygon(0% 31%, 100% 1%, 100% 96%, 0% 67%);
+			transform: none;
+			pointer-events: none;
+			z-index: -1;
 		}
 	}
 
@@ -646,26 +682,9 @@
 }
 
 @media (max-width: 768px) {
-	.quality {
-		position: relative;
-		background: none;
-
-		.wrapper {
-			padding-right: 0;
-			&::after {
-				content: '';
-				display: none;
-			}
-		}
-		&::after {
-			content: '';
-			position: absolute;
-			inset: 0;
-			background: var(--purple);
-			clip-path: polygon(0% 31%, 100% 4%, 100% 96%, 0% 67%);
-			transform: none;
-			pointer-events: none;
-			z-index: -1;
+	.secondHero {
+		.textWrapper {
+			min-width: 270px;
 		}
 	}
 
@@ -723,6 +742,9 @@
 		}
 		.rightImg {
 			display: none;
+		}
+		.textWrapper {
+			min-width: 230px;
 		}
 	}
 	.ensureQuality {
