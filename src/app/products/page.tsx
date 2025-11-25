@@ -119,8 +119,8 @@ export default function Page() {
 													<Image
 														src={src}
 														alt={`${p.titleSpan} piece ${idx + 1}`}
-														width={40}
-														height={40}
+														width={140}
+														height={140}
 													/>
 												</div>
 											))}
@@ -129,8 +129,8 @@ export default function Page() {
 												<Image
 													src={p.image}
 													alt={p.titleSpan}
-													width={200}
-													height={200}
+													width={140}
+													height={140}
 												/>
 											</div>
 										</div>

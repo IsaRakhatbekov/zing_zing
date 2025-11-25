@@ -82,8 +82,8 @@ export default function Home() {
 										<Image
 											src={hero.image}
 											alt='Hero image'
-											width={100}
-											height={100}
+											width={300}
+											height={500}
 											onError={e => {
 												// Обработка ошибки загрузки изображения
 												console.error('Failed to load hero image:', hero.image)
