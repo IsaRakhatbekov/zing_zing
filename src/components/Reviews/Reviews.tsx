@@ -196,6 +196,7 @@ export default function Reviews({
 								slidesPerView={2} // ровно 2
 								centeredSlides={false}
 								spaceBetween={gapPx}
+								loop={true} // ← Добавьте эту строку
 								onSlideChange={() => setPlaying(null)}
 								className={styles.swiper}
 							>
