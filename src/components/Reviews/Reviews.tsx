@@ -188,7 +188,7 @@ export default function Reviews({
 							<Swiper
 								modules={[Pagination]}
 								pagination={{ clickable: true }}
-								slidesPerView={4}
+								slidesPerView={5}
 								centeredSlides={false}
 								spaceBetween={gapPx}
 								loop={true}
