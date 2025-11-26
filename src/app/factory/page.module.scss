@@ -560,3 +560,13 @@
 		}
 	}
 }
+
+@media (max-width: 450px) {
+	.secondHero {
+		.leftImg {
+			.leftImgWrapper {
+				height: clamp(63px, 13vw, 114px);
+			}
+		}
+	}
+}

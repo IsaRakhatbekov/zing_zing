@@ -22,10 +22,10 @@ export default function FactorySwiper({ data }: Props) {
 				spaceBetween={24}
 				coverflowEffect={{
 					rotate: 0,
-					stretch: -80,
-					depth: 90,
+					stretch: -30, // ← УМЕНЬШИТЕ (было -80)
+					depth: 50,
 					modifier: 1.1,
-					scale: 1,
+					scale: 0.85, // ← Боковые слайды немного меньше
 					slideShadows: false,
 				}}
 				className={styles.swiper}
@@ -40,7 +40,7 @@ export default function FactorySwiper({ data }: Props) {
 									width={800}
 									height={500}
 									className={styles.img}
-									loading='eager' 
+									loading='eager'
 								/>
 							</div>
 						</div>
