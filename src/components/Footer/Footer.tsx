@@ -294,7 +294,7 @@ const Footer = () => {
 					<div className={styles.bottomInner}>
 						<div className={styles.logoWrapper}>
 							<span className={styles.logo}>
-								<Image src={footerLogo} alt='' />
+								<Image src={footerLogo} alt='' width={70} height={40} />
 							</span>
 							<span>{t.copyright}</span>
 						</div>

@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import { EffectCoverflow } from 'swiper/modules'
@@ -16,16 +15,17 @@ export default function FactorySwiper({ data }: Props) {
 			<Swiper
 				effect='coverflow'
 				modules={[EffectCoverflow]}
-				loop
+				// loop
 				centeredSlides
-				slidesPerView='auto' // ширину зададим сами через .slot
+				slidesPerView='auto'
 				spaceBetween={24}
+				initialSlide={2} // <-- начинаем с 3-го слайда (индекс 2)
 				coverflowEffect={{
 					rotate: 0,
-					stretch: -30, // ← УМЕНЬШИТЕ (было -80)
+					stretch: -30,
 					depth: 50,
 					modifier: 1.1,
-					scale: 0.85, // ← Боковые слайды немного меньше
+					scale: 0.85,
 					slideShadows: false,
 				}}
 				className={styles.swiper}
@@ -34,11 +34,9 @@ export default function FactorySwiper({ data }: Props) {
 					<SwiperSlide key={i} className={styles.swiperSlideAuto}>
 						<div className={styles.slot}>
 							<div className={styles.slide}>
-								<Image
+								<img
 									src={s.image}
 									alt={s.alt}
-									width={800}
-									height={500}
 									className={styles.img}
 									loading='eager'
 								/>

@@ -28,27 +28,25 @@
 		"swiper": {
 			"slides": [
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper1.jpg",
 					"alt": "Factory production line"
 				},
-				{ "image": "/mock/factory/swiper-img.png", "alt": "Factory equipment" },
-				{ "image": "/mock/factory/swiper-img.png", "alt": "Factory process" },
+				{ "image": "/mock/factory/swiper2.jpg", "alt": "Factory equipment" },
+				{ "image": "/mock/factory/swiper3.jpg", "alt": "Factory process" },
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper4.jpg",
 					"alt": "Factory quality control"
 				},
-				{ "image": "/mock/factory/swiper-img.png", "alt": "Factory packaging" },
-				{ "image": "/mock/factory/swiper-img.png", "alt": "Factory team" },
+				{ "image": "/mock/factory/swiper5.jpg", "alt": "Factory packaging" },
+				{ "image": "/mock/factory/swiper6.jpg", "alt": "Factory team" },
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper7.jpg",
 					"alt": "Factory technology"
 				},
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper8.jpg",
 					"alt": "Factory innovation"
-				},
-				{ "image": "/mock/factory/swiper-img.png", "alt": "Factory standards" },
-				{ "image": "/mock/factory/swiper-img.png", "alt": "Factory excellence" }
+				}
 			]
 		}
 	},
@@ -81,30 +79,25 @@
 		"swiper": {
 			"slides": [
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper1.jpg",
 					"alt": "Производственная линия фабрики"
 				},
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper2.jpg",
 					"alt": "Оборудование фабрики"
 				},
-				{ "image": "/mock/factory/swiper-img.png", "alt": "Процесс фабрики" },
+				{ "image": "/mock/factory/swiper3.jpg", "alt": "Процесс фабрики" },
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper4.jpg",
 					"alt": "Контроль качества фабрики"
 				},
-				{ "image": "/mock/factory/swiper-img.png", "alt": "Упаковка фабрики" },
-				{ "image": "/mock/factory/swiper-img.png", "alt": "Команда фабрики" },
+				{ "image": "/mock/factory/swiper5.jpg", "alt": "Упаковка фабрики" },
+				{ "image": "/mock/factory/swiper6.jpg", "alt": "Команда фабрики" },
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper7.jpg",
 					"alt": "Технологии фабрики"
 				},
-				{ "image": "/mock/factory/swiper-img.png", "alt": "Инновации фабрики" },
-				{ "image": "/mock/factory/swiper-img.png", "alt": "Стандарты фабрики" },
-				{
-					"image": "/mock/factory/swiper-img.png",
-					"alt": "Превосходство фабрики"
-				}
+				{ "image": "/mock/factory/swiper8.jpg", "alt": "Инновации фабрики" }
 			]
 		}
 	},
@@ -137,33 +130,28 @@
 		"swiper": {
 			"slides": [
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper1.jpg",
 					"alt": "Фабриканың өндіріс желісі"
 				},
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper2.jpg",
 					"alt": "Фабрика жабдықтары"
 				},
-				{ "image": "/mock/factory/swiper-img.png", "alt": "Фабрика процесі" },
+				{ "image": "/mock/factory/swiper3.jpg", "alt": "Фабрика процесі" },
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper4.jpg",
 					"alt": "Фабрика сапасын бақылау"
 				},
-				{ "image": "/mock/factory/swiper-img.png", "alt": "Фабрика орамасы" },
-				{ "image": "/mock/factory/swiper-img.png", "alt": "Фабрика командасы" },
+				{ "image": "/mock/factory/swiper5.jpg", "alt": "Фабрика орамасы" },
+				{ "image": "/mock/factory/swiper6.jpg", "alt": "Фабрика командасы" },
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper7.jpg",
 					"alt": "Фабрика технологиясы"
 				},
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper8.jpg",
 					"alt": "Фабрика инновациясы"
-				},
-				{
-					"image": "/mock/factory/swiper-img.png",
-					"alt": "Фабрика стандарттары"
-				},
-				{ "image": "/mock/factory/swiper-img.png", "alt": "Фабрика жетістігі" }
+				}
 			]
 		}
 	},
@@ -196,43 +184,35 @@
 		"swiper": {
 			"slides": [
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper1.jpg",
 					"alt": ""
 				},
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper2.jpg",
 					"alt": ""
 				},
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper3.jpg",
 					"alt": ""
 				},
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper4.jpg",
 					"alt": ""
 				},
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper5.jpg",
 					"alt": ""
 				},
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper6.jpg",
 					"alt": ""
 				},
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper7.jpg",
 					"alt": ""
 				},
 				{
-					"image": "/mock/factory/swiper-img.png",
-					"alt": ""
-				},
-				{
-					"image": "/mock/factory/swiper-img.png",
-					"alt": ""
-				},
-				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper8.jpg",
 					"alt": ""
 				}
 			]
@@ -267,43 +247,35 @@
 		"swiper": {
 			"slides": [
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper1.jpg",
 					"alt": ""
 				},
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper2.jpg",
 					"alt": ""
 				},
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper3.jpg",
 					"alt": ""
 				},
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper4.jpg",
 					"alt": ""
 				},
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper5.jpg",
 					"alt": ""
 				},
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper6.jpg",
 					"alt": ""
 				},
 				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper7.jpg",
 					"alt": ""
 				},
 				{
-					"image": "/mock/factory/swiper-img.png",
-					"alt": ""
-				},
-				{
-					"image": "/mock/factory/swiper-img.png",
-					"alt": ""
-				},
-				{
-					"image": "/mock/factory/swiper-img.png",
+					"image": "/mock/factory/swiper8.jpg",
 					"alt": ""
 				}
 			]
