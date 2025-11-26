@@ -32,9 +32,7 @@ export default function FactorySwiper({ data }: Props) {
 			>
 				{data.slides.map((s, i) => (
 					<SwiperSlide key={i} className={styles.swiperSlideAuto}>
-						{/* Слот задаёт фактическую ширину для Swiper (5 шт. на экран) */}
 						<div className={styles.slot}>
-							{/* ТВОЯ карточка — дизайн не меняем */}
 							<div className={styles.slide}>
 								<Image
 									src={s.image}
@@ -42,7 +40,7 @@ export default function FactorySwiper({ data }: Props) {
 									width={800}
 									height={500}
 									className={styles.img}
-									priority={i < 3}
+									loading='eager' 
 								/>
 							</div>
 						</div>

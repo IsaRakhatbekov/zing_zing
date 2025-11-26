@@ -168,10 +168,15 @@ export default function Reviews({
 	return (
 		<section className={styles.reviews} ref={reviewsRef}>
 			<div className={`${styles.container} container`}>
+				{/* ЗАГОЛОВОК ТЕПЕРЬ СТАТИЧНЫЙ - БУДЕТ ПЕРЕВОДИТЬСЯ НА ФРОНТЕ */}
 				<h2 className={styles.title}>{t.title}</h2>
+
+				{/* Десктопная сетка */}
 				<div className={styles.cards} aria-hidden={isMobile}>
 					{!isMobile && reviews.map(r => <ReviewCard key={r.id} r={r} />)}
 				</div>
+
+				{/* Мобильный свайпер (ровно 2 слайда, ширина карточек — вручную) */}
 				<div
 					className={styles.swiperRoot}
 					aria-hidden={!isMobile}
@@ -188,15 +193,16 @@ export default function Reviews({
 							<Swiper
 								modules={[Pagination]}
 								pagination={{ clickable: true }}
-								slidesPerView={5}
+								slidesPerView={2} // ровно 2
 								centeredSlides={false}
 								spaceBetween={gapPx}
-								loop={true}
+								loop={true} // ← Добавьте эту строку
 								onSlideChange={() => setPlaying(null)}
 								className={styles.swiper}
 							>
 								{reviews.map(r => (
 									<SwiperSlide key={r.id} className={styles.slide}>
+										{/* Слайд-ячейка: центрируем карточку фикс. ширины */}
 										<div className={styles.cell}>
 											<ReviewCard r={r} />
 										</div>

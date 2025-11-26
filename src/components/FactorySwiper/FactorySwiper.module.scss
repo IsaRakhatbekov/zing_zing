@@ -1,49 +1,32 @@
-/* Скрываем то, что выходит за пределы видимой области: видно ровно 5 */
 .viewportClip {
 	overflow: hidden;
 	width: 100%;
 
 }
-
-/* Параметры разметки: 5 карточек и зазоры между ними */
 .swiper {
-	--slides: 5; /* всегда 5 видимых */
+	--slides: 5;
 	--gap: 24px;
 	padding: 50px 0;
-
-	/* ширина вьюпорта для вычислений */
 	--viewport: 100vw;
-
-	/* суммарный зазор между 5 карточками = 4 * gap */
 	--gaps-sum: calc((var(--slides) - 1) * var(--gap));
-
-	/* Ширина одного слота, куда мы вписываем карточку */
 	--slot-w: calc((var(--viewport) - var(--gaps-sum)) / var(--slides));
-
-	/* Коэффициент масштаба для карточки 800×500, чтобы поместить её в слот */
 	--k: clamp(0.2, calc(var(--slot-w) / 800), 1);
 }
-
-/* SwiperSlide должен подстраиваться под ширину слота */
 .swiperSlideAuto {
-	width: var(--slot-w) !important; /* критично: так Swiper считает ширину */
+	width: var(--slot-w) !important;
 }
-
-/* Сам «слот»: задаём фактическую ширину/высоту видимого места */
 .slot {
 	width: var(--slot-w);
-	height: calc(500px * var(--k)); /* реальная занимаемая высота ряда */
+	height: calc(500px * var(--k));
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	position: relative;
 }
-
-/* ====== ТВОЙ ДИЗАЙН КАРТОЧКИ — НЕ МЕНЯЕМ ====== */
 .slide {
 	width: 800px !important;
 	height: 500px !important;
-	flex-shrink: 0; /* запретить сжимание */
+	flex-shrink: 0;
 	position: relative;
 	background-color: #fff;
 	display: flex;
@@ -51,18 +34,14 @@
 	justify-content: center;
 	padding: 30px 100px;
 	box-shadow: 5px 22px 28px 0 rgba(0, 0, 0, 0.1);
-
-	/* Вписываем карточку в слот ПОЛНОСТЬЮ за счёт масштаба */
 	transform: scale(var(--k));
 	transform-origin: center center;
 	transition: transform 250ms ease;
 }
-
-/* Картинка показывается целиком, без обрезки */
 .img {
 	width: 100%;
 	height: 100%;
-	object-fit: contain; /* важно: не обрезаем */
+	object-fit: contain;
 	background: #fff;
 }
 
