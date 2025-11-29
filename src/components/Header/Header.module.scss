@@ -378,17 +378,18 @@
 			display: none;
 		}
 		.mobMenuWrapper {
-			display: block;
+			display: flex; // ✅ Только flex, без block
 			position: fixed;
 			width: 100%;
 			height: 100vh;
+			height: 100dvh; // ✅ Добавь для мобильных браузеров
 			top: 0;
 			left: 0;
 			background-color: var(--pink);
-			display: flex;
 			align-items: flex-start;
 			justify-content: flex-start;
 			overflow-y: auto;
+			-webkit-overflow-scrolling: touch; // ✅ Добавь для iOS
 			transform: translateY(-200%);
 			transition: all 0.5s ease;
 			z-index: 90;

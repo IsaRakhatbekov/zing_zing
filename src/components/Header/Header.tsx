@@ -115,15 +115,25 @@ const Header = () => {
 	]
 
 	useEffect(() => {
-		const body = document.body
 		if (burger) {
-			body.classList.add('lockScroll')
+			// Блокируем скролл body, но сохраняем позицию
+			const scrollY = window.scrollY
+			document.body.style.position = 'fixed'
+			document.body.style.top = `-${scrollY}px`
+			document.body.style.width = '100%'
 		} else {
-			body.classList.remove('lockScroll')
+			// Восстанавливаем скролл
+			const scrollY = document.body.style.top
+			document.body.style.position = ''
+			document.body.style.top = ''
+			document.body.style.width = ''
+			window.scrollTo(0, parseInt(scrollY || '0') * -1)
 		}
 
 		return () => {
-			body.classList.remove('lockScroll')
+			document.body.style.position = ''
+			document.body.style.top = ''
+			document.body.style.width = ''
 		}
 	}, [burger])
 
