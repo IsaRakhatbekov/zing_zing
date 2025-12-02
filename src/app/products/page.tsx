@@ -113,17 +113,17 @@ export default function Page() {
 												<span>{p.titleSpan}</span>
 											</h3>
 
-											{/* маленькие кусочки, максимум 2 */}
-											{p.littleImages?.map((src, idx) => (
-												<div key={idx} className={styles.littleImg}>
+											{/* маленькие кусочки, только 1 элемент */}
+											{p.littleImages && p.littleImages.length > 0 && (
+												<div className={styles.littleImg}>
 													<Image
-														src={src}
-														alt={`${p.titleSpan} piece ${idx + 1}`}
+														src={p.littleImages[0]}
+														alt={`${p.titleSpan} piece 1`}
 														width={140}
 														height={140}
 													/>
 												</div>
-											))}
+											)}
 
 											<div className={styles.imgWrapper}>
 												<Image

@@ -117,18 +117,6 @@
 		gap: 30px;
 	}
 
-	.card {
-		margin: 0 auto;
-		width: 400px;
-		height: 260px;
-
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		overflow: hidden;
-	}
-
 	.yellow {
 		width: 120px;
 		height: 35px;
@@ -181,11 +169,8 @@
 			position: absolute;
 			width: 100px;
 			height: 100px;
-			/* базовая позиция около пакета */
 			right: 80px;
 			bottom: 0;
-
-			/* старт: как будто глубоко в пакете */
 			transform: translateY(0%);
 			transition: transform 0.35s ease-out;
 			z-index: -1;
@@ -196,15 +181,9 @@
 				object-fit: contain;
 			}
 		}
-
-		/* если их две — немного раздвигаем */
 		.littleImg:nth-child(2) {
 			z-index: -1;
 			right: 62px;
-		}
-		.littleImg:nth-child(3) {
-			right: 115px;
-			z-index: -2;
 		}
 
 		/* hover по пинк-карточке — выезжают чуть выше */
@@ -212,9 +191,6 @@
 			.littleImg {
 				&:nth-child(2) {
 					transform: translateY(-170%) rotate(-34deg);
-				}
-				&:nth-child(3) {
-					transform: translateY(-170%) rotate(34deg);
 				}
 			}
 		}
@@ -227,6 +203,63 @@
 
 		span {
 			color: var(--yellow);
+		}
+	}
+
+	.card {
+		margin: 0 auto;
+		width: 400px;
+		height: 260px;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+
+		&:hover {
+			&:nth-child(1) {
+				.pink {
+					.littleImg {
+						transform: translateY(-160%) rotate(-15deg) translateX(-15px);
+					}
+				}
+			}
+			&:nth-child(2) {
+				.pink {
+					.littleImg {
+						transform: translateY(-160%) rotate(45deg) translateX(-15px);
+					}
+				}
+			}
+			&:nth-child(3) {
+				.pink {
+					.littleImg {
+						transform: translateY(-190%) rotate(125deg) translateX(30px);
+					}
+				}
+			}
+			&:nth-child(4) {
+				.pink {
+					.littleImg {
+						transform: translateY(-160%) rotate(-15deg) translateX(-15px);
+					}
+				}
+			}
+			&:nth-child(5) {
+				.pink {
+					.littleImg {
+						transform: translateY(-160%) rotate(45deg) translateX(-15px);
+					}
+				}
+			}
+			&:nth-child(6) {
+				.pink {
+					.littleImg {
+						transform: translateY(-170%) rotate(-15deg) translateX(-15px);
+					}
+				}
+			}
 		}
 	}
 }
